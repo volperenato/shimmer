@@ -69,7 +69,7 @@ void Delay::initDelayLine() {
 	freeBuffer();
 
 	// Reserve memory for buffer vector
-	dly_buffer.reserve(dly_lineLengthInSamples);
+	dly_buffer.resize(dly_lineLengthInSamples, 0.0);
 }
 
 void Delay::updateBuffer() {

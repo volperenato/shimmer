@@ -9,14 +9,9 @@
 #include <stdio.h>
 #include "FDN.h"
 #include "PitchShifter.h"
-#include "vst-2.4-sdk/vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.h"
+#include "../vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.h"
 #include <math.h>
 #include "PSMVocoder.h"
-
-#define NUM_COMB_FILTERS 8
-#define NUM_ALLPASS_FILTERS_IN 3
-#define NUM_ALLPASS_FILTERS_OUT 2
-
 
 using namespace std;
 
@@ -26,9 +21,9 @@ enum EfxParameter {
 	Param_roomSize,
 	Param_decay,
 	Param_shimmer,
-	Param_shimIntrvals,
+	Param_intervals,
 	Param_damping,
-	Param_spread,
+	Param_space,
 	Param_modDepth,
 	Param_modRate,
 	Param_lpf,
@@ -44,8 +39,7 @@ class ShimmerPresets {
 	friend class Shimmer;
 private:
 	// Shimmer User Parameters
-	float shim_mix, shim_roomSize, shim_shimmer, shim_intervals, shim_decay, shim_damping, shim_spread, shim_modRate, shim_modDepth, shim_lpf, shim_hpf; 
-
+	float shim_mix, shim_roomSize, shim_shimmer, shim_intervals, shim_decay, shim_damping, shim_space, shim_modRate, shim_modDepth, shim_lpf, shim_hpf; 
 	char name[24];
 };
 
@@ -56,26 +50,23 @@ class Shimmer : public AudioEffectX {
 	ShimmerPresets* shim_presets;
 	
 	// Shimmer User Parameters
-	float shim_mix, shim_roomSize, shim_shimmer, shim_intervals, shim_decay, shim_damping, shim_spread, shim_modRate, shim_modDepth, shim_lpf, shim_hpf;
+	float shim_mix, shim_roomSize, shim_shimmer, shim_intervals, shim_decay, shim_damping, shim_space, shim_modRate, shim_modDepth, shim_lpf, shim_hpf;
 
 	// FDN reverb
 	FDN* BranchReverb;
 	FDN* MasterReverb;
 
 	// Pitch Shifters
-	PSMVocoder* PitchShift_1octL;
-	PSMVocoder* PitchShift_1octR;
-	PSMVocoder* PitchShift_2octL;
-	PSMVocoder* PitchShift_2octR;
+	PSMVocoder* PitchShift_1oct;
+	PSMVocoder* PitchShift_2oct;
 
 	// Internal quantities
-	float _wet, _dry, _mixP1, _mixP2;
-
-	void InitPlugin();	
-	void InitPresets();
+	float _wet, _dry, _mixP1, _mixP2;	
 
 private:
 
+	void InitPlugin();
+	void InitPresets();
 	void updateMix();
 	void updateMixPitchShifters(float pitch2);
 

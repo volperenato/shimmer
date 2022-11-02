@@ -1,5 +1,7 @@
 #pragma once
 #include <math.h>
+#include <stdlib.h>
+#include <string>
 #include <vector>
 #include "constants.h"
 
@@ -51,7 +53,6 @@ enum class OscillatorType {
 	Triangular, 
 	Pulse 
 };
-
 
 /*--------------------------------------------------------------------*/
 // Convert a value from interval [minValue, maxValue] to [0,1]
@@ -111,5 +112,22 @@ inline float parabolicSine(float x) {
 	float y = PARABOLIC_SINE_B * x + PARABOLIC_SINE_C * x * abs(x);
 	y = PARABOLIC_SINE_P * (y * abs(y) - y) + y;
 	return y;
+}
+/*--------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------*/
+inline void WriteBufferToFile(float** buffer, int numSamples, std::string file)
+{
+	std::string filename = "E:\\MIS\\tesi\\" + file;
+
+	FILE* f = fopen(filename.c_str(), "a");
+	if (!f) return;
+
+	for (int i = 0; i < numSamples; ++i)
+	{
+		fprintf(f, "%f,%f\n", buffer[0][i], buffer[1][i]);
+	}
+
+	fclose(f);
 }
 /*--------------------------------------------------------------------*/

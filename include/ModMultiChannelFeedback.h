@@ -140,7 +140,7 @@ public:
 		// Read value from delay line and allocate it to output
 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 			float newDelayInmsec = mcf_DelayLines[i]->mdly_meanDelayValue + mcf_DelayLines[i]->mdly_deltaDelayValue * mcf_DelayLines[i]->mdly_LFO->processAudio();
-
+			
 			// Set the delay value to the delay line
 			mcf_DelayLines[i]->LPCombFilter::setDelayInmsec(newDelayInmsec);
 
@@ -166,9 +166,9 @@ private:
 
 	void constructMCF(int numCh) {
 		mcf_Householder = new Householder(numCh);
-		setNumberOfChannels(numCh);
 		mcf_numberOfChannels = numCh;
 		mcf_Householder->setNumberOfChannels(numCh);
+		deleteDelayLines();
 		allocateDelayLines();
 	}
 

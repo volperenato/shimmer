@@ -220,7 +220,7 @@ public:
 		setFeedbackDelayLengths(0.5 * diffMaxdel, feedMaxdel, feedDistr);
 		fdn_decayMultiplier = mapValueIntoRange(size, 0.1, 2.0);
 		setDecayInSeconds(fdn_decay);
-		fdn_Feedback->setModDepth(size);
+		fdn_Feedback->setModDepth(size);		
 		fdn_Feedback->setModRate(mapValueIntoRange(1.0 - size, 0.0, _FEEDBACK_MAX_MODULATION_RATE));
 	}	
 
@@ -354,7 +354,7 @@ public:
 		float depth = fdn_Modulation[0]->getModDepth();
 		float rate = fdn_Modulation[0]->getModRate();
 		deleteChorus();
-		constructChorus();
+		constructModulation();
 		for (int i = 0; i < fdn_internalChannels; i++)
 			fdn_Modulation[i]->init(DEFAULT_MODULATION_TYPE, fdn_sampleRate);
 		setModDepth(depth);
@@ -450,7 +450,7 @@ public:
 						
 		// Spill-out the diffused signal and send to multi-channel delay for early reflections
 		fdn_EarlyReflections->processAudio(&fdn_tmpDiffuser[0], &fdn_outEarly[0]);
-
+		
 		// Feedback lines
 		fdn_Feedback->processAudio(&fdn_tmpDiffuser[0], &fdn_tmpFeedback[0]);
 		
@@ -461,7 +461,7 @@ public:
 		fdn_OutputDiffusion->processAudio(&fdn_tmpFeedback[0], &fdn_tmpFeedback[0]);
 
 		// Sum-up early reflections and reverbered signals
-		for (int i = 0; i < fdn_internalChannels; i++)		
+		for (int i = 0; i < fdn_internalChannels; i++)
 			fdn_tmpFeedback[i] += fdn_earlyWeight * fdn_outEarly[i];		
 
 		// Modulate reverb and mix it with non modulated signal
@@ -538,7 +538,7 @@ private:
 
 		// Construct filters
 		constructFilters();
-		constructChorus();
+		constructModulation();
 
 		// Construct mix matrix for output mixing after feedback stage
 		fdn_MixMatrix = new Hadamard(fdn_internalChannels);
@@ -565,7 +565,7 @@ private:
 	}
 
 	// Construct Chorus modulation objects (Modulation)
-	void constructChorus() {
+	void constructModulation() {
 		for (int i = 0; i < fdn_internalChannels; i++)
 			fdn_Modulation.push_back(new Modulation());
 	}
@@ -629,9 +629,9 @@ private:
 
 	// Initialize internal arrays for audio processing
 	void initInternalArrays() {
-		fdn_tmpDiffuser.resize(fdn_internalChannels);
-		fdn_tmpFeedback.resize(fdn_internalChannels);
-		fdn_outEarly.resize(fdn_internalChannels);
+		fdn_tmpDiffuser.resize(fdn_internalChannels, 0.0);
+		fdn_tmpFeedback.resize(fdn_internalChannels, 0.0);
+		fdn_outEarly.resize(fdn_internalChannels, 0.0);
 	}	
 
 	// Delete internal arrays (free memory + set null pointers)

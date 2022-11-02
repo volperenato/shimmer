@@ -57,6 +57,9 @@ public:
 		// initialize delay line
 		LPCombFilter::init(bufferLengthMs, sampleRate);
 
+		// set mean delay value to match the delay of the comb filter
+		setDelayInmsec(bufferLengthMs);
+
 		// initialize LFO
 		mdly_lfoWaveform = type;
 		mdly_LFO->init(type, sampleRate);
@@ -79,6 +82,7 @@ public:
 
 	void setDelayInmsec(float delay) {
 		mdly_meanDelayValue = delay;
+		Delay::setDelayInmsec(delay);
 	}
 
 	void setModRate(float modRate) {

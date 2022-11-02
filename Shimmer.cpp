@@ -51,7 +51,7 @@ const float LPF_FILTER_MIN_FREQ_LOG = log(LPF_FILTER_MIN_FREQ);
 const float DELTA_PARAMETER_BETWEEN_INTERVALS = 1.0/NUM_OF_PITCH_INTERVALS_ALLOWED;
 char* INTERVALS_NAMES_STRING[NUM_OF_PITCH_INTERVALS_ALLOWED] = { "2nd Maj", "3rd Min", "3rd Maj", "4th Per", "5th Per", "6th Maj", "7th Maj", "1st Oct", "1 Oct+5", "1+2 Oct"};
 const float INTERVALS_IN_SEMITONES_PITCH1[NUM_OF_PITCH_INTERVALS_ALLOWED] = {2.0, 3.0, 4.0, 5.0, 7.0, 9.0, 11.0, 12.0, 12.0, 12.0};
-const float INTERVALS_IN_SEMITONES_PITCH2[NUM_OF_PITCH_INTERVALS_ALLOWED] = {  0,   0,   0,   0,   0,   0,    0,    0,   19,   24};
+const float INTERVALS_IN_SEMITONES_PITCH2[NUM_OF_PITCH_INTERVALS_ALLOWED] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0,  0.0,  0.0, 19.0, 24.0};
 /*--------------------------------------------------------------------*/
 
 
@@ -95,58 +95,23 @@ AudioEffect* createEffectInstance(audioMasterCallback audioMaster)
 // Initialize all the objects and parameters
 void Shimmer::InitPlugin()
 {
-    /*.......................................*/
-    // initialize reverb plug-in parameters
-    InitPresets();
-
     // get current sample rate
     int sampleRate = getSampleRate();
-    shim_mix = 0.5;    
-    shim_roomSize = 0.5;
-    shim_decay = 0.2;
-    shim_damping = 0.5;    
-    shim_spread = 0.5;
-    shim_shimmer = 0.5;
-    shim_intervals = 0.1;
-    shim_modRate = 0.0;
-    shim_modDepth = 0.0;
-    shim_lpf = MAX_LPF_FREQUENCY;
-    shim_hpf = MIN_HPF_FREQUENCY;           
-    updateMix();
 
     /*.......................................*/
     // Create FDN Branch Reverb
-    BranchReverb = new FDN(2, DEFAULT_NUMBER_OF_INTERNAL_CHANNELS_FDN, 2, NUMBER_OF_DIFFUSION_STEPS, 1);
+    BranchReverb = new FDN(1, DEFAULT_NUMBER_OF_INTERNAL_CHANNELS_FDN, 2, NUMBER_OF_DIFFUSION_STEPS, 1);
 
     // Initialize objects (allocate delay lines)
     BranchReverb->initialize(DIFFUSER_DELAY_BUFFER_SIZE_MS, FEEDBACK_DELAY_BUFFER_SIZE_MS, sampleRate);
-
-    // Set room size
-    BranchReverb->setRoomSize(shim_roomSize);
-
-    // Set decay
-    BranchReverb->setDecayInSeconds(0.25 * shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
-
-    // set damping frequency
-    BranchReverb->setDampingFrequency(exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG)));
-    BranchReverb->setDampingType(DAMPING_LPF_TYPE);
-
-    // set output low & high pass filters
-    BranchReverb->setLowPassFrequency(LPF_FILTER_MAX_FREQ);
-    BranchReverb->setLowPassType(OUTPUT_LPF_TYPE);
-    BranchReverb->setHighPassType(OUTPUT_HPF_TYPE);
-    BranchReverb->setHighPassFrequency(HPF_FILTER_MIN_FREQ);
-
-    // Modulation
-    BranchReverb->setModDepth(0.0);
-    BranchReverb->setModRate(0.0);
-
-    // stereo spread
-    BranchReverb->setStereoSpread(0.5);
-
+    
     // output mixing mode
     BranchReverb->setMixMode(MixMode::First);
-    /*.......................................*/
+
+    // filters' types
+    BranchReverb->setDampingType(DAMPING_LPF_TYPE);
+    BranchReverb->setLowPassType(OUTPUT_LPF_TYPE);
+    BranchReverb->setHighPassType(OUTPUT_HPF_TYPE);
 
     /*.......................................*/
     // Create FDN Master Reverb
@@ -155,67 +120,51 @@ void Shimmer::InitPlugin()
     // Initialize objects (allocate delay lines)
     MasterReverb->initialize(DIFFUSER_DELAY_BUFFER_SIZE_MS, FEEDBACK_DELAY_BUFFER_SIZE_MS, sampleRate);
 
-    // Set room size
-    MasterReverb->setRoomSize(shim_roomSize);
-
-    // Set decay
-    MasterReverb->setDecayInSeconds(shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
-
-    // set damping frequency
-    MasterReverb->setDampingFrequency(exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG)));
-    MasterReverb->setDampingType(DAMPING_LPF_TYPE);
-
-    // set output low & high pass filters
-    MasterReverb->setLowPassFrequency(shim_lpf);
-    MasterReverb->setLowPassType(OUTPUT_LPF_TYPE);
-    MasterReverb->setHighPassType(OUTPUT_HPF_TYPE);
-    MasterReverb->setHighPassFrequency(shim_hpf);
-
-    // Modulation
-    MasterReverb->setModDepth(shim_modDepth);
-    MasterReverb->setModRate(shim_modRate);
-
-    // stereo spread
-    MasterReverb->setStereoSpread(shim_spread);
-
     // output mixing mode
     MasterReverb->setMixMode(MixMode::First);
-    /*.......................................*/
- 
+
+    // filters' types
+    MasterReverb->setDampingType(DAMPING_LPF_TYPE);
+    MasterReverb->setLowPassType(OUTPUT_LPF_TYPE);
+    MasterReverb->setHighPassType(OUTPUT_HPF_TYPE);
+
     /*.......................................*/
     // init PSMVocoder
-    PitchShift_1octL = new PSMVocoder();
-    PitchShift_1octR = new PSMVocoder();
-    PitchShift_2octL = new PSMVocoder();
-    PitchShift_2octR = new PSMVocoder();
+    PitchShift_1oct = new PSMVocoder();
+    PitchShift_2oct = new PSMVocoder();
+
     // set sample rate
-    PitchShift_1octL->reset((double)sampleRate);
-    PitchShift_1octR->reset((double)sampleRate);
-    PitchShift_2octL->reset((double)sampleRate);
-    PitchShift_2octR->reset((double)sampleRate);
+    PitchShift_1oct->reset((double)sampleRate);
+    PitchShift_2oct->reset((double)sampleRate);
+
     // set phase locking and peak tracking
-    PSMVocoderParameters params1L = PitchShift_1octL->getParameters();
-    PSMVocoderParameters params1R = PitchShift_1octR->getParameters();
-    PSMVocoderParameters params2L = PitchShift_2octL->getParameters();
-    PSMVocoderParameters params2R = PitchShift_2octR->getParameters();    
-    params1L.enablePeakPhaseLocking = true;
-    params1R.enablePeakPhaseLocking = true;
-    params2L.enablePeakPhaseLocking = true;
-    params2R.enablePeakPhaseLocking = true;
-    params1L.enablePeakTracking = true;
-    params1R.enablePeakTracking = true;
-    params2L.enablePeakTracking = true;
-    params2R.enablePeakTracking = true;
+    PSMVocoderParameters params1 = PitchShift_1oct->getParameters();
+    PSMVocoderParameters params2 = PitchShift_2oct->getParameters();
 
-    PitchShift_1octL->setParameters(params1L);
-    PitchShift_1octR->setParameters(params1R);
-    PitchShift_2octL->setParameters(params2L);
-    PitchShift_2octR->setParameters(params2R);
+    params1.enablePeakPhaseLocking = true;
+    params2.enablePeakPhaseLocking = true;
+    params1.enablePeakTracking = true;
+    params2.enablePeakTracking = true;
 
-    PitchShift_1octL->setPitchShift(12.0);
-    PitchShift_1octR->setPitchShift(12.0);
-    PitchShift_2octL->setPitchShift(24.0);
-    PitchShift_2octR->setPitchShift(24.0);
+    PitchShift_1oct->setParameters(params1);
+    PitchShift_2oct->setParameters(params2);
+
+    /*.......................................*/
+    // initialize reverb plug-in parameters
+    InitPresets();  
+    
+    /*.......................................*/
+    // set fixed parameters for BranchReverb
+    BranchReverb->setLowPassFrequency(LPF_FILTER_MAX_FREQ);
+    BranchReverb->setHighPassFrequency(HPF_FILTER_MIN_FREQ);
+
+    // Modulation
+    BranchReverb->setModDepth(0.0);
+    BranchReverb->setModRate(0.0);
+
+    // stereo spread
+    BranchReverb->setStereoSpread(0.5);          
+    /*.......................................*/    
 }
 /*--------------------------------------------------------------------*/
 
@@ -229,10 +178,8 @@ void Shimmer::setSampleRate(float sampleRate)
     // Call setSampleRate on every needed module
     BranchReverb->setSampleRate(sampleRate);
     MasterReverb->setSampleRate(sampleRate);
-    PitchShift_1octL->reset(sampleRate);
-    PitchShift_1octR->reset(sampleRate);
-    PitchShift_2octL->reset(sampleRate);
-    PitchShift_2octR->reset(sampleRate);
+    PitchShift_1oct->reset(sampleRate);
+    PitchShift_2oct->reset(sampleRate);
 }
 /*--------------------------------------------------------------------*/
 
@@ -248,33 +195,34 @@ void Shimmer::processReplacing(float** inputs, float** outputs, VstInt32 sampleF
     float* outL = outputs[0]; // buffer output left
     float* outR = outputs[1]; // buffer output right
 
+    // write input to file
+    //string pre = "test_input.txt";
+    //WriteBufferToFile(inputs, sampleFrames, pre); 
+    
     // Cycle over the sample frames number
     for (int i = 0; i < sampleFrames; i++) {
 
         // Create tmp arrays for processing
-        float pitch_input[2] = {inL[i], inR[i]};
-        float pitch_output_1oct[2] = { 0.0, 0.0 };
-        float pitch_output_2oct[2] = { 0.0, 0.0 };        
-        float pitch_summed_output[2] = { pitch_input[0], pitch_input[1] };
+        float pitchIn = (inL[i] + inR[i]) / 2;
+        double pitchOut1 = 0.0;
+        double pitchOut2 = 0.0;
+        float pitchOut;
         float bran_rev_out[2] = { 0.0, 0.0 };
         float mast_rev_out[2] = { 0.0, 0.0 };
         float mast_rev_in[2];
 
         // --- Pitch Shifting        
         // Process pitch shifting 1 octave
-        pitch_output_1oct[0] = PitchShift_1octL->processAudioSample(pitch_input[0]);
-        pitch_output_1oct[1] = PitchShift_1octR->processAudioSample(pitch_input[1]);
+        pitchOut1 = PitchShift_1oct->processAudioSample(pitchIn);
 
         // Process pitch shifting 2 octaves
-        pitch_output_2oct[0] = PitchShift_2octL->processAudioSample(pitch_input[0]);
-        pitch_output_2oct[1] = PitchShift_2octR->processAudioSample(pitch_input[1]);
+        pitchOut2 = PitchShift_2oct->processAudioSample(pitchIn);
 
         // Sum outputs
-        pitch_summed_output[0] = _mixP1 * pitch_output_1oct[0] + _mixP2 * pitch_output_2oct[0];
-        pitch_summed_output[1] = _mixP1 * pitch_output_1oct[1] + _mixP2 * pitch_output_2oct[1];
+        pitchOut = _mixP1 * (float)pitchOut1 + _mixP2 * (float)pitchOut2;
               
         // --- Branch Reverb        
-        BranchReverb->processAudio(pitch_summed_output, bran_rev_out);
+        BranchReverb->processAudio(&pitchOut, bran_rev_out);
 
         // --- Master Reverb        
         // Mix branch reverb output with dry input
@@ -288,6 +236,11 @@ void Shimmer::processReplacing(float** inputs, float** outputs, VstInt32 sampleF
         outL[i] = _wet * mast_rev_out[0] + _dry * inL[i];
         outR[i] = _wet * mast_rev_out[1] + _dry * inR[i];
     }
+
+   // Write samples to file
+   //string post = "test_output.txt";
+   //WriteBufferToFile(outputs, sampleFrames, post);
+
 }
 /*--------------------------------------------------------------------*/
 
@@ -328,20 +281,18 @@ void Shimmer::setParameter(VstInt32 index, float value)
         MasterReverb->setDampingFrequency(freq);
         break;
     }        
-    case Param_spread: {
-        shim_spread = value;
-        MasterReverb->setStereoSpread(shim_spread);
+    case Param_space: {
+        shim_space = value;
+        MasterReverb->setStereoSpread(shim_space);
         break;
     }
-    case Param_shimIntrvals: {        
+    case Param_intervals: {        
         if (value == 1)
             value = 0.99; // if value = 1, then pitIdx = NUM_OF_PITCH_INTRVL_ALLOWED + 1 -> outside of array boundaries
         shim_intervals = value;
         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
-        PitchShift_1octL->setPitchShift(INTERVALS_IN_SEMITONES_PITCH1[pitIdx]);
-        PitchShift_1octR->setPitchShift(INTERVALS_IN_SEMITONES_PITCH1[pitIdx]);
-        PitchShift_2octL->setPitchShift(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
-        PitchShift_2octR->setPitchShift(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
+        PitchShift_1oct->setPitchShift(INTERVALS_IN_SEMITONES_PITCH1[pitIdx]);
+        PitchShift_2oct->setPitchShift(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
         updateMixPitchShifters(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
         break;
     }
@@ -356,13 +307,15 @@ void Shimmer::setParameter(VstInt32 index, float value)
         break;
     }
     case Param_lpf: {
-        shim_lpf = exp(mapValueIntoRange(value, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
-        MasterReverb->setLowPassFrequency(shim_lpf);
+        shim_lpf = value;
+        float lpf = exp(mapValueIntoRange(value, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
+        MasterReverb->setLowPassFrequency(lpf);
         break;
     }
     case Param_hpf: {        
-        shim_hpf = mapValueIntoRange(value, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
-        MasterReverb->setHighPassFrequency(shim_hpf);
+        shim_hpf = value;
+        float hpf = mapValueIntoRange(value, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+        MasterReverb->setHighPassFrequency(hpf);
         break;
     }    
     default:
@@ -382,7 +335,8 @@ float Shimmer::getParameter(VstInt32 index)
         param = shim_mix;
         break;
     }
-    case Param_roomSize: {
+    case Param_roomSize: 
+    {
         param = shim_roomSize;
         break;
     }
@@ -401,30 +355,36 @@ float Shimmer::getParameter(VstInt32 index)
         param = shim_damping;
         break;
     }    
-    case Param_spread:
+    case Param_space:
     {
-        param = shim_spread;
+        param = shim_space;
         break;
     }
-    case Param_shimIntrvals:
+    case Param_intervals:
     {
         param = shim_intervals;
         break;
     }
-    case Param_modDepth: {
+    case Param_modDepth: 
+    {
         param = shim_modDepth;
         break;
     }
-    case Param_modRate: {
+    case Param_modRate: 
+    {
         param = shim_modRate;
         break;
     }
-    case Param_lpf: {
-        param = mapValueOutsideRange(log(shim_lpf), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+    case Param_lpf: 
+    {
+        //param = mapValueOutsideRange(log(shim_lpf), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+        param = shim_lpf;
         break;
     }
-    case Param_hpf: {        
-        param = mapValueOutsideRange(shim_hpf, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+    case Param_hpf: 
+    {        
+        //param = mapValueOutsideRange(shim_hpf, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+        param = shim_hpf;
         break;
     }    
     default:
@@ -459,11 +419,11 @@ void Shimmer::getParameterLabel(VstInt32 index, char* label)
         vst_strncpy(label, "", kVstMaxParamStrLen);
         break;
     }
-    case Param_spread: {
+    case Param_space: {
         vst_strncpy(label, "", kVstMaxParamStrLen);
         break;
     }
-    case Param_shimIntrvals: {
+    case Param_intervals: {
         vst_strncpy(label, "", kVstMaxParamStrLen);
         break;
     }
@@ -515,11 +475,11 @@ void Shimmer::getParameterDisplay(VstInt32 index, char* text)
         float2string(shim_damping * 10, text, kVstMaxParamStrLen);
         break;
     }
-    case Param_spread: {
-        float2string(shim_spread * 10, text, kVstMaxParamStrLen);
+    case Param_space: {
+        float2string(shim_space * 10, text, kVstMaxParamStrLen);
         break;
     }
-    case Param_shimIntrvals: {
+    case Param_intervals: {
         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
         vst_strncpy(text, INTERVALS_NAMES_STRING[pitIdx], kVstMaxParamStrLen);
         break; 
@@ -533,11 +493,13 @@ void Shimmer::getParameterDisplay(VstInt32 index, char* text)
         break;
     }
     case Param_lpf: {
-        float2string(shim_lpf, text, kVstMaxParamStrLen);
+        float lpf = exp(mapValueIntoRange(shim_lpf, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
+        float2string(lpf, text, kVstMaxParamStrLen);
         break;
     }
     case Param_hpf: {
-        float2string(shim_hpf, text, kVstMaxParamStrLen);
+        float hpf = mapValueIntoRange(shim_hpf, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+        float2string(hpf, text, kVstMaxParamStrLen);
         break;
     }      
     default: {
@@ -553,7 +515,7 @@ void Shimmer::getParameterName(VstInt32 index, char* text)
 {
     switch (index) {
     case Param_mix: {
-        vst_strncpy(text, "Wet", kVstMaxParamStrLen);
+        vst_strncpy(text, "Mix", kVstMaxParamStrLen);
         break;
     }
     case Param_roomSize: {
@@ -572,11 +534,11 @@ void Shimmer::getParameterName(VstInt32 index, char* text)
         vst_strncpy(text, "Damping", kVstMaxParamStrLen);
         break;
     }
-    case Param_spread: {
-        vst_strncpy(text, "Stereo", kVstMaxParamStrLen);
+    case Param_space: {
+        vst_strncpy(text, "Space", kVstMaxParamStrLen);
         break;
     }
-    case Param_shimIntrvals: {
+    case Param_intervals: {
         vst_strncpy(text, "Intervals", kVstMaxParamStrLen);
         break;
     }
@@ -616,57 +578,90 @@ void Shimmer::InitPresets()
 
     /*----------------------------------------------------*/
     // "Default" preset
-    strcpy(shim_presets[0].name, "Default");
-    shim_presets[0].shim_mix = 0.2;                        // given as a number between 0 and 1
-    shim_presets[0].shim_decay = 1.0;                      // given in seconds
-    shim_presets[0].shim_shimmer = 0.7;                   // given as a number between 0 and 1
-    shim_presets[0].shim_damping = 0.5;                    // given as a number between 0 and 1
-    shim_presets[0].shim_spread = 0.3;                     // given as a number between 0 and 1
+    strcpy(shim_presets[0].name, "Default");    
+    shim_presets[0].shim_mix = 0.5;
+    shim_presets[0].shim_roomSize = 0.4;
+    shim_presets[0].shim_decay = 0.2;
+    shim_presets[0].shim_damping = 0.5;
+    shim_presets[0].shim_space = 0.5;
+    shim_presets[0].shim_shimmer = 0.5;
+    shim_presets[0].shim_intervals = 0.71;
+    shim_presets[0].shim_modRate = 0.0;
+    shim_presets[0].shim_modDepth = 0.0;
+    shim_presets[0].shim_lpf = 1.0;
+    shim_presets[0].shim_hpf = 0.0;
 
     /*----------------------------------------------------*/
-    // "Dreamy" preset
-    strcpy(shim_presets[1].name, "Dreamy");
+    // "Small Room" 
+    strcpy(shim_presets[1].name, "Small Room");
     shim_presets[1].shim_mix = 0.5;
-    shim_presets[1].shim_decay = 3.3;
-    shim_presets[1].shim_shimmer = 0.8;
-    shim_presets[1].shim_damping = 0.6;
-    shim_presets[1].shim_spread = 1.0;
+    shim_presets[1].shim_roomSize = 0.1;
+    shim_presets[1].shim_decay = 0.1;
+    shim_presets[1].shim_damping = 0.15;
+    shim_presets[1].shim_space = 0.25;
+    shim_presets[1].shim_shimmer = 0.0;
+    shim_presets[1].shim_intervals = 0.1;
+    shim_presets[1].shim_modRate = 0.0;
+    shim_presets[1].shim_modDepth = 0.0;
+    shim_presets[1].shim_lpf = 1.0;
+    shim_presets[1].shim_hpf = 0.0;
+     
+    // "Hall" 
+    strcpy(shim_presets[2].name, "Hall");
+    shim_presets[2].shim_mix = 0.7;
+    shim_presets[2].shim_roomSize = 0.6;
+    shim_presets[2].shim_decay = 0.4;
+    shim_presets[2].shim_damping = 0.3;
+    shim_presets[2].shim_space = 0.6;
+    shim_presets[2].shim_shimmer = 0.0;
+    shim_presets[2].shim_intervals = 0.1;
+    shim_presets[2].shim_modRate = 0.0;
+    shim_presets[2].shim_modDepth = 0.0;
+    shim_presets[2].shim_lpf = mapValueOutsideRange(log(16000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+    shim_presets[2].shim_hpf = 0.0;
 
-    /*----------------------------------------------------*/
-    // "Short" preset
-    strcpy(shim_presets[2].name, "Short");
-    shim_presets[2].shim_mix = 0.2;
-    shim_presets[2].shim_decay = 2;
-    shim_presets[2].shim_shimmer = 0.5;
-    shim_presets[2].shim_damping = 0.4;
-    shim_presets[2].shim_spread = 0.2;
+    // "Ambience Damped" 
+    strcpy(shim_presets[3].name, "Ambience Damped");
+    shim_presets[3].shim_mix = 0.8;
+    shim_presets[3].shim_roomSize = 0.6;
+    shim_presets[3].shim_decay = 0.6;
+    shim_presets[3].shim_damping = 0.8;
+    shim_presets[3].shim_space = 0.7;
+    shim_presets[3].shim_shimmer = 1.0;
+    shim_presets[3].shim_intervals = 0.71;
+    shim_presets[3].shim_modRate = 0.0;
+    shim_presets[3].shim_modDepth = 0.0;
+    shim_presets[3].shim_lpf = 1.0;
+    shim_presets[3].shim_hpf = mapValueOutsideRange(150.0, MIN_HPF_FREQUENCY, MAX_HPF_FREQUENCY);
 
-    /*----------------------------------------------------*/
-    // "Metallic" preset
-    strcpy(shim_presets[3].name, "Metallic");
-    shim_presets[3].shim_mix = 0.5;
-    shim_presets[3].shim_decay = 2.2;
-    shim_presets[3].shim_shimmer = 0.0;
-    shim_presets[3].shim_damping = 0.0;
-    shim_presets[3].shim_spread = 1.0;
-
-    /*----------------------------------------------------*/
-    // "Wobbly" preset
-    strcpy(shim_presets[4].name, "Wobbly");
-    shim_presets[4].shim_mix = 0.65;
-    shim_presets[4].shim_decay = 2.0;
-    shim_presets[4].shim_shimmer = 0.7;
-    shim_presets[4].shim_damping = 0.3;
-    shim_presets[4].shim_spread = 0.3;
+    // "Ambience Modulated" 
+    strcpy(shim_presets[4].name, "Ambience Modulated");
+    shim_presets[4].shim_mix = 0.8;
+    shim_presets[4].shim_roomSize = 0.6;
+    shim_presets[4].shim_decay = 0.7;
+    shim_presets[4].shim_damping = 0.2;
+    shim_presets[4].shim_space = 0.7;
+    shim_presets[4].shim_shimmer = 1.0;
+    shim_presets[4].shim_intervals = 0.81;
+    shim_presets[4].shim_modRate = 0.4;
+    shim_presets[4].shim_modDepth = 0.5;
+    shim_presets[4].shim_lpf = mapValueOutsideRange(log(17000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);;
+    shim_presets[4].shim_hpf = 0.0;    
 
     // Set the program when creating a new plugin instance
     int initIdx = 0;
-    AudioEffect::setProgram(initIdx);
+    Shimmer::setProgram(initIdx);
     shim_mix = shim_presets[initIdx].shim_mix;
+    shim_roomSize = shim_presets[initIdx].shim_roomSize;
     shim_decay = shim_presets[initIdx].shim_decay;
-    shim_shimmer = shim_presets[initIdx].shim_shimmer;
     shim_damping = shim_presets[initIdx].shim_damping;
-    shim_spread = shim_presets[initIdx].shim_spread;
+    shim_space = shim_presets[initIdx].shim_space;
+    shim_shimmer = shim_presets[initIdx].shim_shimmer;
+    shim_intervals = shim_presets[initIdx].shim_intervals;
+    shim_modRate = shim_presets[initIdx].shim_modRate;
+    shim_modDepth = shim_presets[initIdx].shim_modDepth;
+    shim_lpf = shim_presets[initIdx].shim_lpf;
+    shim_hpf = shim_presets[initIdx].shim_hpf;
 }
 /*--------------------------------------------------------------------*/
 
@@ -677,14 +672,20 @@ void Shimmer::setProgram(VstInt32 program)
     AudioEffect::setProgram(program);
 
     // Create an instante of ShimmerPresets with current preset
-    ShimmerPresets* cp = &shim_presets[curProgram];
+    ShimmerPresets* cp = &shim_presets[program];
 
     // Set each parameter
     setParameter(Param_mix, cp->shim_mix);
-    setParameter(Param_decay, cp->shim_decay / MAX_REVERB_DECAY_IN_SECONDS);
+    setParameter(Param_roomSize, cp->shim_roomSize);
+    setParameter(Param_decay, cp->shim_decay);
     setParameter(Param_damping, cp->shim_damping);
+    setParameter(Param_space, cp->shim_space);
     setParameter(Param_shimmer, cp->shim_shimmer);
-    setParameter(Param_spread, cp->shim_spread);
+    setParameter(Param_intervals, cp->shim_intervals);
+    setParameter(Param_modRate, cp->shim_modRate);
+    setParameter(Param_modDepth, cp->shim_modDepth);
+    setParameter(Param_lpf, cp->shim_lpf);
+    setParameter(Param_hpf, cp->shim_hpf);
 }
 /*--------------------------------------------------------------------*/
 
@@ -735,10 +736,10 @@ bool Shimmer::getVendorString(char* name)
  ------------------------------------------------------------------------------------------------------------ */
 Shimmer::~Shimmer()
 {
-    //Free BranchReverb, delay and pitch shifters
+    //Free BranchReverb, MasterReverb and pitch shifters
     delete MasterReverb;
     delete BranchReverb;
-    delete PitchShift_1octL, PitchShift_1octR, PitchShift_2octL, PitchShift_2octR;
+    delete PitchShift_1oct, PitchShift_2oct;
 }
 
 
