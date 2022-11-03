@@ -1,7 +1,9 @@
-﻿     Creazione della libreria E:\prova\Shimmer\x64\Debug\Shimmer.lib e dell'oggetto E:\prova\Shimmer\x64\Debug\Shimmer.exp
-  Generazione codice in corso...
-  886 of 970 functions (91.3%) were compiled, the rest were copied from previous compilation.
-    34 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Generazione codice terminata
-  Shimmer.vcxproj -> E:\prova\Shimmer\x64\Debug\Shimmer.dll
+﻿  cl : warning della riga di comando D9025 : override di '/sdl' con '/GS-'
+  audioeffect.cpp
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp(149,24): error C2039: 'disp': non è un membro di 'AudioEffect'
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.h(23): message : vedere la dichiarazione di 'AudioEffect'
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp(149,29): error C2146: errore di sintassi: ';' mancante prima dell'identificatore 'chiama'
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp(149,53): error C4430: identificatore di tipo mancante, verrà utilizzato int. Nota: default-int non è più supportato in C++
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp(149,36): error C2146: errore di sintassi: ';' mancante prima dell'identificatore 'setProgramatcher'
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp(150,1): error C2143: errore di sintassi: ';' mancante prima di '{'
+E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp(150,1): error C2447: '{': intestazione di funzione mancante. Elenco formale di tipo obsoleto?

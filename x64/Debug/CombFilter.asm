@@ -101,11 +101,9 @@ PUBLIC	??0CombFilter@@QEAA@XZ				; CombFilter::CombFilter
 PUBLIC	__real@00000000
 PUBLIC	__real@0000000000000000
 PUBLIC	__real@38000100
-PUBLIC	__real@3916a850
 PUBLIC	__real@39800000
 PUBLIC	__real@3a000000
 PUBLIC	__real@3a83126f
-PUBLIC	__real@3d088889
 PUBLIC	__real@3d4ccccd
 PUBLIC	__real@3dcccccd
 PUBLIC	__real@3e4ccccd
@@ -136,9 +134,7 @@ PUBLIC	__real@400921fb54442d18
 PUBLIC	__real@4010000000000000
 PUBLIC	__real@401921fb54442d18
 PUBLIC	__real@4024000000000000
-PUBLIC	__real@4028000000000000
 PUBLIC	__real@4034000000000000
-PUBLIC	__real@4038000000000000
 PUBLIC	__real@4040000000000000
 PUBLIC	__real@4059000000000000
 PUBLIC	__real@4069000000000000
@@ -146,6 +142,7 @@ PUBLIC	__real@40800000
 PUBLIC	__real@40a00000
 PUBLIC	__real@40affe0000000000
 PUBLIC	__real@40b0000000000000
+PUBLIC	__real@40cf400000000000
 PUBLIC	__real@40d09a0000000000
 PUBLIC	__real@40d3880000000000
 PUBLIC	__real@40f00000
@@ -301,6 +298,10 @@ CONST	ENDS
 CONST	SEGMENT
 __real@40d09a0000000000 DQ 040d09a0000000000r	; 17000
 CONST	ENDS
+;	COMDAT __real@40cf400000000000
+CONST	SEGMENT
+__real@40cf400000000000 DQ 040cf400000000000r	; 16000
+CONST	ENDS
 ;	COMDAT __real@40b0000000000000
 CONST	SEGMENT
 __real@40b0000000000000 DQ 040b0000000000000r	; 4096
@@ -329,17 +330,9 @@ CONST	ENDS
 CONST	SEGMENT
 __real@4040000000000000 DQ 04040000000000000r	; 32
 CONST	ENDS
-;	COMDAT __real@4038000000000000
-CONST	SEGMENT
-__real@4038000000000000 DQ 04038000000000000r	; 24
-CONST	ENDS
 ;	COMDAT __real@4034000000000000
 CONST	SEGMENT
 __real@4034000000000000 DQ 04034000000000000r	; 20
-CONST	ENDS
-;	COMDAT __real@4028000000000000
-CONST	SEGMENT
-__real@4028000000000000 DQ 04028000000000000r	; 12
 CONST	ENDS
 ;	COMDAT __real@4024000000000000
 CONST	SEGMENT
@@ -461,10 +454,6 @@ CONST	ENDS
 CONST	SEGMENT
 __real@3d4ccccd DD 03d4ccccdr			; 0.05
 CONST	ENDS
-;	COMDAT __real@3d088889
-CONST	SEGMENT
-__real@3d088889 DD 03d088889r			; 0.0333333
-CONST	ENDS
 ;	COMDAT __real@3a83126f
 CONST	SEGMENT
 __real@3a83126f DD 03a83126fr			; 0.001
@@ -476,10 +465,6 @@ CONST	ENDS
 ;	COMDAT __real@39800000
 CONST	SEGMENT
 __real@39800000 DD 039800000r			; 0.000244141
-CONST	ENDS
-;	COMDAT __real@3916a850
-CONST	SEGMENT
-__real@3916a850 DD 03916a850r			; 0.000143678
 CONST	ENDS
 ;	COMDAT __real@38000100
 CONST	SEGMENT
@@ -551,7 +536,7 @@ CRT$XCU	ENDS
 CRT$XCU	ENDS
 CRT$XCU	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG'', COMDAT
@@ -563,7 +548,7 @@ text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG'', COMDAT
@@ -575,7 +560,7 @@ text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG'', COMDAT
@@ -587,7 +572,7 @@ text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG'', COMDAT
@@ -599,7 +584,7 @@ text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_FREQUENCY_LOG'', COMDAT
@@ -611,7 +596,7 @@ text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_FREQUENCY_LOG'', COMDAT
@@ -623,15 +608,15 @@ text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ;	COMDAT ??0CombFilter@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -641,12 +626,12 @@ this$ = 8
 ; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
 
 	xor	edx, edx
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 11   : 	dly_makeUpGain			= 1.0;
+; 10   : 	dly_makeUpGain			= 1.0;
 
 	mov	QWORD PTR [rcx+68], 1065353216		; 3f800000H
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 6    : CombFilter::CombFilter() : Delay() {
 
@@ -656,7 +641,7 @@ this$ = 8
 ; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
 
 	mov	QWORD PTR [rcx+40], rdx
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 6    : CombFilter::CombFilter() : Delay() {
 
@@ -671,31 +656,31 @@ this$ = 8
 
 	mov	QWORD PTR [rcx+48], rdx
 	mov	QWORD PTR [rcx+56], rdx
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 10   : 	dly_makeUpGaindB		= 0.0;
+; 9    : 	dly_makeUpGaindB		= 0.0;
 
 	mov	DWORD PTR [rcx+64], edx
 
-; 12   : 	dly_delayInmsec			= 0.0;
-; 13   : 	dly_delayInSamples		= 0.0;
+; 11   : 	dly_delayInmsec			= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
 
 	mov	QWORD PTR [rcx+20], rdx
 
-; 14   : 	dly_readIndex			= 0;
+; 13   : 	dly_readIndex			= 0;
 
 	mov	QWORD PTR [rcx+28], rdx
 
-; 15   : 	dly_writeIndex			= 0;
-; 16   : 	dly_lineLengthInSamples = 0;
+; 14   : 	dly_writeIndex			= 0;
+; 15   : 	dly_lineLengthInSamples = 0;
 
 	mov	QWORD PTR [rcx+12], rdx
 
-; 17   : 	dly_lineLengthInmsec	= 0.0;
-; 18   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 16   : 	dly_lineLengthInmsec	= 0.0;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
 
 	mov	DWORD PTR [rcx+8], 44100		; 0000ac44H
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 8    : 	cf_decayInSeconds   = 0.0;
 
@@ -711,7 +696,7 @@ this$ = 8
 ??0CombFilter@@QEAA@XZ ENDP				; CombFilter::CombFilter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ;	COMDAT ??1CombFilter@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -725,7 +710,7 @@ this$ = 8
 ??1CombFilter@@QEAA@XZ ENDP				; CombFilter::~CombFilter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ;	COMDAT ?setFeedback@CombFilter@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -742,7 +727,7 @@ g$ = 16
 ?setFeedback@CombFilter@@QEAAXM@Z ENDP			; CombFilter::setFeedback
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ;	COMDAT ?setFeedbackFromDecay@CombFilter@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -794,15 +779,15 @@ $LN4@setFeedbac:
 ?setFeedbackFromDecay@CombFilter@@QEAAXM@Z ENDP		; CombFilter::setFeedbackFromDecay
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ;	COMDAT ?processAudio@CombFilter@@UEAAMM@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -820,34 +805,34 @@ $LN13:
 ; 32   : 	float yn = readFromDelayLine();
 
 	call	?readFromDelayLine@Delay@@QEAAMXZ	; Delay::readFromDelayLine
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	movsxd	rdx, DWORD PTR [r9+32]
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 35   : 	float buff = xn + cf_feedbackGain * yn;
 
 	movaps	xmm3, xmm0
 	mulss	xmm3, DWORD PTR [r9+72]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	mov	rax, QWORD PTR [r9+40]
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 35   : 	float buff = xn + cf_feedbackGain * yn;
 
 	addss	xmm3, xmm4
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	movss	DWORD PTR [rax+rdx*4], xmm3
 
-; 155  : 	if (dly_readIndex >= dly_lineLengthInSamples)
+; 154  : 	if (dly_readIndex >= dly_lineLengthInSamples)
 
 	xor	edx, edx
 	inc	DWORD PTR [r9+28]
@@ -855,33 +840,33 @@ $LN13:
 	cmp	DWORD PTR [r9+28], ecx
 	jl	SHORT $LN8@processAud
 
-; 156  : 		dly_readIndex = 0;
+; 155  : 		dly_readIndex = 0;
 
 	mov	DWORD PTR [r9+28], edx
 $LN8@processAud:
 
-; 157  : 
-; 158  : 	// Increase writing index
-; 159  : 	dly_writeIndex++;
+; 156  : 
+; 157  : 	// Increase writing index
+; 158  : 	dly_writeIndex++;
 
 	inc	DWORD PTR [r9+32]
 
-; 162  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
 
 	mov	eax, DWORD PTR [r9+32]
 	cmp	eax, ecx
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 44   : 	return yn * dly_makeUpGain;
 
 	mulss	xmm0, DWORD PTR [r9+68]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 162  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
 
 	cmovge	eax, edx
 	mov	DWORD PTR [r9+32], eax
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 45   : }
 
@@ -890,7 +875,7 @@ $LN8@processAud:
 ?processAudio@CombFilter@@UEAAMM@Z ENDP			; CombFilter::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 ;	COMDAT ?getFeedback@CombFilter@@QEAAMXZ
 _TEXT	SEGMENT
 this$ = 8

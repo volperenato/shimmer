@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include "FDN.h"
 #include "PitchShifter.h"
-#include "../vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.h"
+#include "vst-2.4-sdk/vstsdk2.4/public.sdk/source/vst2.x/audioeffectx.h"
 #include <math.h>
 #include "PSMVocoder.h"
 
@@ -29,6 +29,11 @@ enum EfxParameter {
 	Param_lpf,
 	Param_hpf,
 	Param_Count
+};
+
+struct ShimmerParameters
+{
+	float mix, size, decay, shimmer, interval, damping, rate, depth, space, lpf, hpf;
 };
 
 // Declare class BranchReverb
@@ -88,6 +93,8 @@ public:
 	virtual void setProgram(VstInt32 program) override;
 	virtual void getProgramName(char* name) override;
 	virtual bool getProgramNameIndexed(VstInt32 category, VstInt32 index, char* text) override;
+	virtual VstInt32 getChunk(void** data, bool isPreset) override;
+	virtual VstInt32 setChunk(void* data, VstInt32 byteSize, bool isPreset) override;
 };
 
 

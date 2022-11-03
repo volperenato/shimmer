@@ -1,3 +1,4 @@
 E:\FoxSuite\fox-suite-projects\Shimmer\x64\Debug\Shimmer.dll
 C:\Users\RenatoVolpe\personal\fox-suite-projects\Shimmer\x64\Debug\Shimmer.dll
 E:\prova\Shimmer\x64\Debug\Shimmer.dll
+E:\FoxSuite\shimmer\x64\Debug\Shimmer.dll

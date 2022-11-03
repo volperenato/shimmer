@@ -33,6 +33,8 @@ PUBLIC	_TI3?AVbad_array_new_length@std@@
 PUBLIC	??_R0?AVexception@std@@@8			; std::exception `RTTI Type Descriptor'
 PUBLIC	??_R0?AVbad_array_new_length@std@@@8		; std::bad_array_new_length `RTTI Type Descriptor'
 EXTRN	__imp__invalid_parameter_noinfo_noreturn:PROC
+EXTRN	__imp_memset:PROC
+EXTRN	__imp_memcmp:PROC
 EXTRN	??3@YAXPEAX_K@Z:PROC				; operator delete
 EXTRN	__imp___std_exception_copy:PROC
 EXTRN	__imp_?_Xlength_error@std@@YAXPEBD@Z:PROC
@@ -244,47 +246,57 @@ CONST	ENDS
 ;	COMDAT ??_C@_0BC@EOODALEL@Unknown?5exception@
 CONST	SEGMENT
 ??_C@_0BC@EOODALEL@Unknown?5exception@ DB 'Unknown exception', 00H ; `string'
-PUBLIC	??$_Voidify_iter@PEAM@std@@YAPEAXPEAM@Z		; std::_Voidify_iter<float *>
 PUBLIC	??$construct@MM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAM$$QEAM@Z ; std::_Default_allocator_traits<std::allocator<float> >::construct<float,float>
 PUBLIC	??$forward@M@std@@YA$$QEAMAEAM@Z		; std::forward<float>
+PUBLIC	??$_Voidify_iter@PEAM@std@@YAPEAXPEAM@Z		; std::_Voidify_iter<float *>
 PUBLIC	??$_Emplace_back@M@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAX$$QEAM@Z ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<float>
-PUBLIC	??$_To_address@PEAM@std@@YA?A_PAEBQEAM@Z	; std::_To_address<float *>
 PUBLIC	??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z	; std::_Copy_memmove<float *,float *>
-PUBLIC	??$_Unfancy@M@std@@YAPEAMPEAM@Z			; std::_Unfancy<float>
 PUBLIC	??$move@AEAM@std@@YA$$QEAMAEAM@Z		; std::move<float &>
+PUBLIC	??$construct@MAEBM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAMAEBM@Z ; std::_Default_allocator_traits<std::allocator<float> >::construct<float,float const &>
+PUBLIC	??$forward@AEBM@std@@YAAEBMAEBM@Z		; std::forward<float const &>
+PUBLIC	??$_Get_unwrapped@AEBQEAM@std@@YA?A_TAEBQEAM@Z	; std::_Get_unwrapped<float * const &>
+PUBLIC	??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z ; std::_Uninitialized_move<float *,std::allocator<float> >
+PUBLIC	??$_Emplace_back@AEBM@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAXAEBM@Z ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<float const &>
+PUBLIC	??$_Fill_zero_memset@PEAM@std@@YAXPEAM_K@Z	; std::_Fill_zero_memset<float *>
+PUBLIC	??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z		; std::_Is_all_bits_zero<float>
+PUBLIC	??$_To_address@PEAM@std@@YA?A_PAEBQEAM@Z	; std::_To_address<float *>
+PUBLIC	??$_Unfancy@M@std@@YAPEAMPEAM@Z			; std::_Unfancy<float>
 PUBLIC	??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z ; std::_Allocate_manually_vector_aligned<std::_Default_allocate_traits>
-PUBLIC	??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@XZ ; std::_Vector_val<std::_Simple_types<float> >::_Vector_val<std::_Simple_types<float> >
+PUBLIC	?capacity@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ ; std::vector<float,std::allocator<float> >::capacity
+PUBLIC	?_Umove_if_noexcept1@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00U?$integral_constant@_N$00@2@@Z ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept1
+PUBLIC	?_Umove_if_noexcept@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00@Z ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept
+PUBLIC	?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z ; std::vector<float,std::allocator<float> >::_Calculate_growth
+PUBLIC	?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z ; std::vector<float,std::allocator<float> >::_Change_array
 PUBLIC	??0?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@PEAMAEAV?$allocator@M@1@@Z ; std::_Uninitialized_backout_al<std::allocator<float> >::_Uninitialized_backout_al<std::allocator<float> >
 PUBLIC	??1?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@XZ ; std::_Uninitialized_backout_al<std::allocator<float> >::~_Uninitialized_backout_al<std::allocator<float> >
 PUBLIC	?_Release@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAPEAMXZ ; std::_Uninitialized_backout_al<std::allocator<float> >::_Release
-PUBLIC	??$_Get_unwrapped@AEBQEAM@std@@YA?A_TAEBQEAM@Z	; std::_Get_unwrapped<float * const &>
-PUBLIC	??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z ; std::_Uninitialized_move<float *,std::allocator<float> >
+PUBLIC	??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z ; std::_Uninitialized_fill_n<std::allocator<float> >
 PUBLIC	??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z ; std::_Allocate<16,std::_Default_allocate_traits,0>
 PUBLIC	??$_Get_size_of_n@$03@std@@YA_K_K@Z		; std::_Get_size_of_n<4>
-PUBLIC	??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z	; std::_Deallocate<16,0>
 PUBLIC	??$min@_K@std@@YAAEB_KAEB_K0@Z			; std::min<unsigned __int64>
-PUBLIC	??$_Destroy_range@V?$allocator@M@std@@@std@@YAXPEAMQEAMAEAV?$allocator@M@0@@Z ; std::_Destroy_range<std::allocator<float> >
-PUBLIC	??$?0$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1><>
-PUBLIC	?_Umove_if_noexcept1@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00U?$integral_constant@_N$00@2@@Z ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept1
+PUBLIC	??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::_Resize_reallocate<float>
 PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEBAAEBV?$allocator@M@2@XZ ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first
-PUBLIC	?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z	; std::allocator<float>::deallocate
 PUBLIC	?allocate@?$allocator@M@std@@QEAAPEAM_K@Z	; std::allocator<float>::allocate
 PUBLIC	?max_size@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SA_KAEBV?$allocator@M@2@@Z ; std::_Default_allocator_traits<std::allocator<float> >::max_size
-PUBLIC	?_Umove_if_noexcept@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00@Z ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept
-PUBLIC	?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z ; std::vector<float,std::allocator<float> >::_Change_array
 PUBLIC	?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEBAAEBV?$allocator@M@2@XZ ; std::vector<float,std::allocator<float> >::_Getal
-PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAAAEAV?$allocator@M@2@XZ ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first
-PUBLIC	?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z ; std::vector<float,std::allocator<float> >::_Reallocate_exactly
 PUBLIC	?max_size@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ ; std::vector<float,std::allocator<float> >::max_size
-PUBLIC	?capacity@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ ; std::vector<float,std::allocator<float> >::capacity
+PUBLIC	?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ ; std::vector<float,std::allocator<float> >::_Xlength
+PUBLIC	?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z ; std::vector<float,std::allocator<float> >::_Ufill
+PUBLIC	?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z ; std::vector<float,std::allocator<float> >::_Orphan_range
+PUBLIC	??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@XZ ; std::_Vector_val<std::_Simple_types<float> >::_Vector_val<std::_Simple_types<float> >
+PUBLIC	??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z	; std::_Deallocate<16,0>
+PUBLIC	??$_Destroy_range@V?$allocator@M@std@@@std@@YAXPEAMQEAMAEAV?$allocator@M@0@@Z ; std::_Destroy_range<std::allocator<float> >
+PUBLIC	??$?0$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1><>
+PUBLIC	??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::_Resize<float>
+PUBLIC	?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z	; std::allocator<float>::deallocate
+PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAAAEAV?$allocator@M@2@XZ ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first
 PUBLIC	?_Destroy@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM0@Z ; std::vector<float,std::allocator<float> >::_Destroy
 PUBLIC	?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ ; std::vector<float,std::allocator<float> >::_Tidy
-PUBLIC	?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ ; std::vector<float,std::allocator<float> >::_Xlength
 PUBLIC	?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEAAAEAV?$allocator@M@2@XZ ; std::vector<float,std::allocator<float> >::_Getal
 PUBLIC	??0?$allocator@M@std@@QEAA@XZ			; std::allocator<float>::allocator<float>
 PUBLIC	??0?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ	; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
 PUBLIC	??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ	; std::vector<float,std::allocator<float> >::~vector<float,std::allocator<float> >
-PUBLIC	?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::reserve
+PUBLIC	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 PUBLIC	?clear@?$vector@MV?$allocator@M@std@@@std@@QEAAXXZ ; std::vector<float,std::allocator<float> >::clear
 PUBLIC	?empty@?$vector@MV?$allocator@M@std@@@std@@QEBA_NXZ ; std::vector<float,std::allocator<float> >::empty
 PUBLIC	??A?$vector@MV?$allocator@M@std@@@std@@QEAAAEAM_K@Z ; std::vector<float,std::allocator<float> >::operator[]
@@ -327,291 +339,377 @@ EXTRN	??_Ebad_alloc@std@@UEAAPEAXI@Z:PROC		; std::bad_alloc::`vector deleting de
 EXTRN	??_Ebad_array_new_length@std@@UEAAPEAXI@Z:PROC	; std::bad_array_new_length::`vector deleting destructor'
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z DD imagerel $LN4@Copy_memmo
-	DD	imagerel $LN4@Copy_memmo+49
+$pdata$??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z DD imagerel $LN4
+	DD	imagerel $LN4+49
 	DD	imagerel $unwind$??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z DD imagerel $LN17@Allocate_m
-	DD	imagerel $LN17@Allocate_m+59
-	DD	imagerel $unwind$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z DD imagerel $LN18@Uninitiali
-	DD	imagerel $LN18@Uninitiali+53
+$pdata$??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z DD imagerel $LN18
+	DD	imagerel $LN18+53
 	DD	imagerel $unwind$??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z DD imagerel $LN24@Allocate
-	DD	imagerel $LN24@Allocate+86
-	DD	imagerel $unwind$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z
+$pdata$??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z DD imagerel $LN4
+	DD	imagerel $LN4+40
+	DD	imagerel $unwind$??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_Get_size_of_n@$03@std@@YA_K_K@Z DD imagerel $LN7@Get_size_o
-	DD	imagerel $LN7@Get_size_o+38
-	DD	imagerel $unwind$??$_Get_size_of_n@$03@std@@YA_K_K@Z
+$pdata$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z DD imagerel $LN17
+	DD	imagerel $LN17+59
+	DD	imagerel $unwind$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z DD imagerel $LN18@Deallocate
-	DD	imagerel $LN18@Deallocate+53
-	DD	imagerel $unwind$??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z DD imagerel $LN21@deallocate
-	DD	imagerel $LN21@deallocate+67
-	DD	imagerel $unwind$?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?allocate@?$allocator@M@std@@QEAAPEAM_K@Z DD imagerel $LN30@allocate
-	DD	imagerel $LN30@allocate+107
-	DD	imagerel $unwind$?allocate@?$allocator@M@std@@QEAAPEAM_K@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z DD imagerel $LN25@Change_arr
-	DD	imagerel $LN25@Change_arr+136
+$pdata$?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z DD imagerel $LN25
+	DD	imagerel $LN25+136
 	DD	imagerel $unwind$?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z DD imagerel $LN79@Reallocate
-	DD	imagerel $LN79@Reallocate+260
-	DD	imagerel $unwind$?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z
+$pdata$??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z DD imagerel $LN25
+	DD	imagerel $LN25+122
+	DD	imagerel $unwind$??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ DD imagerel $LN25@Tidy
-	DD	imagerel $LN25@Tidy+93
-	DD	imagerel $unwind$?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ
+$pdata$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z DD imagerel $LN24
+	DD	imagerel $LN24+86
+	DD	imagerel $unwind$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$??$_Get_size_of_n@$03@std@@YA_K_K@Z DD imagerel $LN7
+	DD	imagerel $LN7+38
+	DD	imagerel $unwind$??$_Get_size_of_n@$03@std@@YA_K_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z DD imagerel $LN113
+	DD	imagerel $LN113+425
+	DD	imagerel $unwind$??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?allocate@?$allocator@M@std@@QEAAPEAM_K@Z DD imagerel $LN30
+	DD	imagerel $LN30+107
+	DD	imagerel $unwind$?allocate@?$allocator@M@std@@QEAAPEAM_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ DD imagerel $LN28@vector
-	DD	imagerel $LN28@vector+93
+$pdata$?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z DD imagerel $LN27
+	DD	imagerel $LN27+121
+	DD	imagerel $unwind$?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z DD imagerel $LN18
+	DD	imagerel $LN18+53
+	DD	imagerel $unwind$??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z DD imagerel $LN32
+	DD	imagerel $LN32+198
+	DD	imagerel $unwind$??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z DD imagerel $LN21
+	DD	imagerel $LN21+67
+	DD	imagerel $unwind$?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ DD imagerel $LN25
+	DD	imagerel $LN25+93
+	DD	imagerel $unwind$?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ DD imagerel $LN28
+	DD	imagerel $LN28+93
 	DD	imagerel $unwind$??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z DD imagerel $LN11@reserve
-	DD	imagerel $LN11@reserve+51
-	DD	imagerel $unwind$?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z
+$pdata$?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z DD imagerel $LN34
+	DD	imagerel $LN34+198
+	DD	imagerel $unwind$?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?processAudio@Delay@@UEAAMM@Z DD imagerel $LN13@processAud
-	DD	imagerel $LN13@processAud+76
+$pdata$?processAudio@Delay@@UEAAMM@Z DD imagerel $LN13
+	DD	imagerel $LN13+76
 	DD	imagerel $unwind$?processAudio@Delay@@UEAAMM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?updateParameters@Delay@@AEAAXXZ DD imagerel $LN8@updatePara
-	DD	imagerel $LN8@updatePara+150
+$pdata$?updateParameters@Delay@@AEAAXXZ DD imagerel $LN8
+	DD	imagerel $LN8+150
 	DD	imagerel $unwind$?updateParameters@Delay@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?initDelayLine@Delay@@QEAAXXZ DD imagerel $LN19@initDelayL
-	DD	imagerel $LN19@initDelayL+75
+$pdata$?initDelayLine@Delay@@QEAAXXZ DD imagerel $LN10
+	DD	imagerel $LN10+50
 	DD	imagerel $unwind$?initDelayLine@Delay@@QEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z DD imagerel $LN13@Adjust_man
-	DD	imagerel $LN13@Adjust_man+43
+$pdata$?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z DD imagerel $LN13
+	DD	imagerel $LN13+43
 	DD	imagerel $unwind$?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0bad_alloc@std@@QEAA@AEBV01@@Z DD imagerel $LN7@bad_alloc
-	DD	imagerel $LN7@bad_alloc+61
+$pdata$??0bad_alloc@std@@QEAA@AEBV01@@Z DD imagerel $LN7
+	DD	imagerel $LN7+61
 	DD	imagerel $unwind$??0bad_alloc@std@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0bad_array_new_length@std@@QEAA@AEBV01@@Z DD imagerel $LN10@bad_array_
-	DD	imagerel $LN10@bad_array_+61
+$pdata$??0bad_array_new_length@std@@QEAA@AEBV01@@Z DD imagerel $LN10
+	DD	imagerel $LN10+61
 	DD	imagerel $unwind$??0bad_array_new_length@std@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Throw_bad_array_new_length@std@@YAXXZ DD imagerel $LN4@Throw_bad_
-	DD	imagerel $LN4@Throw_bad_+32
+$pdata$?_Throw_bad_array_new_length@std@@YAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+32
 	DD	imagerel $unwind$?_Throw_bad_array_new_length@std@@YAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??_Gbad_array_new_length@std@@UEAAPEAXI@Z DD imagerel $LN14@scalar
-	DD	imagerel $LN14@scalar+67
+$pdata$??_Gbad_array_new_length@std@@UEAAPEAXI@Z DD imagerel $LN14
+	DD	imagerel $LN14+67
 	DD	imagerel $unwind$??_Gbad_array_new_length@std@@UEAAPEAXI@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??_Gbad_alloc@std@@UEAAPEAXI@Z DD imagerel $LN11@scalar
-	DD	imagerel $LN11@scalar+67
+$pdata$??_Gbad_alloc@std@@UEAAPEAXI@Z DD imagerel $LN11
+	DD	imagerel $LN11+67
 	DD	imagerel $unwind$??_Gbad_alloc@std@@UEAAPEAXI@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??_Gexception@std@@UEAAPEAXI@Z DD imagerel $LN8@scalar
-	DD	imagerel $LN8@scalar+67
+$pdata$??_Gexception@std@@UEAAPEAXI@Z DD imagerel $LN8
+	DD	imagerel $LN8+67
 	DD	imagerel $unwind$??_Gexception@std@@UEAAPEAXI@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0exception@std@@QEAA@AEBV01@@Z DD imagerel $LN5@exception
-	DD	imagerel $LN5@exception+51
+$pdata$??0exception@std@@QEAA@AEBV01@@Z DD imagerel $LN5
+	DD	imagerel $LN5+51
 	DD	imagerel $unwind$??0exception@std@@QEAA@AEBV01@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setSampleRate@Delay@@UEAAXH@Z DD imagerel $LN9@setSampleR
-	DD	imagerel $LN9@setSampleR+76
+$pdata$?setSampleRate@Delay@@UEAAXH@Z DD imagerel $LN9
+	DD	imagerel $LN9+76
 	DD	imagerel $unwind$?setSampleRate@Delay@@UEAAXH@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init@Delay@@UEAAXMH@Z DD imagerel $LN10@init
-	DD	imagerel $LN10@init+97
+$pdata$?init@Delay@@UEAAXMH@Z DD imagerel $LN19
+	DD	imagerel $LN19+125
 	DD	imagerel $unwind$?init@Delay@@UEAAXMH@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??1Delay@@QEAA@XZ DD imagerel $LN36@Delay
-	DD	imagerel $LN36@Delay+115
+$pdata$??1Delay@@QEAA@XZ DD imagerel $LN36
+	DD	imagerel $LN36+115
 	DD	imagerel $unwind$??1Delay@@QEAA@XZ
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1Delay@@QEAA@XZ DQ 03002320600020601r	; 1.96423e-77
+$unwind$??1Delay@@QEAA@XZ DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?init@Delay@@UEAAXMH@Z DQ 03002320600020601r ; 1.96423e-77
+$unwind$?init@Delay@@UEAAXMH@Z DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?setSampleRate@Delay@@UEAAXH@Z DQ 00002681900041901r ; 3.34683e-309
+$unwind$?setSampleRate@Delay@@UEAAXH@Z DD 041901H
+	DD	026819H
 	DD	030025206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0exception@std@@QEAA@AEBV01@@Z DQ 03002320600020601r ; 1.96423e-77
+$unwind$??0exception@std@@QEAA@AEBV01@@Z DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??_Gexception@std@@UEAAPEAXI@Z DQ 00006340a00040a01r ; 8.62672e-309
+$unwind$??_Gexception@std@@UEAAPEAXI@Z DD 040a01H
+	DD	06340aH
 	DD	07006320aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??_Gbad_alloc@std@@UEAAPEAXI@Z DQ 00006340a00040a01r ; 8.62672e-309
+$unwind$??_Gbad_alloc@std@@UEAAPEAXI@Z DD 040a01H
+	DD	06340aH
 	DD	07006320aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??_Gbad_array_new_length@std@@UEAAPEAXI@Z DQ 00006340a00040a01r ; 8.62672e-309
+$unwind$??_Gbad_array_new_length@std@@UEAAPEAXI@Z DD 040a01H
+	DD	06340aH
 	DD	07006320aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Throw_bad_array_new_length@std@@YAXXZ DQ 00000820400010401r ; 7.06285e-310
+$unwind$?_Throw_bad_array_new_length@std@@YAXXZ DD 010401H
+	DD	08204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0bad_array_new_length@std@@QEAA@AEBV01@@Z DQ 03002320600020601r ; 1.96423e-77
+$unwind$??0bad_array_new_length@std@@QEAA@AEBV01@@Z DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0bad_alloc@std@@QEAA@AEBV01@@Z DQ 03002320600020601r ; 1.96423e-77
+$unwind$??0bad_alloc@std@@QEAA@AEBV01@@Z DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?initDelayLine@Delay@@QEAAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?initDelayLine@Delay@@QEAAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?updateParameters@Delay@@AEAAXXZ DQ 03002320600020601r ; 1.96423e-77
+$unwind$?updateParameters@Delay@@AEAAXXZ DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?processAudio@Delay@@UEAAMM@Z DQ 00000420400010401r ; 3.58617e-310
+$unwind$?processAudio@Delay@@UEAAMM@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z DQ 00000420400010401r ; 3.58617e-310
+$unwind$?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z DD 081501H
+	DD	097415H
+	DD	086415H
+	DD	073415H
+	DD	0e0113215H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ DQ 03002320600020601r ; 1.96423e-77
+$unwind$??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ DQ 03002320600020601r ; 1.96423e-77
+$unwind$?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z DQ 00008641400081401r ; 1.1669e-308
-	DQ	00006341400075414r		; 8.62693e-309
+$unwind$??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z DD 081501H
+	DD	097415H
+	DD	086415H
+	DD	073415H
+	DD	0e0113215H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z DD 061401H
+	DD	086414H
+	DD	073414H
 	DD	070103214H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z DQ 00008641400081401r ; 1.1669e-308
-	DQ	00006341400075414r		; 8.62693e-309
+$unwind$?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?allocate@?$allocator@M@std@@QEAAPEAM_K@Z DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z DD 0c1c01H
+	DD	0d641cH
+	DD	0c541cH
+	DD	0a341cH
+	DD	0f018321cH
+	DD	0d014e016H
+	DD	07010c012H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Get_size_of_n@$03@std@@YA_K_K@Z DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z DD 010401H
+	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z DD 061401H
+	DD	076414H
+	DD	063414H
 	DD	070103214H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?allocate@?$allocator@M@std@@QEAAPEAM_K@Z DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z DD 081401H
+	DD	086414H
+	DD	075414H
+	DD	063414H
+	DD	070103214H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z DQ 00000420400010401r ; 3.58617e-310
+$unwind$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z DQ 00000420400010401r ; 3.58617e-310
+$unwind$??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$_Get_size_of_n@$03@std@@YA_K_K@Z DQ 00000420400010401r ; 3.58617e-310
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z DQ 00000420400010401r ; 3.58617e-310
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z DQ 00006340a00040a01r ; 8.62672e-309
+$unwind$??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z DD 040a01H
+	DD	06340aH
 	DD	07006320aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z DQ 00000420400010401r ; 3.58617e-310
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z DQ 00006340a00040a01r ; 8.62672e-309
+$unwind$??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z DD 040a01H
+	DD	06340aH
 	DD	07006320aH
 ?MAX_LPF_FREQUENCY_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ ; MAX_LPF_FREQUENCY_LOG$initializer$
 ?MIN_LPF_FREQUENCY_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ ; MIN_LPF_FREQUENCY_LOG$initializer$
@@ -620,7 +718,1012 @@ $unwind$??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z DQ 00006340a00040a01r ; 8.
 ?MAX_FREQUENCY_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__EMAX_FREQUENCY_LOG@@YAXXZ ; MAX_FREQUENCY_LOG$initializer$
 ?MIN_FREQUENCY_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__EMIN_FREQUENCY_LOG@@YAXXZ ; MIN_FREQUENCY_LOG$initializer$
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\constants.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ??0Delay@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??0Delay@@QEAA@XZ PROC					; Delay::Delay, COMDAT
+
+; 8    : Delay::Delay() {
+
+	lea	rax, OFFSET FLAT:??_7Delay@@6B@
+
+; 10   : 	dly_makeUpGain			= 1.0;
+
+	mov	DWORD PTR [rcx+68], 1065353216		; 3f800000H
+	mov	QWORD PTR [rcx], rax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
+
+	xor	eax, eax
+	mov	QWORD PTR [rcx+40], rax
+	mov	QWORD PTR [rcx+48], rax
+	mov	QWORD PTR [rcx+56], rax
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 9    : 	dly_makeUpGaindB		= 0.0;
+
+	mov	DWORD PTR [rcx+64], eax
+
+; 11   : 	dly_delayInmsec			= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
+
+	mov	QWORD PTR [rcx+20], rax
+
+; 13   : 	dly_readIndex			= 0;
+
+	mov	QWORD PTR [rcx+28], rax
+
+; 14   : 	dly_writeIndex			= 0;
+; 15   : 	dly_lineLengthInSamples = 0;
+
+	mov	QWORD PTR [rcx+12], rax
+
+; 16   : 	dly_lineLengthInmsec	= 0.0;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 18   : }
+
+	mov	rax, rcx
+	mov	DWORD PTR [rcx+8], 44100		; 0000ac44H
+	ret	0
+??0Delay@@QEAA@XZ ENDP					; Delay::Delay
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ??1Delay@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 48
+??1Delay@@QEAA@XZ PROC					; Delay::~Delay, COMDAT
+
+; 20   : Delay::~Delay() {
+
+$LN36:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+	lea	rax, OFFSET FLAT:??_7Delay@@6B@
+	mov	QWORD PTR [rcx], rax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
+
+	mov	rcx, QWORD PTR [rcx+40]
+	cmp	rcx, QWORD PTR [rbx+48]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 101  : 	if (!dly_buffer.empty())
+
+	je	SHORT $LN4@Delay
+
+; 102  : 		dly_buffer.clear();
+
+	mov	QWORD PTR [rbx+48], rcx
+$LN4@Delay:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1763 :         if (_Myfirst) { // destroy and deallocate old array
+
+	test	rcx, rcx
+	je	SHORT $LN11@Delay
+
+; 1764 :             _Destroy(_Myfirst, _Mylast);
+; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
+
+	mov	rdx, QWORD PTR [rbx+56]
+	sub	rdx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	and	rdx, -4
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN27@Delay
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN24@Delay
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN27@Delay:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	call	??3@YAXPEAX_K@Z				; operator delete
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1767 :             _Myfirst = nullptr;
+
+	and	QWORD PTR [rbx+40], 0
+
+; 1768 :             _Mylast  = nullptr;
+
+	and	QWORD PTR [rbx+48], 0
+
+; 1769 :             _Myend   = nullptr;
+
+	and	QWORD PTR [rbx+56], 0
+$LN11@Delay:
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 22   : }
+
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+$LN24@Delay:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN33@Delay:
+??1Delay@@QEAA@XZ ENDP					; Delay::~Delay
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?init@Delay@@UEAAXMH@Z
+_TEXT	SEGMENT
+this$ = 48
+$T2 = 56
+bufferLengthMs$ = 56
+sampleRate$ = 64
+?init@Delay@@UEAAXMH@Z PROC				; Delay::init, COMDAT
+
+; 24   : void Delay::init(float bufferLengthMs, int sampleRate) {
+
+$LN19:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	movd	xmm0, r8d
+
+; 25   : 	// set delay line length in milliseconds
+; 26   : 	dly_lineLengthInmsec = bufferLengthMs;
+; 27   : 
+; 28   : 	// allocate sample rate
+; 29   : 	dly_sampleRate = sampleRate;
+; 30   : 
+; 31   : 	// set delay line length in samples
+; 32   : 	dly_lineLengthInSamples = dly_lineLengthInmsec * (float)dly_sampleRate / 1000.0;
+; 33   : 	if (dly_lineLengthInSamples < 1)
+
+	mov	eax, 1
+	cvtdq2ps xmm0, xmm0
+	mov	rbx, rcx
+	mov	DWORD PTR [rcx+8], r8d
+	movss	DWORD PTR [rcx+16], xmm1
+	mulss	xmm0, xmm1
+	mulss	xmm0, DWORD PTR __real@3a83126f
+	cvttss2si edx, xmm0
+	mov	DWORD PTR [rcx+12], edx
+	cmp	edx, eax
+	jge	SHORT $LN16@init
+
+; 34   : 		dly_lineLengthInSamples = 1;
+
+	mov	DWORD PTR [rcx+12], eax
+	mov	edx, eax
+$LN16@init:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1543 :         auto& _My_data = _Mypair._Myval2;
+
+	add	rcx, 40					; 00000028H
+
+; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
+
+	mov	rax, QWORD PTR [rcx]
+	cmp	rax, QWORD PTR [rcx+8]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 101  : 	if (!dly_buffer.empty())
+
+	je	SHORT $LN7@init
+
+; 102  : 		dly_buffer.clear();
+
+	mov	QWORD PTR [rbx+48], rax
+$LN7@init:
+
+; 71   : 	dly_buffer.resize(dly_lineLengthInSamples, 0.0);
+
+	and	DWORD PTR $T2[rsp], 0
+	lea	r8, QWORD PTR $T2[rsp]
+	movsxd	rdx, edx
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
+
+; 35   : 
+; 36   : 	// initialize delay line
+; 37   : 	initDelayLine();
+; 38   : 
+; 39   : 	// Set buffer size as delay length
+; 40   : 	setDelayInmsec(dly_lineLengthInmsec);	
+
+	movss	xmm0, DWORD PTR [rbx+16]
+
+; 127  : 	updateParameters();
+
+	mov	rcx, rbx
+	maxss	xmm0, DWORD PTR __real@00000000
+	movss	DWORD PTR [rbx+24], xmm0
+
+; 41   : }
+
+	add	rsp, 32					; 00000020H
+	pop	rbx
+
+; 127  : 	updateParameters();
+
+	jmp	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+?init@Delay@@UEAAXMH@Z ENDP				; Delay::init
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?setSampleRate@Delay@@UEAAXH@Z
+_TEXT	SEGMENT
+this$ = 64
+sampleRate$ = 72
+?setSampleRate@Delay@@UEAAXH@Z PROC			; Delay::setSampleRate, COMDAT
+
+; 105  : void Delay::setSampleRate(int sampleRate) {
+
+$LN9:
+	push	rbx
+	sub	rsp, 48					; 00000030H
+
+; 106  : 	// temporarily store delay length in milliseconds
+; 107  : 	float dlyInMS = dly_delayInmsec;
+; 108  : 	
+; 109  : 	// initialize the delay from scratches using the same maximum delay length value but new sample rate
+; 110  : 	init(dly_lineLengthInmsec, sampleRate);
+
+	mov	rax, QWORD PTR [rcx]
+	mov	r8d, edx
+	movss	xmm1, DWORD PTR [rcx+16]
+	mov	rbx, rcx
+	movaps	XMMWORD PTR [rsp+32], xmm6
+	movss	xmm6, DWORD PTR [rcx+24]
+	call	QWORD PTR [rax]
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rbx+16]
+	comiss	xmm6, xmm0
+	ja	SHORT $LN6@setSampleR
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm6
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN6@setSampleR:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	mov	rcx, rbx
+	movss	DWORD PTR [rbx+24], xmm0
+
+; 111  : 
+; 112  : 	// set the old delay length in milliseconds
+; 113  : 	setDelayInmsec(dlyInMS);
+; 114  : }
+
+	movaps	xmm6, XMMWORD PTR [rsp+32]
+	add	rsp, 48					; 00000030H
+	pop	rbx
+
+; 127  : 	updateParameters();
+
+	jmp	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+?setSampleRate@Delay@@UEAAXH@Z ENDP			; Delay::setSampleRate
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?updateIndices@Delay@@QEAAXXZ
+_TEXT	SEGMENT
+this$ = 8
+?updateIndices@Delay@@QEAAXXZ PROC			; Delay::updateIndices, COMDAT
+
+; 150  : 	// Increase reading index
+; 151  : 	dly_readIndex++;
+
+	inc	DWORD PTR [rcx+28]
+
+; 152  : 
+; 153  : 	// check if reading index is out of delay line length
+; 154  : 	if (dly_readIndex >= dly_lineLengthInSamples)
+
+	xor	r8d, r8d
+	mov	eax, DWORD PTR [rcx+28]
+	cmp	eax, DWORD PTR [rcx+12]
+	cmovge	eax, r8d
+
+; 155  : 		dly_readIndex = 0;
+; 156  : 
+; 157  : 	// Increase writing index
+; 158  : 	dly_writeIndex++;
+
+	inc	DWORD PTR [rcx+32]
+	mov	DWORD PTR [rcx+28], eax
+
+; 159  : 
+; 160  : 	// check if writing index is out of delay line length
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+
+	mov	eax, DWORD PTR [rcx+32]
+	cmp	eax, DWORD PTR [rcx+12]
+	cmovge	eax, r8d
+	mov	DWORD PTR [rcx+32], eax
+
+; 162  : 		dly_writeIndex = 0;
+; 163  : }
+
+	ret	0
+?updateIndices@Delay@@QEAAXXZ ENDP			; Delay::updateIndices
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?writeToDelayLine@Delay@@QEAAXM@Z
+_TEXT	SEGMENT
+this$ = 8
+xn$ = 16
+?writeToDelayLine@Delay@@QEAAXM@Z PROC			; Delay::writeToDelayLine, COMDAT
+
+; 166  : 	// write the sample 'x' to current writing position of delay buffer
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
+
+	movsxd	rdx, DWORD PTR [rcx+32]
+	mov	rax, QWORD PTR [rcx+40]
+	movss	DWORD PTR [rax+rdx*4], xmm1
+
+; 168  : }
+
+	ret	0
+?writeToDelayLine@Delay@@QEAAXM@Z ENDP			; Delay::writeToDelayLine
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?readFromDelayLine@Delay@@QEAAMXZ
+_TEXT	SEGMENT
+this$ = 8
+?readFromDelayLine@Delay@@QEAAMXZ PROC			; Delay::readFromDelayLine, COMDAT
+
+; 172  : 	float yn = dly_buffer[dly_readIndex];
+
+	movsxd	rdx, DWORD PTR [rcx+28]
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1569 :         return _My_data._Myfirst[_Pos];
+
+	mov	r8, QWORD PTR [rcx+40]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 172  : 	float yn = dly_buffer[dly_readIndex];
+
+	mov	rax, rdx
+
+; 173  : 
+; 174  : 	// compute previous index and wrap if needed
+; 175  : 	int readIndex_1 = dly_readIndex - 1;
+
+	sub	edx, 1
+
+; 176  : 	if (readIndex_1 < 0)
+
+	jns	SHORT $LN2@readFromDe
+
+; 177  : 		readIndex_1 = dly_lineLengthInSamples - 1;
+
+	mov	edx, DWORD PTR [rcx+12]
+	dec	edx
+$LN2@readFromDe:
+
+; 183  : 	float frac = dly_delayInSamples - (int)dly_delayInSamples;
+
+	movss	xmm2, DWORD PTR [rcx+20]
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 84   : 	float result = dx * y2 + (1 - dx) * y1;
+
+	movss	xmm1, DWORD PTR __real@3f800000
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 183  : 	float frac = dly_delayInSamples - (int)dly_delayInSamples;
+
+	cvttss2si ecx, xmm2
+	movd	xmm0, ecx
+	cvtdq2ps xmm0, xmm0
+	movsxd	rcx, edx
+	subss	xmm2, xmm0
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 84   : 	float result = dx * y2 + (1 - dx) * y1;
+
+	subss	xmm1, xmm2
+	movaps	xmm0, xmm2
+	mulss	xmm0, DWORD PTR [r8+rcx*4]
+	mulss	xmm1, DWORD PTR [r8+rax*4]
+	addss	xmm0, xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 189  : }
+
+	ret	0
+?readFromDelayLine@Delay@@QEAAMXZ ENDP			; Delay::readFromDelayLine
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\limits
+;	COMDAT ?max@?$numeric_limits@_J@std@@SA_JXZ
+_TEXT	SEGMENT
+?max@?$numeric_limits@_J@std@@SA_JXZ PROC		; std::numeric_limits<__int64>::max, COMDAT
+
+; 648  :         return LLONG_MAX;
+
+	mov	rax, 9223372036854775807		; 7fffffffffffffffH
+
+; 649  :     }
+
+	ret	0
+?max@?$numeric_limits@_J@std@@SA_JXZ ENDP		; std::numeric_limits<__int64>::max
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_new.h
+;	COMDAT ??2@YAPEAX_KPEAX@Z
+_TEXT	SEGMENT
+_Size$dead$ = 8
+_Where$ = 16
+??2@YAPEAX_KPEAX@Z PROC					; operator new, COMDAT
+
+; 168  :         (void)_Size;
+; 169  :         return _Where;
+
+	mov	rax, rdx
+
+; 170  :     }
+
+	ret	0
+??2@YAPEAX_KPEAX@Z ENDP					; operator new
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??0exception@std@@QEAA@QEBDH@Z
+_TEXT	SEGMENT
+this$ = 8
+_Message$ = 16
+__formal$ = 24
+??0exception@std@@QEAA@QEBDH@Z PROC			; std::exception::exception, COMDAT
+
+; 66   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	QWORD PTR [rcx], rax
+
+; 67   :         _Data._What = _Message;
+; 68   :     }
+
+	mov	rax, rcx
+	and	QWORD PTR [rcx+16], 0
+	mov	QWORD PTR [rcx+8], rdx
+	ret	0
+??0exception@std@@QEAA@QEBDH@Z ENDP			; std::exception::exception
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??0exception@std@@QEAA@AEBV01@@Z
+_TEXT	SEGMENT
+this$ = 48
+_Other$ = 56
+??0exception@std@@QEAA@AEBV01@@Z PROC			; std::exception::exception, COMDAT
+
+; 72   :     {
+
+$LN5:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+	mov	rax, rdx
+	lea	rcx, OFFSET FLAT:??_7exception@std@@6B@
+	xorps	xmm0, xmm0
+	mov	QWORD PTR [rbx], rcx
+	lea	rdx, QWORD PTR [rbx+8]
+
+; 73   :         __std_exception_copy(&_Other._Data, &_Data);
+
+	lea	rcx, QWORD PTR [rax+8]
+	movups	XMMWORD PTR [rdx], xmm0
+	call	QWORD PTR __imp___std_exception_copy
+
+; 74   :     }
+
+	mov	rax, rbx
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+??0exception@std@@QEAA@AEBV01@@Z ENDP			; std::exception::exception
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??1exception@std@@UEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??1exception@std@@UEAA@XZ PROC				; std::exception::~exception, COMDAT
+
+; 89   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	QWORD PTR [rcx], rax
+
+; 90   :         __std_exception_destroy(&_Data);
+
+	add	rcx, 8
+	rex_jmp	QWORD PTR __imp___std_exception_destroy
+??1exception@std@@UEAA@XZ ENDP				; std::exception::~exception
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ?what@exception@std@@UEBAPEBDXZ
+_TEXT	SEGMENT
+this$ = 8
+?what@exception@std@@UEBAPEBDXZ PROC			; std::exception::what, COMDAT
+
+; 95   :         return _Data._What ? _Data._What : "Unknown exception";
+
+	cmp	QWORD PTR [rcx+8], 0
+	lea	rax, OFFSET FLAT:??_C@_0BC@EOODALEL@Unknown?5exception@
+	cmovne	rax, QWORD PTR [rcx+8]
+
+; 96   :     }
+
+	ret	0
+?what@exception@std@@UEBAPEBDXZ ENDP			; std::exception::what
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??_Gexception@std@@UEAAPEAXI@Z
+_TEXT	SEGMENT
+this$ = 48
+__flags$ = 56
+??_Gexception@std@@UEAAPEAXI@Z PROC			; std::exception::`scalar deleting destructor', COMDAT
+$LN8:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+
+; 89   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	rdi, rcx
+	mov	QWORD PTR [rcx], rax
+	mov	ebx, edx
+
+; 90   :         __std_exception_destroy(&_Data);
+
+	add	rcx, 8
+	call	QWORD PTR __imp___std_exception_destroy
+	test	bl, 1
+	je	SHORT $LN2@scalar
+	mov	edx, 24
+	mov	rcx, rdi
+	call	??3@YAXPEAX_K@Z				; operator delete
+$LN2@scalar:
+	mov	rbx, QWORD PTR [rsp+48]
+	mov	rax, rdi
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+??_Gexception@std@@UEAAPEAXI@Z ENDP			; std::exception::`scalar deleting destructor'
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??0bad_alloc@std@@AEAA@QEBD@Z
+_TEXT	SEGMENT
+this$ = 8
+_Message$ = 16
+??0bad_alloc@std@@AEAA@QEBD@Z PROC			; std::bad_alloc::bad_alloc, COMDAT
+
+; 65   :         : _Data()
+
+	and	QWORD PTR [rcx+16], 0
+
+; 130  :     {
+
+	lea	rax, OFFSET FLAT:??_7bad_alloc@std@@6B@
+	mov	QWORD PTR [rcx], rax
+
+; 131  :     }
+
+	mov	rax, rcx
+
+; 67   :         _Data._What = _Message;
+
+	mov	QWORD PTR [rcx+8], rdx
+
+; 131  :     }
+
+	ret	0
+??0bad_alloc@std@@AEAA@QEBD@Z ENDP			; std::bad_alloc::bad_alloc
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??_Gbad_alloc@std@@UEAAPEAXI@Z
+_TEXT	SEGMENT
+this$ = 48
+__flags$ = 56
+??_Gbad_alloc@std@@UEAAPEAXI@Z PROC			; std::bad_alloc::`scalar deleting destructor', COMDAT
+$LN11:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+
+; 89   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	rdi, rcx
+	mov	QWORD PTR [rcx], rax
+	mov	ebx, edx
+
+; 90   :         __std_exception_destroy(&_Data);
+
+	add	rcx, 8
+	call	QWORD PTR __imp___std_exception_destroy
+	test	bl, 1
+	je	SHORT $LN2@scalar
+	mov	edx, 24
+	mov	rcx, rdi
+	call	??3@YAXPEAX_K@Z				; operator delete
+$LN2@scalar:
+	mov	rbx, QWORD PTR [rsp+48]
+	mov	rax, rdi
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+??_Gbad_alloc@std@@UEAAPEAXI@Z ENDP			; std::bad_alloc::`scalar deleting destructor'
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??1bad_alloc@std@@UEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??1bad_alloc@std@@UEAA@XZ PROC				; std::bad_alloc::~bad_alloc, COMDAT
+
+; 89   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	QWORD PTR [rcx], rax
+
+; 90   :         __std_exception_destroy(&_Data);
+
+	add	rcx, 8
+	rex_jmp	QWORD PTR __imp___std_exception_destroy
+??1bad_alloc@std@@UEAA@XZ ENDP				; std::bad_alloc::~bad_alloc
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??0bad_array_new_length@std@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??0bad_array_new_length@std@@QEAA@XZ PROC		; std::bad_array_new_length::bad_array_new_length, COMDAT
+
+; 65   :         : _Data()
+
+	and	QWORD PTR [rcx+16], 0
+
+; 66   :     {
+; 67   :         _Data._What = _Message;
+
+	lea	rax, OFFSET FLAT:??_C@_0BF@KINCDENJ@bad?5array?5new?5length@
+	mov	QWORD PTR [rcx+8], rax
+
+; 141  :     {
+
+	lea	rax, OFFSET FLAT:??_7bad_array_new_length@std@@6B@
+	mov	QWORD PTR [rcx], rax
+
+; 142  :     }
+
+	mov	rax, rcx
+	ret	0
+??0bad_array_new_length@std@@QEAA@XZ ENDP		; std::bad_array_new_length::bad_array_new_length
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??_Gbad_array_new_length@std@@UEAAPEAXI@Z
+_TEXT	SEGMENT
+this$ = 48
+__flags$ = 56
+??_Gbad_array_new_length@std@@UEAAPEAXI@Z PROC		; std::bad_array_new_length::`scalar deleting destructor', COMDAT
+$LN14:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+
+; 89   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	rdi, rcx
+	mov	QWORD PTR [rcx], rax
+	mov	ebx, edx
+
+; 90   :         __std_exception_destroy(&_Data);
+
+	add	rcx, 8
+	call	QWORD PTR __imp___std_exception_destroy
+	test	bl, 1
+	je	SHORT $LN2@scalar
+	mov	edx, 24
+	mov	rcx, rdi
+	call	??3@YAXPEAX_K@Z				; operator delete
+$LN2@scalar:
+	mov	rbx, QWORD PTR [rsp+48]
+	mov	rax, rdi
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+??_Gbad_array_new_length@std@@UEAAPEAXI@Z ENDP		; std::bad_array_new_length::`scalar deleting destructor'
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??1bad_array_new_length@std@@UEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??1bad_array_new_length@std@@UEAA@XZ PROC		; std::bad_array_new_length::~bad_array_new_length, COMDAT
+
+; 89   :     {
+
+	lea	rax, OFFSET FLAT:??_7exception@std@@6B@
+	mov	QWORD PTR [rcx], rax
+
+; 90   :         __std_exception_destroy(&_Data);
+
+	add	rcx, 8
+	rex_jmp	QWORD PTR __imp___std_exception_destroy
+??1bad_array_new_length@std@@UEAA@XZ ENDP		; std::bad_array_new_length::~bad_array_new_length
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\exception
+;	COMDAT ?_Throw_bad_array_new_length@std@@YAXXZ
+_TEXT	SEGMENT
+$T1 = 32
+?_Throw_bad_array_new_length@std@@YAXXZ PROC		; std::_Throw_bad_array_new_length, COMDAT
+
+; 320  : [[noreturn]] inline void _Throw_bad_array_new_length() {
+
+$LN4:
+	sub	rsp, 72					; 00000048H
+
+; 321  :     _THROW(bad_array_new_length{});
+
+	lea	rcx, QWORD PTR $T1[rsp]
+	call	??0bad_array_new_length@std@@QEAA@XZ	; std::bad_array_new_length::bad_array_new_length
+	lea	rdx, OFFSET FLAT:_TI3?AVbad_array_new_length@std@@
+	lea	rcx, QWORD PTR $T1[rsp]
+	call	_CxxThrowException
+	int	3
+$LN3@Throw_bad_:
+?_Throw_bad_array_new_length@std@@YAXXZ ENDP		; std::_Throw_bad_array_new_length
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??0bad_array_new_length@std@@QEAA@AEBV01@@Z
+_TEXT	SEGMENT
+this$ = 48
+__that$ = 56
+??0bad_array_new_length@std@@QEAA@AEBV01@@Z PROC	; std::bad_array_new_length::bad_array_new_length, COMDAT
+$LN10:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+	mov	rax, rdx
+
+; 72   :     {
+
+	lea	rcx, OFFSET FLAT:??_7exception@std@@6B@
+	xorps	xmm0, xmm0
+	mov	QWORD PTR [rbx], rcx
+	lea	rdx, QWORD PTR [rbx+8]
+
+; 73   :         __std_exception_copy(&_Other._Data, &_Data);
+
+	lea	rcx, QWORD PTR [rax+8]
+	movups	XMMWORD PTR [rdx], xmm0
+	call	QWORD PTR __imp___std_exception_copy
+	lea	rax, OFFSET FLAT:??_7bad_array_new_length@std@@6B@
+	mov	QWORD PTR [rbx], rax
+	mov	rax, rbx
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+??0bad_array_new_length@std@@QEAA@AEBV01@@Z ENDP	; std::bad_array_new_length::bad_array_new_length
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vcruntime_exception.h
+;	COMDAT ??0bad_alloc@std@@QEAA@AEBV01@@Z
+_TEXT	SEGMENT
+this$ = 48
+__that$ = 56
+??0bad_alloc@std@@QEAA@AEBV01@@Z PROC			; std::bad_alloc::bad_alloc, COMDAT
+$LN7:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+	mov	rax, rdx
+
+; 72   :     {
+
+	lea	rcx, OFFSET FLAT:??_7exception@std@@6B@
+	xorps	xmm0, xmm0
+	mov	QWORD PTR [rbx], rcx
+	lea	rdx, QWORD PTR [rbx+8]
+
+; 73   :         __std_exception_copy(&_Other._Data, &_Data);
+
+	lea	rcx, QWORD PTR [rax+8]
+	movups	XMMWORD PTR [rdx], xmm0
+	call	QWORD PTR __imp___std_exception_copy
+	lea	rax, OFFSET FLAT:??_7bad_alloc@std@@6B@
+	mov	QWORD PTR [rbx], rax
+	mov	rax, rbx
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+??0bad_alloc@std@@QEAA@AEBV01@@Z ENDP			; std::bad_alloc::bad_alloc
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Allocate@_Default_allocate_traits@std@@SAPEAX_K@Z
+_TEXT	SEGMENT
+_Bytes$ = 8
+?_Allocate@_Default_allocate_traits@std@@SAPEAX_K@Z PROC ; std::_Default_allocate_traits::_Allocate, COMDAT
+
+; 85   :         return ::operator new(_Bytes);
+
+	jmp	??2@YAPEAX_K@Z				; operator new
+?_Allocate@_Default_allocate_traits@std@@SAPEAX_K@Z ENDP ; std::_Default_allocate_traits::_Allocate
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z
+_TEXT	SEGMENT
+_Ptr$ = 48
+_Bytes$ = 56
+?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z PROC ; std::_Adjust_manually_vector_aligned, COMDAT
+
+; 153  : inline void _Adjust_manually_vector_aligned(void*& _Ptr, size_t& _Bytes) {
+
+$LN13:
+	sub	rsp, 40					; 00000028H
+
+; 154  :     // adjust parameters from _Allocate_manually_vector_aligned to pass to operator delete
+; 155  :     _Bytes += _Non_user_size;
+
+	add	QWORD PTR [rdx], 39			; 00000027H
+
+; 156  : 
+; 157  :     const uintptr_t* const _Ptr_user = reinterpret_cast<uintptr_t*>(_Ptr);
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	rax, QWORD PTR [rcx]
+	mov	rdx, QWORD PTR [rax-8]
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rax, rdx
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	add	rax, -8
+	cmp	rax, 31
+	ja	SHORT $LN7@Adjust_man
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	QWORD PTR [rcx], rdx
+
+; 174  : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+$LN7@Adjust_man:
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN11@Adjust_man:
+?_Adjust_manually_vector_aligned@std@@YAXAEAPEAXAEA_K@Z ENDP ; std::_Adjust_manually_vector_aligned
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Orphan_all@_Container_base0@std@@QEAAXXZ
+_TEXT	SEGMENT
+this$dead$ = 8
+?_Orphan_all@_Container_base0@std@@QEAAXXZ PROC		; std::_Container_base0::_Orphan_all, COMDAT
+
+; 1037 :     _CONSTEXPR20_CONTAINER void _Orphan_all() noexcept {}
+
+	ret	0
+?_Orphan_all@_Container_base0@std@@QEAAXXZ ENDP		; std::_Container_base0::_Orphan_all
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Alloc_proxy@_Container_base0@std@@QEAAXAEBU_Fake_allocator@2@@Z
+_TEXT	SEGMENT
+this$dead$ = 8
+__formal$dead$ = 16
+?_Alloc_proxy@_Container_base0@std@@QEAAXAEBU_Fake_allocator@2@@Z PROC ; std::_Container_base0::_Alloc_proxy, COMDAT
+
+; 1039 :     _CONSTEXPR20_CONTAINER void _Alloc_proxy(const _Fake_allocator&) noexcept {}
+
+	ret	0
+?_Alloc_proxy@_Container_base0@std@@QEAAXAEBU_Fake_allocator@2@@Z ENDP ; std::_Container_base0::_Alloc_proxy
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG'', COMDAT
@@ -632,7 +1735,7 @@ text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG'', COMDAT
@@ -644,7 +1747,7 @@ text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG'', COMDAT
@@ -656,7 +1759,7 @@ text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG'', COMDAT
@@ -668,7 +1771,7 @@ text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_FREQUENCY_LOG'', COMDAT
@@ -680,7 +1783,7 @@ text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_FREQUENCY_LOG'', COMDAT
@@ -692,7 +1795,7 @@ text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 ;	COMDAT ?linearInterp@@YAMMMMMM@Z
 _TEXT	SEGMENT
 x1$dead$ = 8
@@ -702,15 +1805,15 @@ y2$ = 32
 x$ = 40
 ?linearInterp@@YAMMMMMM@Z PROC				; linearInterp, COMDAT
 
-; 75   : 	float denom = x2 - x1;
-; 76   : 	if (denom == 0)
-; 77   : 		return y1; // should not ever happen
-; 78   : 
-; 79   : 	// calculate decimal position of x
-; 80   : 	float dx = (x - x1) / (x2 - x1);
-; 81   : 
-; 82   : 	// use weighted sum method of interpolating
-; 83   : 	float result = dx * y2 + (1 - dx) * y1;
+; 76   : 	float denom = x2 - x1;
+; 77   : 	if (denom == 0)
+; 78   : 		return y1; // should not ever happen
+; 79   : 
+; 80   : 	// calculate decimal position of x
+; 81   : 	float dx = (x - x1) / (x2 - x1);
+; 82   : 
+; 83   : 	// use weighted sum method of interpolating
+; 84   : 	float result = dx * y2 + (1 - dx) * y1;
 
 	movss	xmm0, DWORD PTR __real@3f800000
 	subss	xmm0, DWORD PTR x$[rsp]
@@ -718,31 +1821,2997 @@ x$ = 40
 	mulss	xmm0, xmm2
 	addss	xmm0, xmm3
 
-; 84   : 
-; 85   : 	return result;
-; 86   : }
+; 85   : 
+; 86   : 	return result;
+; 87   : }
 
 	ret	0
 ?linearInterp@@YAMMMMMM@Z ENDP				; linearInterp
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?initDelayLine@Delay@@QEAAXXZ
+_TEXT	SEGMENT
+$T2 = 48
+this$ = 48
+?initDelayLine@Delay@@QEAAXXZ PROC			; Delay::initDelayLine, COMDAT
+
+; 62   : void Delay::initDelayLine() {	
+
+$LN10:
+	sub	rsp, 40					; 00000028H
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
+
+	mov	rdx, QWORD PTR [rcx+40]
+	cmp	rdx, QWORD PTR [rcx+48]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 101  : 	if (!dly_buffer.empty())
+
+	je	SHORT $LN4@initDelayL
+
+; 102  : 		dly_buffer.clear();
+
+	mov	QWORD PTR [rcx+48], rdx
+$LN4@initDelayL:
+
+; 63   : 	// call lock on defined critical section and call unlock on destructor
+; 64   : 	// -> block other threads calling this function
+; 65   : 	//Fox::AutoLock lock(delBufferCritSection);
+; 66   : 
+; 67   : 	// free the delay buffer in case it had already been allocated
+; 68   : 	freeBuffer();
+; 69   : 
+; 70   : 	// Reserve memory for buffer vector
+; 71   : 	dly_buffer.resize(dly_lineLengthInSamples, 0.0);
+
+	movsxd	rdx, DWORD PTR [rcx+12]
+	lea	r8, QWORD PTR $T2[rsp]
+	xorps	xmm0, xmm0
+	add	rcx, 40					; 00000028H
+	movss	DWORD PTR $T2[rsp], xmm0
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
+
+; 72   : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+?initDelayLine@Delay@@QEAAXXZ ENDP			; Delay::initDelayLine
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?updateParameters@Delay@@AEAAXXZ
+_TEXT	SEGMENT
+this$ = 48
+?updateParameters@Delay@@AEAAXXZ PROC			; Delay::updateParameters, COMDAT
+
+; 79   : void Delay::updateParameters() {
+
+$LN8:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+
+; 80   : 	// convert makeup gain in linear value
+; 81   : 	dly_makeUpGain = pow(10.0, dly_makeUpGaindB / 20.0);
+
+	movss	xmm0, DWORD PTR [rcx+64]
+	mov	rbx, rcx
+	mulss	xmm0, DWORD PTR __real@3d4ccccd
+	cvtps2pd xmm1, xmm0
+	movsd	xmm0, QWORD PTR __real@4024000000000000
+	call	QWORD PTR __imp_pow
+	movd	xmm2, DWORD PTR [rbx+8]
+	xorps	xmm1, xmm1
+
+; 82   : 
+; 83   : 	// define delay size in samples
+; 84   : 	dly_delayInSamples = dly_delayInmsec * (float)dly_sampleRate / 1000.0;
+
+	cvtdq2ps xmm2, xmm2
+	cvtsd2ss xmm1, xmm0
+	mulss	xmm2, DWORD PTR [rbx+24]
+	movss	DWORD PTR [rbx+68], xmm1
+	mulss	xmm2, DWORD PTR __real@3a83126f
+
+; 85   : 
+; 86   : 	// protection against sample == 0 and sample greater than allocated memory
+; 87   : 	if (dly_delayInSamples == 0.0)
+
+	ucomiss	xmm2, DWORD PTR __real@00000000
+	movss	DWORD PTR [rbx+20], xmm2
+	jne	SHORT $LN2@updatePara
+
+; 88   : 		dly_delayInSamples = 1.0;
+
+	movss	xmm2, DWORD PTR __real@3f800000
+	mov	DWORD PTR [rbx+20], 1065353216		; 3f800000H
+	jmp	SHORT $LN4@updatePara
+$LN2@updatePara:
+	movd	xmm0, DWORD PTR [rbx+12]
+
+; 89   : 	else if (dly_delayInSamples > dly_lineLengthInSamples)
+
+	cvtdq2ps xmm0, xmm0
+	comiss	xmm2, xmm0
+	jbe	SHORT $LN4@updatePara
+
+; 90   : 		dly_delayInSamples = dly_lineLengthInSamples;
+
+	movss	DWORD PTR [rbx+20], xmm0
+	movaps	xmm2, xmm0
+$LN4@updatePara:
+
+; 91   : 
+; 92   : 	// compute read index as the write index minus the delay length
+; 93   : 	dly_readIndex = dly_writeIndex - (int)dly_delayInSamples;
+
+	mov	ecx, DWORD PTR [rbx+32]
+	cvttss2si eax, xmm2
+	sub	ecx, eax
+	mov	DWORD PTR [rbx+28], ecx
+
+; 94   : 
+; 95   : 	// check if the read index is negative. In that case wrap it by adding the delay line length
+; 96   : 	if (dly_readIndex < 0)
+
+	jns	SHORT $LN5@updatePara
+
+; 97   : 		dly_readIndex += dly_lineLengthInSamples;
+
+	add	ecx, DWORD PTR [rbx+12]
+	mov	DWORD PTR [rbx+28], ecx
+$LN5@updatePara:
+
+; 98   : }
+
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+?updateParameters@Delay@@AEAAXXZ ENDP			; Delay::updateParameters
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?freeBuffer@Delay@@AEAAXXZ
+_TEXT	SEGMENT
+this$ = 8
+?freeBuffer@Delay@@AEAAXXZ PROC				; Delay::freeBuffer, COMDAT
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
+
+	mov	rax, QWORD PTR [rcx+40]
+	cmp	rax, QWORD PTR [rcx+48]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 101  : 	if (!dly_buffer.empty())
+
+	je	SHORT $LN2@freeBuffer
+
+; 102  : 		dly_buffer.clear();
+
+	mov	QWORD PTR [rcx+48], rax
+$LN2@freeBuffer:
+
+; 103  : }
+
+	ret	0
+?freeBuffer@Delay@@AEAAXXZ ENDP				; Delay::freeBuffer
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?setDelayInmsec@Delay@@QEAAXM@Z
+_TEXT	SEGMENT
+this$ = 8
+delayInmsec$ = 16
+?setDelayInmsec@Delay@@QEAAXM@Z PROC			; Delay::setDelayInmsec, COMDAT
+
+; 117  : 	// Check that the chosen delay is not higher than allocated one (in milliseconds)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+	ja	SHORT $LN4@setDelayIn
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN4@setDelayIn:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	jmp	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+?setDelayInmsec@Delay@@QEAAXM@Z ENDP			; Delay::setDelayInmsec
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ;	COMDAT ?setMakeUpGaindB@Delay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
 gaindB$dead$ = 16
 ?setMakeUpGaindB@Delay@@QEAAXM@Z PROC			; Delay::setMakeUpGaindB, COMDAT
 
-; 135  : 	// set make up gain [dB]
-; 136  : 	dly_makeUpGaindB = gaindB;
+; 134  : 	// set make up gain [dB]
+; 135  : 	dly_makeUpGaindB = gaindB;
 
 	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
 
-; 137  : 
-; 138  : 	// update parameters
-; 139  : 	updateParameters();
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
 
 	jmp	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
 ?setMakeUpGaindB@Delay@@QEAAXM@Z ENDP			; Delay::setMakeUpGaindB
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+;	COMDAT ?processAudio@Delay@@UEAAMM@Z
+_TEXT	SEGMENT
+this$ = 48
+xn$ = 56
+?processAudio@Delay@@UEAAMM@Z PROC			; Delay::processAudio, COMDAT
+
+; 191  : float Delay::processAudio(float xn) {
+
+$LN13:
+	sub	rsp, 40					; 00000028H
+	movaps	xmm3, xmm1
+	mov	r9, rcx
+
+; 192  : 	// call lock on defined critical section and call unlock on destructor
+; 193  : 	// -> block other threads calling this function
+; 194  : 	//Fox::AutoLock lock(delBufferCritSection);
+; 195  : 
+; 196  : 	// read delay sample
+; 197  : 	float yn = readFromDelayLine();
+
+	call	?readFromDelayLine@Delay@@QEAAMXZ	; Delay::readFromDelayLine
+
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
+
+	movsxd	rdx, DWORD PTR [r9+32]
+	mov	rax, QWORD PTR [r9+40]
+	movss	DWORD PTR [rax+rdx*4], xmm3
+
+; 154  : 	if (dly_readIndex >= dly_lineLengthInSamples)
+
+	xor	edx, edx
+	inc	DWORD PTR [r9+28]
+	mov	ecx, DWORD PTR [r9+12]
+	cmp	DWORD PTR [r9+28], ecx
+	jl	SHORT $LN8@processAud
+
+; 155  : 		dly_readIndex = 0;
+
+	mov	DWORD PTR [r9+28], edx
+$LN8@processAud:
+
+; 156  : 
+; 157  : 	// Increase writing index
+; 158  : 	dly_writeIndex++;
+
+	inc	DWORD PTR [r9+32]
+
+; 159  : 
+; 160  : 	// check if writing index is out of delay line length
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+
+	mov	eax, DWORD PTR [r9+32]
+	cmp	eax, ecx
+
+; 198  : 
+; 199  : 	// allocate value to delay line
+; 200  : 	writeToDelayLine(xn);
+; 201  : 
+; 202  : 	// Update read/write indices
+; 203  : 	updateIndices();
+; 204  : 
+; 205  : 	return yn * dly_makeUpGain;
+
+	mulss	xmm0, DWORD PTR [r9+68]
+
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+
+	cmovge	eax, edx
+	mov	DWORD PTR [r9+32], eax
+
+; 206  : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+?processAudio@Delay@@UEAAMM@Z ENDP			; Delay::processAudio
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ??A?$vector@MV?$allocator@M@std@@@std@@QEAAAEAM_K@Z
+_TEXT	SEGMENT
+this$ = 8
+_Pos$ = 16
+??A?$vector@MV?$allocator@M@std@@@std@@QEAAAEAM_K@Z PROC ; std::vector<float,std::allocator<float> >::operator[], COMDAT
+
+; 1563 :         auto& _My_data = _Mypair._Myval2;
+; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
+; 1565 :         _STL_VERIFY(
+; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
+; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
+; 1568 : 
+; 1569 :         return _My_data._Myfirst[_Pos];
+
+	mov	rax, QWORD PTR [rcx]
+	lea	rax, QWORD PTR [rax+rdx*4]
+
+; 1570 :     }
+
+	ret	0
+??A?$vector@MV?$allocator@M@std@@@std@@QEAAAEAM_K@Z ENDP ; std::vector<float,std::allocator<float> >::operator[]
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?empty@?$vector@MV?$allocator@M@std@@@std@@QEBA_NXZ
+_TEXT	SEGMENT
+this$ = 8
+?empty@?$vector@MV?$allocator@M@std@@@std@@QEBA_NXZ PROC ; std::vector<float,std::allocator<float> >::empty, COMDAT
+
+; 1543 :         auto& _My_data = _Mypair._Myval2;
+; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
+
+	mov	rax, QWORD PTR [rcx+8]
+	cmp	QWORD PTR [rcx], rax
+	sete	al
+
+; 1545 :     }
+
+	ret	0
+?empty@?$vector@MV?$allocator@M@std@@@std@@QEBA_NXZ ENDP ; std::vector<float,std::allocator<float> >::empty
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?clear@?$vector@MV?$allocator@M@std@@@std@@QEAAXXZ
+_TEXT	SEGMENT
+this$ = 8
+?clear@?$vector@MV?$allocator@M@std@@@std@@QEAAXXZ PROC	; std::vector<float,std::allocator<float> >::clear, COMDAT
+
+; 1450 :         auto& _My_data    = _Mypair._Myval2;
+; 1451 :         pointer& _Myfirst = _My_data._Myfirst;
+; 1452 :         pointer& _Mylast  = _My_data._Mylast;
+; 1453 : 
+; 1454 :         _My_data._Orphan_all();
+; 1455 :         _Destroy(_Myfirst, _Mylast);
+; 1456 :         _Mylast = _Myfirst;
+
+	mov	rax, QWORD PTR [rcx]
+	mov	QWORD PTR [rcx+8], rax
+
+; 1457 :     }
+
+	ret	0
+?clear@?$vector@MV?$allocator@M@std@@@std@@QEAAXXZ ENDP	; std::vector<float,std::allocator<float> >::clear
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z
+_TEXT	SEGMENT
+_Zero$5 = 48
+this$ = 48
+_Newsize$ = 56
+_Val$ = 64
+?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z PROC ; std::vector<float,std::allocator<float> >::resize, COMDAT
+
+; 1293 :     _CONSTEXPR20_CONTAINER void resize(_CRT_GUARDOVERFLOW const size_type _Newsize, const _Ty& _Val) {
+
+$LN34:
+	mov	QWORD PTR [rsp+16], rbx
+	mov	QWORD PTR [rsp+24], rsi
+	mov	QWORD PTR [rsp+32], rdi
+	push	r14
+	sub	rsp, 32					; 00000020H
+
+; 1263 :         const auto _Oldsize = static_cast<size_type>(_Mylast - _Myfirst);
+
+	mov	rdi, QWORD PTR [rcx+8]
+
+; 1293 :     _CONSTEXPR20_CONTAINER void resize(_CRT_GUARDOVERFLOW const size_type _Newsize, const _Ty& _Val) {
+
+	mov	rsi, rcx
+	mov	rbx, rdx
+	mov	r14, r8
+
+; 1263 :         const auto _Oldsize = static_cast<size_type>(_Mylast - _Myfirst);
+
+	mov	rdx, QWORD PTR [rcx]
+	mov	rcx, rdi
+	sub	rcx, rdx
+	sar	rcx, 2
+
+; 1264 :         if (_Newsize < _Oldsize) { // trim
+
+	cmp	rbx, rcx
+	jae	SHORT $LN4@resize
+
+; 1265 :             const pointer _Newlast = _Myfirst + _Newsize;
+
+	lea	rax, QWORD PTR [rdx+rbx*4]
+
+; 1266 :             _Orphan_range(_Newlast, _Mylast);
+; 1267 :             _Destroy(_Newlast, _Mylast);
+; 1268 :             _Mylast = _Newlast;
+
+	mov	QWORD PTR [rsi+8], rax
+
+; 1269 :             return;
+
+	jmp	SHORT $LN5@resize
+$LN4@resize:
+
+; 1270 :         }
+; 1271 : 
+; 1272 :         if (_Newsize > _Oldsize) { // append
+
+	jbe	SHORT $LN5@resize
+
+; 1273 :             const auto _Oldcapacity = static_cast<size_type>(_My_data._Myend - _Myfirst);
+
+	mov	rax, QWORD PTR [rsi+16]
+	sub	rax, rdx
+	sar	rax, 2
+
+; 1274 :             if (_Newsize > _Oldcapacity) { // reallocate
+
+	cmp	rbx, rax
+	jbe	SHORT $LN6@resize
+
+; 1275 :                 _Resize_reallocate(_Newsize, _Val);
+
+	mov	rdx, rbx
+	mov	rcx, rsi
+	call	??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::_Resize_reallocate<float>
+
+; 1276 :                 return;
+
+	jmp	SHORT $LN5@resize
+$LN6@resize:
+
+; 1280 :             _Mylast                = _Ufill(_Oldlast, _Newsize - _Oldsize, _Val);
+
+	sub	rbx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	lea	rdx, QWORD PTR _Zero$5[rsp]
+	xorps	xmm0, xmm0
+	mov	rcx, r14
+	mov	r8d, 4
+	movss	DWORD PTR _Zero$5[rsp], xmm0
+	call	QWORD PTR __imp_memcmp
+	test	eax, eax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1737 :             if (_Is_all_bits_zero(_Val)) {
+
+	jne	SHORT $LN14@resize
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4559 :     _CSTD memset(_To_address(_Dest), 0, _Count * sizeof(_Iter_value_t<_CtgIt>));
+
+	shl	rbx, 2
+	xor	edx, edx
+	mov	r8, rbx
+	mov	rcx, rdi
+	call	QWORD PTR __imp_memset
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1739 :                 return _First + _Count;
+
+	add	rdi, rbx
+	jmp	SHORT $LN10@resize
+$LN14@resize:
+
+; 1740 :             }
+; 1741 :         }
+; 1742 :     }
+; 1743 : 
+; 1744 :     _Uninitialized_backout_al<_Alloc> _Backout{_First, _Al};
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	test	rbx, rbx
+	je	SHORT $LN10@resize
+$LL13@resize:
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [r14]
+	mov	DWORD PTR [rdi], eax
+
+; 1612 :         ++_Last;
+
+	add	rdi, 4
+
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	sub	rbx, 1
+	jne	SHORT $LL13@resize
+$LN10@resize:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1280 :             _Mylast                = _Ufill(_Oldlast, _Newsize - _Oldsize, _Val);
+
+	mov	QWORD PTR [rsi+8], rdi
+$LN5@resize:
+
+; 1294 :         // trim or append copies of _Val, provide strong guarantee
+; 1295 :         _Resize(_Newsize, _Val);
+; 1296 :     }
+
+	mov	rbx, QWORD PTR [rsp+56]
+	mov	rsi, QWORD PTR [rsp+64]
+	mov	rdi, QWORD PTR [rsp+72]
+	add	rsp, 32					; 00000020H
+	pop	r14
+	ret	0
+?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ENDP ; std::vector<float,std::allocator<float> >::resize
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 48
+??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ PROC	; std::vector<float,std::allocator<float> >::~vector<float,std::allocator<float> >, COMDAT
+
+; 711  :     _CONSTEXPR20_CONTAINER ~vector() noexcept {
+
+$LN28:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+
+; 1763 :         if (_Myfirst) { // destroy and deallocate old array
+
+	mov	rcx, QWORD PTR [rcx]
+	test	rcx, rcx
+	je	SHORT $LN4@vector
+
+; 1764 :             _Destroy(_Myfirst, _Mylast);
+; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
+
+	mov	rdx, QWORD PTR [rbx+16]
+	sub	rdx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	and	rdx, -4
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN20@vector
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN17@vector
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN20@vector:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	call	??3@YAXPEAX_K@Z				; operator delete
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1767 :             _Myfirst = nullptr;
+
+	and	QWORD PTR [rbx], 0
+
+; 1768 :             _Mylast  = nullptr;
+
+	and	QWORD PTR [rbx+8], 0
+
+; 1769 :             _Myend   = nullptr;
+
+	and	QWORD PTR [rbx+16], 0
+$LN4@vector:
+
+; 717  :     }
+
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+$LN17@vector:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN25@vector:
+??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ ENDP	; std::vector<float,std::allocator<float> >::~vector<float,std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ??0?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??0?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ PROC	; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >, COMDAT
+
+; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
+
+	xor	eax, eax
+	mov	QWORD PTR [rcx], rax
+	mov	QWORD PTR [rcx+8], rax
+	mov	QWORD PTR [rcx+16], rax
+
+; 477  :         _Mypair._Myval2._Alloc_proxy(_GET_PROXY_ALLOCATOR(_Alty, _Getal()));
+; 478  :     }
+
+	mov	rax, rcx
+	ret	0
+??0?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ ENDP	; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??0?$allocator@M@std@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??0?$allocator@M@std@@QEAA@XZ PROC			; std::allocator<float>::allocator<float>, COMDAT
+
+; 825  :     constexpr allocator() noexcept {}
+
+	mov	rax, rcx
+	ret	0
+??0?$allocator@M@std@@QEAA@XZ ENDP			; std::allocator<float>::allocator<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEAAAEAV?$allocator@M@2@XZ
+_TEXT	SEGMENT
+this$ = 8
+?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEAAAEAV?$allocator@M@2@XZ PROC ; std::vector<float,std::allocator<float> >::_Getal, COMDAT
+
+; 1818 :         return _Mypair._Get_first();
+
+	mov	rax, rcx
+
+; 1819 :     }
+
+	ret	0
+?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEAAAEAV?$allocator@M@2@XZ ENDP ; std::vector<float,std::allocator<float> >::_Getal
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ
+_TEXT	SEGMENT
+this$ = 48
+?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ PROC	; std::vector<float,std::allocator<float> >::_Tidy, COMDAT
+
+; 1755 :     _CONSTEXPR20_CONTAINER void _Tidy() noexcept { // free all storage
+
+$LN25:
+	push	rbx
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+
+; 1756 :         auto& _My_data    = _Mypair._Myval2;
+; 1757 :         pointer& _Myfirst = _My_data._Myfirst;
+; 1758 :         pointer& _Mylast  = _My_data._Mylast;
+; 1759 :         pointer& _Myend   = _My_data._Myend;
+; 1760 : 
+; 1761 :         _My_data._Orphan_all();
+; 1762 : 
+; 1763 :         if (_Myfirst) { // destroy and deallocate old array
+
+	mov	rcx, QWORD PTR [rcx]
+	test	rcx, rcx
+	je	SHORT $LN2@Tidy
+
+; 1764 :             _Destroy(_Myfirst, _Mylast);
+; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
+
+	mov	rdx, QWORD PTR [rbx+16]
+	sub	rdx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	and	rdx, -4
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN18@Tidy
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN15@Tidy
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN18@Tidy:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	call	??3@YAXPEAX_K@Z				; operator delete
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1767 :             _Myfirst = nullptr;
+
+	and	QWORD PTR [rbx], 0
+
+; 1768 :             _Mylast  = nullptr;
+
+	and	QWORD PTR [rbx+8], 0
+
+; 1769 :             _Myend   = nullptr;
+
+	and	QWORD PTR [rbx+16], 0
+$LN2@Tidy:
+
+; 1771 :     }
+
+	add	rsp, 32					; 00000020H
+	pop	rbx
+	ret	0
+$LN15@Tidy:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN22@Tidy:
+?_Tidy@?$vector@MV?$allocator@M@std@@@std@@AEAAXXZ ENDP	; std::vector<float,std::allocator<float> >::_Tidy
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Destroy@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM0@Z
+_TEXT	SEGMENT
+this$dead$ = 8
+_First$dead$ = 16
+_Last$dead$ = 24
+?_Destroy@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM0@Z PROC ; std::vector<float,std::allocator<float> >::_Destroy, COMDAT
+
+; 1679 :         // destroy [_First, _Last) using allocator
+; 1680 :         _Destroy_range(_First, _Last, _Getal());
+; 1681 :     }
+
+	ret	0
+?_Destroy@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM0@Z ENDP ; std::vector<float,std::allocator<float> >::_Destroy
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAAAEAV?$allocator@M@2@XZ
+_TEXT	SEGMENT
+this$ = 8
+?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAAAEAV?$allocator@M@2@XZ PROC ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first, COMDAT
+
+; 1378 :         return *this;
+
+	mov	rax, rcx
+
+; 1379 :     }
+
+	ret	0
+?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAAAEAV?$allocator@M@2@XZ ENDP ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z
+_TEXT	SEGMENT
+this$dead$ = 48
+_Ptr$ = 56
+_Count$ = 64
+?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z PROC	; std::allocator<float>::deallocate, COMDAT
+
+; 833  :     _CONSTEXPR20_DYNALLOC void deallocate(_Ty* const _Ptr, const size_t _Count) {
+
+$LN21:
+	sub	rsp, 40					; 00000028H
+	mov	rax, rdx
+
+; 834  :         // no overflow check on the following multiply; we assume _Allocate did that check
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	lea	rdx, QWORD PTR [r8*4]
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN15@deallocate
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	rcx, QWORD PTR [rax-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rax, rcx
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	add	rax, -8
+	cmp	rax, 31
+	ja	SHORT $LN12@deallocate
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rax, rcx
+$LN15@deallocate:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	mov	rcx, rax
+
+; 836  :     }
+
+	add	rsp, 40					; 00000028H
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	jmp	??3@YAXPEAX_K@Z				; operator delete
+$LN12@deallocate:
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN18@deallocate:
+?deallocate@?$allocator@M@std@@QEAAXQEAM_K@Z ENDP	; std::allocator<float>::deallocate
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z
+_TEXT	SEGMENT
+_Zero$5 = 48
+this$ = 48
+_Newsize$ = 56
+_Val$ = 64
+??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z PROC ; std::vector<float,std::allocator<float> >::_Resize<float>, COMDAT
+
+; 1258 :     _CONSTEXPR20_CONTAINER void _Resize(const size_type _Newsize, const _Ty2& _Val) {
+
+$LN32:
+	mov	QWORD PTR [rsp+16], rbx
+	mov	QWORD PTR [rsp+24], rsi
+	mov	QWORD PTR [rsp+32], rdi
+	push	r14
+	sub	rsp, 32					; 00000020H
+
+; 1259 :         // trim or append elements, provide strong guarantee
+; 1260 :         auto& _My_data      = _Mypair._Myval2;
+; 1261 :         pointer& _Myfirst   = _My_data._Myfirst;
+; 1262 :         pointer& _Mylast    = _My_data._Mylast;
+; 1263 :         const auto _Oldsize = static_cast<size_type>(_Mylast - _Myfirst);
+
+	mov	rdi, QWORD PTR [rcx+8]
+	mov	rsi, rcx
+	mov	rbx, rdx
+	mov	r14, r8
+	mov	rdx, QWORD PTR [rcx]
+	mov	rcx, rdi
+	sub	rcx, rdx
+	sar	rcx, 2
+
+; 1264 :         if (_Newsize < _Oldsize) { // trim
+
+	cmp	rbx, rcx
+	jae	SHORT $LN2@Resize
+
+; 1265 :             const pointer _Newlast = _Myfirst + _Newsize;
+
+	lea	rax, QWORD PTR [rdx+rbx*4]
+
+; 1266 :             _Orphan_range(_Newlast, _Mylast);
+; 1267 :             _Destroy(_Newlast, _Mylast);
+; 1268 :             _Mylast = _Newlast;
+
+	mov	QWORD PTR [rsi+8], rax
+
+; 1269 :             return;
+
+	jmp	SHORT $LN3@Resize
+$LN2@Resize:
+
+; 1270 :         }
+; 1271 : 
+; 1272 :         if (_Newsize > _Oldsize) { // append
+
+	jbe	SHORT $LN3@Resize
+
+; 1273 :             const auto _Oldcapacity = static_cast<size_type>(_My_data._Myend - _Myfirst);
+
+	mov	rax, QWORD PTR [rsi+16]
+	sub	rax, rdx
+	sar	rax, 2
+
+; 1274 :             if (_Newsize > _Oldcapacity) { // reallocate
+
+	cmp	rbx, rax
+	jbe	SHORT $LN4@Resize
+
+; 1275 :                 _Resize_reallocate(_Newsize, _Val);
+
+	mov	rdx, rbx
+	mov	rcx, rsi
+	call	??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::_Resize_reallocate<float>
+
+; 1276 :                 return;
+
+	jmp	SHORT $LN3@Resize
+$LN4@Resize:
+
+; 1280 :             _Mylast                = _Ufill(_Oldlast, _Newsize - _Oldsize, _Val);
+
+	sub	rbx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	lea	rdx, QWORD PTR _Zero$5[rsp]
+	xorps	xmm0, xmm0
+	mov	rcx, r14
+	mov	r8d, 4
+	movss	DWORD PTR _Zero$5[rsp], xmm0
+	call	QWORD PTR __imp_memcmp
+	test	eax, eax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1737 :             if (_Is_all_bits_zero(_Val)) {
+
+	jne	SHORT $LN12@Resize
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4559 :     _CSTD memset(_To_address(_Dest), 0, _Count * sizeof(_Iter_value_t<_CtgIt>));
+
+	shl	rbx, 2
+	xor	edx, edx
+	mov	r8, rbx
+	mov	rcx, rdi
+	call	QWORD PTR __imp_memset
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1739 :                 return _First + _Count;
+
+	add	rdi, rbx
+	jmp	SHORT $LN8@Resize
+$LN12@Resize:
+
+; 1740 :             }
+; 1741 :         }
+; 1742 :     }
+; 1743 : 
+; 1744 :     _Uninitialized_backout_al<_Alloc> _Backout{_First, _Al};
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	test	rbx, rbx
+	je	SHORT $LN8@Resize
+$LL11@Resize:
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [r14]
+	mov	DWORD PTR [rdi], eax
+
+; 1612 :         ++_Last;
+
+	add	rdi, 4
+
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	sub	rbx, 1
+	jne	SHORT $LL11@Resize
+$LN8@Resize:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1280 :             _Mylast                = _Ufill(_Oldlast, _Newsize - _Oldsize, _Val);
+
+	mov	QWORD PTR [rsi+8], rdi
+$LN3@Resize:
+
+; 1281 :             _Orphan_range(_Oldlast, _Oldlast);
+; 1282 :         }
+; 1283 : 
+; 1284 :         // if _Newsize == _Oldsize, do nothing; avoid invalidating iterators
+; 1285 :     }
+
+	mov	rbx, QWORD PTR [rsp+56]
+	mov	rsi, QWORD PTR [rsp+64]
+	mov	rdi, QWORD PTR [rsp+72]
+	add	rsp, 32					; 00000020H
+	pop	r14
+	ret	0
+??$_Resize@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z ENDP ; std::vector<float,std::allocator<float> >::_Resize<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$?0$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z
+_TEXT	SEGMENT
+this$ = 8
+__formal$dead$ = 16
+??$?0$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z PROC ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1><>, COMDAT
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
+
+	xor	eax, eax
+	mov	QWORD PTR [rcx], rax
+	mov	QWORD PTR [rcx+8], rax
+	mov	QWORD PTR [rcx+16], rax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1370 :         : _Ty1(), _Myval2(_STD forward<_Other2>(_Val2)...) {}
+
+	mov	rax, rcx
+	ret	0
+??$?0$$V@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ENDP ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1><>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Destroy_range@V?$allocator@M@std@@@std@@YAXPEAMQEAMAEAV?$allocator@M@0@@Z
+_TEXT	SEGMENT
+_First$dead$ = 8
+_Last$dead$ = 16
+_Al$dead$ = 24
+??$_Destroy_range@V?$allocator@M@std@@@std@@YAXPEAMQEAMAEAV?$allocator@M@0@@Z PROC ; std::_Destroy_range<std::allocator<float> >, COMDAT
+
+; 946  :     // note that this is an optimization for debug mode codegen; in release mode the BE removes all of this
+; 947  :     using _Ty = typename _Alloc::value_type;
+; 948  :     if constexpr (!conjunction_v<is_trivially_destructible<_Ty>, _Uses_default_destroy<_Alloc, _Ty*>>) {
+; 949  :         for (; _First != _Last; ++_First) {
+; 950  :             allocator_traits<_Alloc>::destroy(_Al, _Unfancy(_First));
+; 951  :         }
+; 952  :     }
+; 953  : }
+
+	ret	0
+??$_Destroy_range@V?$allocator@M@std@@@std@@YAXPEAMQEAMAEAV?$allocator@M@0@@Z ENDP ; std::_Destroy_range<std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z
+_TEXT	SEGMENT
+_Ptr$ = 48
+_Bytes$ = 56
+??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z PROC		; std::_Deallocate<16,0>, COMDAT
+
+; 251  : _CONSTEXPR20_DYNALLOC void _Deallocate(void* _Ptr, size_t _Bytes) noexcept {
+
+$LN18:
+	sub	rsp, 40					; 00000028H
+
+; 252  :     // deallocate storage allocated by _Allocate when !_HAS_ALIGNED_NEW || _Align <= __STDCPP_DEFAULT_NEW_ALIGNMENT__
+; 253  : #ifdef __cpp_lib_constexpr_dynamic_alloc // TRANSITION, GH-1532
+; 254  :     if (_STD is_constant_evaluated()) {
+; 255  :         ::operator delete(_Ptr);
+; 256  :     } else
+; 257  : #endif // __cpp_lib_constexpr_dynamic_alloc
+; 258  :     {
+; 259  : #if defined(_M_IX86) || defined(_M_X64)
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN13@Deallocate
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN10@Deallocate
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN13@Deallocate:
+
+; 265  :     }
+; 266  : }
+
+	add	rsp, 40					; 00000028H
+
+; 261  :             _Adjust_manually_vector_aligned(_Ptr, _Bytes);
+; 262  :         }
+; 263  : #endif // defined(_M_IX86) || defined(_M_X64)
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	jmp	??3@YAXPEAX_K@Z				; operator delete
+$LN10@Deallocate:
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN15@Deallocate:
+??$_Deallocate@$0BA@$0A@@std@@YAXPEAX_K@Z ENDP		; std::_Deallocate<16,0>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@XZ PROC ; std::_Vector_val<std::_Simple_types<float> >::_Vector_val<std::_Simple_types<float> >, COMDAT
+
+; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
+
+	xor	eax, eax
+	mov	QWORD PTR [rcx], rax
+	mov	QWORD PTR [rcx+8], rax
+	mov	QWORD PTR [rcx+16], rax
+	mov	rax, rcx
+	ret	0
+??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@XZ ENDP ; std::_Vector_val<std::_Simple_types<float> >::_Vector_val<std::_Simple_types<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z
+_TEXT	SEGMENT
+this$dead$ = 8
+__formal$dead$ = 16
+__formal$dead$ = 24
+?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z PROC ; std::vector<float,std::allocator<float> >::_Orphan_range, COMDAT
+
+; 1814 :     _CONSTEXPR20_CONTAINER void _Orphan_range(pointer, pointer) const {}
+
+	ret	0
+?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z ENDP ; std::vector<float,std::allocator<float> >::_Orphan_range
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z
+_TEXT	SEGMENT
+this$dead$ = 48
+_Dest$ = 56
+_Count$ = 64
+_Val$ = 72
+?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z PROC ; std::vector<float,std::allocator<float> >::_Ufill, COMDAT
+
+; 1641 :     _CONSTEXPR20_CONTAINER pointer _Ufill(pointer _Dest, const size_type _Count, const _Ty& _Val) {
+
+$LN27:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+16], rbx
+	mov	QWORD PTR [rax+24], rsi
+	mov	QWORD PTR [rax+8], rcx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+	mov	rbx, r8
+	mov	rdi, rdx
+	xorps	xmm0, xmm0
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	lea	rdx, QWORD PTR [rax+8]
+	mov	r8d, 4
+	movss	DWORD PTR [rax+8], xmm0
+	mov	rcx, r9
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1641 :     _CONSTEXPR20_CONTAINER pointer _Ufill(pointer _Dest, const size_type _Count, const _Ty& _Val) {
+
+	mov	rsi, r9
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	call	QWORD PTR __imp_memcmp
+	test	eax, eax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1737 :             if (_Is_all_bits_zero(_Val)) {
+
+	jne	SHORT $LN7@Ufill
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4559 :     _CSTD memset(_To_address(_Dest), 0, _Count * sizeof(_Iter_value_t<_CtgIt>));
+
+	shl	rbx, 2
+	xor	edx, edx
+	mov	r8, rbx
+	mov	rcx, rdi
+	call	QWORD PTR __imp_memset
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1739 :                 return _First + _Count;
+
+	add	rdi, rbx
+	jmp	SHORT $LN3@Ufill
+$LN7@Ufill:
+
+; 1740 :             }
+; 1741 :         }
+; 1742 :     }
+; 1743 : 
+; 1744 :     _Uninitialized_backout_al<_Alloc> _Backout{_First, _Al};
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	test	rbx, rbx
+	je	SHORT $LN3@Ufill
+$LL6@Ufill:
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	ecx, DWORD PTR [rsi]
+	mov	DWORD PTR [rdi], ecx
+
+; 1612 :         ++_Last;
+
+	add	rdi, 4
+
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	sub	rbx, 1
+	jne	SHORT $LL6@Ufill
+$LN3@Ufill:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1644 :     }
+
+	mov	rbx, QWORD PTR [rsp+56]
+	mov	rax, rdi
+	mov	rsi, QWORD PTR [rsp+64]
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KAEBM@Z ENDP ; std::vector<float,std::allocator<float> >::_Ufill
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ PROC ; std::vector<float,std::allocator<float> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ ENDP ; std::vector<float,std::allocator<float> >::_Xlength
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?max_size@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ
+_TEXT	SEGMENT
+this$dead$ = 8
+?max_size@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ PROC ; std::vector<float,std::allocator<float> >::max_size, COMDAT
+
+; 1553 :         return (_STD min)(
+
+	mov	rax, 4611686018427387903		; 3fffffffffffffffH
+
+; 1554 :             static_cast<size_type>((numeric_limits<difference_type>::max)()), _Alty_traits::max_size(_Getal()));
+; 1555 :     }
+
+	ret	0
+?max_size@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ ENDP ; std::vector<float,std::allocator<float> >::max_size
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEBAAEBV?$allocator@M@2@XZ
+_TEXT	SEGMENT
+this$ = 8
+?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEBAAEBV?$allocator@M@2@XZ PROC ; std::vector<float,std::allocator<float> >::_Getal, COMDAT
+
+; 1822 :         return _Mypair._Get_first();
+
+	mov	rax, rcx
+
+; 1823 :     }
+
+	ret	0
+?_Getal@?$vector@MV?$allocator@M@std@@@std@@AEBAAEBV?$allocator@M@2@XZ ENDP ; std::vector<float,std::allocator<float> >::_Getal
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?max_size@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SA_KAEBV?$allocator@M@2@@Z
+_TEXT	SEGMENT
+__formal$dead$ = 8
+?max_size@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SA_KAEBV?$allocator@M@2@@Z PROC ; std::_Default_allocator_traits<std::allocator<float> >::max_size, COMDAT
+
+; 728  :         return static_cast<size_t>(-1) / sizeof(value_type);
+
+	mov	rax, 4611686018427387903		; 3fffffffffffffffH
+
+; 729  :     }
+
+	ret	0
+?max_size@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SA_KAEBV?$allocator@M@2@@Z ENDP ; std::_Default_allocator_traits<std::allocator<float> >::max_size
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?allocate@?$allocator@M@std@@QEAAPEAM_K@Z
+_TEXT	SEGMENT
+this$dead$ = 48
+_Count$ = 56
+?allocate@?$allocator@M@std@@QEAAPEAM_K@Z PROC		; std::allocator<float>::allocate, COMDAT
+
+; 838  :     _NODISCARD _CONSTEXPR20_DYNALLOC __declspec(allocator) _Ty* allocate(_CRT_GUARDOVERFLOW const size_t _Count) {
+
+$LN30:
+	sub	rsp, 40					; 00000028H
+
+; 64   :         if (_Count > _Max_possible) {
+
+	mov	rax, 4611686018427387903		; 3fffffffffffffffH
+	cmp	rdx, rax
+	ja	SHORT $LN27@allocate
+
+; 65   :             _Throw_bad_array_new_length(); // multiply overflow
+; 66   :         }
+; 67   :     }
+; 68   : 
+; 69   :     return _Count * _Ty_size;
+
+	lea	rcx, QWORD PTR [rdx*4]
+
+; 237  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rcx, 4096				; 00001000H
+	jb	SHORT $LN8@allocate
+
+; 136  :     const size_t _Block_size = _Non_user_size + _Bytes;
+
+	lea	rax, QWORD PTR [rcx+39]
+
+; 137  :     if (_Block_size <= _Bytes) {
+
+	cmp	rax, rcx
+	jbe	SHORT $LN27@allocate
+
+; 85   :         return ::operator new(_Bytes);
+
+	mov	rcx, rax
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	rcx, rax
+
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	test	rax, rax
+	je	SHORT $LN17@allocate
+
+; 143  :     void* const _Ptr = reinterpret_cast<void*>((_Ptr_container + _Non_user_size) & ~(_Big_allocation_alignment - 1));
+
+	lea	rax, QWORD PTR [rax+39]
+	and	rax, -32				; ffffffffffffffe0H
+
+; 144  :     static_cast<uintptr_t*>(_Ptr)[-1] = _Ptr_container;
+
+	mov	QWORD PTR [rax-8], rcx
+$LN6@allocate:
+
+; 839  :         return static_cast<_Ty*>(_Allocate<_New_alignof<_Ty>>(_Get_size_of_n<sizeof(_Ty)>(_Count)));
+; 840  :     }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+$LN17@allocate:
+
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN8@allocate:
+
+; 243  :     if (_Bytes != 0) {
+
+	xor	eax, eax
+	test	rcx, rcx
+	je	SHORT $LN6@allocate
+
+; 839  :         return static_cast<_Ty*>(_Allocate<_New_alignof<_Ty>>(_Get_size_of_n<sizeof(_Ty)>(_Count)));
+; 840  :     }
+
+	add	rsp, 40					; 00000028H
+
+; 85   :         return ::operator new(_Bytes);
+
+	jmp	??2@YAPEAX_K@Z				; operator new
+$LN27@allocate:
+
+; 138  :         _Throw_bad_array_new_length(); // add overflow
+
+	call	?_Throw_bad_array_new_length@std@@YAXXZ	; std::_Throw_bad_array_new_length
+	int	3
+$LN28@allocate:
+?allocate@?$allocator@M@std@@QEAAPEAM_K@Z ENDP		; std::allocator<float>::allocate
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEBAAEBV?$allocator@M@2@XZ
+_TEXT	SEGMENT
+this$ = 8
+?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEBAAEBV?$allocator@M@2@XZ PROC ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first, COMDAT
+
+; 1382 :         return *this;
+
+	mov	rax, rcx
+
+; 1383 :     }
+
+	ret	0
+?_Get_first@?$_Compressed_pair@V?$allocator@M@std@@V?$_Vector_val@U?$_Simple_types@M@std@@@2@$00@std@@QEBAAEBV?$allocator@M@2@XZ ENDP ; std::_Compressed_pair<std::allocator<float>,std::_Vector_val<std::_Simple_types<float> >,1>::_Get_first
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z
+_TEXT	SEGMENT
+this$ = 80
+_Zero$11 = 88
+_Newsize$ = 88
+_Val$ = 96
+??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z PROC ; std::vector<float,std::allocator<float> >::_Resize_reallocate<float>, COMDAT
+
+; 1229 :     _CONSTEXPR20_CONTAINER void _Resize_reallocate(const size_type _Newsize, const _Ty2& _Val) {
+
+$LN113:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+24], rbp
+	mov	QWORD PTR [rsp+32], rsi
+	push	rdi
+	push	r12
+	push	r13
+	push	r14
+	push	r15
+	sub	rsp, 32					; 00000020H
+	mov	r13, r8
+	mov	rbp, rdx
+
+; 1230 :         if (_Newsize > max_size()) {
+
+	mov	r8, 4611686018427387903			; 3fffffffffffffffH
+	mov	rdi, rcx
+	cmp	rdx, r8
+	ja	$LN111@Resize_rea
+
+; 1232 :         }
+; 1233 : 
+; 1234 :         auto& _My_data    = _Mypair._Myval2;
+; 1235 :         pointer& _Myfirst = _My_data._Myfirst;
+; 1236 :         pointer& _Mylast  = _My_data._Mylast;
+; 1237 : 
+; 1238 :         const auto _Oldsize          = static_cast<size_type>(_Mylast - _Myfirst);
+
+	mov	r12, QWORD PTR [rcx+8]
+
+; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
+
+	mov	rax, r8
+
+; 1232 :         }
+; 1233 : 
+; 1234 :         auto& _My_data    = _Mypair._Myval2;
+; 1235 :         pointer& _Myfirst = _My_data._Myfirst;
+; 1236 :         pointer& _Mylast  = _My_data._Mylast;
+; 1237 : 
+; 1238 :         const auto _Oldsize          = static_cast<size_type>(_Mylast - _Myfirst);
+
+	sub	r12, QWORD PTR [rcx]
+
+; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
+
+	mov	rcx, QWORD PTR [rcx+16]
+	sub	rcx, QWORD PTR [rdi]
+	sar	rcx, 2
+
+; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
+
+	mov	rdx, rcx
+
+; 1232 :         }
+; 1233 : 
+; 1234 :         auto& _My_data    = _Mypair._Myval2;
+; 1235 :         pointer& _Myfirst = _My_data._Myfirst;
+; 1236 :         pointer& _Mylast  = _My_data._Mylast;
+; 1237 : 
+; 1238 :         const auto _Oldsize          = static_cast<size_type>(_Mylast - _Myfirst);
+
+	sar	r12, 2
+
+; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
+
+	shr	rdx, 1
+	sub	rax, rdx
+	cmp	rcx, rax
+	ja	$LN108@Resize_rea
+
+; 1689 :             return _Max; // geometric growth would overflow
+; 1690 :         }
+; 1691 : 
+; 1692 :         const size_type _Geometric = _Oldcapacity + _Oldcapacity / 2;
+
+	lea	rsi, QWORD PTR [rdx+rcx]
+
+; 1693 : 
+; 1694 :         if (_Geometric < _Newsize) {
+
+	cmp	rsi, rbp
+	jae	SHORT $LN11@Resize_rea
+
+; 1695 :             return _Newsize; // geometric growth would be insufficient
+
+	mov	rsi, rbp
+	jmp	SHORT $LN106@Resize_rea
+$LN11@Resize_rea:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 64   :         if (_Count > _Max_possible) {
+
+	cmp	rsi, r8
+	ja	$LN108@Resize_rea
+$LN106@Resize_rea:
+
+; 65   :             _Throw_bad_array_new_length(); // multiply overflow
+; 66   :         }
+; 67   :     }
+; 68   : 
+; 69   :     return _Count * _Ty_size;
+
+	shl	rsi, 2
+
+; 237  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rsi, 4096				; 00001000H
+	jb	SHORT $LN22@Resize_rea
+
+; 136  :     const size_t _Block_size = _Non_user_size + _Bytes;
+
+	lea	rcx, QWORD PTR [rsi+39]
+
+; 137  :     if (_Block_size <= _Bytes) {
+
+	cmp	rcx, rsi
+	jbe	$LN108@Resize_rea
+
+; 85   :         return ::operator new(_Bytes);
+
+	call	??2@YAPEAX_K@Z				; operator new
+
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	test	rax, rax
+	je	$LN95@Resize_rea
+
+; 143  :     void* const _Ptr = reinterpret_cast<void*>((_Ptr_container + _Non_user_size) & ~(_Big_allocation_alignment - 1));
+
+	lea	rbx, QWORD PTR [rax+39]
+	and	rbx, -32				; ffffffffffffffe0H
+
+; 144  :     static_cast<uintptr_t*>(_Ptr)[-1] = _Ptr_container;
+
+	mov	QWORD PTR [rbx-8], rax
+
+; 238  :             return _Allocate_manually_vector_aligned<_Traits>(_Bytes);
+
+	jmp	SHORT $LN21@Resize_rea
+$LN22@Resize_rea:
+
+; 239  :         }
+; 240  :     }
+; 241  : #endif // defined(_M_IX86) || defined(_M_X64)
+; 242  : 
+; 243  :     if (_Bytes != 0) {
+
+	test	rsi, rsi
+	je	SHORT $LN23@Resize_rea
+
+; 85   :         return ::operator new(_Bytes);
+
+	mov	rcx, rsi
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	rbx, rax
+
+; 244  :         return _Traits::_Allocate(_Bytes);
+
+	jmp	SHORT $LN21@Resize_rea
+$LN23@Resize_rea:
+
+; 245  :     }
+; 246  : 
+; 247  :     return nullptr;
+
+	xor	ebx, ebx
+$LN21@Resize_rea:
+	xorps	xmm0, xmm0
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	lea	rdx, QWORD PTR _Zero$11[rsp]
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1246 :         _Appended_last = _Ufill(_Appended_first, _Newsize - _Oldsize, _Val);
+
+	mov	r14, rbp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4566 :     constexpr _Ty _Zero{};
+
+	movss	DWORD PTR _Zero$11[rsp], xmm0
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	mov	r8d, 4
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1242 :         const pointer _Appended_first = _Newvec + _Oldsize;
+
+	lea	r15, QWORD PTR [rbx+r12*4]
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	mov	rcx, r13
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1246 :         _Appended_last = _Ufill(_Appended_first, _Newsize - _Oldsize, _Val);
+
+	sub	r14, r12
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	call	QWORD PTR __imp_memcmp
+	test	eax, eax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1737 :             if (_Is_all_bits_zero(_Val)) {
+
+	jne	SHORT $LN48@Resize_rea
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4559 :     _CSTD memset(_To_address(_Dest), 0, _Count * sizeof(_Iter_value_t<_CtgIt>));
+
+	lea	r8, QWORD PTR [r14*4]
+	xor	edx, edx
+	mov	rcx, r15
+	call	QWORD PTR __imp_memset
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1739 :                 return _First + _Count;
+
+	jmp	SHORT $LN46@Resize_rea
+$LN48@Resize_rea:
+
+; 1740 :             }
+; 1741 :         }
+; 1742 :     }
+; 1743 : 
+; 1744 :     _Uninitialized_backout_al<_Alloc> _Backout{_First, _Al};
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	test	r14, r14
+	je	SHORT $LN46@Resize_rea
+$LL47@Resize_rea:
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [r13]
+	mov	DWORD PTR [r15], eax
+
+; 1612 :         ++_Last;
+
+	lea	r15, QWORD PTR [r15+4]
+
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	sub	r14, 1
+	jne	SHORT $LL47@Resize_rea
+$LN46@Resize_rea:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
+
+	mov	r8, QWORD PTR [rdi+8]
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rcx, rbx
+	sub	r8, QWORD PTR [rdi]
+	mov	rdx, QWORD PTR [rdi]
+	call	QWORD PTR __imp_memmove
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1745 :         if (_Myfirst) { // destroy and deallocate old array
+
+	mov	rcx, QWORD PTR [rdi]
+	test	rcx, rcx
+	je	SHORT $LN88@Resize_rea
+
+; 1746 :             _Destroy(_Myfirst, _Mylast);
+; 1747 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
+
+	mov	rdx, QWORD PTR [rdi+16]
+	sub	rdx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	and	rdx, -4
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN98@Resize_rea
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN95@Resize_rea
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN98@Resize_rea:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	call	??3@YAXPEAX_K@Z				; operator delete
+$LN88@Resize_rea:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1751 :         _Mylast  = _Newvec + _Newsize;
+
+	lea	rax, QWORD PTR [rbx+rbp*4]
+	mov	QWORD PTR [rdi], rbx
+
+; 1255 :     }
+
+	mov	rbp, QWORD PTR [rsp+96]
+
+; 1751 :         _Mylast  = _Newvec + _Newsize;
+
+	mov	QWORD PTR [rdi+8], rax
+
+; 1752 :         _Myend   = _Newvec + _Newcapacity;
+
+	lea	rax, QWORD PTR [rsi+rbx]
+
+; 1255 :     }
+
+	mov	rbx, QWORD PTR [rsp+80]
+	mov	rsi, QWORD PTR [rsp+104]
+
+; 1752 :         _Myend   = _Newvec + _Newcapacity;
+
+	mov	QWORD PTR [rdi+16], rax
+
+; 1255 :     }
+
+	add	rsp, 32					; 00000020H
+	pop	r15
+	pop	r14
+	pop	r13
+	pop	r12
+	pop	rdi
+	ret	0
+$LN95@Resize_rea:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN111@Resize_rea:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1231 :             _Xlength();
+
+	call	?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ ; std::vector<float,std::allocator<float> >::_Xlength
+	int	3
+$LN108@Resize_rea:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 138  :         _Throw_bad_array_new_length(); // add overflow
+
+	call	?_Throw_bad_array_new_length@std@@YAXXZ	; std::_Throw_bad_array_new_length
+	int	3
+$LN109@Resize_rea:
+??$_Resize_reallocate@M@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBM@Z ENDP ; std::vector<float,std::allocator<float> >::_Resize_reallocate<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\utility
+;	COMDAT ??$min@_K@std@@YAAEB_KAEB_K0@Z
+_TEXT	SEGMENT
+_Left$ = 8
+_Right$ = 16
+??$min@_K@std@@YAAEB_KAEB_K0@Z PROC			; std::min<unsigned __int64>, COMDAT
+
+; 67   :     // return smaller of _Left and _Right
+; 68   :     return _Right < _Left ? _Right : _Left;
+
+	mov	rax, QWORD PTR [rcx]
+	cmp	QWORD PTR [rdx], rax
+	cmovb	rcx, rdx
+	mov	rax, rcx
+
+; 69   : }
+
+	ret	0
+??$min@_K@std@@YAAEB_KAEB_K0@Z ENDP			; std::min<unsigned __int64>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Get_size_of_n@$03@std@@YA_K_K@Z
+_TEXT	SEGMENT
+_Count$ = 48
+??$_Get_size_of_n@$03@std@@YA_K_K@Z PROC		; std::_Get_size_of_n<4>, COMDAT
+
+; 59   : _NODISCARD constexpr size_t _Get_size_of_n(const size_t _Count) {
+
+$LN7:
+	sub	rsp, 40					; 00000028H
+
+; 60   :     constexpr bool _Overflow_is_possible = _Ty_size > 1;
+; 61   : 
+; 62   :     if constexpr (_Overflow_is_possible) {
+; 63   :         constexpr size_t _Max_possible = static_cast<size_t>(-1) / _Ty_size;
+; 64   :         if (_Count > _Max_possible) {
+
+	mov	rax, 4611686018427387903		; 3fffffffffffffffH
+	cmp	rcx, rax
+	ja	SHORT $LN6@Get_size_o
+
+; 66   :         }
+; 67   :     }
+; 68   : 
+; 69   :     return _Count * _Ty_size;
+
+	lea	rax, QWORD PTR [rcx*4]
+
+; 70   : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+$LN6@Get_size_o:
+
+; 65   :             _Throw_bad_array_new_length(); // multiply overflow
+
+	call	?_Throw_bad_array_new_length@std@@YAXXZ	; std::_Throw_bad_array_new_length
+	int	3
+$LN4@Get_size_o:
+??$_Get_size_of_n@$03@std@@YA_K_K@Z ENDP		; std::_Get_size_of_n<4>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z
+_TEXT	SEGMENT
+_Bytes$ = 48
+??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z PROC ; std::_Allocate<16,std::_Default_allocate_traits,0>, COMDAT
+
+; 230  : __declspec(allocator) _CONSTEXPR20_DYNALLOC void* _Allocate(const size_t _Bytes) {
+
+$LN24:
+	sub	rsp, 40					; 00000028H
+
+; 231  :     // allocate _Bytes when !_HAS_ALIGNED_NEW || _Align <= __STDCPP_DEFAULT_NEW_ALIGNMENT__
+; 232  : #if defined(_M_IX86) || defined(_M_X64)
+; 233  : #ifdef __cpp_lib_constexpr_dynamic_alloc // TRANSITION, GH-1532
+; 234  :     if (!_STD is_constant_evaluated())
+; 235  : #endif // __cpp_lib_constexpr_dynamic_alloc
+; 236  :     {
+; 237  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rcx, 4096				; 00001000H
+	jb	SHORT $LN2@Allocate
+
+; 136  :     const size_t _Block_size = _Non_user_size + _Bytes;
+
+	lea	rax, QWORD PTR [rcx+39]
+
+; 137  :     if (_Block_size <= _Bytes) {
+
+	cmp	rax, rcx
+	jbe	SHORT $LN23@Allocate
+
+; 85   :         return ::operator new(_Bytes);
+
+	mov	rcx, rax
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	rcx, rax
+
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	test	rax, rax
+	je	SHORT $LN11@Allocate
+
+; 143  :     void* const _Ptr = reinterpret_cast<void*>((_Ptr_container + _Non_user_size) & ~(_Big_allocation_alignment - 1));
+
+	add	rax, 39					; 00000027H
+	and	rax, -32				; ffffffffffffffe0H
+
+; 144  :     static_cast<uintptr_t*>(_Ptr)[-1] = _Ptr_container;
+
+	mov	QWORD PTR [rax-8], rcx
+
+; 238  :             return _Allocate_manually_vector_aligned<_Traits>(_Bytes);
+
+	jmp	SHORT $LN1@Allocate
+$LN11@Allocate:
+
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN2@Allocate:
+
+; 239  :         }
+; 240  :     }
+; 241  : #endif // defined(_M_IX86) || defined(_M_X64)
+; 242  : 
+; 243  :     if (_Bytes != 0) {
+
+	test	rcx, rcx
+	je	SHORT $LN3@Allocate
+
+; 248  : }
+
+	add	rsp, 40					; 00000028H
+
+; 85   :         return ::operator new(_Bytes);
+
+	jmp	??2@YAPEAX_K@Z				; operator new
+$LN3@Allocate:
+
+; 244  :         return _Traits::_Allocate(_Bytes);
+; 245  :     }
+; 246  : 
+; 247  :     return nullptr;
+
+	xor	eax, eax
+$LN1@Allocate:
+
+; 248  : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+$LN23@Allocate:
+
+; 138  :         _Throw_bad_array_new_length(); // add overflow
+
+	call	?_Throw_bad_array_new_length@std@@YAXXZ	; std::_Throw_bad_array_new_length
+	int	3
+$LN21@Allocate:
+??$_Allocate@$0BA@U_Default_allocate_traits@std@@$0A@@std@@YAPEAX_K@Z ENDP ; std::_Allocate<16,std::_Default_allocate_traits,0>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z
+_TEXT	SEGMENT
+_First$ = 48
+_Count$ = 56
+_Val$ = 64
+_Al$dead$ = 72
+??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z PROC ; std::_Uninitialized_fill_n<std::allocator<float> >, COMDAT
+
+; 1721 :     _Alloc_ptr_t<_Alloc> _First, _Alloc_size_t<_Alloc> _Count, const typename _Alloc::value_type& _Val, _Alloc& _Al) {
+
+$LN25:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+8], rbx
+	mov	QWORD PTR [rax+16], rsi
+	mov	QWORD PTR [rax+32], r9
+	push	rdi
+	sub	rsp, 32					; 00000020H
+	mov	rsi, r8
+	mov	rbx, rdx
+	mov	rdi, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	lea	rdx, QWORD PTR [rax+32]
+	xorps	xmm0, xmm0
+	mov	rcx, rsi
+	mov	r8d, 4
+	movss	DWORD PTR [rax+32], xmm0
+	call	QWORD PTR __imp_memcmp
+	test	eax, eax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1737 :             if (_Is_all_bits_zero(_Val)) {
+
+	jne	SHORT $LN5@Uninitiali
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4559 :     _CSTD memset(_To_address(_Dest), 0, _Count * sizeof(_Iter_value_t<_CtgIt>));
+
+	shl	rbx, 2
+	xor	edx, edx
+	mov	r8, rbx
+	mov	rcx, rdi
+	call	QWORD PTR __imp_memset
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1739 :                 return _First + _Count;
+
+	lea	rax, QWORD PTR [rbx+rdi]
+	jmp	SHORT $LN1@Uninitiali
+$LN5@Uninitiali:
+
+; 1740 :             }
+; 1741 :         }
+; 1742 :     }
+; 1743 : 
+; 1744 :     _Uninitialized_backout_al<_Alloc> _Backout{_First, _Al};
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	test	rbx, rbx
+	je	SHORT $LN3@Uninitiali
+$LL4@Uninitiali:
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	ecx, DWORD PTR [rsi]
+	mov	DWORD PTR [rdi], ecx
+
+; 1612 :         ++_Last;
+
+	add	rdi, 4
+
+; 1740 :             }
+; 1741 :         }
+; 1742 :     }
+; 1743 : 
+; 1744 :     _Uninitialized_backout_al<_Alloc> _Backout{_First, _Al};
+; 1745 :     for (; 0 < _Count; --_Count) {
+
+	sub	rbx, 1
+	jne	SHORT $LL4@Uninitiali
+$LN3@Uninitiali:
+
+; 1746 :         _Backout._Emplace_back(_Val);
+; 1747 :     }
+; 1748 : 
+; 1749 :     return _Backout._Release();
+
+	mov	rax, rdi
+$LN1@Uninitiali:
+
+; 1750 : }
+
+	mov	rbx, QWORD PTR [rsp+48]
+	mov	rsi, QWORD PTR [rsp+56]
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+??$_Uninitialized_fill_n@V?$allocator@M@std@@@std@@YAPEAMPEAM_KAEBMAEAV?$allocator@M@0@@Z ENDP ; std::_Uninitialized_fill_n<std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ?_Release@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAPEAMXZ
+_TEXT	SEGMENT
+this$ = 8
+?_Release@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAPEAMXZ PROC ; std::_Uninitialized_backout_al<std::allocator<float> >::_Release, COMDAT
+
+; 1616 :         _First = _Last;
+
+	mov	rax, QWORD PTR [rcx+8]
+	mov	QWORD PTR [rcx], rax
+
+; 1617 :         return _Last;
+; 1618 :     }
+
+	ret	0
+?_Release@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAPEAMXZ ENDP ; std::_Uninitialized_backout_al<std::allocator<float> >::_Release
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??1?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@XZ
+_TEXT	SEGMENT
+this$ = 8
+??1?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@XZ PROC ; std::_Uninitialized_backout_al<std::allocator<float> >::~_Uninitialized_backout_al<std::allocator<float> >, COMDAT
+
+; 1606 :         _Destroy_range(_First, _Last, _Al);
+; 1607 :     }
+
+	ret	0
+??1?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@XZ ENDP ; std::_Uninitialized_backout_al<std::allocator<float> >::~_Uninitialized_backout_al<std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??0?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@PEAMAEAV?$allocator@M@1@@Z
+_TEXT	SEGMENT
+this$ = 8
+_Dest$ = 16
+_Al_$ = 24
+??0?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@PEAMAEAV?$allocator@M@1@@Z PROC ; std::_Uninitialized_backout_al<std::allocator<float> >::_Uninitialized_backout_al<std::allocator<float> >, COMDAT
+
+; 1600 :         : _First(_Dest), _Last(_Dest), _Al(_Al_) {}
+
+	mov	QWORD PTR [rcx], rdx
+	mov	rax, rcx
+	mov	QWORD PTR [rcx+8], rdx
+	mov	QWORD PTR [rcx+16], r8
+	ret	0
+??0?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAA@PEAMAEAV?$allocator@M@1@@Z ENDP ; std::_Uninitialized_backout_al<std::allocator<float> >::_Uninitialized_backout_al<std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z
+_TEXT	SEGMENT
+this$ = 48
+_Newvec$ = 56
+_Newsize$ = 64
+_Newcapacity$ = 72
+?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z PROC ; std::vector<float,std::allocator<float> >::_Change_array, COMDAT
+
+; 1736 :         const pointer _Newvec, const size_type _Newsize, const size_type _Newcapacity) {
+
+$LN25:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rbp
+	mov	QWORD PTR [rsp+24], rsi
+	push	rdi
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rcx
+	mov	rsi, r9
+
+; 1737 :         // orphan all iterators, discard old array, acquire new array
+; 1738 :         auto& _My_data    = _Mypair._Myval2;
+; 1739 :         pointer& _Myfirst = _My_data._Myfirst;
+; 1740 :         pointer& _Mylast  = _My_data._Mylast;
+; 1741 :         pointer& _Myend   = _My_data._Myend;
+; 1742 : 
+; 1743 :         _My_data._Orphan_all();
+; 1744 : 
+; 1745 :         if (_Myfirst) { // destroy and deallocate old array
+
+	mov	rcx, QWORD PTR [rcx]
+	mov	rbp, r8
+	mov	rdi, rdx
+	test	rcx, rcx
+	je	SHORT $LN8@Change_arr
+
+; 1746 :             _Destroy(_Myfirst, _Mylast);
+; 1747 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
+
+	mov	rdx, QWORD PTR [rbx+16]
+	sub	rdx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	and	rdx, -4
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN18@Change_arr
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN15@Change_arr
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN18@Change_arr:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	call	??3@YAXPEAX_K@Z				; operator delete
+$LN8@Change_arr:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1751 :         _Mylast  = _Newvec + _Newsize;
+
+	lea	rax, QWORD PTR [rdi+rbp*4]
+	mov	QWORD PTR [rbx], rdi
+
+; 1753 :     }
+
+	mov	rbp, QWORD PTR [rsp+56]
+	mov	QWORD PTR [rbx+8], rax
+	lea	rax, QWORD PTR [rdi+rsi*4]
+	mov	rsi, QWORD PTR [rsp+64]
+	mov	QWORD PTR [rbx+16], rax
+	mov	rbx, QWORD PTR [rsp+48]
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+$LN15@Change_arr:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN22@Change_arr:
+?_Change_array@?$vector@MV?$allocator@M@std@@@std@@AEAAXQEAM_K1@Z ENDP ; std::vector<float,std::allocator<float> >::_Change_array
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z
+_TEXT	SEGMENT
+this$ = 8
+_Newsize$ = 16
+?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z PROC ; std::vector<float,std::allocator<float> >::_Calculate_growth, COMDAT
+
+; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
+
+	mov	r8, QWORD PTR [rcx+16]
+
+; 1684 :         // given _Oldcapacity and _Newsize, calculate geometric growth
+; 1685 :         const size_type _Oldcapacity = capacity();
+; 1686 :         const auto _Max              = max_size();
+; 1687 : 
+; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
+
+	mov	rax, 4611686018427387903		; 3fffffffffffffffH
+
+; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
+
+	sub	r8, QWORD PTR [rcx]
+
+; 1684 :         // given _Oldcapacity and _Newsize, calculate geometric growth
+; 1685 :         const size_type _Oldcapacity = capacity();
+; 1686 :         const auto _Max              = max_size();
+; 1687 : 
+; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
+
+	mov	rcx, rax
+
+; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
+
+	sar	r8, 2
+
+; 1684 :         // given _Oldcapacity and _Newsize, calculate geometric growth
+; 1685 :         const size_type _Oldcapacity = capacity();
+; 1686 :         const auto _Max              = max_size();
+; 1687 : 
+; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
+
+	mov	r9, r8
+	shr	r9, 1
+	sub	rcx, r9
+	cmp	r8, rcx
+	ja	SHORT $LN3@Calculate_
+
+; 1689 :             return _Max; // geometric growth would overflow
+; 1690 :         }
+; 1691 : 
+; 1692 :         const size_type _Geometric = _Oldcapacity + _Oldcapacity / 2;
+
+	lea	rax, QWORD PTR [r9+r8]
+
+; 1693 : 
+; 1694 :         if (_Geometric < _Newsize) {
+
+	cmp	rax, rdx
+	cmovb	rax, rdx
+$LN3@Calculate_:
+
+; 1695 :             return _Newsize; // geometric growth would be insufficient
+; 1696 :         }
+; 1697 : 
+; 1698 :         return _Geometric; // geometric growth is sufficient
+; 1699 :     }
+
+	ret	0
+?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z ENDP ; std::vector<float,std::allocator<float> >::_Calculate_growth
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Umove_if_noexcept@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00@Z
+_TEXT	SEGMENT
+this$dead$ = 8
+_First$ = 16
+_Last$ = 24
+_Dest$ = 32
+?_Umove_if_noexcept@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00@Z PROC ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept, COMDAT
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
+
+	sub	r8, rdx
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rcx, r9
+	rex_jmp	QWORD PTR __imp_memmove
+?_Umove_if_noexcept@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00@Z ENDP ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Umove_if_noexcept1@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00U?$integral_constant@_N$00@2@@Z
+_TEXT	SEGMENT
+this$dead$ = 8
+_First$ = 16
+_Last$ = 24
+_Dest$ = 32
+__formal$dead$ = 40
+?_Umove_if_noexcept1@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00U?$integral_constant@_N$00@2@@Z PROC ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept1, COMDAT
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
+
+	sub	r8, rdx
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rcx, r9
+	rex_jmp	QWORD PTR __imp_memmove
+?_Umove_if_noexcept1@?$vector@MV?$allocator@M@std@@@std@@AEAAXPEAM00U?$integral_constant@_N$00@2@@Z ENDP ; std::vector<float,std::allocator<float> >::_Umove_if_noexcept1
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?capacity@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ
+_TEXT	SEGMENT
+this$ = 8
+?capacity@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ PROC ; std::vector<float,std::allocator<float> >::capacity, COMDAT
+
+; 1558 :         auto& _My_data = _Mypair._Myval2;
+; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
+
+	mov	rax, QWORD PTR [rcx+16]
+	sub	rax, QWORD PTR [rcx]
+	sar	rax, 2
+
+; 1560 :     }
+
+	ret	0
+?capacity@?$vector@MV?$allocator@M@std@@@std@@QEBA_KXZ ENDP ; std::vector<float,std::allocator<float> >::capacity
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z
+_TEXT	SEGMENT
+_Bytes$ = 48
+??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z PROC ; std::_Allocate_manually_vector_aligned<std::_Default_allocate_traits>, COMDAT
+
+; 134  : __declspec(allocator) void* _Allocate_manually_vector_aligned(const size_t _Bytes) {
+
+$LN17:
+	sub	rsp, 40					; 00000028H
+
+; 135  :     // allocate _Bytes manually aligned to at least _Big_allocation_alignment
+; 136  :     const size_t _Block_size = _Non_user_size + _Bytes;
+
+	lea	rax, QWORD PTR [rcx+39]
+
+; 137  :     if (_Block_size <= _Bytes) {
+
+	cmp	rax, rcx
+	jbe	SHORT $LN16@Allocate_m
+
+; 85   :         return ::operator new(_Bytes);
+
+	mov	rcx, rax
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	rcx, rax
+
+; 139  :     }
+; 140  : 
+; 141  :     const uintptr_t _Ptr_container = reinterpret_cast<uintptr_t>(_Traits::_Allocate(_Block_size));
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	test	rax, rax
+	je	SHORT $LN7@Allocate_m
+
+; 143  :     void* const _Ptr = reinterpret_cast<void*>((_Ptr_container + _Non_user_size) & ~(_Big_allocation_alignment - 1));
+
+	add	rax, 39					; 00000027H
+	and	rax, -32				; ffffffffffffffe0H
+
+; 144  :     static_cast<uintptr_t*>(_Ptr)[-1] = _Ptr_container;
+
+	mov	QWORD PTR [rax-8], rcx
+
+; 145  : 
+; 146  : #ifdef _DEBUG
+; 147  :     static_cast<uintptr_t*>(_Ptr)[-2] = _Big_allocation_sentinel;
+; 148  : #endif // _DEBUG
+; 149  :     return _Ptr;
+; 150  : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+$LN7@Allocate_m:
+
+; 139  :     }
+; 140  : 
+; 141  :     const uintptr_t _Ptr_container = reinterpret_cast<uintptr_t>(_Traits::_Allocate(_Block_size));
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN16@Allocate_m:
+
+; 138  :         _Throw_bad_array_new_length(); // add overflow
+
+	call	?_Throw_bad_array_new_length@std@@YAXXZ	; std::_Throw_bad_array_new_length
+	int	3
+$LN14@Allocate_m:
+??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z ENDP ; std::_Allocate_manually_vector_aligned<std::_Default_allocate_traits>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef
+;	COMDAT ??$_Unfancy@M@std@@YAPEAMPEAM@Z
+_TEXT	SEGMENT
+_Ptr$ = 8
+??$_Unfancy@M@std@@YAPEAMPEAM@Z PROC			; std::_Unfancy<float>, COMDAT
+
+; 289  :     return _Ptr;
+
+	mov	rax, rcx
+
+; 290  : }
+
+	ret	0
+??$_Unfancy@M@std@@YAPEAMPEAM@Z ENDP			; std::_Unfancy<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+;	COMDAT ??$_To_address@PEAM@std@@YA?A_PAEBQEAM@Z
+_TEXT	SEGMENT
+_Val$ = 8
+??$_To_address@PEAM@std@@YA?A_PAEBQEAM@Z PROC		; std::_To_address<float *>, COMDAT
+
+; 4081 :     _STL_INTERNAL_STATIC_ASSERT(is_pointer_v<_Iter>);
+; 4082 :     return _Val;
+
+	mov	rax, QWORD PTR [rcx]
+
+; 4083 : }
+
+	ret	0
+??$_To_address@PEAM@std@@YA?A_PAEBQEAM@Z ENDP		; std::_To_address<float *>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+;	COMDAT ??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z
+_TEXT	SEGMENT
+_Val$ = 48
+_Zero$ = 56
+??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z PROC		; std::_Is_all_bits_zero<float>, COMDAT
+
+; 4563 : _NODISCARD bool _Is_all_bits_zero(const _Ty& _Val) {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+	xorps	xmm0, xmm0
+
+; 4564 :     // checks if scalar type has all bits set to zero
+; 4565 :     _STL_INTERNAL_STATIC_ASSERT(is_scalar_v<_Ty> && !is_member_pointer_v<_Ty>);
+; 4566 :     constexpr _Ty _Zero{};
+; 4567 :     return _CSTD memcmp(&_Val, &_Zero, sizeof(_Ty)) == 0;
+
+	lea	rdx, QWORD PTR _Zero$[rsp]
+	mov	r8d, 4
+	movss	DWORD PTR _Zero$[rsp], xmm0
+	call	QWORD PTR __imp_memcmp
+	test	eax, eax
+	sete	al
+
+; 4568 : }
+
+	add	rsp, 40					; 00000028H
+	ret	0
+??$_Is_all_bits_zero@M@std@@YA_NAEBM@Z ENDP		; std::_Is_all_bits_zero<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+;	COMDAT ??$_Fill_zero_memset@PEAM@std@@YAXPEAM_K@Z
+_TEXT	SEGMENT
+_Dest$ = 8
+_Count$ = 16
+??$_Fill_zero_memset@PEAM@std@@YAXPEAM_K@Z PROC		; std::_Fill_zero_memset<float *>, COMDAT
+
+; 4559 :     _CSTD memset(_To_address(_Dest), 0, _Count * sizeof(_Iter_value_t<_CtgIt>));
+
+	lea	r8, QWORD PTR [rdx*4]
+	xor	edx, edx
+	rex_jmp	QWORD PTR __imp_memset
+??$_Fill_zero_memset@PEAM@std@@YAXPEAM_K@Z ENDP		; std::_Fill_zero_memset<float *>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Emplace_back@AEBM@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAXAEBM@Z
+_TEXT	SEGMENT
+this$ = 8
+<_Vals_0>$ = 16
+??$_Emplace_back@AEBM@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAXAEBM@Z PROC ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<float const &>, COMDAT
+
+; 1611 :         allocator_traits<_Alloc>::construct(_Al, _Unfancy(_Last), _STD forward<_Types>(_Vals)...);
+
+	mov	r8, QWORD PTR [rcx+8]
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [rdx]
+	mov	DWORD PTR [r8], eax
+
+; 1612 :         ++_Last;
+
+	lea	rax, QWORD PTR [r8+4]
+	mov	QWORD PTR [rcx+8], rax
+
+; 1613 :     }
+
+	ret	0
+??$_Emplace_back@AEBM@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAXAEBM@Z ENDP ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<float const &>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z
+_TEXT	SEGMENT
+_First$ = 48
+_Last$ = 56
+_Dest$ = 64
+_Al$dead$ = 72
+??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z PROC ; std::_Uninitialized_move<float *,std::allocator<float> >, COMDAT
+
+; 1693 :     const _InIt _First, const _InIt _Last, _Alloc_ptr_t<_Alloc> _Dest, _Alloc& _Al) {
+
+$LN18:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rdx
+	mov	rdi, r8
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
+
+	sub	rbx, rcx
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rdx, rcx
+	mov	r8, rbx
+	mov	rcx, rdi
+	call	QWORD PTR __imp_memmove
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 1706 :             return _Dest + (_ULast - _UFirst);
+
+	sar	rbx, 2
+	lea	rax, QWORD PTR [rdi+rbx*4]
+
+; 1707 :         }
+; 1708 :     }
+; 1709 : 
+; 1710 :     _Uninitialized_backout_al<_Alloc> _Backout{_Dest, _Al};
+; 1711 :     for (; _UFirst != _ULast; ++_UFirst) {
+; 1712 :         _Backout._Emplace_back(_STD move(*_UFirst));
+; 1713 :     }
+; 1714 : 
+; 1715 :     return _Backout._Release();
+; 1716 : }
+
+	mov	rbx, QWORD PTR [rsp+48]
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+??$_Uninitialized_move@PEAMV?$allocator@M@std@@@std@@YAPEAMQEAM0PEAMAEAV?$allocator@M@0@@Z ENDP ; std::_Uninitialized_move<float *,std::allocator<float> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+;	COMDAT ??$_Get_unwrapped@AEBQEAM@std@@YA?A_TAEBQEAM@Z
+_TEXT	SEGMENT
+_It$ = 8
+??$_Get_unwrapped@AEBQEAM@std@@YA?A_TAEBQEAM@Z PROC	; std::_Get_unwrapped<float * const &>, COMDAT
+
+; 1325 :     // unwrap an iterator previously subjected to _Adl_verify_range or otherwise validated
+; 1326 :     if constexpr (is_pointer_v<decay_t<_Iter>>) { // special-case pointers and arrays
+; 1327 :         return _It + 0;
+
+	mov	rax, QWORD PTR [rcx]
+
+; 1328 :     } else if constexpr (_Unwrappable_v<_Iter>) {
+; 1329 :         return static_cast<_Iter&&>(_It)._Unwrapped();
+; 1330 :     } else {
+; 1331 :         return static_cast<_Iter&&>(_It);
+; 1332 :     }
+; 1333 : }
+
+	ret	0
+??$_Get_unwrapped@AEBQEAM@std@@YA?A_TAEBQEAM@Z ENDP	; std::_Get_unwrapped<float * const &>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits
+;	COMDAT ??$forward@AEBM@std@@YAAEBMAEBM@Z
+_TEXT	SEGMENT
+_Arg$ = 8
+??$forward@AEBM@std@@YAAEBMAEBM@Z PROC			; std::forward<float const &>, COMDAT
+
+; 1444 :     return static_cast<_Ty&&>(_Arg);
+
+	mov	rax, rcx
+
+; 1445 : }
+
+	ret	0
+??$forward@AEBM@std@@YAAEBMAEBM@Z ENDP			; std::forward<float const &>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$construct@MAEBM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAMAEBM@Z
+_TEXT	SEGMENT
+__formal$dead$ = 8
+_Ptr$ = 16
+<_Args_0>$ = 24
+??$construct@MAEBM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAMAEBM@Z PROC ; std::_Default_allocator_traits<std::allocator<float> >::construct<float,float const &>, COMDAT
+
+; 708  : #ifdef __cpp_lib_constexpr_dynamic_alloc
+; 709  :         if (_STD is_constant_evaluated()) {
+; 710  :             _STD construct_at(_Ptr, _STD forward<_Types>(_Args)...);
+; 711  :         } else
+; 712  : #endif // __cpp_lib_constexpr_dynamic_alloc
+; 713  :         {
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [r8]
+	mov	DWORD PTR [rdx], eax
+
+; 715  :         }
+; 716  :     }
+
+	ret	0
+??$construct@MAEBM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAMAEBM@Z ENDP ; std::_Default_allocator_traits<std::allocator<float> >::construct<float,float const &>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits
+;	COMDAT ??$move@AEAM@std@@YA$$QEAMAEAM@Z
+_TEXT	SEGMENT
+_Arg$ = 8
+??$move@AEAM@std@@YA$$QEAMAEAM@Z PROC			; std::move<float &>, COMDAT
+
+; 1456 :     return static_cast<remove_reference_t<_Ty>&&>(_Arg);
+
+	mov	rax, rcx
+
+; 1457 : }
+
+	ret	0
+??$move@AEAM@std@@YA$$QEAMAEAM@Z ENDP			; std::move<float &>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+;	COMDAT ??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z
+_TEXT	SEGMENT
+_First$ = 48
+_Last$ = 56
+_Dest$ = 64
+??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z PROC	; std::_Copy_memmove<float *,float *>, COMDAT
+
+; 4159 : _OutCtgIt _Copy_memmove(_CtgIt _First, _CtgIt _Last, _OutCtgIt _Dest) {
+
+$LN4:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+	mov	rbx, rdx
+	mov	rdi, r8
+
+; 4160 :     auto _FirstPtr              = _To_address(_First);
+; 4161 :     auto _LastPtr               = _To_address(_Last);
+; 4162 :     auto _DestPtr               = _To_address(_Dest);
+; 4163 :     const char* const _First_ch = const_cast<const char*>(reinterpret_cast<const volatile char*>(_FirstPtr));
+; 4164 :     const char* const _Last_ch  = const_cast<const char*>(reinterpret_cast<const volatile char*>(_LastPtr));
+; 4165 :     char* const _Dest_ch        = const_cast<char*>(reinterpret_cast<const volatile char*>(_DestPtr));
+; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
+
+	sub	rbx, rcx
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rdx, rcx
+	mov	r8, rbx
+	mov	rcx, rdi
+	call	QWORD PTR __imp_memmove
+
+; 4168 :     if constexpr (is_pointer_v<_OutCtgIt>) {
+; 4169 :         return reinterpret_cast<_OutCtgIt>(_Dest_ch + _Count);
+
+	lea	rax, QWORD PTR [rbx+rdi]
+
+; 4170 :     } else {
+; 4171 :         return _Dest + (_LastPtr - _FirstPtr);
+; 4172 :     }
+; 4173 : }
+
+	mov	rbx, QWORD PTR [rsp+48]
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+??$_Copy_memmove@PEAMPEAM@std@@YAPEAMPEAM00@Z ENDP	; std::_Copy_memmove<float *,float *>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$_Emplace_back@M@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAX$$QEAM@Z
+_TEXT	SEGMENT
+this$ = 8
+<_Vals_0>$ = 16
+??$_Emplace_back@M@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAX$$QEAM@Z PROC ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<float>, COMDAT
+
+; 1611 :         allocator_traits<_Alloc>::construct(_Al, _Unfancy(_Last), _STD forward<_Types>(_Vals)...);
+
+	mov	r8, QWORD PTR [rcx+8]
+
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [rdx]
+	mov	DWORD PTR [r8], eax
+
+; 1612 :         ++_Last;
+
+	lea	rax, QWORD PTR [r8+4]
+	mov	QWORD PTR [rcx+8], rax
+
+; 1613 :     }
+
+	ret	0
+??$_Emplace_back@M@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAX$$QEAM@Z ENDP ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+;	COMDAT ??$_Voidify_iter@PEAM@std@@YAPEAXPEAM@Z
+_TEXT	SEGMENT
+_It$ = 8
+??$_Voidify_iter@PEAM@std@@YAPEAXPEAM@Z PROC		; std::_Voidify_iter<float *>, COMDAT
+
+; 131  :     if constexpr (is_pointer_v<_Iter>) {
+; 132  :         return const_cast<void*>(static_cast<const volatile void*>(_It));
+
+	mov	rax, rcx
+
+; 133  :     } else {
+; 134  :         return const_cast<void*>(static_cast<const volatile void*>(_STD addressof(*_It)));
+; 135  :     }
+; 136  : }
+
+	ret	0
+??$_Voidify_iter@PEAM@std@@YAPEAXPEAM@Z ENDP		; std::_Voidify_iter<float *>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits
+;	COMDAT ??$forward@M@std@@YA$$QEAMAEAM@Z
+_TEXT	SEGMENT
+_Arg$ = 8
+??$forward@M@std@@YA$$QEAMAEAM@Z PROC			; std::forward<float>, COMDAT
+
+; 1444 :     return static_cast<_Ty&&>(_Arg);
+
+	mov	rax, rcx
+
+; 1445 : }
+
+	ret	0
+??$forward@M@std@@YA$$QEAMAEAM@Z ENDP			; std::forward<float>
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+;	COMDAT ??$construct@MM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAM$$QEAM@Z
+_TEXT	SEGMENT
+__formal$dead$ = 8
+_Ptr$ = 16
+<_Args_0>$ = 24
+??$construct@MM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAM$$QEAM@Z PROC ; std::_Default_allocator_traits<std::allocator<float> >::construct<float,float>, COMDAT
+
+; 708  : #ifdef __cpp_lib_constexpr_dynamic_alloc
+; 709  :         if (_STD is_constant_evaluated()) {
+; 710  :             _STD construct_at(_Ptr, _STD forward<_Types>(_Args)...);
+; 711  :         } else
+; 712  : #endif // __cpp_lib_constexpr_dynamic_alloc
+; 713  :         {
+; 714  :             ::new (_Voidify_iter(_Ptr)) _Objty(_STD forward<_Types>(_Args)...);
+
+	mov	eax, DWORD PTR [r8]
+	mov	DWORD PTR [rdx], eax
+
+; 715  :         }
+; 716  :     }
+
+	ret	0
+??$construct@MM@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAM$$QEAM@Z ENDP ; std::_Default_allocator_traits<std::allocator<float> >::construct<float,float>
 _TEXT	ENDS
 END

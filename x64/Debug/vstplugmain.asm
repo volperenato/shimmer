@@ -17,9 +17,9 @@ xdata	SEGMENT
 $unwind$VSTPluginMain DD 020601H
 	DD	030025206H
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
 ;	COMDAT VSTPluginMain
 _TEXT	SEGMENT
 audioMaster$ = 64
@@ -45,16 +45,16 @@ $LN12:
 	call	rbx
 	test	rax, rax
 	je	SHORT $LN9@VSTPluginM
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
 ; 90   :     return new Shimmer(audioMaster);
 
-	mov	ecx, 360				; 00000168H
+	mov	ecx, 344				; 00000158H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	rdx, rbx
 	mov	rcx, rax
 	call	??0Shimmer@@QEAA@P6A_JPEAUAEffect@@HH_JPEAXM@Z@Z ; Shimmer::Shimmer
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
 
 ; 38   : 	if (!effect)
 
@@ -92,7 +92,7 @@ $LN9@VSTPluginM:
 VSTPluginMain ENDP
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
 ;	COMDAT MAIN
 _TEXT	SEGMENT
 audioMaster$ = 8
@@ -104,7 +104,7 @@ MAIN	PROC						; COMDAT
 MAIN	ENDP
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\vstplugmain.cpp
 ;	COMDAT DllMain
 _TEXT	SEGMENT
 hInst$ = 8

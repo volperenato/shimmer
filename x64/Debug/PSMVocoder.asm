@@ -4,13 +4,12 @@ include listing.inc
 
 INCLUDELIB OLDNAMES
 
-EXTRN	__imp_fftw_free:PROC
-EXTRN	__imp_memset:PROC
+EXTRN	fftw_free:PROC
 EXTRN	??_U@YAPEAX_K@Z:PROC				; operator new[]
-EXTRN	__imp_fftw_execute:PROC
-EXTRN	__imp_fftw_destroy_plan:PROC
-EXTRN	__imp_fftw_plan_dft_1d:PROC
-EXTRN	__imp_fftw_malloc:PROC
+EXTRN	fftw_execute:PROC
+EXTRN	fftw_destroy_plan:PROC
+EXTRN	fftw_plan_dft_1d:PROC
+EXTRN	fftw_malloc:PROC
 ?_Fake_alloc@std@@3U_Fake_allocator@1@B	ORG $+1		; std::_Fake_alloc
 PUBLIC	?doOverlapAdd@PhaseVocoder@@QEAAXPEANH@Z	; PhaseVocoder::doOverlapAdd
 PUBLIC	?doInverseFFT@PhaseVocoder@@QEAAXXZ		; PhaseVocoder::doInverseFFT
@@ -25,31 +24,31 @@ _BSS	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?doInverseFFT@PhaseVocoder@@QEAAXXZ DD imagerel $LN4
-	DD	imagerel $LN4+29
+	DD	imagerel $LN4+28
 	DD	imagerel $unwind$?doInverseFFT@PhaseVocoder@@QEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?processAudioSample@PhaseVocoder@@QEAANNAEA_N@Z DD imagerel $LN8
-	DD	imagerel $LN8+160
+	DD	imagerel $LN8+159
 	DD	imagerel $unwind$?processAudioSample@PhaseVocoder@@QEAANNAEA_N@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?advanceAndCheckFFT@PhaseVocoder@@QEAA_NXZ DD imagerel $LN18
-	DD	imagerel $LN18+176
+	DD	imagerel $LN18+175
 	DD	imagerel $unwind$?advanceAndCheckFFT@PhaseVocoder@@QEAA_NXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?initialize@PhaseVocoder@@QEAAXIIW4windowType@@@Z DD imagerel $LN64
-	DD	imagerel $LN64+1191
+	DD	imagerel $LN64+1186
 	DD	imagerel $unwind$?initialize@PhaseVocoder@@QEAAXIIW4windowType@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?destroyFFTW@PhaseVocoder@@QEAAXXZ DD imagerel $LN9
-	DD	imagerel $LN9+89
+	DD	imagerel $LN9+84
 	DD	imagerel $unwind$?destroyFFTW@PhaseVocoder@@QEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -124,7 +123,7 @@ $unwind$?doInverseFFT@PhaseVocoder@@QEAAXXZ DD 020601H
 ?kCTCorrFactorAntiLog$initializer$@@3P6AXXZEA DQ FLAT:??__EkCTCorrFactorAntiLog@@YAXXZ ; kCTCorrFactorAntiLog$initializer$
 ?kCTCorrFactorAntiLogScale$initializer$@@3P6AXXZEA DQ FLAT:??__EkCTCorrFactorAntiLogScale@@YAXXZ ; kCTCorrFactorAntiLogScale$initializer$
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorZero@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorZero@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorZero'', COMDAT
@@ -141,7 +140,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorZero@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorZero''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorUnity@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorUnity@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorUnity'', COMDAT
@@ -154,7 +153,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorUnity@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorUnity''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorAntiUnity@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorAntiUnity@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorAntiUnity'', COMDAT
@@ -167,7 +166,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorAntiUnity@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorAntiUnity''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorAntiLog@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorAntiLog@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorAntiLog'', COMDAT
@@ -185,7 +184,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorAntiLog@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorAntiLog''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorAntiLogScale@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorAntiLogScale@@YAXXZ PROC		; `dynamic initializer for 'kCTCorrFactorAntiLogScale'', COMDAT
@@ -223,7 +222,7 @@ $LL2@vector:
 ??_H@YAXPEAX_K1P6APEAX0@Z@Z ENDP			; `vector constructor iterator'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 ;	COMDAT ?destroyFFTW@PhaseVocoder@@QEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -244,7 +243,7 @@ $LN9:
 
 ; 188  : 		fftw_destroy_plan(plan_forward);
 
-	call	QWORD PTR __imp_fftw_destroy_plan
+	call	fftw_destroy_plan
 $LN2@destroyFFT:
 
 ; 189  : 	if (plan_backward)
@@ -255,7 +254,7 @@ $LN2@destroyFFT:
 
 ; 190  : 		fftw_destroy_plan(plan_backward);
 
-	call	QWORD PTR __imp_fftw_destroy_plan
+	call	fftw_destroy_plan
 $LN3@destroyFFT:
 
 ; 191  : 
@@ -267,7 +266,7 @@ $LN3@destroyFFT:
 
 ; 193  : 		fftw_free(fft_input);
 
-	call	QWORD PTR __imp_fftw_free
+	call	fftw_free
 $LN4@destroyFFT:
 
 ; 194  : 	if (fft_result)
@@ -278,7 +277,7 @@ $LN4@destroyFFT:
 
 ; 195  : 		fftw_free(fft_result);
 
-	call	QWORD PTR __imp_fftw_free
+	call	fftw_free
 $LN5@destroyFFT:
 
 ; 196  : 	if (ifft_result)
@@ -289,7 +288,7 @@ $LN5@destroyFFT:
 
 ; 197  : 		fftw_free(ifft_result);
 
-	call	QWORD PTR __imp_fftw_free
+	call	fftw_free
 $LN6@destroyFFT:
 
 ; 198  : }
@@ -300,7 +299,7 @@ $LN6@destroyFFT:
 ?destroyFFTW@PhaseVocoder@@QEAAXXZ ENDP			; PhaseVocoder::destroyFFTW
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 ;	COMDAT ?initialize@PhaseVocoder@@QEAAXIIW4windowType@@@Z
 _TEXT	SEGMENT
 this$ = 112
@@ -808,21 +807,21 @@ $LN33@initialize:
 
 	mov	ecx, DWORD PTR [rbx+104]
 	shl	rcx, 4
-	call	QWORD PTR __imp_fftw_malloc
+	call	fftw_malloc
 
 ; 335  : 	fft_result = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * frameLength);
 
 	mov	ecx, DWORD PTR [rbx+104]
 	shl	rcx, 4
 	mov	QWORD PTR [rbx], rax
-	call	QWORD PTR __imp_fftw_malloc
+	call	fftw_malloc
 
 ; 336  : 	ifft_result = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * frameLength);
 
 	mov	ecx, DWORD PTR [rbx+104]
 	shl	rcx, 4
 	mov	QWORD PTR [rbx+8], rax
-	call	QWORD PTR __imp_fftw_malloc
+	call	fftw_malloc
 
 ; 337  : 
 ; 338  : 	plan_forward = fftw_plan_dft_1d(frameLength, fft_input, fft_result, FFTW_FORWARD, FFTW_ESTIMATE);
@@ -832,9 +831,9 @@ $LN33@initialize:
 	mov	rdx, QWORD PTR [rbx]
 	mov	r9d, r13d
 	mov	ecx, DWORD PTR [rbx+104]
-	mov	QWORD PTR [rbx+16], rax
 	mov	DWORD PTR [rsp+32], edi
-	call	QWORD PTR __imp_fftw_plan_dft_1d
+	mov	QWORD PTR [rbx+16], rax
+	call	fftw_plan_dft_1d
 
 ; 339  : 	plan_backward = fftw_plan_dft_1d(frameLength, fft_result, ifft_result, FFTW_BACKWARD, FFTW_ESTIMATE);
 
@@ -844,7 +843,7 @@ $LN33@initialize:
 	mov	ecx, DWORD PTR [rbx+104]
 	mov	QWORD PTR [rbx+24], rax
 	mov	DWORD PTR [rsp+32], edi
-	call	QWORD PTR __imp_fftw_plan_dft_1d
+	call	fftw_plan_dft_1d
 
 ; 340  : #endif
 ; 341  : }
@@ -864,7 +863,7 @@ $LN33@initialize:
 ?initialize@PhaseVocoder@@QEAAXIIW4windowType@@@Z ENDP	; PhaseVocoder::initialize
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 ;	COMDAT ?advanceAndCheckFFT@PhaseVocoder@@QEAA_NXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -943,7 +942,7 @@ $LN16@advanceAnd:
 ; 402  : 	fftw_execute(plan_forward);
 
 	mov	rcx, QWORD PTR [rbx+24]
-	call	QWORD PTR __imp_fftw_execute
+	call	fftw_execute
 
 ; 403  : 
 ; 404  : 	// --- in case user does not take IFFT, just to prevent zero output
@@ -1012,7 +1011,7 @@ $LN1@advanceAnd:
 ?advanceAndCheckFFT@PhaseVocoder@@QEAA_NXZ ENDP		; PhaseVocoder::advanceAndCheckFFT
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 ;	COMDAT ?processAudioSample@PhaseVocoder@@QEAANNAEA_N@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -1042,7 +1041,7 @@ $LN8:
 ; 479  : 	fftw_execute(plan_backward);
 
 	mov	rcx, QWORD PTR [rcx+32]
-	call	QWORD PTR __imp_fftw_execute
+	call	fftw_execute
 
 ; 480  : 
 ; 481  : 	// --- output is now in ifft_result array
@@ -1132,7 +1131,7 @@ $LN3@processAud:
 ?processAudioSample@PhaseVocoder@@QEAANNAEA_N@Z ENDP	; PhaseVocoder::processAudioSample
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 ;	COMDAT ?doInverseFFT@PhaseVocoder@@QEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -1149,7 +1148,7 @@ $LN4:
 ; 479  : 	fftw_execute(plan_backward);
 
 	mov	rcx, QWORD PTR [rcx+32]
-	call	QWORD PTR __imp_fftw_execute
+	call	fftw_execute
 
 ; 480  : 
 ; 481  : 	// --- output is now in ifft_result array
@@ -1165,7 +1164,7 @@ $LN4:
 ?doInverseFFT@PhaseVocoder@@QEAAXXZ ENDP		; PhaseVocoder::doInverseFFT
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 ;	COMDAT ?doOverlapAdd@PhaseVocoder@@QEAAXPEANH@Z
 _TEXT	SEGMENT
 this$ = 8

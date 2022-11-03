@@ -574,6 +574,10 @@ void Shimmer::getParameterName(VstInt32 index, char* text)
  // Define presets parameters values
 void Shimmer::InitPresets()
 {
+    // Instruction to allow the DAW to save parameters as currently shown on the UI
+    programsAreChunks(true);
+
+    // Create object for presets
     shim_presets = new ShimmerPresets[NUM_PRESETS];
 
     /*----------------------------------------------------*/
@@ -710,6 +714,49 @@ bool Shimmer::getProgramNameIndexed(VstInt32 category, VstInt32 index, char* tex
 }
 /*--------------------------------------------------------------------*/
 
+/* ------------------------------------------------------------------------------------------------------------
+ ------------------------------------------  SAVE&LOAD  -------------------------------------------------------
+ ------------------------------------------------------------------------------------------------------------ */
+
+// Save current parameters
+VstInt32 Shimmer::getChunk(void** data, bool isPreset) 
+{    
+    ShimmerParameters params;
+    params.mix = this->shim_mix;
+    params.size = this->shim_roomSize;
+    params.decay = shim_decay;
+    params.shimmer = shim_shimmer;
+    params.interval = shim_intervals;
+    params.damping = shim_damping;
+    params.rate = shim_modRate;
+    params.depth = shim_modDepth;
+    params.space = shim_space;
+    params.lpf = shim_lpf;
+    params.hpf = shim_hpf;   
+
+    *data = &params;
+
+    return sizeof(params);    
+}
+
+// Load parameters saved
+VstInt32 Shimmer::setChunk(void* data, VstInt32 byteSize, bool isPreset)
+{
+    ShimmerParameters* cp = (ShimmerParameters*)data;
+    setParameter(Param_mix, cp->mix);
+    setParameter(Param_roomSize, cp->size);
+    setParameter(Param_decay, cp->decay);
+    setParameter(Param_damping, cp->damping);
+    setParameter(Param_space, cp->space);
+    setParameter(Param_shimmer, cp->shimmer);
+    setParameter(Param_intervals, cp->interval);
+    setParameter(Param_modRate, cp->rate);
+    setParameter(Param_modDepth, cp->depth);
+    setParameter(Param_lpf, cp->lpf);
+    setParameter(Param_hpf, cp->hpf);
+
+    return 0;
+}
 
 /* ------------------------------------------------------------------------------------------------------------
  ---------------------------------------------  NAME  ---------------------------------------------------------

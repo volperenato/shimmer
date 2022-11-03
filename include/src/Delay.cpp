@@ -2,7 +2,6 @@
 #include "Delay.h"
 #include <string>
 #include "utils.h"
-#include "threadsync.h"
 
 //Fox::CriticalSection delBufferCritSection; 
 

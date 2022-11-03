@@ -4,6 +4,12 @@ include listing.inc
 
 INCLUDELIB OLDNAMES
 
+PUBLIC	??_7PSMVocoder@@6B@				; PSMVocoder::`vftable'
+PUBLIC	??_R2IAudioSignalProcessor@@8			; IAudioSignalProcessor::`RTTI Base Class Array'
+PUBLIC	??_R0?AVModulation@@@8				; Modulation `RTTI Type Descriptor'
+PUBLIC	?INTERVALS_NAMES_STRING@@3PAPEADA		; INTERVALS_NAMES_STRING
+PUBLIC	??_R4ModDelay@@6B@				; ModDelay::`RTTI Complete Object Locator'
+PUBLIC	??_R2Modulation@@8				; Modulation::`RTTI Base Class Array'
 PUBLIC	??_C@_07GLGBIDLM@2nd?5Maj@			; `string'
 PUBLIC	??_C@_07GNMKOBCE@3rd?5Min@			; `string'
 PUBLIC	??_C@_07HLFHFJI@3rd?5Maj@			; `string'
@@ -16,22 +22,22 @@ PUBLIC	??_C@_07EOOPKDLB@1?5Oct?$CL5@			; `string'
 PUBLIC	??_C@_07FEMGBGFB@1?$CL2?5Oct@			; `string'
 PUBLIC	??_C@_01LKDEMHDF@s@				; `string'
 PUBLIC	??_C@_02KLOHGLOJ@Hz@				; `string'
-PUBLIC	??_C@_03INCOKCMB@Wet@				; `string'
+PUBLIC	??_C@_03BHCFKDFC@Mix@				; `string'
 PUBLIC	??_C@_04EBKMHHBE@Size@				; `string'
 PUBLIC	??_C@_07CNCNAGDO@Shimmer@			; `string'
 PUBLIC	??_C@_05BFFNNFFO@Decay@				; `string'
 PUBLIC	??_C@_07HJKIPEFI@Damping@			; `string'
-PUBLIC	??_C@_06NMIAHCPF@Stereo@			; `string'
+PUBLIC	??_C@_05OMHELODH@Space@				; `string'
 PUBLIC	??_C@_09ONNCCMEP@Intervals@			; `string'
 PUBLIC	??_C@_08MNIOIDHF@Mod?5Rate@			; `string'
 PUBLIC	??_C@_09DPAPPDMJ@Mod?5Depth@			; `string'
 PUBLIC	??_C@_03MFOGABFF@LPF@				; `string'
 PUBLIC	??_C@_03EKIEJGAC@HPF@				; `string'
 PUBLIC	??_C@_07MCAEODGB@Default@			; `string'
-PUBLIC	??_C@_06PIIHCPLG@Dreamy@			; `string'
-PUBLIC	??_C@_05BCAGPPBA@Short@				; `string'
-PUBLIC	??_C@_08FBELJDCF@Metallic@			; `string'
-PUBLIC	??_C@_06LAKOKBGJ@Wobbly@			; `string'
+PUBLIC	??_C@_0L@GEJFJLEL@Small?5Room@			; `string'
+PUBLIC	??_C@_04FKEBJNOD@Hall@				; `string'
+PUBLIC	??_C@_0BA@JIEKPJGJ@Ambience?5Damped@		; `string'
+PUBLIC	??_C@_0BD@CJOOIIIC@Ambience?5Modulated@		; `string'
 PUBLIC	??_C@_09KHHOPKD@Fox?5Suite@			; `string'
 PUBLIC	??_R0?AVPSMVocoder@@@8				; PSMVocoder `RTTI Type Descriptor'
 PUBLIC	??_7Shimmer@@6B@				; Shimmer::`vftable'
@@ -62,61 +68,15 @@ PUBLIC	??_R0?AVIAudioSignalProcessor@@@8		; IAudioSignalProcessor `RTTI Type Des
 PUBLIC	??_7Modulation@@6B@				; Modulation::`vftable'
 PUBLIC	??_R2PSMVocoder@@8				; PSMVocoder::`RTTI Base Class Array'
 PUBLIC	??_R2ModDelay@@8				; ModDelay::`RTTI Base Class Array'
-PUBLIC	??_7PSMVocoder@@6B@				; PSMVocoder::`vftable'
-PUBLIC	??_R2IAudioSignalProcessor@@8			; IAudioSignalProcessor::`RTTI Base Class Array'
-PUBLIC	??_R0?AVModulation@@@8				; Modulation `RTTI Type Descriptor'
-PUBLIC	?INTERVALS_NAMES_STRING@@3PAPEADA		; INTERVALS_NAMES_STRING
-PUBLIC	??_R4ModDelay@@6B@				; ModDelay::`RTTI Complete Object Locator'
-PUBLIC	??_R2Modulation@@8				; Modulation::`RTTI Base Class Array'
+EXTRN	__imp_strcpy:PROC
+EXTRN	__imp_abs:PROC
+EXTRN	__imp_srand:PROC
 EXTRN	__imp_malloc:PROC
 EXTRN	__imp_round:PROC
 EXTRN	__imp_free:PROC
 EXTRN	__imp_atan2:PROC
 EXTRN	__imp_fabs:PROC
 EXTRN	__imp_rand:PROC
-EXTRN	__imp_strcpy:PROC
-EXTRN	__imp_abs:PROC
-EXTRN	__imp_srand:PROC
-;	COMDAT ??_R2Modulation@@8
-rdata$r	SEGMENT
-??_R2Modulation@@8 DD imagerel ??_R1A@?0A@EA@Modulation@@8 ; Modulation::`RTTI Base Class Array'
-	DD	imagerel ??_R1A@?0A@EN@ModDelay@@8
-	DD	imagerel ??_R1A@?0A@EJ@LPCombFilter@@8
-	DD	imagerel ??_R1A@?0A@EJ@CombFilter@@8
-	DD	imagerel ??_R1A@?0A@EJ@Delay@@8
-	ORG $+3
-rdata$r	ENDS
-;	COMDAT ??_R4ModDelay@@6B@
-rdata$r	SEGMENT
-??_R4ModDelay@@6B@ DD 01H				; ModDelay::`RTTI Complete Object Locator'
-	DD	00H
-	DD	00H
-	DD	imagerel ??_R0?AVModDelay@@@8
-	DD	imagerel ??_R3ModDelay@@8
-	DD	imagerel ??_R4ModDelay@@6B@
-rdata$r	ENDS
-;	COMDAT ??_R0?AVModulation@@@8
-data$rs	SEGMENT
-??_R0?AVModulation@@@8 DQ FLAT:??_7type_info@@6B@	; Modulation `RTTI Type Descriptor'
-	DQ	0000000000000000H
-	DB	'.?AVModulation@@', 00H
-data$rs	ENDS
-;	COMDAT ??_R2IAudioSignalProcessor@@8
-rdata$r	SEGMENT
-??_R2IAudioSignalProcessor@@8 DD imagerel ??_R1A@?0A@EA@IAudioSignalProcessor@@8 ; IAudioSignalProcessor::`RTTI Base Class Array'
-	ORG $+3
-rdata$r	ENDS
-;	COMDAT ??_7PSMVocoder@@6B@
-CONST	SEGMENT
-??_7PSMVocoder@@6B@ DQ FLAT:??_R4PSMVocoder@@6B@	; PSMVocoder::`vftable'
-	DQ	FLAT:?reset@PSMVocoder@@UEAA_NN@Z
-	DQ	FLAT:?processAudioSample@PSMVocoder@@UEAANN@Z
-	DQ	FLAT:?canProcessAudioFrame@PSMVocoder@@UEAA_NXZ
-	DQ	FLAT:?setSampleRate@IAudioSignalProcessor@@UEAAXN@Z
-	DQ	FLAT:?enableAuxInput@IAudioSignalProcessor@@UEAAX_N@Z
-	DQ	FLAT:?processAuxInputAudioSample@IAudioSignalProcessor@@UEAANN@Z
-	DQ	FLAT:?processAudioFrame@IAudioSignalProcessor@@UEAA_NPEBMPEAMII@Z
-CONST	ENDS
 ;	COMDAT ??_R2ModDelay@@8
 rdata$r	SEGMENT
 ??_R2ModDelay@@8 DD imagerel ??_R1A@?0A@EA@ModDelay@@8	; ModDelay::`RTTI Base Class Array'
@@ -365,8 +325,8 @@ CONST	SEGMENT
 	DQ	FLAT:?getParameterLabel@Shimmer@@UEAAXHPEAD@Z
 	DQ	FLAT:?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z
 	DQ	FLAT:?getParameterName@Shimmer@@UEAAXHPEAD@Z
-	DQ	FLAT:?getChunk@AudioEffect@@UEAAHPEAPEAX_N@Z
-	DQ	FLAT:?setChunk@AudioEffect@@UEAAHPEAXH_N@Z
+	DQ	FLAT:?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z
+	DQ	FLAT:?setChunk@Shimmer@@UEAAHPEAXH_N@Z
 	DQ	FLAT:?setUniqueID@AudioEffect@@UEAAXH@Z
 	DQ	FLAT:?setNumInputs@AudioEffect@@UEAAXH@Z
 	DQ	FLAT:?setNumOutputs@AudioEffect@@UEAAXH@Z
@@ -508,21 +468,21 @@ data$rs	ENDS
 CONST	SEGMENT
 ??_C@_09KHHOPKD@Fox?5Suite@ DB 'Fox Suite', 00H		; `string'
 CONST	ENDS
-;	COMDAT ??_C@_06LAKOKBGJ@Wobbly@
+;	COMDAT ??_C@_0BD@CJOOIIIC@Ambience?5Modulated@
 CONST	SEGMENT
-??_C@_06LAKOKBGJ@Wobbly@ DB 'Wobbly', 00H		; `string'
+??_C@_0BD@CJOOIIIC@Ambience?5Modulated@ DB 'Ambience Modulated', 00H ; `string'
 CONST	ENDS
-;	COMDAT ??_C@_08FBELJDCF@Metallic@
+;	COMDAT ??_C@_0BA@JIEKPJGJ@Ambience?5Damped@
 CONST	SEGMENT
-??_C@_08FBELJDCF@Metallic@ DB 'Metallic', 00H		; `string'
+??_C@_0BA@JIEKPJGJ@Ambience?5Damped@ DB 'Ambience Damped', 00H ; `string'
 CONST	ENDS
-;	COMDAT ??_C@_05BCAGPPBA@Short@
+;	COMDAT ??_C@_04FKEBJNOD@Hall@
 CONST	SEGMENT
-??_C@_05BCAGPPBA@Short@ DB 'Short', 00H			; `string'
+??_C@_04FKEBJNOD@Hall@ DB 'Hall', 00H			; `string'
 CONST	ENDS
-;	COMDAT ??_C@_06PIIHCPLG@Dreamy@
+;	COMDAT ??_C@_0L@GEJFJLEL@Small?5Room@
 CONST	SEGMENT
-??_C@_06PIIHCPLG@Dreamy@ DB 'Dreamy', 00H		; `string'
+??_C@_0L@GEJFJLEL@Small?5Room@ DB 'Small Room', 00H	; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_07MCAEODGB@Default@
 CONST	SEGMENT
@@ -548,9 +508,9 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_09ONNCCMEP@Intervals@ DB 'Intervals', 00H		; `string'
 CONST	ENDS
-;	COMDAT ??_C@_06NMIAHCPF@Stereo@
+;	COMDAT ??_C@_05OMHELODH@Space@
 CONST	SEGMENT
-??_C@_06NMIAHCPF@Stereo@ DB 'Stereo', 00H		; `string'
+??_C@_05OMHELODH@Space@ DB 'Space', 00H			; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_07HJKIPEFI@Damping@
 CONST	SEGMENT
@@ -568,9 +528,9 @@ CONST	ENDS
 CONST	SEGMENT
 ??_C@_04EBKMHHBE@Size@ DB 'Size', 00H			; `string'
 CONST	ENDS
-;	COMDAT ??_C@_03INCOKCMB@Wet@
+;	COMDAT ??_C@_03BHCFKDFC@Mix@
 CONST	SEGMENT
-??_C@_03INCOKCMB@Wet@ DB 'Wet', 00H			; `string'
+??_C@_03BHCFKDFC@Mix@ DB 'Mix', 00H			; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_02KLOHGLOJ@Hz@
 CONST	SEGMENT
@@ -619,18 +579,48 @@ CONST	ENDS
 ;	COMDAT ??_C@_07GLGBIDLM@2nd?5Maj@
 CONST	SEGMENT
 ??_C@_07GLGBIDLM@2nd?5Maj@ DB '2nd Maj', 00H		; `string'
+CONST	ENDS
+;	COMDAT ??_R2Modulation@@8
+rdata$r	SEGMENT
+??_R2Modulation@@8 DD imagerel ??_R1A@?0A@EA@Modulation@@8 ; Modulation::`RTTI Base Class Array'
+	DD	imagerel ??_R1A@?0A@EN@ModDelay@@8
+	DD	imagerel ??_R1A@?0A@EJ@LPCombFilter@@8
+	DD	imagerel ??_R1A@?0A@EJ@CombFilter@@8
+	DD	imagerel ??_R1A@?0A@EJ@Delay@@8
+	ORG $+3
+rdata$r	ENDS
+;	COMDAT ??_R4ModDelay@@6B@
+rdata$r	SEGMENT
+??_R4ModDelay@@6B@ DD 01H				; ModDelay::`RTTI Complete Object Locator'
+	DD	00H
+	DD	00H
+	DD	imagerel ??_R0?AVModDelay@@@8
+	DD	imagerel ??_R3ModDelay@@8
+	DD	imagerel ??_R4ModDelay@@6B@
+rdata$r	ENDS
+;	COMDAT ??_R0?AVModulation@@@8
+data$rs	SEGMENT
+??_R0?AVModulation@@@8 DQ FLAT:??_7type_info@@6B@	; Modulation `RTTI Type Descriptor'
+	DQ	0000000000000000H
+	DB	'.?AVModulation@@', 00H
+data$rs	ENDS
+;	COMDAT ??_R2IAudioSignalProcessor@@8
+rdata$r	SEGMENT
+??_R2IAudioSignalProcessor@@8 DD imagerel ??_R1A@?0A@EA@IAudioSignalProcessor@@8 ; IAudioSignalProcessor::`RTTI Base Class Array'
+	ORG $+3
+rdata$r	ENDS
+;	COMDAT ??_7PSMVocoder@@6B@
+CONST	SEGMENT
+??_7PSMVocoder@@6B@ DQ FLAT:??_R4PSMVocoder@@6B@	; PSMVocoder::`vftable'
+	DQ	FLAT:?reset@PSMVocoder@@UEAA_NN@Z
+	DQ	FLAT:?processAudioSample@PSMVocoder@@UEAANN@Z
+	DQ	FLAT:?canProcessAudioFrame@PSMVocoder@@UEAA_NXZ
+	DQ	FLAT:?setSampleRate@IAudioSignalProcessor@@UEAAXN@Z
+	DQ	FLAT:?enableAuxInput@IAudioSignalProcessor@@UEAAX_N@Z
+	DQ	FLAT:?processAuxInputAudioSample@IAudioSignalProcessor@@UEAANN@Z
+	DQ	FLAT:?processAudioFrame@IAudioSignalProcessor@@UEAA_NPEBMPEAMII@Z
 ?_Fake_alloc@std@@3U_Fake_allocator@1@B	ORG $+1		; std::_Fake_alloc
 	ORG $+4
-?INTERVALS_IN_SEMITONES_PITCH1@@3QBMB DD 040000000r ; 2	; INTERVALS_IN_SEMITONES_PITCH1
-	DD	040400000r			; 3
-	DD	040800000r			; 4
-	DD	040a00000r			; 5
-	DD	040e00000r			; 7
-	DD	041100000r			; 9
-	DD	041300000r			; 11
-	DD	041400000r			; 12
-	DD	041400000r			; 12
-	DD	041400000r			; 12
 ?INTERVALS_IN_SEMITONES_PITCH2@@3QBMB DD 000000000r ; 0	; INTERVALS_IN_SEMITONES_PITCH2
 	DD	000000000r			; 0
 	DD	000000000r			; 0
@@ -641,7 +631,6 @@ CONST	SEGMENT
 	DD	000000000r			; 0
 	DD	041980000r			; 19
 	DD	041c00000r			; 24
-	ORG $+8
 ?INTERVALS_NAMES_STRING@@3PAPEADA DQ FLAT:??_C@_07GLGBIDLM@2nd?5Maj@ ; INTERVALS_NAMES_STRING
 	DQ	FLAT:??_C@_07GNMKOBCE@3rd?5Min@
 	DQ	FLAT:??_C@_07HLFHFJI@3rd?5Maj@
@@ -652,6 +641,16 @@ CONST	SEGMENT
 	DQ	FLAT:??_C@_07JNPNFIPA@1st?5Oct@
 	DQ	FLAT:??_C@_07EOOPKDLB@1?5Oct?$CL5@
 	DQ	FLAT:??_C@_07FEMGBGFB@1?$CL2?5Oct@
+?INTERVALS_IN_SEMITONES_PITCH1@@3QBMB DD 040000000r ; 2	; INTERVALS_IN_SEMITONES_PITCH1
+	DD	040400000r			; 3
+	DD	040800000r			; 4
+	DD	040a00000r			; 5
+	DD	040e00000r			; 7
+	DD	041100000r			; 9
+	DD	041300000r			; 11
+	DD	041400000r			; 12
+	DD	041400000r			; 12
+	DD	041400000r			; 12
 PUBLIC	??$construct@M$$V@?$_Default_allocator_traits@V?$allocator@M@std@@@std@@SAXAEAV?$allocator@M@1@QEAM@Z ; std::_Default_allocator_traits<std::allocator<float> >::construct<float>
 PUBLIC	??$_Emplace_back@$$V@?$_Uninitialized_backout_al@V?$allocator@M@std@@@std@@QEAAXXZ ; std::_Uninitialized_backout_al<std::allocator<float> >::_Emplace_back<>
 PUBLIC	??$_Zero_range@PEAM@std@@YAPEAMQEAM0@Z		; std::_Zero_range<float *>
@@ -679,7 +678,6 @@ PUBLIC	??$_Copy_memmove@PEAPEAVModulation@@PEAPEAV1@@std@@YAPEAPEAVModulation@@P
 PUBLIC	??$_Emplace_back@PEAVHighPassFilter@@@?$_Uninitialized_backout_al@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAAX$$QEAPEAVHighPassFilter@@@Z ; std::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >::_Emplace_back<HighPassFilter *>
 PUBLIC	??$_To_address@PEAPEAVHighPassFilter@@@std@@YA?A_PAEBQEAPEAVHighPassFilter@@@Z ; std::_To_address<HighPassFilter * *>
 PUBLIC	??$_Copy_memmove@PEAPEAVHighPassFilter@@PEAPEAV1@@std@@YAPEAPEAVHighPassFilter@@PEAPEAV1@00@Z ; std::_Copy_memmove<HighPassFilter * *,HighPassFilter * *>
-PUBLIC	?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z ; std::vector<float,std::allocator<float> >::_Calculate_growth
 PUBLIC	??0?$_Uninitialized_backout_al@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAA@PEAPEAVHighPassFilter@@AEAV?$allocator@PEAVHighPassFilter@@@1@@Z ; std::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >
 PUBLIC	??1?$_Uninitialized_backout_al@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAA@XZ ; std::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >::~_Uninitialized_backout_al<std::allocator<HighPassFilter *> >
 PUBLIC	?_Release@?$_Uninitialized_backout_al@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAAPEAPEAVHighPassFilter@@XZ ; std::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >::_Release
@@ -725,7 +723,6 @@ PUBLIC	??$_Uninitialized_move@PEAPEAVHighPassFilter@@V?$allocator@PEAVHighPassFi
 PUBLIC	??$forward@AEBV?$allocator@M@std@@@std@@YAAEBV?$allocator@M@0@AEBV10@@Z ; std::forward<std::allocator<float> const &>
 PUBLIC	??$forward@PEAM@std@@YA$$QEAPEAMAEAPEAM@Z	; std::forward<float *>
 PUBLIC	??$forward@V?$allocator@M@std@@@std@@YA$$QEAV?$allocator@M@0@AEAV10@@Z ; std::forward<std::allocator<float> >
-PUBLIC	??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z ; std::vector<float,std::allocator<float> >::_Resize_reallocate<std::_Value_init_tag>
 PUBLIC	??$_Voidify_iter@PEAPEAVDelay@@@std@@YAPEAXPEAPEAVDelay@@@Z ; std::_Voidify_iter<Delay * *>
 PUBLIC	??$_Voidify_iter@PEAH@std@@YAPEAXPEAH@Z		; std::_Voidify_iter<int *>
 PUBLIC	??$_Voidify_iter@PEAPEAVModDelay@@@std@@YAPEAXPEAPEAVModDelay@@@Z ; std::_Voidify_iter<ModDelay * *>
@@ -777,7 +774,6 @@ PUBLIC	?_Umove_if_noexcept1@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPa
 PUBLIC	?_Getal@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@AEBAAEBV?$allocator@PEAVHighPassFilter@@@2@XZ ; std::vector<HighPassFilter *,std::allocator<HighPassFilter *> >::_Getal
 PUBLIC	?_Ufill@?$vector@MV?$allocator@M@std@@@std@@AEAAPEAMPEAM_KU_Value_init_tag@2@@Z ; std::vector<float,std::allocator<float> >::_Ufill
 PUBLIC	?_Buy_nonzero@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z ; std::vector<float,std::allocator<float> >::_Buy_nonzero
-PUBLIC	?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z ; std::vector<float,std::allocator<float> >::_Orphan_range
 PUBLIC	??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@PEAM00@Z ; std::_Vector_val<std::_Simple_types<float> >::_Vector_val<std::_Simple_types<float> >
 PUBLIC	??0?$allocator@PEAVDelay@@@std@@QEAA@XZ		; std::allocator<Delay *>::allocator<Delay *>
 PUBLIC	?allocate@?$allocator@PEAVDelay@@@std@@QEAAPEAPEAVDelay@@_K@Z ; std::allocator<Delay *>::allocate
@@ -867,7 +863,6 @@ PUBLIC	??$?0V?$allocator@M@std@@PEAMPEAMPEAM@?$_Compressed_pair@V?$allocator@M@s
 PUBLIC	??$exchange@PEAM$$T@std@@YAPEAMAEAPEAM$$QEA$$T@Z ; std::exchange<float *,std::nullptr_t>
 PUBLIC	??$move@AEAV?$allocator@M@std@@@std@@YA$$QEAV?$allocator@M@0@AEAV10@@Z ; std::move<std::allocator<float> &>
 PUBLIC	??$addressof@V?$vector@MV?$allocator@M@std@@@std@@@std@@YAPEAV?$vector@MV?$allocator@M@std@@@0@AEAV10@@Z ; std::addressof<std::vector<float,std::allocator<float> > >
-PUBLIC	??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z ; std::vector<float,std::allocator<float> >::_Resize<std::_Value_init_tag>
 PUBLIC	??$?0$$V@?$_Compressed_pair@V?$allocator@PEAVDelay@@@std@@V?$_Vector_val@U?$_Simple_types@PEAVDelay@@@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ; std::_Compressed_pair<std::allocator<Delay *>,std::_Vector_val<std::_Simple_types<Delay *> >,1>::_Compressed_pair<std::allocator<Delay *>,std::_Vector_val<std::_Simple_types<Delay *> >,1><>
 PUBLIC	??$_Emplace_reallocate@PEAVDelay@@@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAAPEAPEAVDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Emplace_reallocate<Delay *>
 PUBLIC	??$construct@PEAVDelay@@PEAV1@@?$_Default_allocator_traits@V?$allocator@PEAVDelay@@@std@@@std@@SAXAEAV?$allocator@PEAVDelay@@@1@QEAPEAVDelay@@$$QEAPEAV3@@Z ; std::_Default_allocator_traits<std::allocator<Delay *> >::construct<Delay *,Delay *>
@@ -934,6 +929,7 @@ PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@PEAVModulation@@@std@@V?$_Vec
 PUBLIC	?deallocate@?$allocator@PEAVHighPassFilter@@@std@@QEAAXQEAPEAVHighPassFilter@@_K@Z ; std::allocator<HighPassFilter *>::deallocate
 PUBLIC	?_Get_first@?$_Compressed_pair@V?$allocator@PEAVHighPassFilter@@@std@@V?$_Vector_val@U?$_Simple_types@PEAVHighPassFilter@@@std@@@2@$00@std@@QEAAAEAV?$allocator@PEAVHighPassFilter@@@2@XZ ; std::_Compressed_pair<std::allocator<HighPassFilter *>,std::_Vector_val<std::_Simple_types<HighPassFilter *> >,1>::_Get_first
 PUBLIC	?_Move_assign@?$vector@MV?$allocator@M@std@@@std@@AEAAXAEAV12@U_Equal_allocators@2@@Z ; std::vector<float,std::allocator<float> >::_Move_assign
+PUBLIC	?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z ; std::vector<float,std::allocator<float> >::_Reallocate_exactly
 PUBLIC	?_Destroy@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAAXPEAPEAVDelay@@0@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Destroy
 PUBLIC	?_Tidy@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAAXXZ ; std::vector<Delay *,std::allocator<Delay *> >::_Tidy
 PUBLIC	?_Orphan_range@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEBAXPEAPEAVDelay@@0@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Orphan_range
@@ -969,7 +965,7 @@ PUBLIC	?_Getal@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@st
 PUBLIC	??0?$vector@MV?$allocator@M@std@@@std@@QEAA@_KAEBV?$allocator@M@1@@Z ; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
 PUBLIC	??0?$vector@MV?$allocator@M@std@@@std@@QEAA@$$QEAV01@@Z ; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
 PUBLIC	??4?$vector@MV?$allocator@M@std@@@std@@QEAAAEAV01@$$QEAV01@@Z ; std::vector<float,std::allocator<float> >::operator=
-PUBLIC	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+PUBLIC	?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::reserve
 PUBLIC	??0?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAA@XZ ; std::vector<Delay *,std::allocator<Delay *> >::vector<Delay *,std::allocator<Delay *> >
 PUBLIC	??1?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAA@XZ ; std::vector<Delay *,std::allocator<Delay *> >::~vector<Delay *,std::allocator<Delay *> >
 PUBLIC	??$_Emplace_back_with_unused_capacity@PEAVDelay@@@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAA?A_T$$QEAPEAVDelay@@@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Emplace_back_with_unused_capacity<Delay *>
@@ -1046,6 +1042,8 @@ PUBLIC	??_GFDN@@QEAAPEAXI@Z				; FDN::`scalar deleting destructor'
 PUBLIC	??1Shimmer@@UEAA@XZ				; Shimmer::~Shimmer
 PUBLIC	?getVendorString@Shimmer@@UEAA_NPEAD@Z		; Shimmer::getVendorString
 PUBLIC	?getEffectName@Shimmer@@UEAA_NPEAD@Z		; Shimmer::getEffectName
+PUBLIC	?setChunk@Shimmer@@UEAAHPEAXH_N@Z		; Shimmer::setChunk
+PUBLIC	?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z		; Shimmer::getChunk
 PUBLIC	?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z	; Shimmer::getProgramNameIndexed
 PUBLIC	?getProgramName@Shimmer@@UEAAXPEAD@Z		; Shimmer::getProgramName
 PUBLIC	?setProgram@Shimmer@@UEAAXH@Z			; Shimmer::setProgram
@@ -1106,7 +1104,7 @@ PUBLIC	?deleteFilters@FDN@@AEAAXXZ			; FDN::deleteFilters
 PUBLIC	?deleteFeedbackBlock@FDN@@AEAAXXZ		; FDN::deleteFeedbackBlock
 PUBLIC	?deleteDiffusionBlocks@FDN@@AEAAXXZ		; FDN::deleteDiffusionBlocks
 PUBLIC	?deleteInterfaceBlocks@FDN@@AEAAXXZ		; FDN::deleteInterfaceBlocks
-PUBLIC	?constructChorus@FDN@@AEAAXXZ			; FDN::constructChorus
+PUBLIC	?constructModulation@FDN@@AEAAXXZ		; FDN::constructModulation
 PUBLIC	?constructFilters@FDN@@AEAAXXZ			; FDN::constructFilters
 PUBLIC	?constructDiffusionBlocks@FDN@@AEAAXXZ		; FDN::constructDiffusionBlocks
 PUBLIC	?constructFDN@FDN@@AEAAXHHHHH@Z			; FDN::constructFDN
@@ -1184,7 +1182,6 @@ PUBLIC	?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z 
 PUBLIC	?setSampleRate@ModMultiChannelFeedback@@QEAAXH@Z ; ModMultiChannelFeedback::setSampleRate
 PUBLIC	?init@ModMultiChannelFeedback@@QEAAXMH@Z	; ModMultiChannelFeedback::init
 PUBLIC	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-PUBLIC	?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z ; ModMultiChannelFeedback::setNumberOfChannels
 PUBLIC	??1ModMultiChannelFeedback@@QEAA@XZ		; ModMultiChannelFeedback::~ModMultiChannelFeedback
 PUBLIC	??0ModMultiChannelFeedback@@QEAA@H@Z		; ModMultiChannelFeedback::ModMultiChannelFeedback
 PUBLIC	??_GModMultiChannelDelay@@QEAAPEAXI@Z		; ModMultiChannelDelay::`scalar deleting destructor'
@@ -1429,12 +1426,6 @@ $pdata$??$_Uninitialized_move@PEAPEAVHighPassFilter@@V?$allocator@PEAVHighPassFi
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z DD imagerel $LN106
-	DD	imagerel $LN106+353
-	DD	imagerel $unwind$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$?_Buy_raw@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z DD imagerel $LN33
 	DD	imagerel $LN33+134
 	DD	imagerel $unwind$?_Buy_raw@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z
@@ -1471,8 +1462,8 @@ $pdata$?_Change_array@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AE
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1495,8 +1486,8 @@ $pdata$?_Change_array@?$vector@HV?$allocator@H@std@@@std@@AEAAXQEAH_K1@Z DD imag
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1519,8 +1510,8 @@ $pdata$?_Change_array@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@s
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1543,8 +1534,8 @@ $pdata$?_Change_array@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiC
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1567,8 +1558,8 @@ $pdata$?_Change_array@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVMod
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1591,8 +1582,8 @@ $pdata$?_Change_array@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1615,8 +1606,8 @@ $pdata$?_Change_array@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1639,8 +1630,8 @@ $pdata$?_Change_array@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilt
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ DD imagerel $LN4@Xlength
-	DD	imagerel $LN4@Xlength+18
+$pdata$?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ DD imagerel $LN4
+	DD	imagerel $LN4+18
 	DD	imagerel $unwind$?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1654,12 +1645,6 @@ pdata	SEGMENT
 $pdata$??$_Construct_n_copies_of_ty@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z DD imagerel $LN62
 	DD	imagerel $LN62+209
 	DD	imagerel $unwind$??$_Construct_n_copies_of_ty@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z DD imagerel $LN26
-	DD	imagerel $LN26+123
-	DD	imagerel $unwind$??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1765,6 +1750,12 @@ $pdata$?_Move_assign@?$vector@MV?$allocator@M@std@@@std@@AEAAXAEAV12@U_Equal_all
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z DD imagerel $LN78
+	DD	imagerel $LN78+177
+	DD	imagerel $unwind$?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?_Tidy@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAAXXZ DD imagerel $LN25
 	DD	imagerel $LN25+93
 	DD	imagerel $unwind$?_Tidy@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAAXXZ
@@ -1825,9 +1816,9 @@ $pdata$??4?$vector@MV?$allocator@M@std@@@std@@QEAAAEAV01@$$QEAV01@@Z DD imagerel
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z DD imagerel $LN28
-	DD	imagerel $LN28+123
-	DD	imagerel $unwind$?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z
+$pdata$?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z DD imagerel $LN9
+	DD	imagerel $LN9+33
+	DD	imagerel $unwind$?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -1909,6 +1900,18 @@ $pdata$?getEffectName@Shimmer@@UEAA_NPEAD@Z DD imagerel $LN6
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?setChunk@Shimmer@@UEAAHPEAXH_N@Z DD imagerel $LN4
+	DD	imagerel $LN4+231
+	DD	imagerel $unwind$?setChunk@Shimmer@@UEAAHPEAXH_N@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z DD imagerel $LN4
+	DD	imagerel $LN4+21
+	DD	imagerel $unwind$?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z DD imagerel $LN5
 	DD	imagerel $LN5+51
 	DD	imagerel $unwind$?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z
@@ -1916,13 +1919,13 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?setProgram@Shimmer@@UEAAXH@Z DD imagerel $LN4
-	DD	imagerel $LN4+137
+	DD	imagerel $LN4+243
 	DD	imagerel $unwind$?setProgram@Shimmer@@UEAAXH@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?InitPresets@Shimmer@@AEAAXXZ DD imagerel $LN4
-	DD	imagerel $LN4+597
+$pdata$?InitPresets@Shimmer@@AEAAXXZ DD imagerel $LN10
+	DD	imagerel $LN10+1186
 	DD	imagerel $unwind$?InitPresets@Shimmer@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1933,8 +1936,8 @@ $pdata$?getParameterName@Shimmer@@UEAAXHPEAD@Z DD imagerel $LN42
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z DD imagerel $LN23
-	DD	imagerel $LN23+282
+$pdata$?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z DD imagerel $LN28
+	DD	imagerel $LN28+382
 	DD	imagerel $unwind$?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -1945,32 +1948,26 @@ $pdata$?getParameterLabel@Shimmer@@UEAAXHPEAD@Z DD imagerel $LN42
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?getParameter@Shimmer@@UEAAMH@Z DD imagerel $LN23
-	DD	imagerel $LN23+275
-	DD	imagerel $unwind$?getParameter@Shimmer@@UEAAMH@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?setParameter@Shimmer@@UEAAXHM@Z DD imagerel $LN152
-	DD	imagerel $LN152+1242
+$pdata$?setParameter@Shimmer@@UEAAXHM@Z DD imagerel $LN150
+	DD	imagerel $LN150+1225
 	DD	imagerel $unwind$?setParameter@Shimmer@@UEAAXHM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z DD imagerel $LN12
-	DD	imagerel $LN12+526
+	DD	imagerel $LN12+394
 	DD	imagerel $unwind$?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?setSampleRate@Shimmer@@UEAAXM@Z DD imagerel $LN4
-	DD	imagerel $LN4+138
+	DD	imagerel $LN4+108
 	DD	imagerel $unwind$?setSampleRate@Shimmer@@UEAAXM@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?InitPlugin@Shimmer@@AEAAXXZ DD imagerel $LN353
-	DD	imagerel $LN353+2334
+$pdata$?InitPlugin@Shimmer@@AEAAXXZ DD imagerel $LN206
+	DD	imagerel $LN206+1141
 	DD	imagerel $unwind$?InitPlugin@Shimmer@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -1996,18 +1993,6 @@ pdata	SEGMENT
 $pdata$?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD imagerel ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
 	DD	imagerel ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA+32
 	DD	imagerel $unwind$?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD imagerel ?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
-	DD	imagerel ?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA+32
-	DD	imagerel $unwind$?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD imagerel ?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
-	DD	imagerel ?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA+32
-	DD	imagerel $unwind$?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2060,7 +2045,7 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?processAudioSample@PSMVocoder@@UEAANN@Z DD imagerel $LN161
-	DD	imagerel $LN161+1735
+	DD	imagerel $LN161+1733
 	DD	imagerel $unwind$?processAudioSample@PSMVocoder@@UEAANN@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2174,7 +2159,7 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?initInternalArrays@FDN@@AEAAXXZ DD imagerel $LN4
-	DD	imagerel $LN4+71
+	DD	imagerel $LN4+102
 	DD	imagerel $unwind$?initInternalArrays@FDN@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2209,15 +2194,15 @@ $pdata$?deleteInterfaceBlocks@FDN@@AEAAXXZ DD imagerel $LN15
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?constructChorus@FDN@@AEAAXXZ DD imagerel $LN25
+$pdata$?constructModulation@FDN@@AEAAXXZ DD imagerel $LN25
 	DD	imagerel $LN25+125
-	DD	imagerel $unwind$?constructChorus@FDN@@AEAAXXZ
+	DD	imagerel $unwind$?constructModulation@FDN@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA DD imagerel ?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA
-	DD	imagerel ?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA+29
-	DD	imagerel $unwind$?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA
+$pdata$?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA DD imagerel ?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA
+	DD	imagerel ?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA+29
+	DD	imagerel $unwind$?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2275,8 +2260,8 @@ $pdata$?dtor$2@?0??constructDiffusionBlocks@FDN@@AEAAXXZ@4HA DD imagerel ?dtor$2
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?constructFDN@FDN@@AEAAXHHHHH@Z DD imagerel $LN81
-	DD	imagerel $LN81+687
+$pdata$?constructFDN@FDN@@AEAAXHHHHH@Z DD imagerel $LN120
+	DD	imagerel $LN120+843
 	DD	imagerel $unwind$?constructFDN@FDN@@AEAAXHHHHH@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2287,15 +2272,21 @@ $pdata$?dtor$2@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD imagerel ?dtor$2@?0??co
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
+$pdata$?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD imagerel ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+	DD	imagerel ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA+29
+	DD	imagerel $unwind$?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
 $pdata$?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD imagerel ?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
 	DD	imagerel ?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA+29
 	DD	imagerel $unwind$?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD imagerel ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
-	DD	imagerel ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA+29
-	DD	imagerel $unwind$?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+$pdata$?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD imagerel ?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+	DD	imagerel ?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA+29
+	DD	imagerel $unwind$?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2329,8 +2320,8 @@ $pdata$?setSampleRate@FDN@@QEAAXH@Z DD imagerel $LN112
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setFeedbackDelayLengths@FDN@@QEAAXMMW4DelayDistribution@@@Z DD imagerel $LN6
-	DD	imagerel $LN6+55
+$pdata$?setFeedbackDelayLengths@FDN@@QEAAXMMW4DelayDistribution@@@Z DD imagerel $LN11
+	DD	imagerel $LN11+87
 	DD	imagerel $unwind$?setFeedbackDelayLengths@FDN@@QEAAXMMW4DelayDistribution@@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2389,14 +2380,20 @@ $pdata$?setModMix@FDN@@QEAAXM@Z DD imagerel $LN4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z DD imagerel $LN110
-	DD	imagerel $LN110+731
+$pdata$?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z DD imagerel $LN113
+	DD	imagerel $LN113+745
 	DD	imagerel $unwind$?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?initialize@FDN@@QEAAXMMHM@Z DD imagerel $LN434
-	DD	imagerel $LN434+1935
+$pdata$?setDecayInSeconds@FDN@@QEAAXM@Z DD imagerel $LN20
+	DD	imagerel $LN20+187
+	DD	imagerel $unwind$?setDecayInSeconds@FDN@@QEAAXM@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?initialize@FDN@@QEAAXMMHM@Z DD imagerel $LN436
+	DD	imagerel $LN436+1904
 	DD	imagerel $unwind$?initialize@FDN@@QEAAXMMHM@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2419,14 +2416,14 @@ $pdata$?processAudio@Modulation@@UEAAMM@Z DD imagerel $LN11
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setModType@Modulation@@QEAAXW4ModulationType@@@Z DD imagerel $LN22
-	DD	imagerel $LN22+117
+$pdata$?setModType@Modulation@@QEAAXW4ModulationType@@@Z DD imagerel $LN29
+	DD	imagerel $LN29+151
 	DD	imagerel $unwind$?setModType@Modulation@@QEAAXW4ModulationType@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init@Modulation@@QEAAXW4ModulationType@@H@Z DD imagerel $LN34
-	DD	imagerel $LN34+208
+$pdata$?init@Modulation@@QEAAXW4ModulationType@@H@Z DD imagerel $LN31
+	DD	imagerel $LN31+164
 	DD	imagerel $unwind$?init@Modulation@@QEAAXW4ModulationType@@H@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2461,14 +2458,14 @@ $pdata$??0HighPassFilter@@QEAA@HMW4HPFilterType@@@Z DD imagerel $LN4
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ DD imagerel $LN16
-	DD	imagerel $LN16+192
+$pdata$?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ DD imagerel $LN23
+	DD	imagerel $LN23+227
 	DD	imagerel $unwind$?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ DD imagerel $LN68
-	DD	imagerel $LN68+257
+$pdata$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ DD imagerel $LN75
+	DD	imagerel $LN75+316
 	DD	imagerel $unwind$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -2491,8 +2488,8 @@ $pdata$?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ DD imagerel $LN32
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DD imagerel $LN56
-	DD	imagerel $LN56+333
+$pdata$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DD imagerel $LN33
+	DD	imagerel $LN33+171
 	DD	imagerel $unwind$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2500,12 +2497,6 @@ pdata	SEGMENT
 $pdata$?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA DD imagerel ?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA
 	DD	imagerel ?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA+29
 	DD	imagerel $unwind$?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA DD imagerel ?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA
-	DD	imagerel ?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA+29
-	DD	imagerel $unwind$?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2533,8 +2524,8 @@ $pdata$?setDampingFrequency@ModMultiChannelFeedback@@QEAAXM@Z DD imagerel $LN18
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z DD imagerel $LN25
-	DD	imagerel $LN25+240
+$pdata$?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z DD imagerel $LN9
+	DD	imagerel $LN9+57
 	DD	imagerel $unwind$?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2545,8 +2536,8 @@ $pdata$?setSampleRate@ModMultiChannelFeedback@@QEAAXH@Z DD imagerel $LN14
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init@ModMultiChannelFeedback@@QEAAXMH@Z DD imagerel $LN28
-	DD	imagerel $LN28+204
+$pdata$?init@ModMultiChannelFeedback@@QEAAXMH@Z DD imagerel $LN18
+	DD	imagerel $LN18+120
 	DD	imagerel $unwind$?init@ModMultiChannelFeedback@@QEAAXMH@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2557,26 +2548,14 @@ $pdata$?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z DD imagerel $LN18
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z DD imagerel $LN26
-	DD	imagerel $LN26+202
-	DD	imagerel $unwind$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA DD imagerel ?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA
-	DD	imagerel ?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA+29
-	DD	imagerel $unwind$?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
 $pdata$??1ModMultiChannelFeedback@@QEAA@XZ DD imagerel $LN31
 	DD	imagerel $LN31+114
 	DD	imagerel $unwind$??1ModMultiChannelFeedback@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0ModMultiChannelFeedback@@QEAA@H@Z DD imagerel $LN65
-	DD	imagerel $LN65+336
+$pdata$??0ModMultiChannelFeedback@@QEAA@H@Z DD imagerel $LN42
+	DD	imagerel $LN42+188
 	DD	imagerel $unwind$??0ModMultiChannelFeedback@@QEAA@H@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2584,12 +2563,6 @@ pdata	SEGMENT
 $pdata$?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA DD imagerel ?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
 	DD	imagerel ?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA+29
 	DD	imagerel $unwind$?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
-pdata	ENDS
-;	COMDAT pdata
-pdata	SEGMENT
-$pdata$?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA DD imagerel ?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
-	DD	imagerel ?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA+29
-	DD	imagerel $unwind$?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2701,8 +2674,8 @@ $pdata$?setMakeUpGainDB@ModMultiChannelDiffuser@@QEAAXM@Z DD imagerel $LN18
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init@ModMultiChannelDiffuser@@QEAAXMH@Z DD imagerel $LN44
-	DD	imagerel $LN44+241
+$pdata$?init@ModMultiChannelDiffuser@@QEAAXMH@Z DD imagerel $LN34
+	DD	imagerel $LN34+163
 	DD	imagerel $unwind$?init@ModMultiChannelDiffuser@@QEAAXMH@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -2779,15 +2752,21 @@ $pdata$?deleteDelayLines@ModMultiChannelDelay@@AEAAXXZ DD imagerel $LN32
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ DD imagerel $LN68
-	DD	imagerel $LN68+260
+$pdata$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ DD imagerel $LN75
+	DD	imagerel $LN75+319
 	DD	imagerel $unwind$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setRandomInRangeDelayLines@ModMultiChannelDelay@@AEAAXXZ DD imagerel $LN16
-	DD	imagerel $LN16+209
+$pdata$?setRandomInRangeDelayLines@ModMultiChannelDelay@@AEAAXXZ DD imagerel $LN23
+	DD	imagerel $LN23+248
 	DD	imagerel $unwind$?setRandomInRangeDelayLines@ModMultiChannelDelay@@AEAAXXZ
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?setEqualDelayLines@ModMultiChannelDelay@@AEAAXXZ DD imagerel $LN21
+	DD	imagerel $LN21+101
+	DD	imagerel $unwind$?setEqualDelayLines@ModMultiChannelDelay@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -2815,14 +2794,14 @@ $pdata$?setMakeUpGaindB@ModMultiChannelDelay@@QEAAXM@Z DD imagerel $LN16
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z DD imagerel $LN100
-	DD	imagerel $LN100+537
+$pdata$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z DD imagerel $LN121
+	DD	imagerel $LN121+659
 	DD	imagerel $unwind$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z DD imagerel $LN27
-	DD	imagerel $LN27+182
+$pdata$?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z DD imagerel $LN17
+	DD	imagerel $LN17+103
 	DD	imagerel $unwind$?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -3127,8 +3106,8 @@ $pdata$?processAudio@ModDelay@@UEAAMM@Z DD imagerel $LN9
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z DD imagerel $LN12
-	DD	imagerel $LN12+93
+$pdata$?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z DD imagerel $LN19
+	DD	imagerel $LN19+145
 	DD	imagerel $unwind$?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z
 pdata	ENDS
 ;	COMDAT pdata
@@ -3152,7 +3131,7 @@ pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
 $pdata$?createTable@LFO@@AEAAXXZ DD imagerel $LN68
-	DD	imagerel $LN68+436
+	DD	imagerel $LN68+433
 	DD	imagerel $unwind$?createTable@LFO@@AEAAXXZ
 pdata	ENDS
 ;	COMDAT pdata
@@ -3358,9 +3337,10 @@ $unwind$??1ModDelay@@QEAA@XZ DD 040a01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z DD 040a01H
-	DD	06340aH
-	DD	07006320aH
+$unwind$?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z DD 060f01H
+	DD	02680fH
+	DD	08340aH
+	DD	07006520aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -3919,17 +3899,16 @@ $unwind$??1ModMultiChannelDelay@@QEAA@XZ DD 0a1901H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z DD 0a1901H
-	DD	097419H
-	DD	086419H
-	DD	075419H
-	DD	063419H
-	DD	0e0153219H
+$unwind$?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z DD 081401H
+	DD	086414H
+	DD	075414H
+	DD	063414H
+	DD	070103214H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $ip2state$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z DB 04H
-	DB	'Q', 04H
+	DB	08dH, 05H
 	DB	00H
 	DB	','
 	DB	02H
@@ -3949,12 +3928,14 @@ $cppxdata$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z DD 0a1911H
-	DD	058819H
-	DD	066814H
-	DD	0116410H
-	DD	0103410H
-	DD	0700cd210H
+$unwind$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z DD 0e2211H
+	DD	058822H
+	DD	06681dH
+	DD	0137419H
+	DD	0126419H
+	DD	0115419H
+	DD	0103419H
+	DD	0e015d219H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z
 xdata	ENDS
@@ -3991,6 +3972,13 @@ $unwind$?processAudio@ModMultiChannelDelay@@QEAAXPEAM0@Z DD 0a1901H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$?setEqualDelayLines@ModMultiChannelDelay@@AEAAXXZ DD 060f01H
+	DD	07640fH
+	DD	06340fH
+	DD	0700b320fH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$?setRandomInRangeDelayLines@ModMultiChannelDelay@@AEAAXXZ DD 0a3401H
 	DD	028834H
 	DD	03682fH
@@ -4001,7 +3989,7 @@ xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $ip2state$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ DB 04H
-	DB	'"'
+	DB	'>'
 	DB	00H
 	DB	','
 	DB	02H
@@ -4021,8 +4009,11 @@ $cppxdata$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ DB 028H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ DD 020611H
-	DD	030029206H
+$unwind$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ DD 081511H
+	DD	0e7415H
+	DD	0d6415H
+	DD	0c3415H
+	DD	0e0119215H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ
 xdata	ENDS
@@ -4192,13 +4183,12 @@ $unwind$??1ModMultiChannelDiffuser@@QEAA@XZ DD 081401H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?init@ModMultiChannelDiffuser@@QEAAXMH@Z DD 0c1d01H
-	DD	0b741dH
-	DD	0a641dH
-	DD	09541dH
-	DD	08341dH
-	DD	0f019321dH
-	DD	0c015e017H
+$unwind$?init@ModMultiChannelDiffuser@@QEAAXMH@Z DD 0a1801H
+	DD	0a6418H
+	DD	095418H
+	DD	083418H
+	DD	0f0143218H
+	DD	07010e012H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4396,39 +4386,28 @@ $unwind$??_GModMultiChannelDelay@@QEAAPEAXI@Z DD 020601H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$??0ModMultiChannelFeedback@@QEAA@H@Z DB 0cH
-	DB	'\'
+$ip2state$??0ModMultiChannelFeedback@@QEAA@H@Z DB 08H
+	DB	'P'
 	DB	02H
-	DB	09eH
+	DB	098H
 	DB	04H
 	DB	012H
 	DB	02H
-	DB	09H, 02H
-	DB	06H
-	DB	012H
-	DB	02H
-	DB	'X'
+	DB	'\'
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$??0ModMultiChannelFeedback@@QEAA@H@Z DB 06H
+$stateUnwindMap$??0ModMultiChannelFeedback@@QEAA@H@Z DB 04H
 	DB	0eH
 	DD	imagerel ?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
 	DB	02eH
 	DD	imagerel ?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
-	DB	056H
-	DD	imagerel ?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4438,11 +4417,10 @@ $cppxdata$??0ModMultiChannelFeedback@@QEAA@H@Z DB 028H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0ModMultiChannelFeedback@@QEAA@H@Z DD 081411H
-	DD	026814H
-	DD	0e00b520fH
-	DD	060087009H
-	DD	030065007H
+$unwind$??0ModMultiChannelFeedback@@QEAA@H@Z DD 061211H
+	DD	093412H
+	DD	0e00e3212H
+	DD	0600b700cH
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$??0ModMultiChannelFeedback@@QEAA@H@Z
 xdata	ENDS
@@ -4450,42 +4428,6 @@ xdata	ENDS
 xdata	SEGMENT
 $unwind$??1ModMultiChannelFeedback@@QEAA@XZ DD 020601H
 	DD	030023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$ip2state$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z DB 06H
-	DB	08eH
-	DB	00H
-	DB	01aH
-	DB	02H
-	DB	'P'
-	DB	00H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$stateUnwindMap$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z DB 02H
-	DB	0eH
-	DD	imagerel ?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$cppxdata$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z DB 028H
-	DD	imagerel $stateUnwindMap$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z
-	DD	imagerel $ip2state$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z DD 060f11H
-	DD	09640fH
-	DD	07340fH
-	DD	0700b320fH
-	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4498,13 +4440,11 @@ $unwind$?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z DD 0a1901H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?init@ModMultiChannelFeedback@@QEAAXMH@Z DD 0c1d01H
-	DD	02681dH
-	DD	0b7419H
-	DD	0a6419H
-	DD	095419H
-	DD	083419H
-	DD	0e0155219H
+$unwind$?init@ModMultiChannelFeedback@@QEAAXMH@Z DD 081401H
+	DD	086414H
+	DD	075414H
+	DD	063414H
+	DD	070103214H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4516,13 +4456,8 @@ $unwind$?setSampleRate@ModMultiChannelFeedback@@QEAAXH@Z DD 081401H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z DD 0c2701H
-	DD	028827H
-	DD	037822H
-	DD	04681eH
-	DD	0d6410H
-	DD	0c3410H
-	DD	0700c9210H
+$unwind$?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4582,35 +4517,24 @@ $unwind$?processAudio@ModMultiChannelFeedback@@QEAAXPEAM0@Z DD 0e2311H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DB 0aH
-	DB	'D'
+$ip2state$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DB 06H
+	DB	'2'
 	DB	00H
-	DB	0a2H
+	DB	098H
 	DB	02H
-	DB	012H
-	DB	00H
-	DB	0dH, 02H
-	DB	04H
 	DB	012H
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DB 04H
+$stateUnwindMap$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DB 02H
 	DB	0eH
 	DD	imagerel ?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA
-	DB	036H
-	DD	imagerel ?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4620,12 +4544,10 @@ $cppxdata$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DB 028H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DD 0a1711H
-	DD	026817H
-	DD	0d5412H
-	DD	0b3412H
-	DD	0e00e5212H
-	DD	0600b700cH
+$unwind$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z DD 060f11H
+	DD	09640fH
+	DD	07340fH
+	DD	0700b320fH
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z
 xdata	ENDS
@@ -4677,7 +4599,7 @@ xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $ip2state$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ DB 04H
-	DB	'"'
+	DB	'>'
 	DB	00H
 	DB	'0'
 	DB	02H
@@ -4697,8 +4619,11 @@ $cppxdata$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ DB 028H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ DD 020611H
-	DD	030029206H
+$unwind$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ DD 081511H
+	DD	0e7415H
+	DD	0d6415H
+	DD	0c3415H
+	DD	0e0119215H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ
 xdata	ENDS
@@ -4746,10 +4671,8 @@ $unwind$??1Modulation@@QEAA@XZ DD 040a01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?init@Modulation@@QEAAXW4ModulationType@@H@Z DD 060f01H
-	DD	07640fH
-	DD	06340fH
-	DD	0700b320fH
+$unwind$?init@Modulation@@QEAAXW4ModulationType@@H@Z DD 020601H
+	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -4813,17 +4736,27 @@ $unwind$??1FDN@@QEAA@XZ DD 0c1d01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?initialize@FDN@@QEAAXMMHM@Z DD 0a1f01H
-	DD	0f341fH
-	DD	0f01b321fH
-	DD	0d017e019H
-	DD	07013c015H
-	DD	050116012H
+$unwind$?initialize@FDN@@QEAAXMMHM@Z DD 0c2001H
+	DD	0c6420H
+	DD	0b5420H
+	DD	0a3420H
+	DD	0f01c3220H
+	DD	0d018e01aH
+	DD	07014c016H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z DD 0125901H
-	DD	029859H
+$unwind$?setDecayInSeconds@FDN@@QEAAXM@Z DD 0a1f01H
+	DD	02681fH
+	DD	0a7415H
+	DD	096415H
+	DD	083415H
+	DD	0e0115215H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z DD 0125e01H
+	DD	02a85eH
 	DD	038850H
 	DD	047836H
 	DD	05681fH
@@ -4949,7 +4882,7 @@ $unwind$?dtor$4@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD 020601H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD 020601H
+$unwind$?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
 ;	COMDAT xdata
@@ -4959,41 +4892,56 @@ $unwind$?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD 020601H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
+$unwind$?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
 $unwind$?dtor$2@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$?constructFDN@FDN@@AEAAXHHHHH@Z DB 012H
-	DB	0b0H
+$ip2state$?constructFDN@FDN@@AEAAXHHHHH@Z DB 018H
+	DB	0beH
 	DB	00H
 	DB	0bcH
 	DB	02H
-	DB	01eH
-	DB	00H
-	DB	'"'
+	DB	'*'
 	DB	04H
+	DB	098H
+	DB	06H
+	DB	012H
+	DB	04H
+	DB	'X'
+	DB	00H
+	DB	'$'
+	DB	08H
 	DB	01eH
 	DB	00H
-	DB	'E', 04H
-	DB	06H
+	DB	')', 04H
+	DB	0aH
 	DB	'$'
 	DB	00H
-	DB	080H
-	DB	08H
+	DB	'z'
+	DB	0cH
 	DB	01eH
 	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$?constructFDN@FDN@@AEAAXHHHHH@Z DB 08H
+$stateUnwindMap$?constructFDN@FDN@@AEAAXHHHHH@Z DB 0cH
 	DB	0eH
 	DD	imagerel ?dtor$2@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
-	DB	036H
-	DD	imagerel ?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
-	DB	05eH
+	DB	02eH
+	DD	imagerel ?dtor$5@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+	DB	02eH
 	DD	imagerel ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
 	DB	086H
+	DD	imagerel ?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+	DB	0aeH
+	DD	imagerel ?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
+	DB	0d6H
 	DD	imagerel ?dtor$4@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA
 xdata	ENDS
 ;	COMDAT xdata
@@ -5004,12 +4952,12 @@ $cppxdata$?constructFDN@FDN@@AEAAXHHHHH@Z DB 028H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?constructFDN@FDN@@AEAAXHHHHH@Z DD 0a1811H
-	DD	0d6418H
-	DD	0c5418H
-	DD	0b3418H
-	DD	0f0145218H
-	DD	07010e012H
+$unwind$?constructFDN@FDN@@AEAAXHHHHH@Z DD 0a1e11H
+	DD	0e641eH
+	DD	0d341eH
+	DD	0f017521eH
+	DD	0c013e015H
+	DD	050107011H
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$?constructFDN@FDN@@AEAAXHHHHH@Z
 xdata	ENDS
@@ -5130,12 +5078,12 @@ $unwind$?constructFilters@FDN@@AEAAXXZ DD 081201H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA DD 020601H
+$unwind$?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$?constructChorus@FDN@@AEAAXXZ DB 06H
+$ip2state$?constructModulation@FDN@@AEAAXXZ DB 06H
 	DB	'>'
 	DB	00H
 	DB	' '
@@ -5145,24 +5093,24 @@ $ip2state$?constructChorus@FDN@@AEAAXXZ DB 06H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$?constructChorus@FDN@@AEAAXXZ DB 02H
+$stateUnwindMap$?constructModulation@FDN@@AEAAXXZ DB 02H
 	DB	0eH
-	DD	imagerel ?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA
+	DD	imagerel ?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$cppxdata$?constructChorus@FDN@@AEAAXXZ DB 028H
-	DD	imagerel $stateUnwindMap$?constructChorus@FDN@@AEAAXXZ
-	DD	imagerel $ip2state$?constructChorus@FDN@@AEAAXXZ
+$cppxdata$?constructModulation@FDN@@AEAAXXZ DB 028H
+	DD	imagerel $stateUnwindMap$?constructModulation@FDN@@AEAAXXZ
+	DD	imagerel $ip2state$?constructModulation@FDN@@AEAAXXZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?constructChorus@FDN@@AEAAXXZ DD 060d11H
+$unwind$?constructModulation@FDN@@AEAAXXZ DD 060d11H
 	DD	0a340dH
 	DD	0e009320dH
 	DD	060067007H
 	DD	imagerel __CxxFrameHandler4
-	DD	imagerel $cppxdata$?constructChorus@FDN@@AEAAXXZ
+	DD	imagerel $cppxdata$?constructModulation@FDN@@AEAAXXZ
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5420,16 +5368,6 @@ $unwind$??_GShimmer@@UEAAPEAXI@Z DD 040a01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD 020601H
-	DD	050023206H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD 020601H
 	DD	050023206H
 xdata	ENDS
@@ -5450,18 +5388,18 @@ $unwind$?dtor$0@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA DD 020601H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$ip2state$?InitPlugin@Shimmer@@AEAAXXZ DB 01aH
-	DB	'T'
+$ip2state$?InitPlugin@Shimmer@@AEAAXXZ DB 012H
+	DB	'B'
 	DB	00H
-	DB	019H, 02H
+	DB	':'
 	DB	02H
-	DB	012H
+	DB	'$'
 	DB	00H
-	DB	0f9H, 0bH
+	DB	08dH, 03H
 	DB	04H
-	DB	012H
+	DB	01cH
 	DB	00H
-	DB	0d5H, 0cH
+	DB	089H, 03H
 	DB	06H
 	DB	012H
 	DB	00H
@@ -5469,18 +5407,10 @@ $ip2state$?InitPlugin@Shimmer@@AEAAXXZ DB 01aH
 	DB	08H
 	DB	012H
 	DB	00H
-	DB	','
-	DB	0aH
-	DB	012H
-	DB	00H
-	DB	','
-	DB	0cH
-	DB	012H
-	DB	00H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$stateUnwindMap$?InitPlugin@Shimmer@@AEAAXXZ DB 0cH
+$stateUnwindMap$?InitPlugin@Shimmer@@AEAAXXZ DB 08H
 	DB	0eH
 	DD	imagerel ?dtor$0@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
 	DB	036H
@@ -5489,10 +5419,6 @@ $stateUnwindMap$?InitPlugin@Shimmer@@AEAAXXZ DB 0cH
 	DD	imagerel ?dtor$2@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
 	DB	086H
 	DD	imagerel ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
-	DB	0aeH
-	DD	imagerel ?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
-	DB	0d6H
-	DD	imagerel ?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5502,16 +5428,13 @@ $cppxdata$?InitPlugin@Shimmer@@AEAAXXZ DB 028H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?InitPlugin@Shimmer@@AEAAXXZ DD 0112711H
-	DD	077827H
-	DD	086823H
-	DD	01b641fH
-	DD	01a541fH
-	DD	019341fH
-	DD	012011fH
-	DD	0e016f018H
-	DD	0c012d014H
-	DD	07010H
+$unwind$?InitPlugin@Shimmer@@AEAAXXZ DD 0c1b11H
+	DD	05681bH
+	DD	0145416H
+	DD	0133416H
+	DD	0f012b216H
+	DD	0c00ee010H
+	DD	0600b700cH
 	DD	imagerel __CxxFrameHandler4
 	DD	imagerel $cppxdata$?InitPlugin@Shimmer@@AEAAXXZ
 xdata	ENDS
@@ -5524,17 +5447,13 @@ $unwind$?setSampleRate@Shimmer@@UEAAXM@Z DD 061201H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z DD 0145701H
-	DD	03a857H
-	DD	049852H
-	DD	05884dH
-	DD	067848H
-	DD	076841H
-	DD	0196426H
-	DD	0163426H
-	DD	0f01cf226H
-	DD	0d018e01aH
-	DD	050157016H
+$unwind$?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z DD 0c3e01H
+	DD	03783eH
+	DD	046836H
+	DD	0f013921aH
+	DD	0d00fe011H
+	DD	0600c700dH
+	DD	0500a300bH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5548,20 +5467,14 @@ $unwind$?setParameter@Shimmer@@UEAAXHM@Z DD 0c1d01H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?getParameter@Shimmer@@UEAAMH@Z DD 051101H
-	DD	027811H
-	DD	036809H
-	DD	08204H
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$?getParameterLabel@Shimmer@@UEAAXHPEAD@Z DD 020601H
 	DD	030023206H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z DD 020601H
-	DD	030023206H
+$unwind$?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z DD 040a01H
+	DD	06340aH
+	DD	07006320aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5570,8 +5483,13 @@ $unwind$?getParameterName@Shimmer@@UEAAXHPEAD@Z DD 020601H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?InitPresets@Shimmer@@AEAAXXZ DD 020601H
-	DD	030023206H
+$unwind$?InitPresets@Shimmer@@AEAAXXZ DD 0c1f01H
+	DD	02781fH
+	DD	036819H
+	DD	0c7415H
+	DD	0b6415H
+	DD	0a3415H
+	DD	0f0117215H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5583,6 +5501,17 @@ xdata	ENDS
 xdata	SEGMENT
 $unwind$?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z DD 010401H
 	DD	04204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z DD 010401H
+	DD	06204H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?setChunk@Shimmer@@UEAAHPEAXH_N@Z DD 040a01H
+	DD	06340aH
+	DD	07006320aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5652,10 +5581,8 @@ $unwind$??1?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAA@XZ DD 02
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z DD 060f01H
-	DD	07640fH
-	DD	06340fH
-	DD	0700b320fH
+$unwind$?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5709,6 +5636,13 @@ xdata	ENDS
 xdata	SEGMENT
 $unwind$?_Tidy@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAAXXZ DD 020601H
 	DD	030023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z DD 060f01H
+	DD	07640fH
+	DD	06340fH
+	DD	0700b320fH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5838,13 +5772,6 @@ $unwind$??$_Emplace_reallocate@PEAVDelay@@@?$vector@PEAVDelay@@V?$allocator@PEAV
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z DD 060f01H
-	DD	07640fH
-	DD	06340fH
-	DD	0700b320fH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
 $unwind$??$_Construct_n_copies_of_ty@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z DD 061d01H
 	DD	07641dH
 	DD	06341dH
@@ -5857,7 +5784,8 @@ $unwind$??1?$_Tidy_guard@V?$vector@MV?$allocator@M@std@@@std@@@std@@QEAA@XZ DD 0
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5880,7 +5808,8 @@ $unwind$?allocate@?$allocator@PEAVHighPassFilter@@@std@@QEAAPEAPEAVHighPassFilte
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5903,7 +5832,8 @@ $unwind$?allocate@?$allocator@PEAVModulation@@@std@@QEAAPEAPEAVModulation@@_K@Z 
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5926,7 +5856,8 @@ $unwind$?allocate@?$allocator@PEAVLowPassFilter@@@std@@QEAAPEAPEAVLowPassFilter@
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5949,7 +5880,8 @@ $unwind$?allocate@?$allocator@PEAVModMultiChannelDiffuser@@@std@@QEAAPEAPEAVModM
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5972,7 +5904,8 @@ $unwind$?allocate@?$allocator@PEAVMultiChannelDiffuser@@@std@@QEAAPEAPEAVMultiCh
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -5995,7 +5928,8 @@ $unwind$?allocate@?$allocator@PEAVModDelay@@@std@@QEAAPEAPEAVModDelay@@_K@Z DD 0
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -6018,7 +5952,8 @@ $unwind$?allocate@?$allocator@H@std@@QEAAPEAH_K@Z DD 010401H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ DQ 00000420400010401r ; 3.58617e-310
+$unwind$?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ DD 010401H
+	DD	04204H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -6056,15 +5991,6 @@ xdata	SEGMENT
 $unwind$?_Buy_raw@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z DD 040a01H
 	DD	06340aH
 	DD	07006320aH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z DD 0a1901H
-	DD	097419H
-	DD	086419H
-	DD	075419H
-	DD	063419H
-	DD	0e0153219H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -6193,7 +6119,7 @@ $unwind$??$_Zero_range@PEAM@std@@YAPEAMQEAM0@Z DD 020601H
 ?LPF_FILTER_MAX_FREQ_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__ELPF_FILTER_MAX_FREQ_LOG@@YAXXZ ; LPF_FILTER_MAX_FREQ_LOG$initializer$
 ?LPF_FILTER_MIN_FREQ_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__ELPF_FILTER_MIN_FREQ_LOG@@YAXXZ ; LPF_FILTER_MIN_FREQ_LOG$initializer$
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?createEffectInstance@@YAPEAVAudioEffect@@P6A_JPEAUAEffect@@HH_JPEAXM@Z@Z
 _TEXT	SEGMENT
 audioMaster$ = 48
@@ -6209,7 +6135,7 @@ $LN8:
 
 ; 90   :     return new Shimmer(audioMaster);
 
-	mov	ecx, 360				; 00000168H
+	mov	ecx, 344				; 00000158H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
 	mov	rdx, rbx
@@ -6232,7 +6158,7 @@ $T1 = 56
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
-	mov	edx, 360				; 00000168H
+	mov	edx, 344				; 00000158H
 	mov	rcx, QWORD PTR $T1[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
@@ -6249,7 +6175,7 @@ $T1 = 56
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
-	mov	edx, 360				; 00000168H
+	mov	edx, 344				; 00000158H
 	mov	rcx, QWORD PTR $T1[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
@@ -6310,7 +6236,7 @@ this$dead$ = 8
 ?_Release@_Fake_proxy_ptr_impl@std@@QEAAXXZ ENDP	; std::_Fake_proxy_ptr_impl::_Release
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG'', COMDAT
@@ -6328,7 +6254,7 @@ text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG'', COMDAT
@@ -6346,7 +6272,7 @@ text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG'', COMDAT
@@ -6358,7 +6284,7 @@ text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG'', COMDAT
@@ -6370,7 +6296,7 @@ text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_FREQUENCY_LOG'', COMDAT
@@ -6382,7 +6308,7 @@ text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_FREQUENCY_LOG'', COMDAT
@@ -6394,7 +6320,7 @@ text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 ;	COMDAT ?mapValueIntoRange@@YAMMMM@Z
 _TEXT	SEGMENT
 value$ = 8
@@ -6402,20 +6328,20 @@ minvalue$ = 16
 maxValue$ = 24
 ?mapValueIntoRange@@YAMMMM@Z PROC			; mapValueIntoRange, COMDAT
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
 	subss	xmm2, xmm1
 	mulss	xmm2, xmm0
 	addss	xmm2, xmm1
 	movaps	xmm0, xmm2
 
-; 61   : }
+; 62   : }
 
 	ret	0
 ?mapValueIntoRange@@YAMMMM@Z ENDP			; mapValueIntoRange
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 ;	COMDAT ?mapValueOutsideRange@@YAMMMM@Z
 _TEXT	SEGMENT
 value$ = 8
@@ -6423,21 +6349,21 @@ minValue$ = 16
 maxValue$ = 24
 ?mapValueOutsideRange@@YAMMMM@Z PROC			; mapValueOutsideRange, COMDAT
 
-; 68   :     return (value - minValue) / (maxValue - minValue);
+; 69   :     return (value - minValue) / (maxValue - minValue);
 
 	subss	xmm0, xmm1
 	subss	xmm2, xmm1
 	divss	xmm0, xmm2
 
-; 69   : }
+; 70   : }
 
 	ret	0
 ?mapValueOutsideRange@@YAMMMM@Z ENDP			; mapValueOutsideRange
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 ;	COMDAT ?exponentialVector@@YA?AV?$vector@MV?$allocator@M@std@@@std@@MMH@Z
 _TEXT	SEGMENT
 __$ReturnUdt$ = 96
@@ -6446,7 +6372,7 @@ max$ = 112
 n$ = 120
 ?exponentialVector@@YA?AV?$vector@MV?$allocator@M@std@@@std@@MMH@Z PROC ; exponentialVector, COMDAT
 
-; 90   : inline std::vector<float> exponentialVector(float min, float max, int n) {
+; 91   : inline std::vector<float> exponentialVector(float min, float max, int n) {
 
 $LN16:
 	mov	rax, rsp
@@ -6462,7 +6388,7 @@ $LN16:
 	movaps	xmm6, xmm2
 	movaps	XMMWORD PTR [rax-40], xmm7
 
-; 91   :     std::vector<float> out(n);
+; 92   :     std::vector<float> out(n);
 
 	mov	rdx, rdi
 	movaps	XMMWORD PTR [rax-56], xmm8
@@ -6470,15 +6396,15 @@ $LN16:
 	call	??0?$vector@MV?$allocator@M@std@@@std@@QEAA@_KAEBV?$allocator@M@1@@Z ; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
 	movd	xmm0, edi
 
-; 92   :     float rate;
-; 93   :     float step = (max - min) / n;
+; 93   :     float rate;
+; 94   :     float step = (max - min) / n;
 
 	subss	xmm6, xmm8
 	cvtdq2ps xmm0, xmm0
 	xor	ebp, ebp
 	divss	xmm6, xmm0
 
-; 94   :     for (int i = 0; i < n; i++) {
+; 95   :     for (int i = 0; i < n; i++) {
 
 	test	edi, edi
 	jle	SHORT $LN3@exponentia
@@ -6494,9 +6420,9 @@ $LL4@exponentia:
 
 	mov	rbx, QWORD PTR [rsi]
 	xorps	xmm0, xmm0
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 95   :         rate = ((float)i + 1.0) * 2.0 / n;
+; 96   :         rate = ((float)i + 1.0) * 2.0 / n;
 
 	cvtsi2ss xmm0, ebp
 	addss	xmm0, xmm0
@@ -6505,7 +6431,7 @@ $LL4@exponentia:
 	mulsd	xmm0, xmm7
 	cvtpd2ps xmm0, xmm0
 
-; 96   : 		out[i] = min + step * (exp(rate) - 0.5);
+; 97   : 		out[i] = min + step * (exp(rate) - 0.5);
 
 	cvtps2pd xmm0, xmm0
 	call	QWORD PTR __imp_exp
@@ -6524,9 +6450,9 @@ $LL4@exponentia:
 	jl	SHORT $LL4@exponentia
 $LN3@exponentia:
 
-; 97   :     }
-; 98   :     return out;
-; 99   : }
+; 98   :     }
+; 99   :     return out;
+; 100  : }
 
 	movaps	xmm6, XMMWORD PTR [rsp+64]
 	lea	r11, QWORD PTR [rsp+80]
@@ -6543,14 +6469,14 @@ $LN3@exponentia:
 ?exponentialVector@@YA?AV?$vector@MV?$allocator@M@std@@@std@@MMH@Z ENDP ; exponentialVector
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 ;	COMDAT ?randomInRange@@YAMMM@Z
 _TEXT	SEGMENT
 min$ = 80
 max$ = 88
 ?randomInRange@@YAMMM@Z PROC				; randomInRange, COMDAT
 
-; 103  : inline float randomInRange(float min, float max) {
+; 104  : inline float randomInRange(float min, float max) {
 
 $LN4:
 	sub	rsp, 72					; 00000048H
@@ -6559,19 +6485,19 @@ $LN4:
 	movaps	XMMWORD PTR [rsp+32], xmm7
 	movaps	xmm7, xmm0
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	call	QWORD PTR __imp_rand
 	xorps	xmm0, xmm0
 
-; 105  : 	return min + unitRand * (max - min);
+; 106  : 	return min + unitRand * (max - min);
 
 	subss	xmm6, xmm7
 	cvtsi2ss xmm0, eax
 	mulss	xmm0, DWORD PTR __real@38000100
 	mulss	xmm0, xmm6
 
-; 106  : }
+; 107  : }
 
 	movaps	xmm6, XMMWORD PTR [rsp+48]
 	addss	xmm0, xmm7
@@ -6581,7 +6507,7 @@ $LN4:
 ?randomInRange@@YAMMM@Z ENDP				; randomInRange
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?setSampleRate@LowPassFilter@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -6601,9 +6527,9 @@ sampleRate$ = 16
 ?setSampleRate@LowPassFilter@@QEAAXH@Z ENDP		; LowPassFilter::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ??0LFO@@QEAA@W4OscillatorType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -6625,7 +6551,7 @@ $LN12:
 	mov	QWORD PTR [rcx+24], rax
 	mov	QWORD PTR [rcx+32], rax
 	mov	QWORD PTR [rcx+40], rax
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 44   : 		lfo_counter = 0.0;
 
@@ -6687,13 +6613,13 @@ type$dead$ = 56
 ?dtor$0@?0???0LFO@@QEAA@W4OscillatorType@@@Z@4HA ENDP	; `LFO::LFO'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ??1LFO@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -6782,7 +6708,7 @@ $LN24@LFO:
 
 	and	QWORD PTR [rbx+40], 0
 $LN8@LFO:
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 57   : 	}
 
@@ -6800,7 +6726,7 @@ $LN30@LFO:
 ??1LFO@@QEAA@XZ ENDP					; LFO::~LFO
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?init@LFO@@QEAAXW4OscillatorType@@H@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -6845,7 +6771,7 @@ sampleRate$ = 24
 ?init@LFO@@QEAAXW4OscillatorType@@H@Z ENDP		; LFO::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?setLFOfrequency@LFO@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -6874,7 +6800,7 @@ frequency$ = 16
 ?setLFOfrequency@LFO@@QEAAXM@Z ENDP			; LFO::setLFOfrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?setLFOWaveform@LFO@@QEAAXW4OscillatorType@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -6897,7 +6823,7 @@ waveform$ = 16
 ?setLFOWaveform@LFO@@QEAAXW4OscillatorType@@@Z ENDP	; LFO::setLFOWaveform
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?setLFOunipolar@LFO@@QEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -6914,7 +6840,7 @@ isUnipolar$ = 16
 ?setLFOunipolar@LFO@@QEAAX_N@Z ENDP			; LFO::setLFOunipolar
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?setSampleRate@LFO@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -6944,11 +6870,11 @@ sampleRate$ = 16
 ?setSampleRate@LFO@@QEAAXH@Z ENDP			; LFO::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\FoxSuite\fox-suite-blocks\include\utils.h
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?processAudio@LFO@@QEAAMXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -6983,7 +6909,7 @@ $LN14@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rdx, QWORD PTR [r8+24]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 106  : 		int readIndexNext = (readIndex + 1 >= WAVETABLE_SIZE) ? 0 : readIndex + 1;
 
@@ -7000,9 +6926,9 @@ $LN14@processAud:
 	cmovge	ecx, r9d
 	movsxd	rcx, ecx
 	subss	xmm1, xmm0
-; File E:\FoxSuite\fox-suite-blocks\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 83   : 	float result = dx * y2 + (1 - dx) * y1;
+; 84   : 	float result = dx * y2 + (1 - dx) * y1;
 
 	movss	xmm0, DWORD PTR __real@3f800000
 	subss	xmm0, xmm1
@@ -7010,7 +6936,7 @@ $LN14@processAud:
 	mulss	xmm2, DWORD PTR [rdx+rcx*4]
 	mulss	xmm0, DWORD PTR [rdx+rax*4]
 	addss	xmm2, xmm0
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 110  : 		if (lfo_unipolar) {
 
@@ -7040,7 +6966,7 @@ $LN2@processAud:
 ?processAudio@LFO@@QEAAMXZ ENDP				; LFO::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?computeIncrement@LFO@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -7064,7 +6990,7 @@ this$ = 8
 ?computeIncrement@LFO@@AEAAXXZ ENDP			; LFO::computeIncrement
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?increaseLFOCounter@LFO@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -7094,7 +7020,7 @@ $LN2@increaseLF:
 ?increaseLFOCounter@LFO@@AEAAXXZ ENDP			; LFO::increaseLFOCounter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?clearTable@LFO@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -7111,17 +7037,17 @@ this$ = 8
 ?clearTable@LFO@@AEAAXXZ ENDP				; LFO::clearTable
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\cstdlib
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 ;	COMDAT ?createTable@LFO@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 112
@@ -7151,7 +7077,7 @@ $LN68:
 
 	mov	r15d, 4096				; 00001000H
 	movaps	XMMWORD PTR [rax-72], xmm8
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 135  : 	void createTable() {
 
@@ -7175,11 +7101,10 @@ $LN68:
 ; 1375 : 
 ; 1376 :             _Reallocate_exactly(_Newcapacity);
 
-	mov	edx, r15d
 	mov	rcx, rdi
 	call	?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z ; std::vector<float,std::allocator<float> >::_Reallocate_exactly
 $LN26@createTabl:
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 142  : 		switch (lfo_waveform) {
 
@@ -7201,7 +7126,7 @@ $LN26@createTabl:
 	xorps	xmm2, xmm2
 	movss	xmm1, DWORD PTR __real@3f800000
 $LL15@createTabl:
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 178  : 				if (i <= halfWave)
 
@@ -7262,7 +7187,7 @@ $LL12@createTabl:
 ; 24   :     return _CSTD fabs(_Xx);
 
 	call	QWORD PTR __imp_fabs
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 169  : 				lfo_table[i] = 2.0 * abs(2.0 * step - 1.0) - 1.0;				
 
@@ -7343,7 +7268,7 @@ $LN19@createTabl:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rdi]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 158  : 			for (int i = 0; i < WAVETABLE_SIZE; i++) {
 
@@ -7390,17 +7315,17 @@ $LL54@createTabl:
 ?createTable@LFO@@AEAAXXZ ENDP				; LFO::createTable
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ??0ModDelay@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -7425,35 +7350,35 @@ $LN36:
 	mov	QWORD PTR [rcx+40], r15
 	mov	QWORD PTR [rcx+48], r15
 	mov	QWORD PTR [rcx+56], r15
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 10   : 	dly_makeUpGaindB		= 0.0;
+; 9    : 	dly_makeUpGaindB		= 0.0;
 
 	mov	DWORD PTR [rcx+64], r15d
 
-; 11   : 	dly_makeUpGain			= 1.0;
+; 10   : 	dly_makeUpGain			= 1.0;
 
 	mov	QWORD PTR [rcx+68], 1065353216		; 3f800000H
 
-; 12   : 	dly_delayInmsec			= 0.0;
-; 13   : 	dly_delayInSamples		= 0.0;
+; 11   : 	dly_delayInmsec			= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
 
 	mov	QWORD PTR [rcx+20], r15
 
-; 14   : 	dly_readIndex			= 0;
+; 13   : 	dly_readIndex			= 0;
 
 	mov	QWORD PTR [rcx+28], r15
 
-; 15   : 	dly_writeIndex			= 0;
-; 16   : 	dly_lineLengthInSamples = 0;
+; 14   : 	dly_writeIndex			= 0;
+; 15   : 	dly_lineLengthInSamples = 0;
 
 	mov	QWORD PTR [rcx+12], r15
 
-; 17   : 	dly_lineLengthInmsec	= 0.0;
-; 18   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 16   : 	dly_lineLengthInmsec	= 0.0;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
 
 	mov	DWORD PTR [rcx+8], 44100		; 0000ac44H
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 8    : 	cf_decayInSeconds   = 0.0;
 
@@ -7462,7 +7387,7 @@ $LN36:
 ; 9    : 	cf_feedbackGainSign = 1;
 
 	mov	DWORD PTR [rcx+80], 1
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 6    : LPCombFilter::LPCombFilter() : CombFilter() {
 
@@ -7475,7 +7400,7 @@ $LN36:
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	rbx, rax
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 39   : 			lpf_cutoffFreq = freq;
 
@@ -7511,12 +7436,12 @@ $LN36:
 
 	mov	rcx, rax
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 7    : 	lpcf_feedbackLPF = new LowPassFilter();	
 
 	mov	QWORD PTR [rdi+88], rbx
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 40   : 	ModDelay() : LPCombFilter() {
 
@@ -7536,7 +7461,7 @@ $LN36:
 	mov	QWORD PTR [rax+24], r15
 	mov	QWORD PTR [rax+32], r15
 	mov	QWORD PTR [rax+40], r15
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 44   : 		lfo_counter = 0.0;
 
@@ -7568,7 +7493,7 @@ $LN36:
 	mov	rcx, rax
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
 	npad	1
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 41   : 		mdly_LFO = new LFO();
 
@@ -7694,7 +7619,7 @@ $T3 = 56
 ?dtor$4@?0???0ModDelay@@QEAA@XZ@4HA ENDP		; `ModDelay::ModDelay'::`1'::dtor$4
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ??1ModDelay@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -7732,25 +7657,31 @@ $LN6@ModDelay:
 ??1ModDelay@@QEAA@XZ ENDP				; ModDelay::~ModDelay
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z
 _TEXT	SEGMENT
-this$ = 48
-bufferLengthMs$ = 56
-sampleRate$ = 64
-type$dead$ = 72
+this$ = 64
+bufferLengthMs$ = 72
+sampleRate$ = 80
+type$dead$ = 88
 ?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z PROC	; ModDelay::init, COMDAT
 
 ; 54   : 	void init(float bufferLengthMs, int sampleRate, OscillatorType type = DEFAULT_OSC_TYPE) {
 
-$LN12:
+$LN19:
 	mov	QWORD PTR [rsp+8], rbx
 	push	rdi
-	sub	rsp, 32					; 00000020H
-	mov	ebx, r8d
-	mov	rdi, rcx
+	sub	rsp, 48					; 00000030H
+	movaps	XMMWORD PTR [rsp+32], xmm6
+	mov	edi, r8d
+	movaps	xmm6, xmm1
+	mov	rbx, rcx
 
 ; 55   : 		bool isunipolar = false;
 ; 56   : 		
@@ -7758,16 +7689,49 @@ $LN12:
 ; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
 
 	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
-	mov	rcx, QWORD PTR [rdi+104]
+	movss	xmm0, DWORD PTR [rbx+16]
+	comiss	xmm6, xmm0
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rbx+120], xmm6
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	ja	SHORT $LN8@init
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm6
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN8@init:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	mov	rcx, rbx
+	movss	DWORD PTR [rbx+24], xmm0
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 65   : 		mdly_LFO->init(type, sampleRate);
+
+	mov	rcx, QWORD PTR [rbx+104]
 	mov	eax, 1
-	mov	DWORD PTR [rdi+116], eax
-; File E:\prova\Shimmer\include\LFO.h
+	mov	DWORD PTR [rbx+116], eax
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 60   : 		lfo_counter = 0.0;
 
@@ -7796,91 +7760,128 @@ $LN12:
 
 ; 64   : 		lfo_sampleRate = sampleRate;		
 
-	mov	DWORD PTR [rcx+4], ebx
+	mov	DWORD PTR [rcx+4], edi
 
 ; 65   : 		computeIncrement();
 ; 66   : 		clearTable();
 ; 67   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
-	mov	rax, QWORD PTR [rdi+104]
+	mov	rax, QWORD PTR [rbx+104]
 
-; 63   : 		setLFOUnipolar(isunipolar);
-; 64   : 	}
+; 66   : 		setLFOUnipolar(isunipolar);
+; 67   : 	}
 
-	mov	rbx, QWORD PTR [rsp+48]
+	movaps	xmm6, XMMWORD PTR [rsp+32]
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
-	mov	BYTE PTR [rdi+112], 0
+	mov	BYTE PTR [rbx+112], 0
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 66   : 		setLFOUnipolar(isunipolar);
+; 67   : 	}
+
+	mov	rbx, QWORD PTR [rsp+64]
+
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	BYTE PTR [rax+48], 0
 
-; 63   : 		setLFOUnipolar(isunipolar);
-; 64   : 	}
+; 66   : 		setLFOUnipolar(isunipolar);
+; 67   : 	}
 
-	add	rsp, 32					; 00000020H
+	add	rsp, 48					; 00000030H
 	pop	rdi
 	ret	0
 ?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ENDP	; ModDelay::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?setDeltaDelayValue@ModDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
 delta$ = 16
 ?setDeltaDelayValue@ModDelay@@QEAAXM@Z PROC		; ModDelay::setDeltaDelayValue, COMDAT
 
-; 77   : 		mdly_deltaDelayValue = delta;
+; 80   : 		mdly_deltaDelayValue = delta;
 
 	movss	DWORD PTR [rcx+124], xmm1
 
-; 78   : 	}
+; 81   : 	}
 
 	ret	0
 ?setDeltaDelayValue@ModDelay@@QEAAXM@Z ENDP		; ModDelay::setDeltaDelayValue
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?setDelayInmsec@ModDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
 delay$ = 16
 ?setDelayInmsec@ModDelay@@QEAAXM@Z PROC			; ModDelay::setDelayInmsec, COMDAT
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 81   : 		mdly_meanDelayValue = delay;
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
 
 	movss	DWORD PTR [rcx+120], xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 82   : 	}
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
-	ret	0
+	ja	SHORT $LN6@setDelayIn
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN6@setDelayIn:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	jmp	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
 ?setDelayInmsec@ModDelay@@QEAAXM@Z ENDP			; ModDelay::setDelayInmsec
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?setModRate@ModDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
 modRate$ = 16
 ?setModRate@ModDelay@@QEAAXM@Z PROC			; ModDelay::setModRate, COMDAT
 
-; 85   : 		mdly_rate = modRate;
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 89   : 		mdly_rate = modRate;
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	movss	DWORD PTR [rcx+136], xmm1
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 71   : 		lfo_frequency = frequency;
 
@@ -7892,31 +7893,31 @@ modRate$ = 16
 	cvtdq2ps xmm0, xmm0
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 87   : 	}		
+; 91   : 	}		
 
 	ret	0
 ?setModRate@ModDelay@@QEAAXM@Z ENDP			; ModDelay::setModRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?setLFOWaveform@ModDelay@@QEAAXW4OscillatorType@@@Z
 _TEXT	SEGMENT
 this$ = 8
 wave$ = 16
 ?setLFOWaveform@ModDelay@@QEAAXW4OscillatorType@@@Z PROC ; ModDelay::setLFOWaveform, COMDAT
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
 	mov	DWORD PTR [rcx+116], edx
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -7934,40 +7935,40 @@ wave$ = 16
 ?setLFOWaveform@ModDelay@@QEAAXW4OscillatorType@@@Z ENDP ; ModDelay::setLFOWaveform
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?setLFOUnipolar@ModDelay@@QEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
 isUnipolar$ = 16
 ?setLFOUnipolar@ModDelay@@QEAAX_N@Z PROC		; ModDelay::setLFOUnipolar, COMDAT
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 99   : 		mdly_isUnipolar = isUnipolar;
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rcx+104]
 	mov	BYTE PTR [rcx+112], dl
 	mov	BYTE PTR [rax+48], dl
 
-; 97   : 	}	
+; 101  : 	}	
 
 	ret	0
 ?setLFOUnipolar@ModDelay@@QEAAX_N@Z ENDP		; ModDelay::setLFOUnipolar
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?setSampleRate@ModDelay@@UEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
 sampleRate$ = 16
 ?setSampleRate@ModDelay@@UEAAXH@Z PROC			; ModDelay::setSampleRate, COMDAT
 
-; 100  : 		mdly_LFO->setSampleRate(sampleRate);
+; 104  : 		mdly_LFO->setSampleRate(sampleRate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	movd	xmm0, edx
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -7983,26 +7984,26 @@ sampleRate$ = 16
 	mulss	xmm1, DWORD PTR __real@45800000
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 101  : 		LPCombFilter::setSampleRate(sampleRate);
+; 105  : 		LPCombFilter::setSampleRate(sampleRate);
 
 	jmp	?setSampleRate@Delay@@UEAAXH@Z		; Delay::setSampleRate
 ?setSampleRate@ModDelay@@UEAAXH@Z ENDP			; ModDelay::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ?processAudio@ModDelay@@UEAAMM@Z
 _TEXT	SEGMENT
 this$ = 64
 xn$ = 72
 ?processAudio@ModDelay@@UEAAMM@Z PROC			; ModDelay::processAudio, COMDAT
 
-; 104  : 	float processAudio(float xn) {
+; 108  : 	float processAudio(float xn) {
 
 $LN9:
 	push	rbx
@@ -8010,63 +8011,63 @@ $LN9:
 	mov	rbx, rcx
 	movaps	XMMWORD PTR [rsp+32], xmm6
 
-; 106  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
+; 110  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
 
 	mov	rcx, QWORD PTR [rcx+104]
 	movaps	xmm6, xmm1
 	call	?processAudio@LFO@@QEAAMXZ		; LFO::processAudio
 	mulss	xmm0, DWORD PTR [rbx+124]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm2, DWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 106  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
+; 110  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
 
 	addss	xmm0, DWORD PTR [rbx+120]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	comiss	xmm0, xmm2
 	ja	SHORT $LN6@processAud
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm2, xmm0
 	maxss	xmm2, DWORD PTR __real@00000000
 $LN6@processAud:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	mov	rcx, rbx
 	movss	DWORD PTR [rbx+24], xmm2
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 112  : 		float yn = LPCombFilter::processAudio(xn);
+; 116  : 		float yn = LPCombFilter::processAudio(xn);
 
 	movaps	xmm1, xmm6
 	mov	rcx, rbx
 
-; 113  : 
-; 114  : 		return yn;
-; 115  : 	}
+; 117  : 
+; 118  : 		return yn;
+; 119  : 	}
 
 	movaps	xmm6, XMMWORD PTR [rsp+32]
 	add	rsp, 48					; 00000030H
 	pop	rbx
 
-; 112  : 		float yn = LPCombFilter::processAudio(xn);
+; 116  : 		float yn = LPCombFilter::processAudio(xn);
 
 	jmp	?processAudio@LPCombFilter@@UEAAMM@Z	; LPCombFilter::processAudio
 ?processAudio@ModDelay@@UEAAMM@Z ENDP			; ModDelay::processAudio
@@ -8092,15 +8093,15 @@ $LN6:
 ??_GLFO@@QEAAPEAXI@Z ENDP				; LFO::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ??0MultiChannelDelay@@QEAA@H@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -8127,7 +8128,7 @@ $LN41:
 	mov	QWORD PTR [rcx+8], rbp
 	mov	QWORD PTR [rcx+16], rbp
 	mov	QWORD PTR [rcx+24], rbp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 135  : 		mdel_numberOfChannels = numCh;
 
@@ -8149,9 +8150,9 @@ $LL15@MultiChann:
 	mov	ecx, 72					; 00000048H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 9    : Delay::Delay() {
+; 8    : Delay::Delay() {
 
 	lea	rcx, OFFSET FLAT:??_7Delay@@6B@
 	mov	QWORD PTR [rax], rcx
@@ -8162,35 +8163,35 @@ $LL15@MultiChann:
 	mov	QWORD PTR [rax+40], rbp
 	mov	QWORD PTR [rax+48], rbp
 	mov	QWORD PTR [rax+56], rbp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 10   : 	dly_makeUpGaindB		= 0.0;
+; 9    : 	dly_makeUpGaindB		= 0.0;
 
 	mov	DWORD PTR [rax+64], ebp
 
-; 11   : 	dly_makeUpGain			= 1.0;
+; 10   : 	dly_makeUpGain			= 1.0;
 
 	mov	DWORD PTR [rax+68], 1065353216		; 3f800000H
 
-; 12   : 	dly_delayInmsec			= 0.0;
-; 13   : 	dly_delayInSamples		= 0.0;
+; 11   : 	dly_delayInmsec			= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
 
 	mov	QWORD PTR [rax+20], rbp
 
-; 14   : 	dly_readIndex			= 0;
+; 13   : 	dly_readIndex			= 0;
 
 	mov	QWORD PTR [rax+28], rbp
 
-; 15   : 	dly_writeIndex			= 0;
-; 16   : 	dly_lineLengthInSamples = 0;
+; 14   : 	dly_writeIndex			= 0;
+; 15   : 	dly_lineLengthInSamples = 0;
 
 	mov	QWORD PTR [rax+12], rbp
 
-; 17   : 	dly_lineLengthInmsec	= 0.0;
-; 18   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 16   : 	dly_lineLengthInmsec	= 0.0;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
 
 	mov	DWORD PTR [rax+8], 44100		; 0000ac44H
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 131  : 			mdel_DelayLines.push_back(new Delay);
 
@@ -8226,7 +8227,7 @@ $LN31@MultiChann:
 	lea	rcx, QWORD PTR [rbx+8]
 	call	??$_Emplace_reallocate@PEAVDelay@@@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAAPEAPEAVDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Emplace_reallocate<Delay *>
 $LN13@MultiChann:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 130  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -8273,31 +8274,31 @@ $T3 = 80
 ?dtor$0@?0???0MultiChannelDelay@@QEAA@H@Z@4HA ENDP	; `MultiChannelDelay::MultiChannelDelay'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ??1MultiChannelDelay@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -8316,7 +8317,7 @@ $LN52:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	r8, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 33   : 	~MultiChannelDelay() { deleteDelayLines(); }
 
@@ -8327,7 +8328,7 @@ $LN52:
 
 	mov	rax, QWORD PTR [rcx+16]
 	cmp	r8, rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 122  : 		if (!mdel_DelayLines.empty()) {
 
@@ -8337,7 +8338,7 @@ $LN52:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, r8
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -8347,7 +8348,7 @@ $LN52:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -8360,7 +8361,7 @@ $LN52:
 
 	xor	esi, esi
 $LL6@MultiChann:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 124  : 				delete mdel_DelayLines[i];
 
@@ -8378,7 +8379,7 @@ $LN4@MultiChann:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	r8, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -8388,7 +8389,7 @@ $LN4@MultiChann:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -8398,7 +8399,7 @@ $LN4@MultiChann:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, r8
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -8409,7 +8410,7 @@ $LN4@MultiChann:
 
 	sar	rcx, 3
 	mov	rdx, r8
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -8495,7 +8496,7 @@ $LN39@MultiChann:
 
 	and	QWORD PTR [rbx+24], 0
 $LN23@MultiChann:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 33   : 	~MultiChannelDelay() { deleteDelayLines(); }
 
@@ -8516,11 +8517,11 @@ $LN49@MultiChann:
 ??1MultiChannelDelay@@QEAA@XZ ENDP			; MultiChannelDelay::~MultiChannelDelay
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?initDelayLines@MultiChannelDelay@@QEAAXMH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -8549,7 +8550,7 @@ $LN17:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rax, QWORD PTR [rcx+16]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 35   : 	void initDelayLines(float bufferLengthMs, int sampleRate) {
 
@@ -8559,7 +8560,7 @@ $LN17:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	cmp	QWORD PTR [rcx+8], rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 37   : 		if (!mdel_DelayLines.empty()) {
 
@@ -8600,25 +8601,25 @@ $LN3@initDelayL:
 ?initDelayLines@MultiChannelDelay@@QEAAXMH@Z ENDP	; MultiChannelDelay::initDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 dly$7 = 32
@@ -8694,34 +8695,34 @@ $LL92@setDelayLi:
 	movss	xmm1, DWORD PTR [rdi+36]
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm0, DWORD PTR [rcx+16]
 	comiss	xmm1, xmm0
 	ja	SHORT $LN99@setDelayLi
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm0, xmm1
 	maxss	xmm0, DWORD PTR __real@00000000
 $LN99@setDelayLi:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm0
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 100  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -8758,15 +8759,15 @@ $LL12@setDelayLi:
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm6, xmm1
 	inc	ebx
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	call	QWORD PTR __imp_rand
 	xorps	xmm3, xmm3
 	cvtsi2ss xmm3, eax
 	xorps	xmm0, xmm0
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 108  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
 
@@ -8775,48 +8776,48 @@ $LL12@setDelayLi:
 	cvtps2pd xmm1, xmm0
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm2, xmm1
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 105  : 	return min + unitRand * (max - min);
+; 106  : 	return min + unitRand * (max - min);
 
 	subss	xmm2, xmm6
 	mulss	xmm3, xmm2
 	mulss	xmm3, DWORD PTR __real@38000100
 	addss	xmm3, xmm6
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 109  : 			mdel_DelayLines[i]->setDelayInmsec(dlyLength);
 
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm0, DWORD PTR [rcx+16]
 	comiss	xmm3, xmm0
 	ja	SHORT $LN21@setDelayLi
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm0, xmm3
 	maxss	xmm0, DWORD PTR __real@00000000
 $LN21@setDelayLi:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm0
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 107  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -8911,7 +8912,7 @@ $LN49@setDelayLi:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN33@setDelayLi:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 116  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -8934,41 +8935,41 @@ $LL26@setDelayLi:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rdi+8]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 117  : 			mdel_DelayLines[i]->setDelayInmsec(dly[i]);		
 
 	mov	rax, QWORD PTR dly$7[rsp]
 	movss	xmm1, DWORD PTR [rax+rbp]
 	mov	rcx, QWORD PTR [r14+rcx]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm0, DWORD PTR [rcx+16]
 	comiss	xmm1, xmm0
 	ja	SHORT $LN62@setDelayLi
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm0, xmm1
 	maxss	xmm0, DWORD PTR __real@00000000
 $LN62@setDelayLi:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm0
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 116  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -9044,7 +9045,7 @@ $LN83@setDelayLi:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN67@setDelayLi:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 73   : 	}
 
@@ -9089,7 +9090,7 @@ distr$ = 152
 ?dtor$0@?0??setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z@4HA ENDP ; `MultiChannelDelay::setDelayLinesLength'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?setSampleRate@MultiChannelDelay@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -9144,7 +9145,7 @@ $LN3@setSampleR:
 ?setSampleRate@MultiChannelDelay@@QEAAXH@Z ENDP		; MultiChannelDelay::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?processAudio@MultiChannelDelay@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -9202,9 +9203,9 @@ $LN3@processAud:
 ?processAudio@MultiChannelDelay@@QEAAXPEAM0@Z ENDP	; MultiChannelDelay::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?setEqualDelayLines@MultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -9232,34 +9233,34 @@ $LL4@setEqualDe:
 	mov	rax, QWORD PTR [rdi+8]
 	movss	xmm1, DWORD PTR [rdi+36]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm0, DWORD PTR [rcx+16]
 	comiss	xmm1, xmm0
 	ja	SHORT $LN11@setEqualDe
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm0, xmm1
 	maxss	xmm0, DWORD PTR __real@00000000
 $LN11@setEqualDe:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm0
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 100  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -9279,16 +9280,16 @@ $LN3@setEqualDe:
 ?setEqualDelayLines@MultiChannelDelay@@AEAAXXZ ENDP	; MultiChannelDelay::setEqualDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?setRandomInRangeDelayLines@MultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 80
@@ -9333,24 +9334,24 @@ $LL4@setRandomI:
 	cvtps2pd xmm1, xmm0
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm6, xmm1
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	call	QWORD PTR __imp_rand
 	xorps	xmm0, xmm0
 	xorps	xmm3, xmm3
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 108  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
 
 	cvtsi2ss xmm0, esi
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	cvtsi2ss xmm3, eax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 109  : 			mdel_DelayLines[i]->setDelayInmsec(dlyLength);
 
@@ -9358,52 +9359,52 @@ $LL4@setRandomI:
 	mov	rcx, QWORD PTR [rdi+rax]
 	mulss	xmm0, xmm8
 	cvtps2pd xmm1, xmm0
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm0, DWORD PTR [rcx+16]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 108  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
 
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm2, xmm1
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 105  : 	return min + unitRand * (max - min);
+; 106  : 	return min + unitRand * (max - min);
 
 	subss	xmm2, xmm6
 	mulss	xmm3, xmm2
 	mulss	xmm3, DWORD PTR __real@38000100
 	addss	xmm3, xmm6
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	comiss	xmm3, xmm0
 	ja	SHORT $LN13@setRandomI
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm0, xmm3
 	maxss	xmm0, DWORD PTR __real@00000000
 $LN13@setRandomI:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm0
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 107  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -9426,17 +9427,17 @@ $LN3@setRandomI:
 ?setRandomInRangeDelayLines@MultiChannelDelay@@AEAAXXZ ENDP ; MultiChannelDelay::setRandomInRangeDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?setExponentialDelayLengths@MultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 dly$ = 32
@@ -9535,7 +9536,7 @@ $LN27@setExponen:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN11@setExponen:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 116  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -9558,41 +9559,41 @@ $LL4@setExponen:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 117  : 			mdel_DelayLines[i]->setDelayInmsec(dly[i]);		
 
 	mov	rax, QWORD PTR dly$[rsp]
 	movss	xmm1, DWORD PTR [rsi+rax]
 	mov	rcx, QWORD PTR [r14+rcx]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm0, DWORD PTR [rcx+16]
 	comiss	xmm1, xmm0
 	ja	SHORT $LN40@setExponen
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm0, xmm1
 	maxss	xmm0, DWORD PTR __real@00000000
 $LN40@setExponen:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm0
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 116  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -9668,7 +9669,7 @@ $LN61@setExponen:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN45@setExponen:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 119  : 	}
 
@@ -9703,25 +9704,25 @@ this$ = 96
 ?dtor$0@?0??setExponentialDelayLengths@MultiChannelDelay@@AEAAXXZ@4HA ENDP ; `MultiChannelDelay::setExponentialDelayLengths'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?deleteDelayLines@MultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -9740,7 +9741,7 @@ $LN24:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rdx, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 121  : 	void deleteDelayLines() {
 
@@ -9751,7 +9752,7 @@ $LN24:
 
 	mov	rax, QWORD PTR [rcx+16]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 122  : 		if (!mdel_DelayLines.empty()) {
 
@@ -9761,7 +9762,7 @@ $LN24:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -9771,7 +9772,7 @@ $LN24:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -9783,7 +9784,7 @@ $LN24:
 
 	xor	esi, esi
 $LL4@deleteDela:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 124  : 				delete mdel_DelayLines[i];
 
@@ -9801,7 +9802,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -9811,7 +9812,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -9821,7 +9822,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -9831,7 +9832,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 123  : 			for (int i = 0; i < mdel_DelayLines.size(); i++) 
 
@@ -9856,14 +9857,14 @@ $LN5@deleteDela:
 ?deleteDelayLines@MultiChannelDelay@@AEAAXXZ ENDP	; MultiChannelDelay::deleteDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?constructDelayObjects@MultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 $T1 = 48
@@ -9892,19 +9893,19 @@ $LL4@constructD:
 	mov	ecx, 72					; 00000048H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 9    : Delay::Delay() {
+; 8    : Delay::Delay() {
 
 	lea	rcx, OFFSET FLAT:??_7Delay@@6B@
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 131  : 			mdel_DelayLines.push_back(new Delay);
 
 	mov	QWORD PTR $T3[rsp], rax
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 9    : Delay::Delay() {
+; 8    : Delay::Delay() {
 
 	mov	QWORD PTR [rax], rcx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -9914,39 +9915,39 @@ $LL4@constructD:
 	and	QWORD PTR [rax+40], 0
 	and	QWORD PTR [rax+48], 0
 	and	QWORD PTR [rax+56], 0
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 10   : 	dly_makeUpGaindB		= 0.0;
+; 9    : 	dly_makeUpGaindB		= 0.0;
 
 	and	DWORD PTR [rax+64], 0
 
-; 11   : 	dly_makeUpGain			= 1.0;
-; 12   : 	dly_delayInmsec			= 0.0;
+; 10   : 	dly_makeUpGain			= 1.0;
+; 11   : 	dly_delayInmsec			= 0.0;
 
 	and	DWORD PTR [rax+24], 0
 
-; 13   : 	dly_delayInSamples		= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
 
 	and	DWORD PTR [rax+20], 0
 
-; 14   : 	dly_readIndex			= 0;
+; 13   : 	dly_readIndex			= 0;
 
 	and	DWORD PTR [rax+28], 0
 
-; 15   : 	dly_writeIndex			= 0;
+; 14   : 	dly_writeIndex			= 0;
 
 	and	DWORD PTR [rax+32], 0
 
-; 16   : 	dly_lineLengthInSamples = 0;
+; 15   : 	dly_lineLengthInSamples = 0;
 
 	and	DWORD PTR [rax+12], 0
 
-; 17   : 	dly_lineLengthInmsec	= 0.0;
+; 16   : 	dly_lineLengthInmsec	= 0.0;
 
 	and	DWORD PTR [rax+16], 0
 	mov	DWORD PTR [rax+68], 1065353216		; 3f800000H
 
-; 18   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
 
 	mov	DWORD PTR [rax+8], 44100		; 0000ac44H
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -9980,7 +9981,7 @@ $LN20@constructD:
 	lea	rcx, QWORD PTR [rbx+8]
 	call	??$_Emplace_reallocate@PEAVDelay@@@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAAPEAPEAVDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Emplace_reallocate<Delay *>
 $LN2@constructD:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 130  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -9999,14 +10000,14 @@ $LN3@constructD:
 ?constructDelayObjects@MultiChannelDelay@@AEAAXXZ ENDP	; MultiChannelDelay::constructDelayObjects
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ;	COMDAT ?constructMCDL@MultiChannelDelay@@AEAAXH@Z
 _TEXT	SEGMENT
 $T1 = 48
@@ -10044,19 +10045,19 @@ $LL6@constructM:
 	mov	ecx, 72					; 00000048H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 9    : Delay::Delay() {
+; 8    : Delay::Delay() {
 
 	lea	rcx, OFFSET FLAT:??_7Delay@@6B@
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 131  : 			mdel_DelayLines.push_back(new Delay);
 
 	mov	QWORD PTR $T3[rsp], rax
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 9    : Delay::Delay() {
+; 8    : Delay::Delay() {
 
 	mov	QWORD PTR [rax], rcx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -10066,32 +10067,32 @@ $LL6@constructM:
 	mov	QWORD PTR [rax+40], rbp
 	mov	QWORD PTR [rax+48], rbp
 	mov	QWORD PTR [rax+56], rbp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 10   : 	dly_makeUpGaindB		= 0.0;
+; 9    : 	dly_makeUpGaindB		= 0.0;
 
 	mov	DWORD PTR [rax+64], ebp
 
-; 11   : 	dly_makeUpGain			= 1.0;
+; 10   : 	dly_makeUpGain			= 1.0;
 
 	mov	DWORD PTR [rax+68], 1065353216		; 3f800000H
 
-; 12   : 	dly_delayInmsec			= 0.0;
-; 13   : 	dly_delayInSamples		= 0.0;
+; 11   : 	dly_delayInmsec			= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
 
 	mov	QWORD PTR [rax+20], rbp
 
-; 14   : 	dly_readIndex			= 0;
+; 13   : 	dly_readIndex			= 0;
 
 	mov	QWORD PTR [rax+28], rbp
 
-; 15   : 	dly_writeIndex			= 0;
-; 16   : 	dly_lineLengthInSamples = 0;
+; 14   : 	dly_writeIndex			= 0;
+; 15   : 	dly_lineLengthInSamples = 0;
 
 	mov	QWORD PTR [rax+12], rbp
 
-; 17   : 	dly_lineLengthInmsec	= 0.0;
-; 18   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 16   : 	dly_lineLengthInmsec	= 0.0;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
 
 	mov	DWORD PTR [rax+8], 44100		; 0000ac44H
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -10125,7 +10126,7 @@ $LN22@constructM:
 	lea	rcx, QWORD PTR [rbx+8]
 	call	??$_Emplace_reallocate@PEAVDelay@@@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@QEAAPEAPEAVDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<Delay *,std::allocator<Delay *> >::_Emplace_reallocate<Delay *>
 $LN4@constructM:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 130  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -10167,7 +10168,7 @@ $LN6:
 ??_GDelay@@QEAAPEAXI@Z ENDP				; Delay::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ??0Hadamard@@QEAA@H@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -10327,7 +10328,7 @@ $LN8@Hadamard:
 ??0Hadamard@@QEAA@H@Z ENDP				; Hadamard::Hadamard
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ??1Hadamard@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -10389,7 +10390,7 @@ $LN7@Hadamard:
 ??1Hadamard@@QEAA@XZ ENDP				; Hadamard::~Hadamard
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ?deleteMatrix@Hadamard@@QEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -10451,7 +10452,7 @@ $LN5@deleteMatr:
 ?deleteMatrix@Hadamard@@QEAAXXZ ENDP			; Hadamard::deleteMatrix
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ?setNumberOfChannels@Hadamard@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -10645,7 +10646,7 @@ $LN6@setNumberO:
 ?setNumberOfChannels@Hadamard@@QEAAXH@Z ENDP		; Hadamard::setNumberOfChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ?hadamardUnscaled@Hadamard@@QEAAXPEAMH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -10736,7 +10737,7 @@ $LN13@hadamardUn:
 ?hadamardUnscaled@Hadamard@@QEAAXPEAMH@Z ENDP		; Hadamard::hadamardUnscaled
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ?hadamardScaled@Hadamard@@QEAAXPEAMH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -10796,7 +10797,7 @@ $LN3@hadamardSc:
 ?hadamardScaled@Hadamard@@QEAAXPEAMH@Z ENDP		; Hadamard::hadamardScaled
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ?processAudio@Hadamard@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -10880,15 +10881,15 @@ $LN8@processAud:
 ?processAudio@Hadamard@@QEAAXPEAM0@Z ENDP		; Hadamard::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ;	COMDAT ??0FlipPolarity@@QEAA@H@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -10912,7 +10913,7 @@ $LN44:
 	and	QWORD PTR [rcx], 0
 	and	QWORD PTR [rcx+8], 0
 	and	QWORD PTR [rcx+16], 0
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 19   : 		fp_numofChannels = numCh; 
 
@@ -10922,7 +10923,7 @@ $LN44:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rax, QWORD PTR [rcx]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 37   : 		if (!fp_flipPolarity.empty())
 
@@ -10967,7 +10968,7 @@ $LN40@FlipPolari:
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
 	mov	DWORD PTR [rdx], 1
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 23   : 				fp_flipPolarity.push_back(1);
 
@@ -10989,7 +10990,7 @@ $LN14@FlipPolari:
 
 	or	DWORD PTR [rdx], -1
 $LN41@FlipPolari:
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 21   : 		for (int i = 0; i < fp_numofChannels; i++)
 
@@ -11039,15 +11040,15 @@ numCh$ = 56
 ?dtor$0@?0???0FlipPolarity@@QEAA@H@Z@4HA ENDP		; `FlipPolarity::FlipPolarity'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ;	COMDAT ??1FlipPolarity@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -11065,7 +11066,7 @@ $LN36:
 
 	mov	rcx, QWORD PTR [rcx]
 	cmp	rcx, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 37   : 		if (!fp_flipPolarity.empty())
 
@@ -11147,7 +11148,7 @@ $LN27@FlipPolari:
 
 	and	QWORD PTR [rbx+16], 0
 $LN11@FlipPolari:
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 16   : 	~FlipPolarity() { deleteFlipVector(); }
 
@@ -11165,13 +11166,13 @@ $LN33@FlipPolari:
 ??1FlipPolarity@@QEAA@XZ ENDP				; FlipPolarity::~FlipPolarity
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ;	COMDAT ?setNumberOfChannels@FlipPolarity@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -11197,7 +11198,7 @@ $LN35:
 
 	mov	rax, QWORD PTR [rcx]
 	cmp	rax, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 37   : 		if (!fp_flipPolarity.empty())
 
@@ -11241,7 +11242,7 @@ $LN31@setNumberO:
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
 	mov	DWORD PTR [rdx], 1
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 23   : 				fp_flipPolarity.push_back(1);
 
@@ -11263,7 +11264,7 @@ $LN5@setNumberO:
 
 	or	DWORD PTR [rdx], -1
 $LN32@setNumberO:
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 21   : 		for (int i = 0; i < fp_numofChannels; i++)
 
@@ -11288,9 +11289,9 @@ $LN3@setNumberO:
 ?setNumberOfChannels@FlipPolarity@@QEAAXH@Z ENDP	; FlipPolarity::setNumberOfChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ;	COMDAT ?processAudio@FlipPolarity@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -11312,7 +11313,7 @@ out$ = 24
 	sub	r8, rdx
 $LL4@processAud:
 	movd	xmm0, DWORD PTR [r9+rdx]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -11335,9 +11336,9 @@ $LN3@processAud:
 ?processAudio@FlipPolarity@@QEAAXPEAM0@Z ENDP		; FlipPolarity::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ;	COMDAT ?deleteFlipVector@FlipPolarity@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -11348,7 +11349,7 @@ this$ = 8
 
 	mov	rax, QWORD PTR [rcx]
 	cmp	rax, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 37   : 		if (!fp_flipPolarity.empty())
 
@@ -11365,7 +11366,7 @@ $LN2@deleteFlip:
 ?deleteFlipVector@FlipPolarity@@AEAAXXZ ENDP		; FlipPolarity::deleteFlipVector
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ??0MultiChannelDiffuser@@QEAA@H@Z
 _TEXT	SEGMENT
 $T5 = 48
@@ -11582,9 +11583,9 @@ numChInt$ = 56
 ?dtor$2@?0???0MultiChannelDiffuser@@QEAA@H@Z@4HA ENDP	; `MultiChannelDiffuser::MultiChannelDiffuser'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\Hadamard.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ??1MultiChannelDiffuser@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -11623,7 +11624,7 @@ $LN12@MultiChann:
 	mov	rdi, QWORD PTR [rbx+32]
 	test	rdi, rdi
 	je	SHORT $LN15@MultiChann
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 
 ; 29   : 		if (had_matrix) {
 
@@ -11665,7 +11666,7 @@ $LN23@MultiChann:
 	mov	rcx, rdi
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN15@MultiChann:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 106  : 		delete mdiff_Polarity;
 
@@ -11722,11 +11723,11 @@ $LN30@MultiChann:
 ??1MultiChannelDiffuser@@QEAA@XZ ENDP			; MultiChannelDiffuser::~MultiChannelDiffuser
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?init@MultiChannelDiffuser@@QEAAXMH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -11749,7 +11750,7 @@ $LN19:
 	mov	rbx, QWORD PTR [rcx+24]
 	mov	esi, r8d
 	mov	DWORD PTR [rcx+4], r8d
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 36   : 		mdel_sampleRate = sampleRate;
 
@@ -11760,7 +11761,7 @@ $LN19:
 
 	mov	rax, QWORD PTR [rbx+16]
 	cmp	QWORD PTR [rbx+8], rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 37   : 		if (!mdel_DelayLines.empty()) {
 
@@ -11787,7 +11788,7 @@ $LL6@init:
 	cmp	edi, DWORD PTR [rbx]
 	jl	SHORT $LL6@init
 $LN5@init:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 39   : 	}
 
@@ -11800,7 +11801,7 @@ $LN5@init:
 ?init@MultiChannelDiffuser@@QEAAXMH@Z ENDP		; MultiChannelDiffuser::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?setDelayLinesLength@MultiChannelDiffuser@@QEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -11816,11 +11817,11 @@ distr$ = 32
 ?setDelayLinesLength@MultiChannelDiffuser@@QEAAXMMW4DelayDistribution@@@Z ENDP ; MultiChannelDiffuser::setDelayLinesLength
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?setSampleRate@MultiChannelDiffuser@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -11839,18 +11840,18 @@ $LN16:
 ; 59   : 		mdiff_MultiChDelay->setSampleRate(sampleRate); 
 
 	mov	rdi, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	xor	ebx, ebx
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 58   : 		mdiff_sampleRate = sampleRate;
 
 	mov	DWORD PTR [rcx+4], edx
 	mov	esi, edx
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -11875,7 +11876,7 @@ $LL6@setSampleR:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL6@setSampleR
 $LN5@setSampleR:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 60   : 	}
 
@@ -11888,15 +11889,15 @@ $LN5@setSampleR:
 ?setSampleRate@MultiChannelDiffuser@@QEAAXH@Z ENDP	; MultiChannelDiffuser::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?processAudio@MultiChannelDiffuser@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -11920,12 +11921,12 @@ $LN27:
 ; 63   : 		mdiff_MultiChDelay->processAudio(in, mdiff_outMultiChDel);
 
 	mov	r14, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++) 
 
 	xor	esi, esi
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 63   : 		mdiff_MultiChDelay->processAudio(in, mdiff_outMultiChDel);
 
@@ -11933,7 +11934,7 @@ $LN27:
 	mov	r13, r8
 	mov	rbp, rdx
 	mov	rdi, rcx
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++) 
 
@@ -11959,12 +11960,12 @@ $LL6@processAud:
 	jl	SHORT $LL6@processAud
 	mov	rbx, QWORD PTR [rdi+8]
 $LN5@processAud:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 64   : 		mdiff_Polarity->processAudio(mdiff_outMultiChDel, mdiff_outMultiChDel);
 
 	mov	rax, QWORD PTR [rdi+40]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -11978,7 +11979,7 @@ $LN5@processAud:
 	sub	rcx, rbx
 $LL13@processAud:
 	movd	xmm0, DWORD PTR [rcx+rbx]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -11994,7 +11995,7 @@ $LL13@processAud:
 	jl	SHORT $LL13@processAud
 	mov	rbx, QWORD PTR [rdi+8]
 $LN12@processAud:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 65   : 		mdiff_Hadamard->processAudio(mdiff_outMultiChDel, out);
 
@@ -12020,7 +12021,7 @@ $LN12@processAud:
 ?processAudio@MultiChannelDiffuser@@QEAAXPEAM0@Z ENDP	; MultiChannelDiffuser::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?constructMCDF@MultiChannelDiffuser@@AEAAXH@Z
 _TEXT	SEGMENT
 $T5 = 48
@@ -12240,7 +12241,7 @@ numCh$ = 56
 ?dtor$2@?0??constructMCDF@MultiChannelDiffuser@@AEAAXH@Z@4HA ENDP ; `MultiChannelDiffuser::constructMCDF'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?initInternalArrays@MultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -12297,7 +12298,7 @@ $LN4:
 ?initInternalArrays@MultiChannelDiffuser@@AEAAXXZ ENDP	; MultiChannelDiffuser::initInternalArrays
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?deleteInternalArrays@MultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -12349,7 +12350,7 @@ $LN3@deleteInte:
 ?deleteInternalArrays@MultiChannelDiffuser@@AEAAXXZ ENDP ; MultiChannelDiffuser::deleteInternalArrays
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?initPointers@MultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -12369,9 +12370,9 @@ this$ = 8
 ?initPointers@MultiChannelDiffuser@@AEAAXXZ ENDP	; MultiChannelDiffuser::initPointers
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\Hadamard.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?deleteBlocks@MultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -12404,7 +12405,7 @@ $LN10@deleteBloc:
 	mov	rbx, QWORD PTR [rdi+32]
 	test	rbx, rbx
 	je	SHORT $LN13@deleteBloc
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 
 ; 29   : 		if (had_matrix) {
 
@@ -12446,7 +12447,7 @@ $LN21@deleteBloc:
 	mov	rcx, rbx
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN13@deleteBloc:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 106  : 		delete mdiff_Polarity;
 
@@ -12471,7 +12472,7 @@ $LN24@deleteBloc:
 ?deleteBlocks@MultiChannelDiffuser@@AEAAXXZ ENDP	; MultiChannelDiffuser::deleteBlocks
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 ;	COMDAT ?constructBlocks@MultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 $T5 = 48
@@ -12653,7 +12654,7 @@ $LN6:
 ??_GMultiChannelDelay@@QEAAPEAXI@Z ENDP			; MultiChannelDelay::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ;	COMDAT ??_GHadamard@@QEAAPEAXI@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -12734,7 +12735,7 @@ $LN6:
 ??_GFlipPolarity@@QEAAPEAXI@Z ENDP			; FlipPolarity::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\Householder.h
 ;	COMDAT ??0Householder@@QEAA@H@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -12764,7 +12765,7 @@ numCh$ = 16
 ??0Householder@@QEAA@H@Z ENDP				; Householder::Householder
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\Householder.h
 ;	COMDAT ?setNumberOfChannels@Householder@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -12788,7 +12789,7 @@ numCh$ = 16
 ?setNumberOfChannels@Householder@@QEAAXH@Z ENDP		; Householder::setNumberOfChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\Householder.h
 ;	COMDAT ?processAudio@Householder@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -12846,13 +12847,13 @@ $LN6@processAud:
 ?processAudio@Householder@@QEAAXPEAM0@Z ENDP		; Householder::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ??0ModMultiChannelDelay@@QEAA@H@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -12880,7 +12881,7 @@ $LN44:
 	mov	QWORD PTR [rsi], rbx
 	mov	QWORD PTR [rsi+8], rbx
 	mov	QWORD PTR [rsi+16], rbx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 163  : 		mdel_numberOfChannels = numCh;
 
@@ -12937,7 +12938,7 @@ $LN23@ModMultiCh:
 	mov	rcx, rsi
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN13@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -12970,7 +12971,7 @@ $LL30@ModMultiCh:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rsi]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
 
@@ -13057,32 +13058,32 @@ $T1 = 88
 ?dtor$1@?0???0ModMultiChannelDelay@@QEAA@H@Z@4HA ENDP	; `ModMultiChannelDelay::ModMultiChannelDelay'::`1'::dtor$1
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ??1ModMultiChannelDelay@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -13103,7 +13104,7 @@ $LN60:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	r8, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 35   : 	~ModMultiChannelDelay() { deleteDelayLines(); }
 
@@ -13114,7 +13115,7 @@ $LN60:
 
 	mov	rax, QWORD PTR [rcx+16]
 	cmp	r8, rax
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 150  : 		if (!mdel_DelayLines.empty()) {
 
@@ -13124,7 +13125,7 @@ $LN60:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, r8
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -13134,7 +13135,7 @@ $LN60:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -13147,14 +13148,14 @@ $LN60:
 
 	xor	r14d, r14d
 $LL6@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 152  : 				delete mdel_DelayLines[i];
 
 	mov	rdi, QWORD PTR [r14+r8]
 	test	rdi, rdi
 	je	SHORT $LN4@ModMultiCh
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
@@ -13183,7 +13184,7 @@ $LN4@ModMultiCh:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	r8, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -13193,7 +13194,7 @@ $LN4@ModMultiCh:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -13203,7 +13204,7 @@ $LN4@ModMultiCh:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, r8
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -13214,7 +13215,7 @@ $LN4@ModMultiCh:
 
 	sar	rcx, 3
 	mov	rdx, r8
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -13300,7 +13301,7 @@ $LN47@ModMultiCh:
 
 	and	QWORD PTR [rbx+24], 0
 $LN31@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 35   : 	~ModMultiChannelDelay() { deleteDelayLines(); }
 
@@ -13322,21 +13323,11 @@ $LN57@ModMultiCh:
 ??1ModMultiChannelDelay@@QEAA@XZ ENDP			; ModMultiChannelDelay::~ModMultiChannelDelay
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -13346,35 +13337,33 @@ sampleRate$ = 64
 
 ; 37   : 	void initDelayLines(float bufferLengthMs, int sampleRate) {
 
-$LN27:
-	mov	rax, rsp
-	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+16], rbp
-	mov	QWORD PTR [rax+24], rsi
-	mov	QWORD PTR [rax+32], rdi
-	push	r14
+$LN17:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rbp
+	mov	QWORD PTR [rsp+24], rsi
+	push	rdi
 	sub	rsp, 32					; 00000020H
 
 ; 38   : 		mdel_sampleRate = sampleRate;
 
 	mov	DWORD PTR [rcx+40], r8d
-	mov	esi, r8d
+	mov	ebp, r8d
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rax, QWORD PTR [rcx+16]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 37   : 	void initDelayLines(float bufferLengthMs, int sampleRate) {
 
-	mov	rdi, rcx
+	mov	rbx, rcx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	cmp	QWORD PTR [rcx+8], rax
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 39   : 		if (!mdel_DelayLines.empty()) {
 
@@ -13382,109 +13371,22 @@ $LN27:
 
 ; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	xor	ebp, ebp
-	cmp	DWORD PTR [rcx], ebp
+	xor	edi, edi
+	cmp	DWORD PTR [rcx], edi
 	jle	SHORT $LN3@initDelayL
-	xor	r14d, r14d
+	mov	esi, edi
 $LL4@initDelayL:
 
 ; 41   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
 
-	mov	rax, QWORD PTR [rdi+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	r8d, esi
+	mov	rcx, QWORD PTR [rbx+8]
+	mov	r8d, ebp
 	movss	xmm1, DWORD PTR __real@44fa0000
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 41   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
-
-	mov	rbx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	rcx, rbx
-	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
-
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+104]
-	mov	DWORD PTR [rbx+116], 1
-; File E:\prova\Shimmer\include\LFO.h
-
-; 132  : 		lfo_table.clear();
-
-	mov	rax, QWORD PTR [rcx+24]
-
-; 60   : 		lfo_counter = 0.0;
-
-	and	DWORD PTR [rcx+16], 0
-
-; 63   : 		lfo_frequency = 0.0;
-
-	and	DWORD PTR [rcx], 0
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	and	DWORD PTR [rcx+20], 0
-
-; 132  : 		lfo_table.clear();
-
-	mov	QWORD PTR [rcx+32], rax
-
-; 61   : 		lfo_amplitude = 1.0;
-
-	mov	DWORD PTR [rcx+8], 1065353216		; 3f800000H
-
-; 62   : 		lfo_waveform = waveform;
-
-	mov	DWORD PTR [rcx+12], 1
-
-; 64   : 		lfo_sampleRate = sampleRate;		
-
-	mov	DWORD PTR [rcx+4], esi
-
-; 65   : 		computeIncrement();
-; 66   : 		clearTable();
-; 67   : 		createTable();
-
-	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	rax, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	lea	r14, QWORD PTR [r14+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 95   : 		mdly_isUnipolar = isUnipolar;
-
-	mov	BYTE PTR [rbx+112], 0
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	inc	ebp
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	BYTE PTR [rax+48], 0
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	cmp	ebp, DWORD PTR [rdi]
+	mov	rcx, QWORD PTR [rcx+rsi]
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
+	inc	edi
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	edi, DWORD PTR [rbx]
 	jl	SHORT $LL4@initDelayL
 $LN3@initDelayL:
 
@@ -13494,26 +13396,34 @@ $LN3@initDelayL:
 	mov	rbx, QWORD PTR [rsp+48]
 	mov	rbp, QWORD PTR [rsp+56]
 	mov	rsi, QWORD PTR [rsp+64]
-	mov	rdi, QWORD PTR [rsp+72]
 	add	rsp, 32					; 00000020H
-	pop	r14
+	pop	rdi
 	ret	0
 ?initDelayLines@ModMultiChannelDelay@@QEAAXMH@Z ENDP	; ModMultiChannelDelay::initDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 dly$7 = 32
@@ -13526,11 +13436,13 @@ distr$ = 152
 
 ; 55   : 	void setDelayLinesLength(float dlyMinLengthMs, float dlyMaxLengthMs, DelayDistribution distr = DelayDistribution::RandomInRange) {
 
-$LN100:
+$LN121:
 	mov	rax, rsp
 	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+16], rsi
-	push	rdi
+	mov	QWORD PTR [rax+16], rbp
+	mov	QWORD PTR [rax+24], rsi
+	mov	QWORD PTR [rax+32], rdi
+	push	r14
 	sub	rsp, 112				; 00000070H
 	movaps	XMMWORD PTR [rax-24], xmm6
 	movaps	XMMWORD PTR [rax-40], xmm8
@@ -13558,81 +13470,61 @@ $LN100:
 	sub	r9d, 1
 	je	SHORT $LN4@setDelayLi
 	cmp	r9d, 1
-	jne	$LN56@setDelayLi
+	jne	$LN70@setDelayLi
 
 ; 128  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	cmp	DWORD PTR [rcx], ebx
-	jle	$LN56@setDelayLi
-	mov	edx, ebx
-$LL81@setDelayLi:
+	jle	$LN70@setDelayLi
+	mov	esi, ebx
+$LL95@setDelayLi:
 
 ; 129  : 			mdel_DelayLines[i]->setDelayInmsec(mdel_maxDelayMs);
 
+	movss	xmm1, DWORD PTR [rdi+36]
 	mov	rax, QWORD PTR [rdi+8]
-	mov	rcx, QWORD PTR [rdx+rax]
-	mov	eax, DWORD PTR [rdi+36]
-	mov	DWORD PTR [rcx+120], eax
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 76   : 
-; 77   : 	void setSpecificDelayLengthsMs(float* lenghts) {
-; 78   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 79   : 			mdel_DelayLines[i]->setDelayInmsec(lenghts[i]);
-; 80   : 	}
-; 81   : 
-; 82   : 	void setMakeUpGaindB(float makeUpGain) {
-; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 84   : 			mdel_DelayLines[i]->setMakeUpGaindB(makeUpGain);
-; 85   : 	}
-; 86   : 
-; 87   : 	void setModDepth(float depth) {
-; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 89   : 			mdel_DelayLines[i]->setDeltaDelayValue(depth*mdel_modValmsec);
-; 90   : 	}
-; 91   : 
-; 92   : 	void setModRate(float freq) {
-; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 94   : 			mdel_DelayLines[i]->setModRate(freq);
-; 95   : 	}	
-; 96   : 	
-; 97   : 	void setModValueInMsec(float modVal) {
-; 98   : 		mdel_modValmsec = modVal;
-; 99   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
-; 101  : 	}
-; 102  : 
-; 103  : 	void setOscillatorType(OscillatorType type) {
-; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 105  : 			mdel_DelayLines[i]->setLFOWaveform(type);
-; 106  : 	}
-; 107  : 
-; 108  : 	void setOscillatorIsUnipolar(bool isUnipolar) {
-; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 110  : 			mdel_DelayLines[i]->setLFOUnipolar(isUnipolar);
-; 111  : 	}
-; 112  : 
-; 113  : 	void setSampleRate(int sampleRate) {
-; 114  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
-; 115  : 			mdel_sampleRate = sampleRate;
-; 116  : 			mdel_DelayLines[i]->setSampleRate(sampleRate);
-; 117  : 		}
-; 118  : 	}
-; 119  : 
-; 120  : 	void processAudio(float* in, float* out) {
-; 121  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-; 122  : 			out[i] = mdel_DelayLines[i]->processAudio(in[i]);
-; 123  : 	}
-; 124  : 
-; 125  : private:
-; 126  : 
-; 127  : 	void setEqualDelayLines() {
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rcx+120], xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+	ja	SHORT $LN104@setDelayLi
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN104@setDelayLi:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+
 ; 128  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	inc	ebx
-	lea	rdx, QWORD PTR [rdx+8]
+	add	rsi, 8
 	cmp	ebx, DWORD PTR [rdi]
-	jl	SHORT $LL81@setDelayLi
-	jmp	$LN56@setDelayLi
+	jl	SHORT $LL95@setDelayLi
+	jmp	$LN70@setDelayLi
 $LN4@setDelayLi:
 
 ; 133  : 		float step = (mdel_maxDelayMs - MINIMUM_DELAY_LENGTH_MCD) / mdel_numberOfChannels;
@@ -13645,11 +13537,10 @@ $LN4@setDelayLi:
 	divsd	xmm1, xmm0
 	cvtpd2ps xmm8, xmm1
 
-; 134  : 		float dlyLength;
 ; 135  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	cmp	DWORD PTR [rcx], ebx
-	jle	$LN56@setDelayLi
+	jle	$LN70@setDelayLi
 	mov	rsi, rbx
 $LL11@setDelayLi:
 	xorps	xmm0, xmm0
@@ -13662,15 +13553,16 @@ $LL11@setDelayLi:
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm6, xmm1
 	inc	ebx
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	call	QWORD PTR __imp_rand
 	xorps	xmm3, xmm3
 	cvtsi2ss xmm3, eax
+	mulss	xmm3, DWORD PTR __real@38000100
 	xorps	xmm0, xmm0
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 136  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
 
@@ -13679,34 +13571,64 @@ $LL11@setDelayLi:
 	cvtps2pd xmm1, xmm0
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm2, xmm1
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 105  : 	return min + unitRand * (max - min);
+; 106  : 	return min + unitRand * (max - min);
 
 	subss	xmm2, xmm6
 	mulss	xmm3, xmm2
-	mulss	xmm3, DWORD PTR __real@38000100
 	addss	xmm3, xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 137  : 			mdel_DelayLines[i]->setDelayInmsec(dlyLength);
 
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, QWORD PTR [rsi+rax]
-	movss	DWORD PTR [rcx+120], xmm3
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 134  : 		float dlyLength;
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rcx+120], xmm3
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm3, xmm0
+	ja	SHORT $LN22@setDelayLi
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm3
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN22@setDelayLi:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+
 ; 135  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	add	rsi, 8
 	cmp	ebx, DWORD PTR [rdi]
-	jl	SHORT $LL11@setDelayLi
+	jl	$LL11@setDelayLi
 
 ; 62   : 		case DelayDistribution::RandomInRange: {
 ; 63   : 			setRandomInRangeDelayLines();
 ; 64   : 			break;
 
-	jmp	$LN56@setDelayLi
+	jmp	$LN70@setDelayLi
 $LN5@setDelayLi:
 
 ; 142  : 		vector<float> dly(mdel_numberOfChannels);
@@ -13730,10 +13652,9 @@ $LN5@setDelayLi:
 
 ; 1763 :         if (_Myfirst) { // destroy and deallocate old array
 
-	mov	esi, 4096				; 00001000H
 	mov	rcx, QWORD PTR $T3[rsp]
 	test	rcx, rcx
-	je	SHORT $LN27@setDelayLi
+	je	SHORT $LN34@setDelayLi
 
 ; 1764 :             _Destroy(_Myfirst, _Mylast);
 ; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
@@ -13750,8 +13671,8 @@ $LN5@setDelayLi:
 
 ; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
 
-	cmp	rdx, rsi
-	jb	SHORT $LN43@setDelayLi
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN50@setDelayLi
 
 ; 155  :     _Bytes += _Non_user_size;
 
@@ -13781,29 +13702,29 @@ $LN5@setDelayLi:
 
 	add	rax, -8
 	cmp	rax, 31
-	jbe	SHORT $LN43@setDelayLi
+	jbe	SHORT $LN50@setDelayLi
 	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
 	int	3
-$LN43@setDelayLi:
+$LN50@setDelayLi:
 
 ; 264  :         ::operator delete(_Ptr, _Bytes);
 
 	call	??3@YAXPEAX_K@Z				; operator delete
-$LN27@setDelayLi:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+$LN34@setDelayLi:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 144  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r8d, ebx
+	mov	esi, ebx
 	cmp	DWORD PTR [rdi], ebx
-	jle	SHORT $LN19@setDelayLi
+	jle	SHORT $LN26@setDelayLi
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1563 :         auto& _My_data = _Mypair._Myval2;
 
-	mov	r9, rbx
-	mov	r10, rbx
-$LL20@setDelayLi:
+	mov	rbp, rbx
+	mov	r14, rbx
+$LL27@setDelayLi:
 
 ; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
 ; 1565 :         _STL_VERIFY(
@@ -13812,24 +13733,56 @@ $LL20@setDelayLi:
 ; 1568 : 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rax, QWORD PTR [rdi+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rcx, QWORD PTR [rdi+8]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 145  : 			mdel_DelayLines[i]->setDelayInmsec(dly[i]);
 
-	mov	rdx, QWORD PTR [r10+rax]
 	mov	rax, QWORD PTR dly$7[rsp]
-	mov	ecx, DWORD PTR [r9+rax]
-	mov	DWORD PTR [rdx+120], ecx
+	movss	xmm1, DWORD PTR [rax+rbp]
+	mov	rcx, QWORD PTR [r14+rcx]
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rcx+120], xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+	ja	SHORT $LN65@setDelayLi
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN65@setDelayLi:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 144  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	inc	r8d
-	lea	r10, QWORD PTR [r10+8]
-	lea	r9, QWORD PTR [r9+4]
-	cmp	r8d, DWORD PTR [rdi]
-	jl	SHORT $LL20@setDelayLi
-$LN19@setDelayLi:
+	inc	esi
+	add	r14, 8
+	add	rbp, 4
+	cmp	esi, DWORD PTR [rdi]
+	jl	SHORT $LL27@setDelayLi
+$LN26@setDelayLi:
 
 ; 146  : 		dly.clear();
 
@@ -13840,7 +13793,7 @@ $LN19@setDelayLi:
 ; 1763 :         if (_Myfirst) { // destroy and deallocate old array
 
 	test	rcx, rcx
-	je	SHORT $LN56@setDelayLi
+	je	SHORT $LN70@setDelayLi
 
 ; 1764 :             _Destroy(_Myfirst, _Mylast);
 ; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
@@ -13856,8 +13809,8 @@ $LN19@setDelayLi:
 
 ; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
 
-	cmp	rdx, rsi
-	jb	SHORT $LN72@setDelayLi
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN86@setDelayLi
 
 ; 155  :     _Bytes += _Non_user_size;
 
@@ -13887,28 +13840,30 @@ $LN19@setDelayLi:
 
 	add	rax, -8
 	cmp	rax, 31
-	jbe	SHORT $LN72@setDelayLi
+	jbe	SHORT $LN86@setDelayLi
 	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
 	int	3
-$LN72@setDelayLi:
+$LN86@setDelayLi:
 
 ; 264  :         ::operator delete(_Ptr, _Bytes);
 
 	call	??3@YAXPEAX_K@Z				; operator delete
-$LN56@setDelayLi:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+$LN70@setDelayLi:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 75   : 	}
 
 	lea	r11, QWORD PTR [rsp+112]
 	mov	rbx, QWORD PTR [r11+16]
-	mov	rsi, QWORD PTR [r11+24]
+	mov	rbp, QWORD PTR [r11+24]
+	mov	rsi, QWORD PTR [r11+32]
+	mov	rdi, QWORD PTR [r11+40]
 	movaps	xmm6, XMMWORD PTR [rsp+96]
 	movaps	xmm8, XMMWORD PTR [r11-32]
 	mov	rsp, r11
-	pop	rdi
+	pop	r14
 	ret	0
-$LN97@setDelayLi:
+$LN118@setDelayLi:
 ?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ENDP ; ModMultiChannelDelay::setDelayLinesLength
 _TEXT	ENDS
 ;	COMDAT text$x
@@ -13939,9 +13894,9 @@ distr$ = 152
 ?dtor$0@?0??setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z@4HA ENDP ; `ModMultiChannelDelay::setDelayLinesLength'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setMakeUpGaindB@ModMultiChannelDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -13969,18 +13924,18 @@ $LL4@setMakeUpG:
 
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 136  : 	dly_makeUpGaindB = gaindB;
+; 135  : 	dly_makeUpGaindB = gaindB;
 
 	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
 
-; 137  : 
-; 138  : 	// update parameters
-; 139  : 	updateParameters();
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -14000,7 +13955,7 @@ $LN3@setMakeUpG:
 ?setMakeUpGaindB@ModMultiChannelDelay@@QEAAXM@Z ENDP	; ModMultiChannelDelay::setMakeUpGaindB
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setModDepth@ModMultiChannelDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -14035,12 +13990,12 @@ $LN3@setModDept:
 ?setModDepth@ModMultiChannelDelay@@QEAAXM@Z ENDP	; ModMultiChannelDelay::setModDepth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setModRate@ModMultiChannelDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -14061,25 +14016,25 @@ $LL4@setModRate:
 
 	mov	rax, QWORD PTR [r8+8]
 	inc	edx
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movss	xmm1, DWORD PTR __real@45800000
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 94   : 			mdel_DelayLines[i]->setModRate(freq);
 
 	mov	rcx, QWORD PTR [r9+rax]
 	lea	r9, QWORD PTR [r9+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	mov	DWORD PTR [rcx+136], r10d
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -14093,7 +14048,7 @@ $LL4@setModRate:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -14107,7 +14062,7 @@ $LN3@setModRate:
 ?setModRate@ModMultiChannelDelay@@QEAAXM@Z ENDP		; ModMultiChannelDelay::setModRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setModValueInMsec@ModMultiChannelDelay@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -14141,10 +14096,10 @@ $LN3@setModValu:
 ?setModValueInMsec@ModMultiChannelDelay@@QEAAXM@Z ENDP	; ModMultiChannelDelay::setModValueInMsec
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setOscillatorType@ModMultiChannelDelay@@QEAAXW4OscillatorType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -14172,13 +14127,13 @@ $LL4@setOscilla:
 
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rdx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rdx+104]
 	mov	DWORD PTR [rdx+116], 1
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -14193,7 +14148,7 @@ $LL4@setOscilla:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -14213,9 +14168,9 @@ $LN3@setOscilla:
 ?setOscillatorType@ModMultiChannelDelay@@QEAAXW4OscillatorType@@@Z ENDP ; ModMultiChannelDelay::setOscillatorType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setOscillatorIsUnipolar@ModMultiChannelDelay@@QEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -14237,17 +14192,17 @@ $LL4@setOscilla:
 	inc	r8d
 	mov	rax, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
 	mov	BYTE PTR [rax+112], r9b
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rax+104]
 	mov	BYTE PTR [rax+48], r9b
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -14261,7 +14216,7 @@ $LN3@setOscilla:
 ?setOscillatorIsUnipolar@ModMultiChannelDelay@@QEAAX_N@Z ENDP ; ModMultiChannelDelay::setOscillatorIsUnipolar
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setSampleRate@ModMultiChannelDelay@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -14316,7 +14271,7 @@ $LN3@setSampleR:
 ?setSampleRate@ModMultiChannelDelay@@QEAAXH@Z ENDP	; ModMultiChannelDelay::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?processAudio@ModMultiChannelDelay@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -14374,45 +14329,108 @@ $LN3@processAud:
 ?processAudio@ModMultiChannelDelay@@QEAAXPEAM0@Z ENDP	; ModMultiChannelDelay::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setEqualDelayLines@ModMultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
-this$ = 8
+this$ = 48
 ?setEqualDelayLines@ModMultiChannelDelay@@AEAAXXZ PROC	; ModMultiChannelDelay::setEqualDelayLines, COMDAT
+
+; 127  : 	void setEqualDelayLines() {
+
+$LN21:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rsi
+	push	rdi
+	sub	rsp, 32					; 00000020H
 
 ; 128  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	xor	r8d, r8d
-	cmp	DWORD PTR [rcx], r8d
+	xor	ebx, ebx
+	mov	rdi, rcx
+	cmp	DWORD PTR [rcx], ebx
 	jle	SHORT $LN3@setEqualDe
-	mov	r9d, r8d
+	mov	esi, ebx
 $LL4@setEqualDe:
 
 ; 129  : 			mdel_DelayLines[i]->setDelayInmsec(mdel_maxDelayMs);
 
-	mov	rax, QWORD PTR [rcx+8]
-	inc	r8d
-	mov	rdx, QWORD PTR [rax+r9]
-	lea	r9, QWORD PTR [r9+8]
-	mov	eax, DWORD PTR [rcx+36]
-	mov	DWORD PTR [rdx+120], eax
-	cmp	r8d, DWORD PTR [rcx]
+	movss	xmm1, DWORD PTR [rdi+36]
+	mov	rax, QWORD PTR [rdi+8]
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rcx+120], xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	ja	SHORT $LN13@setEqualDe
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN13@setEqualDe:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+
+; 128  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
+
+	inc	ebx
+	add	rsi, 8
+	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL4@setEqualDe
 $LN3@setEqualDe:
 
 ; 130  : 	}
 
+	mov	rbx, QWORD PTR [rsp+48]
+	mov	rsi, QWORD PTR [rsp+56]
+	add	rsp, 32					; 00000020H
+	pop	rdi
 	ret	0
 ?setEqualDelayLines@ModMultiChannelDelay@@AEAAXXZ ENDP	; ModMultiChannelDelay::setEqualDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setRandomInRangeDelayLines@ModMultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 80
@@ -14420,14 +14438,14 @@ this$ = 80
 
 ; 132  : 	void setRandomInRangeDelayLines() {
 
-$LN16:
+$LN23:
 	mov	rax, rsp
 	mov	QWORD PTR [rax+8], rbx
 	mov	QWORD PTR [rax+16], rsi
 	push	rdi
 	sub	rsp, 64					; 00000040H
 	movss	xmm1, DWORD PTR [rcx+36]
-	mov	rdi, rcx
+	mov	rbx, rcx
 	movd	xmm0, DWORD PTR [rcx]
 
 ; 133  : 		float step = (mdel_maxDelayMs - MINIMUM_DELAY_LENGTH_MCD) / mdel_numberOfChannels;
@@ -14438,70 +14456,120 @@ $LN16:
 	movaps	XMMWORD PTR [rax-24], xmm6
 	movaps	XMMWORD PTR [rax-40], xmm8
 
-; 134  : 		float dlyLength;
 ; 135  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	xor	eax, eax
 	divsd	xmm1, xmm0
 	cvtpd2ps xmm8, xmm1
 	cmp	DWORD PTR [rcx], eax
-	jle	SHORT $LN3@setRandomI
-	mov	esi, eax
+	jle	$LN3@setRandomI
+	mov	edi, eax
 $LL4@setRandomI:
 	xorps	xmm0, xmm0
 
 ; 136  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
 
-	lea	ebx, DWORD PTR [rax+1]
+	lea	esi, DWORD PTR [rax+1]
 	cvtsi2ss xmm0, eax
 	mulss	xmm0, xmm8
 	cvtps2pd xmm1, xmm0
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm6, xmm1
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	call	QWORD PTR __imp_rand
 	xorps	xmm0, xmm0
 	xorps	xmm3, xmm3
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 136  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
 
-	cvtsi2ss xmm0, ebx
-; File E:\prova\Shimmer\include\utils.h
+	cvtsi2ss xmm0, esi
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	cvtsi2ss xmm3, eax
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 137  : 			mdel_DelayLines[i]->setDelayInmsec(dlyLength);
 
-	mov	rax, QWORD PTR [rdi+8]
-	mov	rcx, QWORD PTR [rax+rsi]
-	mov	eax, ebx
+	mov	rax, QWORD PTR [rbx+8]
+	mov	rcx, QWORD PTR [rdi+rax]
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
+
+	mulss	xmm3, DWORD PTR __real@38000100
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+
+; 136  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
+
 	mulss	xmm0, xmm8
-	add	rsi, 8
 	cvtps2pd xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+
+; 136  : 			dlyLength = randomInRange(MINIMUM_DELAY_LENGTH_MCD + step * i, MINIMUM_DELAY_LENGTH_MCD + step * (i + 1));
+
 	addsd	xmm1, QWORD PTR __real@3fb999999999999a
 	cvtpd2ps xmm2, xmm1
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 105  : 	return min + unitRand * (max - min);
+; 106  : 	return min + unitRand * (max - min);
 
 	subss	xmm2, xmm6
 	mulss	xmm3, xmm2
-	mulss	xmm3, DWORD PTR __real@38000100
 	addss	xmm3, xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 137  : 			mdel_DelayLines[i]->setDelayInmsec(dlyLength);
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	comiss	xmm3, xmm0
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
 
 	movss	DWORD PTR [rcx+120], xmm3
-	cmp	ebx, DWORD PTR [rdi]
-	jl	SHORT $LL4@setRandomI
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	ja	SHORT $LN15@setRandomI
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm3
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN15@setRandomI:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+
+; 135  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
+
+	add	rdi, 8
+	mov	eax, esi
+	cmp	esi, DWORD PTR [rbx]
+	jl	$LL4@setRandomI
 $LN3@setRandomI:
 
 ; 138  : 		}
@@ -14517,15 +14585,18 @@ $LN3@setRandomI:
 ?setRandomInRangeDelayLines@ModMultiChannelDelay@@AEAAXXZ ENDP ; ModMultiChannelDelay::setRandomInRangeDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 dly$ = 32
@@ -14535,15 +14606,19 @@ this$ = 96
 
 ; 141  : 	void setExponentialDelayLengths() {
 
-$LN68:
-	push	rbx
+$LN75:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+8], rbx
+	mov	QWORD PTR [rax+16], rsi
+	mov	QWORD PTR [rax+24], rdi
+	push	r14
 	sub	rsp, 80					; 00000050H
 	mov	rbx, rcx
 
 ; 142  : 		vector<float> dly(mdel_numberOfChannels);
 
 	movsxd	rdx, DWORD PTR [rcx]
-	lea	rcx, QWORD PTR dly$[rsp]
+	lea	rcx, QWORD PTR [rax-56]
 	call	??0?$vector@MV?$allocator@M@std@@@std@@QEAA@_KAEBV?$allocator@M@1@@Z ; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
 	npad	1
 
@@ -14620,19 +14695,19 @@ $LN27@setExponen:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN11@setExponen:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 144  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	xor	r8d, r8d
-	cmp	DWORD PTR [rbx], r8d
+	xor	edi, edi
+	cmp	DWORD PTR [rbx], edi
 	jle	SHORT $LN3@setExponen
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1563 :         auto& _My_data = _Mypair._Myval2;
 
-	xor	r9d, r9d
-	xor	r10d, r10d
+	xor	esi, esi
+	xor	r14d, r14d
 $LL4@setExponen:
 
 ; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
@@ -14642,22 +14717,54 @@ $LL4@setExponen:
 ; 1568 : 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rax, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rcx, QWORD PTR [rbx+8]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 145  : 			mdel_DelayLines[i]->setDelayInmsec(dly[i]);
 
-	mov	rdx, QWORD PTR [r10+rax]
 	mov	rax, QWORD PTR dly$[rsp]
-	mov	ecx, DWORD PTR [r9+rax]
-	mov	DWORD PTR [rdx+120], ecx
+	movss	xmm1, DWORD PTR [rsi+rax]
+	mov	rcx, QWORD PTR [r14+rcx]
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rcx+120], xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+	ja	SHORT $LN42@setExponen
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN42@setExponen:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 144  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	inc	r8d
-	lea	r10, QWORD PTR [r10+8]
-	lea	r9, QWORD PTR [r9+4]
-	cmp	r8d, DWORD PTR [rbx]
+	inc	edi
+	add	r14, 8
+	add	rsi, 4
+	cmp	edi, DWORD PTR [rbx]
 	jl	SHORT $LL4@setExponen
 $LN3@setExponen:
 
@@ -14670,7 +14777,7 @@ $LN3@setExponen:
 ; 1763 :         if (_Myfirst) { // destroy and deallocate old array
 
 	test	rcx, rcx
-	je	SHORT $LN40@setExponen
+	je	SHORT $LN47@setExponen
 
 ; 1764 :             _Destroy(_Myfirst, _Mylast);
 ; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
@@ -14687,7 +14794,7 @@ $LN3@setExponen:
 ; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
 
 	cmp	rdx, 4096				; 00001000H
-	jb	SHORT $LN56@setExponen
+	jb	SHORT $LN63@setExponen
 
 ; 155  :     _Bytes += _Non_user_size;
 
@@ -14717,23 +14824,26 @@ $LN3@setExponen:
 
 	add	rax, -8
 	cmp	rax, 31
-	jbe	SHORT $LN56@setExponen
+	jbe	SHORT $LN63@setExponen
 	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
 	int	3
-$LN56@setExponen:
+$LN63@setExponen:
 
 ; 264  :         ::operator delete(_Ptr, _Bytes);
 
 	call	??3@YAXPEAX_K@Z				; operator delete
-$LN40@setExponen:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+$LN47@setExponen:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 147  : 	}
 
+	mov	rbx, QWORD PTR [rsp+96]
+	mov	rsi, QWORD PTR [rsp+104]
+	mov	rdi, QWORD PTR [rsp+112]
 	add	rsp, 80					; 00000050H
-	pop	rbx
+	pop	r14
 	ret	0
-$LN65@setExponen:
+$LN72@setExponen:
 ?setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ ENDP ; ModMultiChannelDelay::setExponentialDelayLengths
 _TEXT	ENDS
 ;	COMDAT text$x
@@ -14758,26 +14868,26 @@ this$ = 96
 ?dtor$0@?0??setExponentialDelayLengths@ModMultiChannelDelay@@AEAAXXZ@4HA ENDP ; `ModMultiChannelDelay::setExponentialDelayLengths'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?deleteDelayLines@ModMultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -14798,7 +14908,7 @@ $LN32:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rdx, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 149  : 	void deleteDelayLines() {
 
@@ -14809,7 +14919,7 @@ $LN32:
 
 	mov	rax, QWORD PTR [rcx+16]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 150  : 		if (!mdel_DelayLines.empty()) {
 
@@ -14819,7 +14929,7 @@ $LN32:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -14829,7 +14939,7 @@ $LN32:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -14841,14 +14951,14 @@ $LN32:
 
 	xor	r14d, r14d
 $LL4@deleteDela:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 152  : 				delete mdel_DelayLines[i];
 
 	mov	rdi, QWORD PTR [r14+rdx]
 	test	rdi, rdi
 	je	SHORT $LN2@deleteDela
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
@@ -14877,7 +14987,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -14887,7 +14997,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -14897,7 +15007,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -14907,7 +15017,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 151  : 			for (int i = 0; i < mdel_DelayLines.size(); i++)
 
@@ -14933,9 +15043,9 @@ $LN5@deleteDela:
 ?deleteDelayLines@ModMultiChannelDelay@@AEAAXXZ ENDP	; ModMultiChannelDelay::deleteDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?constructDelayObjects@ModMultiChannelDelay@@AEAAXXZ
 _TEXT	SEGMENT
 $T3 = 48
@@ -14999,7 +15109,7 @@ $LN12@constructD:
 	lea	rcx, QWORD PTR [rdi+8]
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN2@constructD:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -15053,9 +15163,9 @@ $T1 = 56
 ?dtor$0@?0??constructDelayObjects@ModMultiChannelDelay@@AEAAXXZ@4HA ENDP ; `ModMultiChannelDelay::constructDelayObjects'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ;	COMDAT ?constructMCDL@ModMultiChannelDelay@@AEAAXH@Z
 _TEXT	SEGMENT
 $T3 = 64
@@ -15130,7 +15240,7 @@ $LN14@constructM:
 	lea	rcx, QWORD PTR [rdi+8]
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN4@constructM:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -15217,7 +15327,7 @@ $T1 = 80
 ?dtor$0@?0??constructMCDL@ModMultiChannelDelay@@AEAAXH@Z@4HA ENDP ; `ModMultiChannelDelay::constructMCDL'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ??_GModDelay@@QEAAPEAXI@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -15258,15 +15368,15 @@ $LN10@scalar:
 ??_GModDelay@@QEAAPEAXI@Z ENDP				; ModDelay::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ??0ModMultiChannelDiffuser@@QEAA@H@Z
 _TEXT	SEGMENT
 $T4 = 80
@@ -15309,7 +15419,7 @@ $LN63:
 	mov	rdi, rax
 	mov	QWORD PTR $T1[rsp], rax
 	mov	edx, DWORD PTR [r14]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 31   : 	ModMultiChannelDelay(int numCh) {
 
@@ -15321,7 +15431,7 @@ $LN63:
 	mov	QWORD PTR [rsi], rbx
 	mov	QWORD PTR [rsi+8], rbx
 	mov	QWORD PTR [rsi+16], rbx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 163  : 		mdel_numberOfChannels = numCh;
 
@@ -15378,7 +15488,7 @@ $LN40@ModMultiCh:
 	mov	rcx, rsi
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN30@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -15411,7 +15521,7 @@ $LL47@ModMultiCh:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rsi]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
 
@@ -15425,7 +15535,7 @@ $LL47@ModMultiCh:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL47@ModMultiCh
 $LN46@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 132  : 		mdiff_MultiChDelay = new ModMultiChannelDelay(mdiff_numberOfChannels);
 
@@ -15690,9 +15800,9 @@ $T2 = 104
 ?dtor$2@?0???0ModMultiChannelDiffuser@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelDiffuser::ModMultiChannelDiffuser'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\Hadamard.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ??1ModMultiChannelDiffuser@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -15731,7 +15841,7 @@ $LN12@ModMultiCh:
 	mov	rdi, QWORD PTR [rbx+32]
 	test	rdi, rdi
 	je	SHORT $LN15@ModMultiCh
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 
 ; 29   : 		if (had_matrix) {
 
@@ -15773,7 +15883,7 @@ $LN23@ModMultiCh:
 	mov	rcx, rdi
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN15@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 128  : 		delete mdiff_Polarity;
 
@@ -15830,27 +15940,17 @@ $LN30@ModMultiCh:
 ??1ModMultiChannelDiffuser@@QEAA@XZ ENDP		; ModMultiChannelDiffuser::~ModMultiChannelDiffuser
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?init@ModMultiChannelDiffuser@@QEAAXMH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -15860,44 +15960,42 @@ sampleRate$ = 80
 
 ; 37   : 	void init(float bufferLengthMs, int sampleRate) {
 
-$LN44:
-	mov	rax, rsp
-	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+16], rbp
-	mov	QWORD PTR [rax+24], rsi
-	mov	QWORD PTR [rax+32], rdi
-	push	r12
+$LN34:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rbp
+	mov	QWORD PTR [rsp+24], rsi
+	push	rdi
 	push	r14
 	push	r15
 	sub	rsp, 32					; 00000020H
 
 ; 39   : 		mdiff_MultiChDelay->initDelayLines(bufferLengthMs, sampleRate);
 
-	mov	rsi, QWORD PTR [rcx+24]
+	mov	rdi, QWORD PTR [rcx+24]
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
-	xor	edi, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	xor	ebx, ebx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 38   : 		mdiff_sampleRate = sampleRate;
 
 	mov	DWORD PTR [rcx+4], r8d
-	mov	r14d, r8d
-	mov	rbp, rcx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	r15d, r8d
+	mov	rsi, rcx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 38   : 		mdel_sampleRate = sampleRate;
 
-	mov	DWORD PTR [rsi+40], r8d
+	mov	DWORD PTR [rdi+40], r8d
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
-	mov	rax, QWORD PTR [rsi+16]
-	cmp	QWORD PTR [rsi+8], rax
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rax, QWORD PTR [rdi+16]
+	cmp	QWORD PTR [rdi+8], rax
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 39   : 		if (!mdel_DelayLines.empty()) {
 
@@ -15905,154 +16003,78 @@ $LN44:
 
 ; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r15d, edi
-	cmp	DWORD PTR [rsi], edi
+	mov	ebp, ebx
+	cmp	DWORD PTR [rdi], ebx
 	jle	SHORT $LN5@init
-	mov	r12d, edi
+	mov	r14d, ebx
 $LL6@init:
 
 ; 41   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
 
-	mov	rax, QWORD PTR [rsi+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	r8d, r14d
+	mov	rcx, QWORD PTR [rdi+8]
+	mov	r8d, r15d
 	movss	xmm1, DWORD PTR __real@44fa0000
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 41   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
-
-	mov	rbx, QWORD PTR [r12+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	rcx, rbx
-	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
-
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+104]
-	mov	DWORD PTR [rbx+116], 1
-; File E:\prova\Shimmer\include\LFO.h
-
-; 132  : 		lfo_table.clear();
-
-	mov	rax, QWORD PTR [rcx+24]
-	mov	QWORD PTR [rcx+32], rax
-
-; 62   : 		lfo_waveform = waveform;
-
-	mov	QWORD PTR [rcx+12], 1
-	mov	DWORD PTR [rcx+8], 1065353216		; 3f800000H
-
-; 63   : 		lfo_frequency = 0.0;
-
-	mov	DWORD PTR [rcx], edi
-
-; 64   : 		lfo_sampleRate = sampleRate;		
-
-	mov	DWORD PTR [rcx+4], r14d
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	mov	DWORD PTR [rcx+20], edi
-
-; 67   : 		createTable();
-
-	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	rax, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	lea	r12, QWORD PTR [r12+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 95   : 		mdly_isUnipolar = isUnipolar;
-
-	mov	BYTE PTR [rbx+112], dil
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	inc	r15d
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	BYTE PTR [rax+48], dil
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	cmp	r15d, DWORD PTR [rsi]
+	mov	rcx, QWORD PTR [rcx+r14]
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
+	inc	ebp
+	lea	r14, QWORD PTR [r14+8]
+	cmp	ebp, DWORD PTR [rdi]
 	jl	SHORT $LL6@init
 $LN5@init:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 57   : 	void setMakeUpGainDB(float makeUpGain) { mdiff_MultiChDelay->setMakeUpGaindB(makeUpGain); }
 
-	mov	rbx, QWORD PTR [rbp+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rdi, QWORD PTR [rsi+24]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	cmp	DWORD PTR [rbx], edi
-	jle	SHORT $LN27@init
-	mov	rsi, rdi
-$LL28@init:
+	cmp	DWORD PTR [rdi], ebx
+	jle	SHORT $LN17@init
+	mov	rsi, rbx
+$LL18@init:
 
 ; 84   : 			mdel_DelayLines[i]->setMakeUpGaindB(makeUpGain);
 
-	mov	rax, QWORD PTR [rbx+8]
+	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 136  : 	dly_makeUpGaindB = gaindB;
+; 135  : 	dly_makeUpGaindB = gaindB;
 
 	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
 
-; 137  : 
-; 138  : 	// update parameters
-; 139  : 	updateParameters();
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	inc	edi
+	inc	ebx
 	lea	rsi, QWORD PTR [rsi+8]
-	cmp	edi, DWORD PTR [rbx]
-	jl	SHORT $LL28@init
-$LN27@init:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	cmp	ebx, DWORD PTR [rdi]
+	jl	SHORT $LL18@init
+$LN17@init:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 41   : 	}
 
 	mov	rbx, QWORD PTR [rsp+64]
 	mov	rbp, QWORD PTR [rsp+72]
 	mov	rsi, QWORD PTR [rsp+80]
-	mov	rdi, QWORD PTR [rsp+88]
 	add	rsp, 32					; 00000020H
 	pop	r15
 	pop	r14
-	pop	r12
+	pop	rdi
 	ret	0
 ?init@ModMultiChannelDiffuser@@QEAAXMH@Z ENDP		; ModMultiChannelDiffuser::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setDelayLinesLength@ModMultiChannelDiffuser@@QEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -16068,11 +16090,11 @@ distr$ = 32
 ?setDelayLinesLength@ModMultiChannelDiffuser@@QEAAXMMW4DelayDistribution@@@Z ENDP ; ModMultiChannelDiffuser::setDelayLinesLength
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setMakeUpGainDB@ModMultiChannelDiffuser@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -16087,7 +16109,7 @@ $LN18:
 	push	rdi
 	sub	rsp, 32					; 00000020H
 	mov	rsi, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16101,18 +16123,18 @@ $LL6@setMakeUpG:
 
 	mov	rax, QWORD PTR [rsi+8]
 	mov	rcx, QWORD PTR [rdi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 136  : 	dly_makeUpGaindB = gaindB;
+; 135  : 	dly_makeUpGaindB = gaindB;
 
 	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
 
-; 137  : 
-; 138  : 	// update parameters
-; 139  : 	updateParameters();
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16121,7 +16143,7 @@ $LL6@setMakeUpG:
 	cmp	ebx, DWORD PTR [rsi]
 	jl	SHORT $LL6@setMakeUpG
 $LN5@setMakeUpG:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 57   : 	void setMakeUpGainDB(float makeUpGain) { mdiff_MultiChDelay->setMakeUpGaindB(makeUpGain); }
 
@@ -16133,9 +16155,9 @@ $LN5@setMakeUpG:
 ?setMakeUpGainDB@ModMultiChannelDiffuser@@QEAAXM@Z ENDP	; ModMultiChannelDiffuser::setMakeUpGainDB
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setModDepth@ModMultiChannelDiffuser@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -16145,7 +16167,7 @@ depth$ = 16
 ; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
 
 	mov	r8, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16167,7 +16189,7 @@ $LL6@setModDept:
 	cmp	edx, DWORD PTR [r8]
 	jl	SHORT $LL6@setModDept
 $LN5@setModDept:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 61   : 	}
 
@@ -16175,14 +16197,14 @@ $LN5@setModDept:
 ?setModDepth@ModMultiChannelDiffuser@@QEAAXM@Z ENDP	; ModMultiChannelDiffuser::setModDepth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setModRate@ModMultiChannelDiffuser@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -16192,7 +16214,7 @@ rate$dead$ = 16
 ; 64   : 		mdiff_MultiChDelay->setModRate(rate);
 
 	mov	r8, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16207,25 +16229,25 @@ $LL6@setModRate:
 
 	mov	rax, QWORD PTR [r8+8]
 	inc	edx
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movss	xmm1, DWORD PTR __real@45800000
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 94   : 			mdel_DelayLines[i]->setModRate(freq);
 
 	mov	rcx, QWORD PTR [r9+rax]
 	lea	r9, QWORD PTR [r9+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	mov	DWORD PTR [rcx+136], r10d
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -16239,14 +16261,14 @@ $LL6@setModRate:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	cmp	edx, DWORD PTR [r8]
 	jl	SHORT $LL6@setModRate
 $LN5@setModRate:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 65   : 	}
 
@@ -16254,9 +16276,9 @@ $LN5@setModRate:
 ?setModRate@ModMultiChannelDiffuser@@QEAAXM@Z ENDP	; ModMultiChannelDiffuser::setModRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setModValue@ModMultiChannelDiffuser@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -16266,7 +16288,7 @@ val$dead$ = 16
 ; 68   : 		mdiff_MultiChDelay->setModValueInMsec(val);
 
 	mov	r8, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 99   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16288,7 +16310,7 @@ $LL6@setModValu:
 	cmp	edx, DWORD PTR [r8]
 	jl	SHORT $LL6@setModValu
 $LN5@setModValu:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 69   : 	}
 
@@ -16296,12 +16318,12 @@ $LN5@setModValu:
 ?setModValue@ModMultiChannelDiffuser@@QEAAXM@Z ENDP	; ModMultiChannelDiffuser::setModValue
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setOscillatorType@ModMultiChannelDiffuser@@QEAAXW4OscillatorType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -16319,7 +16341,7 @@ $LN22:
 ; 72   : 		mdiff_MultiChDelay->setOscillatorType(type);
 
 	mov	rdi, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16333,16 +16355,16 @@ $LL6@setOscilla:
 
 	mov	rax, QWORD PTR [rdi+8]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
 	mov	DWORD PTR [rcx+116], 1
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -16357,7 +16379,7 @@ $LL6@setOscilla:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16366,7 +16388,7 @@ $LL6@setOscilla:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL6@setOscilla
 $LN5@setOscilla:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 73   : 	}
 
@@ -16378,11 +16400,11 @@ $LN5@setOscilla:
 ?setOscillatorType@ModMultiChannelDiffuser@@QEAAXW4OscillatorType@@@Z ENDP ; ModMultiChannelDiffuser::setOscillatorType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setOscillatorIsUnipolar@ModMultiChannelDiffuser@@QEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -16392,7 +16414,7 @@ isUnipolar$dead$ = 16
 ; 76   : 		mdiff_MultiChDelay->setOscillatorIsUnipolar(isUnipolar);
 
 	mov	rdx, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16409,24 +16431,24 @@ $LL6@setOscilla:
 	inc	r8d
 	mov	rax, QWORD PTR [rcx+rax]
 	lea	rcx, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
 	mov	BYTE PTR [rax+112], r9b
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rax+104]
 	mov	BYTE PTR [rax+48], r9b
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	cmp	r8d, DWORD PTR [rdx]
 	jl	SHORT $LL6@setOscilla
 $LN5@setOscilla:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 77   : 	}
 
@@ -16434,11 +16456,11 @@ $LN5@setOscilla:
 ?setOscillatorIsUnipolar@ModMultiChannelDiffuser@@QEAAX_N@Z ENDP ; ModMultiChannelDiffuser::setOscillatorIsUnipolar
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?setSampleRate@ModMultiChannelDiffuser@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -16457,18 +16479,18 @@ $LN16:
 ; 81   : 		mdiff_MultiChDelay->setSampleRate(sampleRate);
 
 	mov	rdi, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 114  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	xor	ebx, ebx
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 80   : 		mdiff_sampleRate = sampleRate;
 
 	mov	DWORD PTR [rcx+4], edx
 	mov	esi, edx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 114  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -16493,7 +16515,7 @@ $LL6@setSampleR:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL6@setSampleR
 $LN5@setSampleR:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 82   : 	}
 
@@ -16506,15 +16528,15 @@ $LN5@setSampleR:
 ?setSampleRate@ModMultiChannelDiffuser@@QEAAXH@Z ENDP	; ModMultiChannelDiffuser::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?processAudio@ModMultiChannelDiffuser@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -16538,12 +16560,12 @@ $LN27:
 ; 85   : 		mdiff_MultiChDelay->processAudio(in, mdiff_outMultiChDel);
 
 	mov	r14, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 121  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	xor	esi, esi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 85   : 		mdiff_MultiChDelay->processAudio(in, mdiff_outMultiChDel);
 
@@ -16551,7 +16573,7 @@ $LN27:
 	mov	r13, r8
 	mov	rbp, rdx
 	mov	rdi, rcx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 121  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16577,12 +16599,12 @@ $LL6@processAud:
 	jl	SHORT $LL6@processAud
 	mov	rbx, QWORD PTR [rdi+8]
 $LN5@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 86   : 		mdiff_Polarity->processAudio(mdiff_outMultiChDel, mdiff_outMultiChDel);
 
 	mov	rax, QWORD PTR [rdi+40]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -16596,7 +16618,7 @@ $LN5@processAud:
 	sub	rcx, rbx
 $LL13@processAud:
 	movd	xmm0, DWORD PTR [rcx+rbx]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -16612,7 +16634,7 @@ $LL13@processAud:
 	jl	SHORT $LL13@processAud
 	mov	rbx, QWORD PTR [rdi+8]
 $LN12@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 87   : 		mdiff_Hadamard->processAudio(mdiff_outMultiChDel, out);
 
@@ -16638,15 +16660,15 @@ $LN12@processAud:
 ?processAudio@ModMultiChannelDiffuser@@QEAAXPEAM0@Z ENDP ; ModMultiChannelDiffuser::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?constructMCDF@ModMultiChannelDiffuser@@AEAAXH@Z
 _TEXT	SEGMENT
 $T4 = 80
@@ -16689,7 +16711,7 @@ $LN61:
 	mov	rdi, rax
 	mov	QWORD PTR $T1[rsp], rax
 	mov	edx, DWORD PTR [r14]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 31   : 	ModMultiChannelDelay(int numCh) {
 
@@ -16701,7 +16723,7 @@ $LN61:
 	mov	QWORD PTR [rsi], rbx
 	mov	QWORD PTR [rsi+8], rbx
 	mov	QWORD PTR [rsi+16], rbx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 163  : 		mdel_numberOfChannels = numCh;
 
@@ -16758,7 +16780,7 @@ $LN38@constructM:
 	mov	rcx, rsi
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN28@constructM:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -16791,7 +16813,7 @@ $LL45@constructM:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rsi]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
 
@@ -16805,7 +16827,7 @@ $LL45@constructM:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL45@constructM
 $LN44@constructM:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 132  : 		mdiff_MultiChDelay = new ModMultiChannelDelay(mdiff_numberOfChannels);
 
@@ -17073,7 +17095,7 @@ $T2 = 104
 ?dtor$2@?0??constructMCDF@ModMultiChannelDiffuser@@AEAAXH@Z@4HA ENDP ; `ModMultiChannelDiffuser::constructMCDF'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?initInternalArrays@ModMultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -17130,7 +17152,7 @@ $LN4:
 ?initInternalArrays@ModMultiChannelDiffuser@@AEAAXXZ ENDP ; ModMultiChannelDiffuser::initInternalArrays
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?deleteInternalArrays@ModMultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -17182,7 +17204,7 @@ $LN3@deleteInte:
 ?deleteInternalArrays@ModMultiChannelDiffuser@@AEAAXXZ ENDP ; ModMultiChannelDiffuser::deleteInternalArrays
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?initPointers@ModMultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -17202,9 +17224,9 @@ this$ = 8
 ?initPointers@ModMultiChannelDiffuser@@AEAAXXZ ENDP	; ModMultiChannelDiffuser::initPointers
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\Hadamard.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?deleteBlocks@ModMultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -17237,7 +17259,7 @@ $LN10@deleteBloc:
 	mov	rbx, QWORD PTR [rdi+32]
 	test	rbx, rbx
 	je	SHORT $LN13@deleteBloc
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 
 ; 29   : 		if (had_matrix) {
 
@@ -17279,7 +17301,7 @@ $LN21@deleteBloc:
 	mov	rcx, rbx
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN13@deleteBloc:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 128  : 		delete mdiff_Polarity;
 
@@ -17304,15 +17326,15 @@ $LN24@deleteBloc:
 ?deleteBlocks@ModMultiChannelDiffuser@@AEAAXXZ ENDP	; ModMultiChannelDiffuser::deleteBlocks
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 ;	COMDAT ?constructBlocks@ModMultiChannelDiffuser@@AEAAXXZ
 _TEXT	SEGMENT
 $T4 = 80
@@ -17341,7 +17363,7 @@ $LN55:
 	mov	rdi, rax
 	mov	QWORD PTR $T1[rsp], rax
 	mov	edx, DWORD PTR [r14]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 31   : 	ModMultiChannelDelay(int numCh) {
 
@@ -17354,7 +17376,7 @@ $LN55:
 	mov	QWORD PTR [rsi], rbx
 	mov	QWORD PTR [rsi+8], rbx
 	mov	QWORD PTR [rsi+16], rbx
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 163  : 		mdel_numberOfChannels = numCh;
 
@@ -17411,7 +17433,7 @@ $LN34@constructB:
 	mov	rcx, rsi
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN24@constructB:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -17444,7 +17466,7 @@ $LL41@constructB:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rsi]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
 
@@ -17458,7 +17480,7 @@ $LL41@constructB:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL41@constructB
 $LN40@constructB:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 132  : 		mdiff_MultiChDelay = new ModMultiChannelDelay(mdiff_numberOfChannels);
 
@@ -17699,99 +17721,89 @@ $LN6:
 ??_GModMultiChannelDelay@@QEAAPEAXI@Z ENDP		; ModMultiChannelDelay::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ??0ModMultiChannelFeedback@@QEAA@H@Z
 _TEXT	SEGMENT
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
+this$ = 64
+numCH$ = 72
+$T5 = 80
+$T1 = 80
+$T3 = 88
 ??0ModMultiChannelFeedback@@QEAA@H@Z PROC		; ModMultiChannelFeedback::ModMultiChannelFeedback, COMDAT
 
 ; 31   : 	ModMultiChannelFeedback(int numCH) {
 
-$LN65:
+$LN42:
+	mov	QWORD PTR [rsp+16], rbx
 	mov	QWORD PTR [rsp+8], rcx
-	push	rbx
-	push	rbp
 	push	rsi
 	push	rdi
 	push	r14
-	sub	rsp, 48					; 00000030H
-	movaps	XMMWORD PTR [rsp+32], xmm6
-	mov	r14d, edx
-	mov	rbx, rcx
-	lea	rdi, QWORD PTR [rcx+40]
+	sub	rsp, 32					; 00000020H
+	mov	ebx, edx
+	mov	r14, rcx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
 
 	xor	esi, esi
-	mov	QWORD PTR [rdi], rsi
-	mov	QWORD PTR [rdi+8], rsi
-	mov	QWORD PTR [rdi+16], rsi
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	QWORD PTR [rcx+40], rsi
+	mov	QWORD PTR [rcx+48], rsi
+	mov	QWORD PTR [rcx+56], rsi
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 168  : 		mcf_Householder = new Householder(numCh);
 
 	lea	ecx, QWORD PTR [rsi+8]
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
-	movd	xmm0, r14d
-; File E:\prova\Shimmer\include\Householder.h
+	movd	xmm0, ebx
+; File E:\FoxSuite\shimmer\include\Householder.h
 
 ; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
 
 	cvtdq2pd xmm0, xmm0
 	movsd	xmm1, QWORD PTR __real@c000000000000000
 	divsd	xmm1, xmm0
-	cvtpd2ps xmm6, xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	cvtpd2ps xmm2, xmm1
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 168  : 		mcf_Householder = new Householder(numCh);
 
-	mov	QWORD PTR [rbx+32], rax
+	mov	QWORD PTR [r14+32], rax
 
-; 41   : 		mcf_numberOfChannels = numCh;
+; 169  : 		mcf_numberOfChannels = numCh;
 
-	mov	DWORD PTR [rbx], r14d
-; File E:\prova\Shimmer\include\Householder.h
+	mov	DWORD PTR [r14], ebx
+; File E:\FoxSuite\shimmer\include\Householder.h
 
 ; 18   : 		hou_numberOfChannels = numCh;
 
-	mov	DWORD PTR [rax], r14d
+	mov	DWORD PTR [rax], ebx
 
 ; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
 
-	movss	DWORD PTR [rax+4], xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	movss	DWORD PTR [rax+4], xmm2
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
-; 43   : 		deleteDelayLines();
+; 171  : 		deleteDelayLines();
 
-	mov	rcx, rbx
+	mov	rcx, r14
 	call	?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::deleteDelayLines
 
 ; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	ebp, esi
-	cmp	DWORD PTR [rbx], esi
-	jle	SHORT $LN25@ModMultiCh
-$LL26@ModMultiCh:
+	cmp	DWORD PTR [r14], esi
+	jle	SHORT $LN23@ModMultiCh
+$LL24@ModMultiCh:
 
 ; 184  : 			mcf_DelayLines.push_back(new ModDelay);
 
@@ -17806,9 +17818,9 @@ $LL26@ModMultiCh:
 
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
-	mov	rdx, QWORD PTR [rdi+8]
-	cmp	rdx, QWORD PTR [rdi+16]
-	je	SHORT $LN34@ModMultiCh
+	mov	rdx, QWORD PTR [r14+48]
+	cmp	rdx, QWORD PTR [r14+56]
+	je	SHORT $LN32@ModMultiCh
 
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
@@ -17818,215 +17830,59 @@ $LL26@ModMultiCh:
 ; 728  :         _Ty& _Result = *_Mylast;
 ; 729  :         ++_Mylast;
 
-	add	QWORD PTR [rdi+8], 8
+	add	QWORD PTR [r14+48], 8
 
 ; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
 
-	jmp	SHORT $LN24@ModMultiCh
-$LN34@ModMultiCh:
+	jmp	SHORT $LN22@ModMultiCh
+$LN32@ModMultiCh:
 
 ; 745  :         }
 ; 746  : 
 ; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
 
 	lea	r8, QWORD PTR $T5[rsp]
-	mov	rcx, rdi
+	lea	rcx, QWORD PTR [r14+40]
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
-$LN24@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	inc	ebp
-	cmp	ebp, DWORD PTR [rbx]
-	jl	SHORT $LL26@ModMultiCh
-$LN25@ModMultiCh:
-
-; 45   : 		init(mcf_delayBufferSizeMs, mcf_sampleRate);
-
-	mov	r8d, DWORD PTR [rbx+4]
-	movss	xmm1, DWORD PTR [rbx+16]
-	mov	rcx, rbx
-	call	?init@ModMultiChannelFeedback@@QEAAXMH@Z ; ModMultiChannelFeedback::init
-
-; 46   : 		setDelayLengths(mcf_minDelayLength, mcf_maxDelayLength, mcf_delayDistribution);
-
-	mov	r9d, DWORD PTR [rbx+24]
-	movss	xmm2, DWORD PTR [rbx+12]
-	movss	xmm1, DWORD PTR [rbx+8]
-	mov	rcx, rbx
-	call	?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelFeedback::setDelayLengths
-
-; 47   : 		setDecayInSeconds(mcf_decay);
-
-	movss	xmm1, DWORD PTR [rbx+20]
-	mov	rcx, rbx
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-
-; 170  : 		mcf_numberOfChannels = numCh;
-
-	mov	DWORD PTR [rbx], r14d
-
-; 171  : 		mcf_Householder->setNumberOfChannels(numCh);
-
-	mov	rax, QWORD PTR [rbx+32]
-; File E:\prova\Shimmer\include\Householder.h
-
-; 18   : 		hou_numberOfChannels = numCh;
-
-	mov	DWORD PTR [rax], r14d
-
-; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
-
-	movss	DWORD PTR [rax+4], xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	cmp	DWORD PTR [rbx], esi
-	jle	SHORT $LN42@ModMultiCh
-$LL43@ModMultiCh:
-
-; 184  : 			mcf_DelayLines.push_back(new ModDelay);
-
-	mov	ecx, 144				; 00000090H
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T6[rsp], rax
-	mov	rcx, rax
-	call	??0ModDelay@@QEAA@XZ			; ModDelay::ModDelay
-	npad	1
-	mov	QWORD PTR $T8[rsp], rax
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 743  :         if (_Mylast != _My_data._Myend) {
-
-	mov	rdx, QWORD PTR [rdi+8]
-	cmp	rdx, QWORD PTR [rdi+16]
-	je	SHORT $LN51@ModMultiCh
-
-; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
-
-	mov	QWORD PTR [rdx], rax
-
-; 727  :         _Orphan_range(_Mylast, _Mylast);
-; 728  :         _Ty& _Result = *_Mylast;
-; 729  :         ++_Mylast;
-
-	add	QWORD PTR [rdi+8], 8
-
-; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
-
-	jmp	SHORT $LN41@ModMultiCh
-$LN51@ModMultiCh:
-
-; 745  :         }
-; 746  : 
-; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
-
-	lea	r8, QWORD PTR $T8[rsp]
-	mov	rcx, rdi
-	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
-$LN41@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+$LN22@ModMultiCh:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	inc	esi
-	cmp	esi, DWORD PTR [rbx]
-	jl	SHORT $LL43@ModMultiCh
-$LN42@ModMultiCh:
+	cmp	esi, DWORD PTR [r14]
+	jl	SHORT $LL24@ModMultiCh
+$LN23@ModMultiCh:
 
 ; 32   : 		constructMCF(numCH);
 ; 33   : 	}
 
-	mov	rax, rbx
-	movaps	xmm6, XMMWORD PTR [rsp+32]
-	add	rsp, 48					; 00000030H
+	mov	rax, r14
+	mov	rbx, QWORD PTR [rsp+72]
+	add	rsp, 32					; 00000020H
 	pop	r14
 	pop	rdi
 	pop	rsi
-	pop	rbp
-	pop	rbx
 	ret	0
 ??0ModMultiChannelFeedback@@QEAA@H@Z ENDP		; ModMultiChannelFeedback::ModMultiChannelFeedback
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
+this$ = 64
+numCH$ = 72
+$T5 = 80
+$T1 = 80
+$T3 = 88
 ?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$0
 	mov	rcx, QWORD PTR this$[rdx]
 	add	rcx, 40					; 00000028H
 	jmp	??1?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAA@XZ ; std::vector<ModDelay *,std::allocator<ModDelay *> >::~vector<ModDelay *,std::allocator<ModDelay *> >
 ?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$0
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
-?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$2
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T3[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$2
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
-?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$3
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T6[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$3
-text$x	ENDS
-; Function compile flags: /Ogspy
-;	COMDAT text$x
-text$x	SEGMENT
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
-?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$0
-	mov	rcx, QWORD PTR this$[rdx]
-	add	rcx, 40					; 00000028H
-	jmp	??1?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAA@XZ ; std::vector<ModDelay *,std::allocator<ModDelay *> >::~vector<ModDelay *,std::allocator<ModDelay *> >
-?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$0
-text$x	ENDS
-; Function compile flags: /Ogspy
-;	COMDAT text$x
-text$x	SEGMENT
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
+this$ = 64
+numCH$ = 72
+$T5 = 80
+$T1 = 80
+$T3 = 88
 ?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -18042,33 +17898,45 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-this$ = 96
-numCH$ = 104
-$T8 = 112
-$T5 = 112
-$T1 = 112
-$T6 = 120
-$T3 = 120
-?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$3
+this$ = 64
+numCH$ = 72
+$T5 = 80
+$T1 = 80
+$T3 = 88
+?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$0
+	mov	rcx, QWORD PTR this$[rdx]
+	add	rcx, 40					; 00000028H
+	jmp	??1?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAA@XZ ; std::vector<ModDelay *,std::allocator<ModDelay *> >::~vector<ModDelay *,std::allocator<ModDelay *> >
+?dtor$0@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$0
+text$x	ENDS
+; Function compile flags: /Ogspy
+;	COMDAT text$x
+text$x	SEGMENT
+this$ = 64
+numCH$ = 72
+$T5 = 80
+$T1 = 80
+$T3 = 88
+?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA PROC ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T6[rbp]
+	mov	rcx, QWORD PTR $T3[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
-?dtor$3@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$3
+?dtor$2@?0???0ModMultiChannelFeedback@@QEAA@H@Z@4HA ENDP ; `ModMultiChannelFeedback::ModMultiChannelFeedback'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ??1ModMultiChannelFeedback@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -18163,7 +18031,7 @@ $LN22@ModMultiCh:
 
 	and	QWORD PTR [rbx+56], 0
 $LN6@ModMultiCh:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 38   : 	}
 
@@ -18181,191 +18049,15 @@ $LN28@ModMultiCh:
 ??1ModMultiChannelFeedback@@QEAA@XZ ENDP		; ModMultiChannelFeedback::~ModMultiChannelFeedback
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-;	COMDAT ?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z
-_TEXT	SEGMENT
-$T3 = 48
-this$ = 48
-numCh$ = 56
-$T1 = 64
-?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z PROC ; ModMultiChannelFeedback::setNumberOfChannels, COMDAT
-
-; 40   : 	void setNumberOfChannels(int numCh) {
-
-$LN26:
-	mov	QWORD PTR [rsp+16], rbx
-	mov	QWORD PTR [rsp+32], rsi
-	push	rdi
-	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
-
-; 41   : 		mcf_numberOfChannels = numCh;
-
-	mov	DWORD PTR [rcx], edx
-
-; 42   : 		mcf_Householder->setNumberOfChannels(numCh);
-
-	mov	rax, QWORD PTR [rcx+32]
-; File E:\prova\Shimmer\include\Householder.h
-
-; 18   : 		hou_numberOfChannels = numCh;
-
-	mov	DWORD PTR [rax], edx
-	movd	xmm0, edx
-
-; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
-
-	cvtdq2pd xmm0, xmm0
-	movsd	xmm1, QWORD PTR __real@c000000000000000
-	divsd	xmm1, xmm0
-	cvtpd2ps xmm0, xmm1
-	movss	DWORD PTR [rax+4], xmm0
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 43   : 		deleteDelayLines();
-
-	call	?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::deleteDelayLines
-
-; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	xor	esi, esi
-	cmp	DWORD PTR [rbx], esi
-	jle	SHORT $LN7@setNumberO
-$LL8@setNumberO:
-
-; 184  : 			mcf_DelayLines.push_back(new ModDelay);
-
-	mov	ecx, 144				; 00000090H
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T1[rsp], rax
-	mov	rcx, rax
-	call	??0ModDelay@@QEAA@XZ			; ModDelay::ModDelay
-	npad	1
-	mov	QWORD PTR $T3[rsp], rax
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 743  :         if (_Mylast != _My_data._Myend) {
-
-	mov	rdx, QWORD PTR [rbx+48]
-	cmp	rdx, QWORD PTR [rbx+56]
-	je	SHORT $LN16@setNumberO
-
-; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
-
-	mov	QWORD PTR [rdx], rax
-
-; 727  :         _Orphan_range(_Mylast, _Mylast);
-; 728  :         _Ty& _Result = *_Mylast;
-; 729  :         ++_Mylast;
-
-	add	QWORD PTR [rbx+48], 8
-
-; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
-
-	jmp	SHORT $LN6@setNumberO
-$LN16@setNumberO:
-
-; 745  :         }
-; 746  : 
-; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
-
-	lea	r8, QWORD PTR $T3[rsp]
-	lea	rcx, QWORD PTR [rbx+40]
-	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
-$LN6@setNumberO:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	inc	esi
-	cmp	esi, DWORD PTR [rbx]
-	jl	SHORT $LL8@setNumberO
-$LN7@setNumberO:
-
-; 44   : 		allocateDelayLines();
-; 45   : 		init(mcf_delayBufferSizeMs, mcf_sampleRate);
-
-	mov	r8d, DWORD PTR [rbx+4]
-	movss	xmm1, DWORD PTR [rbx+16]
-	mov	rcx, rbx
-	call	?init@ModMultiChannelFeedback@@QEAAXMH@Z ; ModMultiChannelFeedback::init
-
-; 46   : 		setDelayLengths(mcf_minDelayLength, mcf_maxDelayLength, mcf_delayDistribution);
-
-	mov	r9d, DWORD PTR [rbx+24]
-	movss	xmm2, DWORD PTR [rbx+12]
-	movss	xmm1, DWORD PTR [rbx+8]
-	mov	rcx, rbx
-	call	?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelFeedback::setDelayLengths
-
-; 47   : 		setDecayInSeconds(mcf_decay);
-
-	movss	xmm1, DWORD PTR [rbx+20]
-	mov	rcx, rbx
-
-; 48   : 	}
-
-	mov	rbx, QWORD PTR [rsp+56]
-	mov	rsi, QWORD PTR [rsp+72]
-	add	rsp, 32					; 00000020H
-	pop	rdi
-
-; 47   : 		setDecayInSeconds(mcf_decay);
-
-	jmp	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-?setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z ENDP ; ModMultiChannelFeedback::setNumberOfChannels
-_TEXT	ENDS
-;	COMDAT text$x
-text$x	SEGMENT
-$T3 = 48
-this$ = 48
-numCh$ = 56
-$T1 = 64
-?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::setNumberOfChannels'::`1'::dtor$0
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T1[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA ENDP ; `ModMultiChannelFeedback::setNumberOfChannels'::`1'::dtor$0
-text$x	ENDS
-; Function compile flags: /Ogspy
-;	COMDAT text$x
-text$x	SEGMENT
-$T3 = 48
-this$ = 48
-numCh$ = 56
-$T1 = 64
-?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::setNumberOfChannels'::`1'::dtor$0
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T1[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$0@?0??setNumberOfChannels@ModMultiChannelFeedback@@QEAAXH@Z@4HA ENDP ; `ModMultiChannelFeedback::setNumberOfChannels'::`1'::dtor$0
-text$x	ENDS
-; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -18393,18 +18085,18 @@ $LN18:
 	jle	SHORT $LN3@setDecayIn
 	mov	r14d, ebx
 $LL4@setDecayIn:
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 24   : 	float feedbackModule = (cf_decayInSeconds > 0.0) ? pow(10, -3.0 * dly_delayInmsec / (cf_decayInSeconds * 1000.0)) : 0.0;
 
 	comiss	xmm6, DWORD PTR __real@00000000
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 53   : 			mcf_DelayLines[i]->setFeedbackFromDecay(decay);
 
 	mov	rax, QWORD PTR [rdi+40]
 	mov	rsi, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 21   : 	cf_decayInSeconds = decayInSeconds;
 
@@ -18424,22 +18116,22 @@ $LL4@setDecayIn:
 	call	QWORD PTR __imp_pow
 $LN11@setDecayIn:
 	movd	xmm1, DWORD PTR [rsi+80]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	inc	ebx
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 27   : 	cf_feedbackGain = cf_feedbackGainSign * feedbackModule;
 
 	cvtdq2ps xmm1, xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	add	r14, 8
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 24   : 	float feedbackModule = (cf_decayInSeconds > 0.0) ? pow(10, -3.0 * dly_delayInmsec / (cf_decayInSeconds * 1000.0)) : 0.0;
 
@@ -18449,7 +18141,7 @@ $LN11@setDecayIn:
 
 	mulss	xmm1, xmm0
 	movss	DWORD PTR [rsi+72], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -18469,163 +18161,83 @@ $LN3@setDecayIn:
 ?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ENDP ; ModMultiChannelFeedback::setDecayInSeconds
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?init@ModMultiChannelFeedback@@QEAAXMH@Z
 _TEXT	SEGMENT
-this$ = 64
-delayMs$ = 72
-sampleRate$ = 80
+this$ = 48
+delayMs$dead$ = 56
+sampleRate$ = 64
 ?init@ModMultiChannelFeedback@@QEAAXMH@Z PROC		; ModMultiChannelFeedback::init, COMDAT
 
 ; 56   : 	void init(float delayMs, int sampleRate) {
 
-$LN28:
-	mov	rax, rsp
-	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+16], rbp
-	mov	QWORD PTR [rax+24], rsi
-	mov	QWORD PTR [rax+32], rdi
-	push	r14
-	sub	rsp, 48					; 00000030H
-	movaps	XMMWORD PTR [rax-24], xmm6
+$LN18:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rbp
+	mov	QWORD PTR [rsp+24], rsi
+	push	rdi
+	sub	rsp, 32					; 00000020H
 
 ; 59   : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 
-	xor	ebp, ebp
-	movaps	xmm6, xmm1
-	mov	esi, r8d
-	mov	rdi, rcx
-	movss	DWORD PTR [rcx+16], xmm6
+	xor	edi, edi
+	mov	DWORD PTR [rcx+16], 1157234688		; 44fa0000H
+	mov	ebp, r8d
+	mov	rbx, rcx
 	mov	DWORD PTR [rcx+4], r8d
-	cmp	DWORD PTR [rcx], ebp
+	cmp	DWORD PTR [rcx], edi
 	jle	SHORT $LN3@init
-	xor	r14d, r14d
+	mov	esi, edi
 $LL4@init:
 
 ; 60   : 			mcf_DelayLines[i]->init(delayMs, sampleRate);
 
-	mov	rax, QWORD PTR [rdi+40]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	r8d, esi
-	movaps	xmm1, xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 60   : 			mcf_DelayLines[i]->init(delayMs, sampleRate);
-
-	mov	rbx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	rcx, rbx
-	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
-
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+104]
-	mov	DWORD PTR [rbx+116], 1
-; File E:\prova\Shimmer\include\LFO.h
-
-; 132  : 		lfo_table.clear();
-
-	mov	rax, QWORD PTR [rcx+24]
-
-; 60   : 		lfo_counter = 0.0;
-
-	and	DWORD PTR [rcx+16], 0
-
-; 63   : 		lfo_frequency = 0.0;
-
-	and	DWORD PTR [rcx], 0
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	and	DWORD PTR [rcx+20], 0
-
-; 132  : 		lfo_table.clear();
-
-	mov	QWORD PTR [rcx+32], rax
-
-; 61   : 		lfo_amplitude = 1.0;
-
-	mov	DWORD PTR [rcx+8], 1065353216		; 3f800000H
-
-; 62   : 		lfo_waveform = waveform;
-
-	mov	DWORD PTR [rcx+12], 1
-
-; 64   : 		lfo_sampleRate = sampleRate;		
-
-	mov	DWORD PTR [rcx+4], esi
-
-; 65   : 		computeIncrement();
-; 66   : 		clearTable();
-; 67   : 		createTable();
-
-	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	rax, QWORD PTR [rbx+104]
-	mov	BYTE PTR [rbx+112], 0
-	mov	BYTE PTR [rax+48], 0
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	rcx, QWORD PTR [rbx+40]
+	mov	r8d, ebp
+	movss	xmm1, DWORD PTR __real@44fa0000
+	mov	rcx, QWORD PTR [rsi+rcx]
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
 
 ; 61   : 			mcf_DelayLines[i]->setMakeUpGaindB(_DELAY_MAKEUP_GAIN_VALUE);
 
-	mov	rax, QWORD PTR [rdi+40]
-	mov	rcx, QWORD PTR [r14+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+	mov	rax, QWORD PTR [rbx+40]
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 136  : 	dly_makeUpGaindB = gaindB;
+; 135  : 	dly_makeUpGaindB = gaindB;
 
 	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
 
-; 137  : 
-; 138  : 	// update parameters
-; 139  : 	updateParameters();
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 59   : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 
-	inc	ebp
-	lea	r14, QWORD PTR [r14+8]
-	cmp	ebp, DWORD PTR [rdi]
+	inc	edi
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	edi, DWORD PTR [rbx]
 	jl	SHORT $LL4@init
 $LN3@init:
 
 ; 62   : 		}
 ; 63   : 	}
 
-	mov	rbx, QWORD PTR [rsp+64]
-	mov	rbp, QWORD PTR [rsp+72]
-	mov	rsi, QWORD PTR [rsp+80]
-	mov	rdi, QWORD PTR [rsp+88]
-	movaps	xmm6, XMMWORD PTR [rsp+32]
-	add	rsp, 48					; 00000030H
-	pop	r14
+	mov	rbx, QWORD PTR [rsp+48]
+	mov	rbp, QWORD PTR [rsp+56]
+	mov	rsi, QWORD PTR [rsp+64]
+	add	rsp, 32					; 00000020H
+	pop	rdi
 	ret	0
 ?init@ModMultiChannelFeedback@@QEAAXMH@Z ENDP		; ModMultiChannelFeedback::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setSampleRate@ModMultiChannelFeedback@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -18675,162 +18287,78 @@ $LN3@setSampleR:
 ?setSampleRate@ModMultiChannelFeedback@@QEAAXH@Z ENDP	; ModMultiChannelFeedback::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
-this$ = 96
-minDelay$ = 104
-maxDelay$ = 112
-distr$ = 120
+this$ = 48
+minDelay$ = 56
+maxDelay$ = 64
+distr$ = 72
 ?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z PROC ; ModMultiChannelFeedback::setDelayLengths, COMDAT
 
 ; 70   : 	void setDelayLengths(float minDelay, float maxDelay = 0.0, DelayDistribution distr = DelayDistribution::Exponential) {
 
-$LN25:
-	mov	rax, rsp
-	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+16], rsi
-	push	rdi
-	sub	rsp, 80					; 00000050H
+$LN9:
+	sub	rsp, 40					; 00000028H
 
 ; 71   : 		mcf_minDelayLength = minDelay;
 ; 72   : 		if (maxDelay != 0.0)
 
 	ucomiss	xmm2, DWORD PTR __real@00000000
-	mov	rdi, rcx
-	movaps	XMMWORD PTR [rax-24], xmm6
-	movaps	XMMWORD PTR [rax-40], xmm7
-	movaps	XMMWORD PTR [rax-56], xmm8
 	movss	DWORD PTR [rcx+8], xmm1
-	je	SHORT $LN22@setDelayLe
+	je	SHORT $LN4@setDelayLe
 
 ; 73   : 			mcf_maxDelayLength = maxDelay;
 
 	movss	DWORD PTR [rcx+12], xmm2
-$LN22@setDelayLe:
+$LN4@setDelayLe:
 
 ; 74   : 		mcf_delayDistribution = distr;
+
+	mov	DWORD PTR [rcx+24], r9d
+
 ; 75   : 		switch (distr) {
 
-	xor	eax, eax
-	mov	DWORD PTR [rcx+24], r9d
 	test	r9d, r9d
-	je	$LN5@setDelayLe
+	je	SHORT $LN5@setDelayLe
 	cmp	r9d, 1
-	jne	$LN10@setDelayLe
-	movd	xmm0, DWORD PTR [rcx]
+	jne	SHORT $LN2@setDelayLe
 
-; 195  : 		float step = (mcf_maxDelayLength - mcf_minDelayLength) / mcf_numberOfChannels;
+; 82   : 			break;
+; 83   : 		}
+; 84   : 		}
+; 85   : 	}
 
-	movss	xmm8, DWORD PTR [rcx+12]
-	subss	xmm8, xmm1
-	cvtdq2ps xmm0, xmm0
-	divss	xmm8, xmm0
+	add	rsp, 40					; 00000028H
 
-; 196  : 		float dlyLength;
-; 197  : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
+; 78   : 			break;
+; 79   : 		}
+; 80   : 		case DelayDistribution::RandomInRange: {
+; 81   : 			setRandomInRangeDelayLines();
 
-	cmp	DWORD PTR [rcx], eax
-	jle	SHORT $LN10@setDelayLe
-
-; 73   : 			mcf_maxDelayLength = maxDelay;
-
-	mov	esi, eax
-$LL11@setDelayLe:
-
-; 198  : 			dlyLength = randomInRange(mcf_minDelayLength + step * i, mcf_minDelayLength + step * (i + 1));
-
-	movss	xmm6, DWORD PTR [rdi+8]
-	lea	ebx, DWORD PTR [rax+1]
-	xorps	xmm7, xmm7
-	cvtsi2ss xmm7, eax
-	mulss	xmm7, xmm8
-	addss	xmm7, xmm6
-; File E:\prova\Shimmer\include\utils.h
-
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
-
-	call	QWORD PTR __imp_rand
-	xorps	xmm0, xmm0
-	xorps	xmm1, xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 198  : 			dlyLength = randomInRange(mcf_minDelayLength + step * i, mcf_minDelayLength + step * (i + 1));
-
-	cvtsi2ss xmm0, ebx
-; File E:\prova\Shimmer\include\utils.h
-
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
-
-	cvtsi2ss xmm1, eax
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 199  : 			mcf_DelayLines[i]->setDelayInmsec(dlyLength);
-
-	mov	rax, QWORD PTR [rdi+40]
-	mov	rcx, QWORD PTR [rsi+rax]
-	mov	eax, ebx
-	mulss	xmm0, xmm8
-	add	rsi, 8
-	addss	xmm0, xmm6
-; File E:\prova\Shimmer\include\utils.h
-
-; 105  : 	return min + unitRand * (max - min);
-
-	subss	xmm0, xmm7
-	mulss	xmm1, xmm0
-	mulss	xmm1, DWORD PTR __real@38000100
-	addss	xmm1, xmm7
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 199  : 			mcf_DelayLines[i]->setDelayInmsec(dlyLength);
-
-	movss	DWORD PTR [rcx+120], xmm1
-	cmp	ebx, DWORD PTR [rdi]
-	jl	SHORT $LL11@setDelayLe
-
-; 196  : 		float dlyLength;
-; 197  : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
-
-	jmp	SHORT $LN10@setDelayLe
+	jmp	?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::setRandomInRangeDelayLines
 $LN5@setDelayLe:
 
 ; 76   : 		case DelayDistribution::Exponential: {
 ; 77   : 			setDelayExponential();
 
 	call	?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::setDelayExponential
-$LN10@setDelayLe:
+$LN2@setDelayLe:
 
-; 78   : 			break;
-; 79   : 		}
-; 80   : 		case DelayDistribution::RandomInRange: {
-; 81   : 			setRandomInRangeDelayLines();
 ; 82   : 			break;
 ; 83   : 		}
 ; 84   : 		}
 ; 85   : 	}
 
-	mov	rbx, QWORD PTR [rsp+96]
-	mov	rsi, QWORD PTR [rsp+104]
-	movaps	xmm6, XMMWORD PTR [rsp+64]
-	movaps	xmm7, XMMWORD PTR [rsp+48]
-	movaps	xmm8, XMMWORD PTR [rsp+32]
-	add	rsp, 80					; 00000050H
-	pop	rdi
+	add	rsp, 40					; 00000028H
 	ret	0
 ?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z ENDP ; ModMultiChannelFeedback::setDelayLengths
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setDampingFrequency@ModMultiChannelFeedback@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -18860,13 +18388,13 @@ $LL4@setDamping:
 
 	mov	rax, QWORD PTR [rdi+40]
 	mov	rdx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
 
 	mov	rcx, QWORD PTR [rdx+88]
 	movss	DWORD PTR [rdx+96], xmm6
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -18877,7 +18405,7 @@ $LL4@setDamping:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -18898,10 +18426,10 @@ $LN3@setDamping:
 ?setDampingFrequency@ModMultiChannelFeedback@@QEAAXM@Z ENDP ; ModMultiChannelFeedback::setDampingFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setFilterType@ModMultiChannelFeedback@@QEAAXW4LPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -18924,14 +18452,14 @@ $LN18:
 	jle	SHORT $LN3@setFilterT
 	mov	esi, ebx
 $LL4@setFilterT:
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 32   : 	lpcf_feedbackLPF->setFilterType(type);
 
 	mov	rax, QWORD PTR [rdi+40]
 	mov	rdx, QWORD PTR [rsi+rax]
 	mov	rcx, QWORD PTR [rdx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -18942,7 +18470,7 @@ $LL4@setFilterT:
 ; 79   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -18963,7 +18491,7 @@ $LN3@setFilterT:
 ?setFilterType@ModMultiChannelFeedback@@QEAAXW4LPFilterType@@@Z ENDP ; ModMultiChannelFeedback::setFilterType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setModValue@ModMultiChannelFeedback@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -18999,7 +18527,7 @@ $LN3@setModValu:
 ?setModValue@ModMultiChannelFeedback@@QEAAXM@Z ENDP	; ModMultiChannelFeedback::setModValue
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setModDepth@ModMultiChannelFeedback@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -19034,12 +18562,12 @@ $LN3@setModDept:
 ?setModDepth@ModMultiChannelFeedback@@QEAAXM@Z ENDP	; ModMultiChannelFeedback::setModDepth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setModRate@ModMultiChannelFeedback@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -19061,12 +18589,12 @@ $LL4@setModRate:
 ; 109  : 			mcf_DelayLines[i]->setModRate(freq);
 
 	mov	rax, QWORD PTR [r8+40]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movaps	xmm1, xmm2
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -19076,14 +18604,14 @@ $LL4@setModRate:
 
 	mov	rcx, QWORD PTR [r9+rax]
 	lea	r9, QWORD PTR [r9+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	movss	DWORD PTR [rcx+136], xmm3
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -19097,7 +18625,7 @@ $LL4@setModRate:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -19111,10 +18639,10 @@ $LN3@setModRate:
 ?setModRate@ModMultiChannelFeedback@@QEAAXM@Z ENDP	; ModMultiChannelFeedback::setModRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setOscillatorType@ModMultiChannelFeedback@@QEAAXW4OscillatorType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -19142,13 +18670,13 @@ $LL4@setOscilla:
 
 	mov	rax, QWORD PTR [rdi+40]
 	mov	rdx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rdx+104]
 	mov	DWORD PTR [rdx+116], 1
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -19163,7 +18691,7 @@ $LL4@setOscilla:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 113  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -19183,9 +18711,9 @@ $LN3@setOscilla:
 ?setOscillatorType@ModMultiChannelFeedback@@QEAAXW4OscillatorType@@@Z ENDP ; ModMultiChannelFeedback::setOscillatorType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setOscillatorIsUnipolar@ModMultiChannelFeedback@@QEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -19207,17 +18735,17 @@ $LL4@setOscilla:
 	inc	r8d
 	mov	rax, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
 	mov	BYTE PTR [rax+112], r9b
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rax+104]
 	mov	BYTE PTR [rax+48], r9b
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 118  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -19231,32 +18759,32 @@ $LN3@setOscilla:
 ?setOscillatorIsUnipolar@ModMultiChannelFeedback@@QEAAX_N@Z ENDP ; ModMultiChannelFeedback::setOscillatorIsUnipolar
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?processAudio@ModMultiChannelFeedback@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 housein$ = 32
@@ -19316,7 +18844,7 @@ $LL4@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rbx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 142  : 			float newDelayInmsec = mcf_DelayLines[i]->mdly_meanDelayValue + mcf_DelayLines[i]->mdly_deltaDelayValue * mcf_DelayLines[i]->mdly_LFO->processAudio();
 
@@ -19330,36 +18858,36 @@ $LL4@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rbx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 145  : 			mcf_DelayLines[i]->LPCombFilter::setDelayInmsec(newDelayInmsec);
 
 	mov	rcx, QWORD PTR [rdi+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm1, DWORD PTR [rcx+16]
 	comiss	xmm0, xmm1
 	ja	SHORT $LN25@processAud
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm1, xmm0
 	maxss	xmm1, xmm6
 $LN25@processAud:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
 
 	movss	DWORD PTR [rcx+24], xmm1
 
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -19367,7 +18895,7 @@ $LN25@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rbx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 148  : 			out[i] = mcf_DelayLines[i]->readFromDelayLine();
 
@@ -19404,18 +18932,18 @@ $LN141@processAud:
 	mov	rdx, r13
 	mov	r9, r13
 $LL7@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 153  : 			housein[i] = mcf_DelayLines[i]->processLowPass(out[i]) * mcf_DelayLines[i]->getFeedback();
 
 	movss	xmm5, DWORD PTR [rdx+r15]
 	mov	rcx, QWORD PTR [r11+r9]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 36   : 	return lpcf_feedbackLPF->processAudio(xn);
 
 	mov	rax, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 200  : 		float yn = lpf_a0 * xn + lpf_a1 * lpf_xn_1 + lpf_a2 * lpf_xn_2 - lpf_b1 * lpf_yn_1 - lpf_b2 * lpf_yn_2;
 
@@ -19455,7 +18983,7 @@ $LL7@processAud:
 ; 205  : 		return lpf_c0 * yn;
 
 	mulss	xmm4, DWORD PTR [rax+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 153  : 			housein[i] = mcf_DelayLines[i]->processLowPass(out[i]) * mcf_DelayLines[i]->getFeedback();
 
@@ -19480,7 +19008,7 @@ $LN134@processAud:
 ; 157  : 		mcf_Householder->processAudio(&housein[0], &houseout[0]);
 
 	mov	r8, QWORD PTR [rbx+32]
-; File E:\prova\Shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\Householder.h
 
 ; 24   : 		for (int i = 0; i < hou_numberOfChannels; i++)
 
@@ -19532,7 +19060,7 @@ $LL51@processAud:
 	jl	SHORT $LL51@processAud
 	mov	rcx, QWORD PTR housein$[rbp-96]
 $LN50@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 159  : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 
@@ -19550,7 +19078,7 @@ $LL10@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rbx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 160  : 			mcf_DelayLines[i]->writeToDelayLine(in[i] + houseout[i]);
 
@@ -19558,9 +19086,9 @@ $LL10@processAud:
 	movss	xmm0, DWORD PTR [r8+rax]
 	addss	xmm0, DWORD PTR [r8+r12]
 	mov	rdx, QWORD PTR [r10+rcx]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	movsxd	rcx, DWORD PTR [rdx+32]
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -19568,41 +19096,41 @@ $LL10@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rdx+40]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	movss	DWORD PTR [rax+rcx*4], xmm0
 
-; 152  : 	dly_readIndex++;
+; 151  : 	dly_readIndex++;
 
 	inc	DWORD PTR [rdx+28]
 
-; 153  : 
-; 154  : 	// check if reading index is out of delay line length
-; 155  : 	if (dly_readIndex >= dly_lineLengthInSamples)
+; 152  : 
+; 153  : 	// check if reading index is out of delay line length
+; 154  : 	if (dly_readIndex >= dly_lineLengthInSamples)
 
 	mov	eax, DWORD PTR [rdx+28]
 	cmp	eax, DWORD PTR [rdx+12]
 	cmovge	eax, r13d
 	mov	DWORD PTR [rdx+28], eax
 
-; 156  : 		dly_readIndex = 0;
-; 157  : 
-; 158  : 	// Increase writing index
-; 159  : 	dly_writeIndex++;
+; 155  : 		dly_readIndex = 0;
+; 156  : 
+; 157  : 	// Increase writing index
+; 158  : 	dly_writeIndex++;
 
 	inc	DWORD PTR [rdx+32]
 
-; 160  : 
-; 161  : 	// check if writing index is out of delay line length
-; 162  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+; 159  : 
+; 160  : 	// check if writing index is out of delay line length
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
 
 	mov	eax, DWORD PTR [rdx+32]
 	cmp	eax, DWORD PTR [rdx+12]
 	cmovge	eax, r13d
 	mov	DWORD PTR [rdx+32], eax
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 159  : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 
@@ -19748,7 +19276,7 @@ $LN111@processAud:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN95@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 163  : 	}
 
@@ -19793,87 +19321,77 @@ out$ = 160
 ?dtor$0@?0??processAudio@ModMultiChannelFeedback@@QEAAXPEAM0@Z@4HA ENDP ; `ModMultiChannelFeedback::processAudio'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\Householder.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z
 _TEXT	SEGMENT
-$T8 = 80
-$T5 = 80
-$T1 = 80
-this$ = 80
-numCh$ = 88
-$T6 = 96
-$T3 = 96
+$T5 = 48
+$T1 = 48
+this$ = 48
+numCh$ = 56
+$T3 = 64
 ?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z PROC	; ModMultiChannelFeedback::constructMCF, COMDAT
 
 ; 167  : 	void constructMCF(int numCh) {
 
-$LN56:
+$LN33:
 	mov	QWORD PTR [rsp+16], rbx
-	mov	QWORD PTR [rsp+32], rbp
-	push	rsi
+	mov	QWORD PTR [rsp+32], rsi
 	push	rdi
-	push	r14
-	sub	rsp, 48					; 00000030H
-	movaps	XMMWORD PTR [rsp+32], xmm6
-	mov	r14d, edx
-	mov	rbx, rcx
+	sub	rsp, 32					; 00000020H
+	mov	ebx, edx
+	mov	rsi, rcx
 
 ; 168  : 		mcf_Householder = new Householder(numCh);
 
 	mov	ecx, 8
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
-	movd	xmm0, r14d
-; File E:\prova\Shimmer\include\Householder.h
+	movd	xmm0, ebx
+; File E:\FoxSuite\shimmer\include\Householder.h
 
 ; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
 
 	cvtdq2pd xmm0, xmm0
 	movsd	xmm1, QWORD PTR __real@c000000000000000
 	divsd	xmm1, xmm0
-	cvtpd2ps xmm6, xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	cvtpd2ps xmm2, xmm1
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 168  : 		mcf_Householder = new Householder(numCh);
 
-	mov	QWORD PTR [rbx+32], rax
+	mov	QWORD PTR [rsi+32], rax
 
-; 41   : 		mcf_numberOfChannels = numCh;
+; 169  : 		mcf_numberOfChannels = numCh;
 
-	mov	DWORD PTR [rbx], r14d
-; File E:\prova\Shimmer\include\Householder.h
+	mov	DWORD PTR [rsi], ebx
+; File E:\FoxSuite\shimmer\include\Householder.h
 
 ; 18   : 		hou_numberOfChannels = numCh;
 
-	mov	DWORD PTR [rax], r14d
+	mov	DWORD PTR [rax], ebx
 
 ; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
 
-	movss	DWORD PTR [rax+4], xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	movss	DWORD PTR [rax+4], xmm2
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
-; 43   : 		deleteDelayLines();
+; 171  : 		deleteDelayLines();
 
-	mov	rcx, rbx
+	mov	rcx, rsi
 	call	?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::deleteDelayLines
 
 ; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	xor	esi, esi
-	mov	ebp, esi
-	cmp	DWORD PTR [rbx], esi
-	jle	SHORT $LN16@constructM
-$LL17@constructM:
+	xor	edi, edi
+	cmp	DWORD PTR [rsi], edi
+	jle	SHORT $LN14@constructM
+$LL15@constructM:
 
 ; 184  : 			mcf_DelayLines.push_back(new ModDelay);
 
@@ -19888,9 +19406,9 @@ $LL17@constructM:
 
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
-	mov	rdx, QWORD PTR [rbx+48]
-	cmp	rdx, QWORD PTR [rbx+56]
-	je	SHORT $LN25@constructM
+	mov	rdx, QWORD PTR [rsi+48]
+	cmp	rdx, QWORD PTR [rsi+56]
+	je	SHORT $LN23@constructM
 
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
@@ -19900,187 +19418,47 @@ $LL17@constructM:
 ; 728  :         _Ty& _Result = *_Mylast;
 ; 729  :         ++_Mylast;
 
-	add	QWORD PTR [rbx+48], 8
+	add	QWORD PTR [rsi+48], 8
 
 ; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
 
-	jmp	SHORT $LN15@constructM
-$LN25@constructM:
+	jmp	SHORT $LN13@constructM
+$LN23@constructM:
 
 ; 745  :         }
 ; 746  : 
 ; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
 
 	lea	r8, QWORD PTR $T5[rsp]
-	lea	rcx, QWORD PTR [rbx+40]
+	lea	rcx, QWORD PTR [rsi+40]
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
-$LN15@constructM:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+$LN13@constructM:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	inc	ebp
-	cmp	ebp, DWORD PTR [rbx]
-	jl	SHORT $LL17@constructM
-$LN16@constructM:
-
-; 45   : 		init(mcf_delayBufferSizeMs, mcf_sampleRate);
-
-	mov	r8d, DWORD PTR [rbx+4]
-	movss	xmm1, DWORD PTR [rbx+16]
-	mov	rcx, rbx
-	call	?init@ModMultiChannelFeedback@@QEAAXMH@Z ; ModMultiChannelFeedback::init
-
-; 46   : 		setDelayLengths(mcf_minDelayLength, mcf_maxDelayLength, mcf_delayDistribution);
-
-	mov	r9d, DWORD PTR [rbx+24]
-	movss	xmm2, DWORD PTR [rbx+12]
-	movss	xmm1, DWORD PTR [rbx+8]
-	mov	rcx, rbx
-	call	?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelFeedback::setDelayLengths
-
-; 47   : 		setDecayInSeconds(mcf_decay);
-
-	movss	xmm1, DWORD PTR [rbx+20]
-	mov	rcx, rbx
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-
-; 169  : 		setNumberOfChannels(numCh);
-; 170  : 		mcf_numberOfChannels = numCh;
-
-	mov	DWORD PTR [rbx], r14d
-
-; 171  : 		mcf_Householder->setNumberOfChannels(numCh);
-
-	mov	rax, QWORD PTR [rbx+32]
-; File E:\prova\Shimmer\include\Householder.h
-
-; 18   : 		hou_numberOfChannels = numCh;
-
-	mov	DWORD PTR [rax], r14d
-
-; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
-
-	movss	DWORD PTR [rax+4], xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	cmp	DWORD PTR [rbx], esi
-	jle	SHORT $LN33@constructM
-$LL34@constructM:
-
-; 184  : 			mcf_DelayLines.push_back(new ModDelay);
-
-	mov	ecx, 144				; 00000090H
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T6[rsp], rax
-	mov	rcx, rax
-	call	??0ModDelay@@QEAA@XZ			; ModDelay::ModDelay
-	npad	1
-	mov	QWORD PTR $T8[rsp], rax
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 743  :         if (_Mylast != _My_data._Myend) {
-
-	mov	rdx, QWORD PTR [rbx+48]
-	cmp	rdx, QWORD PTR [rbx+56]
-	je	SHORT $LN42@constructM
-
-; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
-
-	mov	QWORD PTR [rdx], rax
-
-; 727  :         _Orphan_range(_Mylast, _Mylast);
-; 728  :         _Ty& _Result = *_Mylast;
-; 729  :         ++_Mylast;
-
-	add	QWORD PTR [rbx+48], 8
-
-; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
-
-	jmp	SHORT $LN32@constructM
-$LN42@constructM:
-
-; 745  :         }
-; 746  : 
-; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
-
-	lea	r8, QWORD PTR $T8[rsp]
-	lea	rcx, QWORD PTR [rbx+40]
-	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
-$LN32@constructM:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	inc	esi
-	cmp	esi, DWORD PTR [rbx]
-	jl	SHORT $LL34@constructM
-$LN33@constructM:
+	inc	edi
+	cmp	edi, DWORD PTR [rsi]
+	jl	SHORT $LL15@constructM
+$LN14@constructM:
 
 ; 172  : 		allocateDelayLines();
 ; 173  : 	}
 
-	mov	rbx, QWORD PTR [rsp+88]
-	mov	rbp, QWORD PTR [rsp+104]
-	movaps	xmm6, XMMWORD PTR [rsp+32]
-	add	rsp, 48					; 00000030H
-	pop	r14
+	mov	rbx, QWORD PTR [rsp+56]
+	mov	rsi, QWORD PTR [rsp+72]
+	add	rsp, 32					; 00000020H
 	pop	rdi
-	pop	rsi
 	ret	0
 ?constructMCF@ModMultiChannelFeedback@@AEAAXH@Z ENDP	; ModMultiChannelFeedback::constructMCF
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-$T8 = 80
-$T5 = 80
-$T1 = 80
-this$ = 80
-numCh$ = 88
-$T6 = 96
-$T3 = 96
-?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$1
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T3[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA ENDP ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$1
-$T8 = 80
-$T5 = 80
-$T1 = 80
-this$ = 80
-numCh$ = 88
-$T6 = 96
-$T3 = 96
-?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$2
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T6[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA ENDP ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$2
-text$x	ENDS
-; Function compile flags: /Ogspy
-;	COMDAT text$x
-text$x	SEGMENT
-$T8 = 80
-$T5 = 80
-$T1 = 80
-this$ = 80
-numCh$ = 88
-$T6 = 96
-$T3 = 96
+$T5 = 48
+$T1 = 48
+this$ = 48
+numCh$ = 56
+$T3 = 64
 ?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -20096,46 +19474,44 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-$T8 = 80
-$T5 = 80
-$T1 = 80
-this$ = 80
-numCh$ = 88
-$T6 = 96
-$T3 = 96
-?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$2
+$T5 = 48
+$T1 = 48
+this$ = 48
+numCh$ = 56
+$T3 = 64
+?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA PROC ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 144				; 00000090H
-	mov	rcx, QWORD PTR $T6[rbp]
+	mov	rcx, QWORD PTR $T3[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
-?dtor$2@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA ENDP ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$2
+?dtor$1@?0??constructMCF@ModMultiChannelFeedback@@AEAAXH@Z@4HA ENDP ; `ModMultiChannelFeedback::constructMCF'::`1'::dtor$1
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -20156,7 +19532,7 @@ $LN32:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rdx, QWORD PTR [rcx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 175  : 	void deleteDelayLines() {
 
@@ -20168,7 +19544,7 @@ $LN32:
 	mov	rax, QWORD PTR [rcx+48]
 	mov	r8, rdx
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 176  : 		if (!mcf_DelayLines.empty())
 
@@ -20178,7 +19554,7 @@ $LN32:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 177  : 			for (int i = 0; i < mcf_DelayLines.size(); i++)
 
@@ -20188,7 +19564,7 @@ $LN32:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 177  : 			for (int i = 0; i < mcf_DelayLines.size(); i++)
 
@@ -20200,14 +19576,14 @@ $LN32:
 
 	xor	r14d, r14d
 $LL4@deleteDela:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 178  : 				delete mcf_DelayLines[i];
 
 	mov	rdi, QWORD PTR [r14+rdx]
 	test	rdi, rdi
 	je	SHORT $LN2@deleteDela
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
@@ -20236,7 +19612,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	r8, QWORD PTR [rbx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 177  : 			for (int i = 0; i < mcf_DelayLines.size(); i++)
 
@@ -20246,7 +19622,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+48]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 177  : 			for (int i = 0; i < mcf_DelayLines.size(); i++)
 
@@ -20256,7 +19632,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, r8
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 177  : 			for (int i = 0; i < mcf_DelayLines.size(); i++)
 
@@ -20266,7 +19642,7 @@ $LN2@deleteDela:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 177  : 			for (int i = 0; i < mcf_DelayLines.size(); i++)
 
@@ -20289,9 +19665,9 @@ $LN3@deleteDela:
 ?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ ENDP	; ModMultiChannelFeedback::deleteDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?allocateDelayLines@ModMultiChannelFeedback@@AEAAXXZ
 _TEXT	SEGMENT
 $T3 = 48
@@ -20355,7 +19731,7 @@ $LN12@allocateDe:
 	lea	rcx, QWORD PTR [rdi+40]
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN2@allocateDe:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -20409,15 +19785,18 @@ $T1 = 56
 ?dtor$0@?0??allocateDelayLines@ModMultiChannelFeedback@@AEAAXXZ@4HA ENDP ; `ModMultiChannelFeedback::allocateDelayLines'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ
 _TEXT	SEGMENT
 expo$ = 32
@@ -20427,15 +19806,19 @@ this$ = 96
 
 ; 187  : 	void setDelayExponential() {
 
-$LN68:
-	push	rbx
+$LN75:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+8], rbx
+	mov	QWORD PTR [rax+16], rsi
+	mov	QWORD PTR [rax+24], rdi
+	push	r14
 	sub	rsp, 80					; 00000050H
 	mov	rbx, rcx
 
 ; 188  : 		vector<float> expo(mcf_numberOfChannels);
 
 	movsxd	rdx, DWORD PTR [rcx]
-	lea	rcx, QWORD PTR expo$[rsp]
+	lea	rcx, QWORD PTR [rax-56]
 	call	??0?$vector@MV?$allocator@M@std@@@std@@QEAA@_KAEBV?$allocator@M@1@@Z ; std::vector<float,std::allocator<float> >::vector<float,std::allocator<float> >
 	npad	1
 
@@ -20512,19 +19895,19 @@ $LN27@setDelayEx:
 
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN11@setDelayEx:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 190  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	xor	r8d, r8d
-	cmp	DWORD PTR [rbx], r8d
+	xor	edi, edi
+	cmp	DWORD PTR [rbx], edi
 	jle	SHORT $LN3@setDelayEx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1563 :         auto& _My_data = _Mypair._Myval2;
 
-	xor	r9d, r9d
-	xor	r10d, r10d
+	xor	esi, esi
+	xor	r14d, r14d
 $LL4@setDelayEx:
 
 ; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
@@ -20534,22 +19917,54 @@ $LL4@setDelayEx:
 ; 1568 : 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rax, QWORD PTR [rbx+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	rcx, QWORD PTR [rbx+40]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 191  : 			mcf_DelayLines[i]->setDelayInmsec(expo[i]);
 
-	mov	rdx, QWORD PTR [r10+rax]
 	mov	rax, QWORD PTR expo$[rsp]
-	mov	ecx, DWORD PTR [r9+rax]
-	mov	DWORD PTR [rdx+120], ecx
+	movss	xmm1, DWORD PTR [rsi+rax]
+	mov	rcx, QWORD PTR [r14+rcx]
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	movss	DWORD PTR [rcx+120], xmm1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+	comiss	xmm1, xmm0
+	ja	SHORT $LN42@setDelayEx
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN42@setDelayEx:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 190  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	inc	r8d
-	lea	r10, QWORD PTR [r10+8]
-	lea	r9, QWORD PTR [r9+4]
-	cmp	r8d, DWORD PTR [rbx]
+	inc	edi
+	add	r14, 8
+	add	rsi, 4
+	cmp	edi, DWORD PTR [rbx]
 	jl	SHORT $LL4@setDelayEx
 $LN3@setDelayEx:
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -20558,7 +19973,7 @@ $LN3@setDelayEx:
 
 	mov	rcx, QWORD PTR expo$[rsp]
 	test	rcx, rcx
-	je	SHORT $LN40@setDelayEx
+	je	SHORT $LN47@setDelayEx
 
 ; 1764 :             _Destroy(_Myfirst, _Mylast);
 ; 1765 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
@@ -20575,7 +19990,7 @@ $LN3@setDelayEx:
 ; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
 
 	cmp	rdx, 4096				; 00001000H
-	jb	SHORT $LN56@setDelayEx
+	jb	SHORT $LN63@setDelayEx
 
 ; 155  :     _Bytes += _Non_user_size;
 
@@ -20605,23 +20020,26 @@ $LN3@setDelayEx:
 
 	add	rax, -8
 	cmp	rax, 31
-	jbe	SHORT $LN56@setDelayEx
+	jbe	SHORT $LN63@setDelayEx
 	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
 	int	3
-$LN56@setDelayEx:
+$LN63@setDelayEx:
 
 ; 264  :         ::operator delete(_Ptr, _Bytes);
 
 	call	??3@YAXPEAX_K@Z				; operator delete
-$LN40@setDelayEx:
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+$LN47@setDelayEx:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 192  : 	}
 
+	mov	rbx, QWORD PTR [rsp+96]
+	mov	rsi, QWORD PTR [rsp+104]
+	mov	rdi, QWORD PTR [rsp+112]
 	add	rsp, 80					; 00000050H
-	pop	rbx
+	pop	r14
 	ret	0
-$LN65@setDelayEx:
+$LN72@setDelayEx:
 ?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ ENDP ; ModMultiChannelFeedback::setDelayExponential
 _TEXT	ENDS
 ;	COMDAT text$x
@@ -20646,13 +20064,20 @@ this$ = 96
 ?dtor$0@?0??setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ@4HA ENDP ; `ModMultiChannelFeedback::setDelayExponential'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ;	COMDAT ?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 96
@@ -20660,20 +20085,18 @@ this$ = 96
 
 ; 194  : 	void setRandomInRangeDelayLines() {
 
-$LN16:
+$LN23:
 	mov	rax, rsp
 	mov	QWORD PTR [rax+8], rbx
 	mov	QWORD PTR [rax+16], rsi
 	push	rdi
 	sub	rsp, 80					; 00000050H
 	movd	xmm0, DWORD PTR [rcx]
-	mov	rdi, rcx
+	mov	rbx, rcx
 	movaps	XMMWORD PTR [rax-24], xmm6
 	movaps	XMMWORD PTR [rax-40], xmm7
 	movaps	XMMWORD PTR [rax-56], xmm8
 
-; 195  : 		float step = (mcf_maxDelayLength - mcf_minDelayLength) / mcf_numberOfChannels;
-; 196  : 		float dlyLength;
 ; 197  : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 
 	xor	eax, eax
@@ -20682,59 +20105,110 @@ $LN16:
 	cvtdq2ps xmm0, xmm0
 	divss	xmm8, xmm0
 	cmp	DWORD PTR [rcx], eax
-	jle	SHORT $LN3@setRandomI
-	mov	esi, eax
+	jle	$LN3@setRandomI
+	mov	edi, eax
 $LL4@setRandomI:
 
 ; 198  : 			dlyLength = randomInRange(mcf_minDelayLength + step * i, mcf_minDelayLength + step * (i + 1));
 
-	movss	xmm6, DWORD PTR [rdi+8]
-	lea	ebx, DWORD PTR [rax+1]
+	movss	xmm6, DWORD PTR [rbx+8]
+	lea	esi, DWORD PTR [rax+1]
 	xorps	xmm7, xmm7
 	cvtsi2ss xmm7, eax
 	mulss	xmm7, xmm8
 	addss	xmm7, xmm6
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	call	QWORD PTR __imp_rand
 	xorps	xmm0, xmm0
 	xorps	xmm1, xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 198  : 			dlyLength = randomInRange(mcf_minDelayLength + step * i, mcf_minDelayLength + step * (i + 1));
 
-	cvtsi2ss xmm0, ebx
-; File E:\prova\Shimmer\include\utils.h
+	cvtsi2ss xmm0, esi
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 104  : 	float unitRand = rand() / float(RAND_MAX);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
 
 	cvtsi2ss xmm1, eax
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 199  : 			mcf_DelayLines[i]->setDelayInmsec(dlyLength);
 
-	mov	rax, QWORD PTR [rdi+40]
-	mov	rcx, QWORD PTR [rsi+rax]
-	mov	eax, ebx
-	mulss	xmm0, xmm8
-	add	rsi, 8
-	addss	xmm0, xmm6
-; File E:\prova\Shimmer\include\utils.h
+	mov	rax, QWORD PTR [rbx+40]
+	mov	rcx, QWORD PTR [rdi+rax]
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 105  : 	return min + unitRand * (max - min);
+; 105  : 	float unitRand = rand() / float(RAND_MAX);
+
+	mulss	xmm1, DWORD PTR __real@38000100
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 198  : 			dlyLength = randomInRange(mcf_minDelayLength + step * i, mcf_minDelayLength + step * (i + 1));
+
+	mulss	xmm0, xmm8
+	addss	xmm0, xmm6
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 106  : 	return min + unitRand * (max - min);
 
 	subss	xmm0, xmm7
 	mulss	xmm1, xmm0
-	mulss	xmm1, DWORD PTR __real@38000100
-	addss	xmm1, xmm7
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 199  : 			mcf_DelayLines[i]->setDelayInmsec(dlyLength);
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rcx+16]
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 106  : 	return min + unitRand * (max - min);
+
+	addss	xmm1, xmm7
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	comiss	xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
 
 	movss	DWORD PTR [rcx+120], xmm1
-	cmp	ebx, DWORD PTR [rdi]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	ja	SHORT $LN15@setRandomI
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+
+	movaps	xmm0, xmm1
+	maxss	xmm0, DWORD PTR __real@00000000
+$LN15@setRandomI:
+
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+
+	movss	DWORD PTR [rcx+24], xmm0
+
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 197  : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
+
+	add	rdi, 8
+	mov	eax, esi
+	cmp	esi, DWORD PTR [rbx]
 	jl	SHORT $LL4@setRandomI
 $LN3@setRandomI:
 
@@ -20752,7 +20226,7 @@ $LN3@setRandomI:
 ?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ ENDP ; ModMultiChannelFeedback::setRandomInRangeDelayLines
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 ;	COMDAT ??0ChannelSplitter@@QEAA@HH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20773,7 +20247,7 @@ numChOut$ = 24
 ??0ChannelSplitter@@QEAA@HH@Z ENDP			; ChannelSplitter::ChannelSplitter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 ;	COMDAT ??1ChannelSplitter@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -20785,7 +20259,7 @@ this$ = 8
 ??1ChannelSplitter@@QEAA@XZ ENDP			; ChannelSplitter::~ChannelSplitter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 ;	COMDAT ?setNumberOfChannelsIn@ChannelSplitter@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20799,7 +20273,7 @@ numChIn$ = 16
 ?setNumberOfChannelsIn@ChannelSplitter@@QEAAXH@Z ENDP	; ChannelSplitter::setNumberOfChannelsIn
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 ;	COMDAT ?setNumberOfChannelsOut@ChannelSplitter@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20813,7 +20287,7 @@ numCh$ = 16
 ?setNumberOfChannelsOut@ChannelSplitter@@QEAAXH@Z ENDP	; ChannelSplitter::setNumberOfChannelsOut
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 ;	COMDAT ?processAudio@ChannelSplitter@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20881,7 +20355,7 @@ $LN6@processAud:
 ?processAudio@ChannelSplitter@@QEAAXPEAM0@Z ENDP	; ChannelSplitter::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 ;	COMDAT ??0ChannelMixer@@QEAA@HH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20904,7 +20378,7 @@ numChOut$ = 24
 ??0ChannelMixer@@QEAA@HH@Z ENDP				; ChannelMixer::ChannelMixer
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 ;	COMDAT ??1ChannelMixer@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -20916,7 +20390,7 @@ this$ = 8
 ??1ChannelMixer@@QEAA@XZ ENDP				; ChannelMixer::~ChannelMixer
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 ;	COMDAT ?setNumberOfInputChannels@ChannelMixer@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20930,7 +20404,7 @@ numChIn$ = 16
 ?setNumberOfInputChannels@ChannelMixer@@QEAAXH@Z ENDP	; ChannelMixer::setNumberOfInputChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 ;	COMDAT ?setNumberOfOutputChannels@ChannelMixer@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20944,7 +20418,7 @@ numChOut$ = 16
 ?setNumberOfOutputChannels@ChannelMixer@@QEAAXH@Z ENDP	; ChannelMixer::setNumberOfOutputChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 ;	COMDAT ?setMixMode@ChannelMixer@@QEAAXW4MixMode@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -20958,7 +20432,7 @@ mode$dead$ = 16
 ?setMixMode@ChannelMixer@@QEAAXW4MixMode@@@Z ENDP	; ChannelMixer::setMixMode
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 ;	COMDAT ?processAudio@ChannelMixer@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21084,7 +20558,7 @@ $LN13@processAud:
 ?processAudio@ChannelMixer@@QEAAXPEAM0@Z ENDP		; ChannelMixer::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ??0HighPassFilter@@QEAA@HMW4HPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -21136,7 +20610,7 @@ $LN4:
 ??0HighPassFilter@@QEAA@HMW4HPFilterType@@@Z ENDP	; HighPassFilter::HighPassFilter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ??1HighPassFilter@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -21148,7 +20622,7 @@ this$ = 8
 ??1HighPassFilter@@QEAA@XZ ENDP				; HighPassFilter::~HighPassFilter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?init@HighPassFilter@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21166,7 +20640,7 @@ sampleRate$ = 16
 ?init@HighPassFilter@@QEAAXH@Z ENDP			; HighPassFilter::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?setSampleRate@HighPassFilter@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21186,7 +20660,7 @@ sampleRate$ = 16
 ?setSampleRate@HighPassFilter@@QEAAXH@Z ENDP		; HighPassFilter::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?setCutoffFrequency@HighPassFilter@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21206,7 +20680,7 @@ cutoffFreq$ = 16
 ?setCutoffFrequency@HighPassFilter@@QEAAXM@Z ENDP	; HighPassFilter::setCutoffFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?setFilterType@HighPassFilter@@QEAAXW4HPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21226,7 +20700,7 @@ type$dead$ = 16
 ?setFilterType@HighPassFilter@@QEAAXW4HPFilterType@@@Z ENDP ; HighPassFilter::setFilterType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?updateGains@HighPassFilter@@QEAAXXZ
 _TEXT	SEGMENT
 this$ = 128
@@ -21528,7 +21002,7 @@ $LN2@updateGain:
 ?updateGains@HighPassFilter@@QEAAXXZ ENDP		; HighPassFilter::updateGains
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?updateBuffers@HighPassFilter@@QEAAXMM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21558,7 +21032,7 @@ yn$ = 24
 ?updateBuffers@HighPassFilter@@QEAAXMM@Z ENDP		; HighPassFilter::updateBuffers
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ;	COMDAT ?processAudio@HighPassFilter@@QEAAMM@Z
 _TEXT	SEGMENT
 this$ = 32
@@ -21636,7 +21110,7 @@ $LN6:
 ?processAudio@HighPassFilter@@QEAAMM@Z ENDP		; HighPassFilter::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModulationValue@Modulation@@AEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21657,7 +21131,7 @@ modVal$ = 16
 ?setModulationValue@Modulation@@AEAAXM@Z ENDP		; Modulation::setModulationValue
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ??0Modulation@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -21679,13 +21153,13 @@ $LN6:
 ??0Modulation@@QEAA@XZ ENDP				; Modulation::Modulation
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ??1Modulation@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -21697,19 +21171,19 @@ $LN13:
 	mov	QWORD PTR [rsp+8], rbx
 	push	rdi
 	sub	rsp, 32					; 00000020H
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
 	mov	rdi, QWORD PTR [rcx+104]
 	lea	rax, OFFSET FLAT:??_7ModDelay@@6B@
 	mov	QWORD PTR [rcx], rax
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 46   : 	~Modulation() {}
 
 	mov	rbx, rcx
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
@@ -21725,14 +21199,14 @@ $LN9@Modulation:
 ; 52   : 	}
 
 	mov	rcx, rbx
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 46   : 	~Modulation() {}
 
 	mov	rbx, QWORD PTR [rsp+48]
 	add	rsp, 32					; 00000020H
 	pop	rdi
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 52   : 	}
 
@@ -21740,19 +21214,18 @@ $LN9@Modulation:
 ??1Modulation@@QEAA@XZ ENDP				; Modulation::~Modulation
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?init@Modulation@@QEAAXW4ModulationType@@H@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -21762,97 +21235,31 @@ sampleRate$ = 64
 
 ; 48   : 	void init(ModulationType type, int sampleRate) {
 
-$LN34:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rsi
-	push	rdi
+$LN31:
+	push	rbx
 	sub	rsp, 32					; 00000020H
-; File E:\prova\Shimmer\include\ModDelay.h
 
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
+; 49   : 		ModDelay::init(DEFAULT_MOD_BUFFER_LENGTH, sampleRate);
 
 	movss	xmm1, DWORD PTR __real@42200000
-; File E:\prova\Shimmer\include\Modulation.h
+	mov	rbx, rcx
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 48   : 	void init(ModulationType type, int sampleRate) {
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
-	mov	ebx, r8d
-	mov	rdi, rcx
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
-
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
-
-	mov	rcx, QWORD PTR [rdi+104]
-	mov	esi, 1
-	mov	DWORD PTR [rdi+116], esi
-; File E:\prova\Shimmer\include\LFO.h
-
-; 132  : 		lfo_table.clear();
-
-	mov	rax, QWORD PTR [rcx+24]
-
-; 60   : 		lfo_counter = 0.0;
-
-	and	DWORD PTR [rcx+16], 0
-
-; 63   : 		lfo_frequency = 0.0;
-
-	and	DWORD PTR [rcx], 0
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	and	DWORD PTR [rcx+20], 0
-
-; 132  : 		lfo_table.clear();
-
-	mov	QWORD PTR [rcx+32], rax
-
-; 61   : 		lfo_amplitude = 1.0;
-
-	mov	DWORD PTR [rcx+8], 1065353216		; 3f800000H
-
-; 62   : 		lfo_waveform = waveform;
-
-	mov	DWORD PTR [rcx+12], esi
-
-; 64   : 		lfo_sampleRate = sampleRate;		
-
-	mov	DWORD PTR [rcx+4], ebx
-
-; 65   : 		computeIncrement();
-; 66   : 		clearTable();
-; 67   : 		createTable();
-
-	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	rax, QWORD PTR [rdi+104]
-	mov	BYTE PTR [rdi+112], 0
-	mov	BYTE PTR [rax+48], 0
-
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
-
-	mov	rcx, QWORD PTR [rdi+104]
-; File E:\prova\Shimmer\include\Modulation.h
+	mov	rcx, QWORD PTR [rbx+104]
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 85   : 		mod_type = modType;
 
-	mov	DWORD PTR [rdi+144], esi
-; File E:\prova\Shimmer\include\ModDelay.h
+	mov	DWORD PTR [rbx+144], 1
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
-	mov	DWORD PTR [rdi+116], esi
-; File E:\prova\Shimmer\include\LFO.h
+	mov	DWORD PTR [rbx+116], 1
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -21861,82 +21268,109 @@ $LN34:
 
 ; 76   : 		lfo_waveform = waveform;
 
-	mov	DWORD PTR [rcx+12], esi
+	mov	DWORD PTR [rcx+12], 1
 
 ; 77   : 		clearTable();
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
-	mov	rax, QWORD PTR [rdi+104]
-; File E:\prova\Shimmer\include\Modulation.h
+	mov	rax, QWORD PTR [rbx+104]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 51   : 	}
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
-	mov	rbx, QWORD PTR [rsp+48]
-; File E:\prova\Shimmer\include\ModDelay.h
+	movss	xmm1, DWORD PTR __real@3dcccccd
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
-	mov	BYTE PTR [rdi+112], sil
+	mov	BYTE PTR [rbx+112], 1
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
-	mov	BYTE PTR [rax+48], sil
-; File E:\prova\Shimmer\include\Modulation.h
+	mov	BYTE PTR [rax+48], 1
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rbx+16]
+	comiss	xmm0, xmm1
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	mov	DWORD PTR [rbx+120], 1036831949		; 3dcccccdH
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	jb	SHORT $LN24@init
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+; 121  : 		delayInmsec = 0.0;
+
+	movaps	xmm0, xmm1
+$LN24@init:
+
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	mov	rcx, rbx
+	movss	DWORD PTR [rbx+24], xmm0
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 38   : 		mod_modValue = modVal;
 
 	mov	eax, 1084017869				; 409ccccdH
 
-; 155  : 		setModMix(mix);
+; 157  : 		setModWet(wet);
 
-	and	DWORD PTR [rdi+156], 0
-
-; 156  : 		setModDry(dry);
-
-	and	DWORD PTR [rdi+152], 0
-
-; 72   : 		mod_fb = fb;
-
-	and	DWORD PTR [rdi+160], 0
-
-; 73   : 		ModDelay::setFeedback(fb);
-
-	and	DWORD PTR [rdi+72], 0
-
-; 51   : 	}
-
-	mov	rsi, QWORD PTR [rsp+56]
+	mov	DWORD PTR [rbx+148], 1065353216		; 3f800000H
 
 ; 38   : 		mod_modValue = modVal;
 
-	mov	DWORD PTR [rdi+172], eax
+	mov	DWORD PTR [rbx+172], eax
 
 ; 39   : 		ModDelay::setDeltaDelayValue(modVal);
 
-	mov	DWORD PTR [rdi+124], eax
+	mov	DWORD PTR [rbx+124], eax
 
-; 153  : 		ModDelay::setDelayInmsec(meanDel);
+; 155  : 		setModMix(mix);
 
-	mov	DWORD PTR [rdi+120], 1036831949		; 3dcccccdH
+	xor	eax, eax
 
-; 157  : 		setModWet(wet);
+; 156  : 		setModDry(dry);
 
-	mov	DWORD PTR [rdi+148], 1065353216		; 3f800000H
+	mov	QWORD PTR [rbx+152], rax
 
+; 72   : 		mod_fb = fb;
+
+	mov	DWORD PTR [rbx+160], eax
+
+; 73   : 		ModDelay::setFeedback(fb);
+
+	mov	DWORD PTR [rbx+72], eax
+
+; 50   : 		setModType(type);				
 ; 51   : 	}
 
 	add	rsp, 32					; 00000020H
-	pop	rdi
+	pop	rbx
 	ret	0
 ?init@Modulation@@QEAAXW4ModulationType@@H@Z ENDP	; Modulation::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModDry@Modulation@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21953,7 +21387,7 @@ dry$ = 16
 ?setModDry@Modulation@@QEAAXM@Z ENDP			; Modulation::setModDry
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModWet@Modulation@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21970,7 +21404,7 @@ wet$ = 16
 ?setModWet@Modulation@@QEAAXM@Z ENDP			; Modulation::setModWet
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModDepth@Modulation@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -21992,34 +21426,34 @@ depth$ = 16
 ?setModDepth@Modulation@@QEAAXM@Z ENDP			; Modulation::setModDepth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModRate@Modulation@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
 rate$ = 16
 ?setModRate@Modulation@@QEAAXM@Z PROC			; Modulation::setModRate, COMDAT
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 67   : 		mod_rate = rate;
 
 	movss	DWORD PTR [rcx+164], xmm1
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 85   : 		mdly_rate = modRate;
+; 89   : 		mdly_rate = modRate;
 
 	movss	DWORD PTR [rcx+136], xmm1
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 71   : 		lfo_frequency = frequency;
 
@@ -22031,7 +21465,7 @@ rate$ = 16
 	cvtdq2ps xmm0, xmm0
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 69   : 	}
 
@@ -22039,7 +21473,7 @@ rate$ = 16
 ?setModRate@Modulation@@QEAAXM@Z ENDP			; Modulation::setModRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModFeedback@Modulation@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -22060,7 +21494,7 @@ fb$ = 16
 ?setModFeedback@Modulation@@QEAAXM@Z ENDP		; Modulation::setModFeedback
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModMix@Modulation@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -22077,23 +21511,23 @@ mix$ = 16
 ?setModMix@Modulation@@QEAAXM@Z ENDP			; Modulation::setModMix
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setSampleRate@Modulation@@UEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
 sampleRate$ = 16
 ?setSampleRate@Modulation@@UEAAXH@Z PROC		; Modulation::setSampleRate, COMDAT
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 100  : 		mdly_LFO->setSampleRate(sampleRate);
+; 104  : 		mdly_LFO->setSampleRate(sampleRate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	movd	xmm0, edx
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -22109,19 +21543,24 @@ sampleRate$ = 16
 	mulss	xmm1, DWORD PTR __real@45800000
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 101  : 		LPCombFilter::setSampleRate(sampleRate);
+; 105  : 		LPCombFilter::setSampleRate(sampleRate);
 
 	jmp	?setSampleRate@Delay@@UEAAXH@Z		; Delay::setSampleRate
 ?setSampleRate@Modulation@@UEAAXH@Z ENDP		; Modulation::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?setModType@Modulation@@QEAAXW4ModulationType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -22130,7 +21569,7 @@ modType$dead$ = 56
 
 ; 84   : 	void setModType(ModulationType modType) {
 
-$LN22:
+$LN29:
 	push	rbx
 	sub	rsp, 32					; 00000020H
 
@@ -22138,16 +21577,16 @@ $LN22:
 
 	mov	DWORD PTR [rcx+144], 1
 	mov	rbx, rcx
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
 	mov	DWORD PTR [rcx+116], 1
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -22162,40 +21601,76 @@ $LN22:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rbx+104]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm1, DWORD PTR __real@3dcccccd
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 99   : 		mdly_isUnipolar = isUnipolar;
+
 	mov	BYTE PTR [rbx+112], 1
+
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
+
 	mov	BYTE PTR [rax+48], 1
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rbx+16]
+	comiss	xmm0, xmm1
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	mov	DWORD PTR [rbx+120], 1036831949		; 3dcccccdH
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	jb	SHORT $LN22@setModType
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+; 121  : 		delayInmsec = 0.0;
+
+	movaps	xmm0, xmm1
+$LN22@setModType:
+
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	mov	rcx, rbx
+	movss	DWORD PTR [rbx+24], xmm0
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 38   : 		mod_modValue = modVal;
 
 	mov	eax, 1084017869				; 409ccccdH
+
+; 157  : 		setModWet(wet);
+
+	mov	DWORD PTR [rbx+148], 1065353216		; 3f800000H
+
+; 38   : 		mod_modValue = modVal;
+
 	mov	DWORD PTR [rbx+172], eax
 
 ; 39   : 		ModDelay::setDeltaDelayValue(modVal);
 
 	mov	DWORD PTR [rbx+124], eax
-
-; 154  : 		setModulationValue(deltaDel);
-; 155  : 		setModMix(mix);
-
-	xor	eax, eax
-
-; 156  : 		setModDry(dry);
-
-	mov	QWORD PTR [rbx+152], rax
-
-; 72   : 		mod_fb = fb;
-
-	mov	DWORD PTR [rbx+160], eax
-
-; 73   : 		ModDelay::setFeedback(fb);
-
-	mov	DWORD PTR [rbx+72], eax
 
 ; 86   : 		OscillatorType lfo_type = OscillatorType::Triangular;
 ; 87   : 
@@ -22265,12 +21740,22 @@ $LN22:
 ; 151  : 		ModDelay::setLFOWaveform(lfo_type);
 ; 152  : 		ModDelay::setLFOUnipolar(isUnipolar);
 ; 153  : 		ModDelay::setDelayInmsec(meanDel);
+; 154  : 		setModulationValue(deltaDel);
+; 155  : 		setModMix(mix);
 
-	mov	DWORD PTR [rbx+120], 1036831949		; 3dcccccdH
+	xor	eax, eax
 
-; 157  : 		setModWet(wet);
+; 156  : 		setModDry(dry);
 
-	mov	DWORD PTR [rbx+148], 1065353216		; 3f800000H
+	mov	QWORD PTR [rbx+152], rax
+
+; 72   : 		mod_fb = fb;
+
+	mov	DWORD PTR [rbx+160], eax
+
+; 73   : 		ModDelay::setFeedback(fb);
+
+	mov	DWORD PTR [rbx+72], eax
 
 ; 158  : 		setModFeedback(feedback);
 ; 159  : 	}
@@ -22281,15 +21766,15 @@ $LN22:
 ?setModType@Modulation@@QEAAXW4ModulationType@@@Z ENDP	; Modulation::setModType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 ;	COMDAT ?processAudio@Modulation@@UEAAMM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -22303,65 +21788,65 @@ $LN11:
 	sub	rsp, 48					; 00000030H
 	mov	rbx, rcx
 	movaps	XMMWORD PTR [rsp+32], xmm6
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 106  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
+; 110  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
 
 	mov	rcx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 161  : 	float processAudio(float xn) {	
 
 	movaps	xmm6, xmm1
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 106  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
+; 110  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
 
 	call	?processAudio@LFO@@QEAAMXZ		; LFO::processAudio
 	mulss	xmm0, DWORD PTR [rbx+124]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	movss	xmm2, DWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 106  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
+; 110  : 		float newDelayInmsec = mdly_meanDelayValue + mdly_deltaDelayValue * mdly_LFO->processAudio();
 
 	addss	xmm0, DWORD PTR [rbx+120]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 119  : 	if (delayInmsec > dly_lineLengthInmsec)
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
 
 	comiss	xmm0, xmm2
 	ja	SHORT $LN8@processAud
 
-; 120  : 		delayInmsec = dly_lineLengthInmsec;
-; 121  : 	else if (delayInmsec < 0.0)
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
 
 	movaps	xmm2, xmm0
 	maxss	xmm2, DWORD PTR __real@00000000
 $LN8@processAud:
 
-; 122  : 		delayInmsec = 0.0;
-; 123  : 
-; 124  : 	// Set delay line length in milliseconds
-; 125  : 	dly_delayInmsec = delayInmsec;
-; 126  : 
-; 127  : 	// Update parameters based on new delay length
-; 128  : 	updateParameters();
+; 121  : 		delayInmsec = 0.0;
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
 
 	mov	rcx, rbx
 	movss	DWORD PTR [rbx+24], xmm2
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 112  : 		float yn = LPCombFilter::processAudio(xn);
+; 116  : 		float yn = LPCombFilter::processAudio(xn);
 
 	movaps	xmm1, xmm6
 	mov	rcx, rbx
 	call	?processAudio@LPCombFilter@@UEAAMM@Z	; LPCombFilter::processAudio
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 163  : 		return mod_dry * xn + mod_wet * yn;
 
@@ -22378,13 +21863,13 @@ $LN8@processAud:
 ?processAudio@Modulation@@UEAAMM@Z ENDP			; Modulation::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ??0FDN@@QEAA@HHHHH@Z
 _TEXT	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22427,7 +21912,7 @@ $LN61:
 	mov	QWORD PTR [rcx+240], rax
 	mov	QWORD PTR [rcx+248], rax
 	mov	QWORD PTR [rcx+256], rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 122  : 		constructFDN(numChIn, numChInt, numChOut, numDiffStep, numModDiffusers);
 
@@ -22445,7 +21930,7 @@ _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22456,7 +21941,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@QEAA@XZ ; std::vector<MultiChannelDiffuser *,std::allocator<MultiChannelDiffuser *> >::~vector<MultiChannelDiffuser *,std::allocator<MultiChannelDiffuser *> >
 ?dtor$0@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$0
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22467,7 +21952,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@QEAA@XZ ; std::vector<ModMultiChannelDiffuser *,std::allocator<ModMultiChannelDiffuser *> >::~vector<ModMultiChannelDiffuser *,std::allocator<ModMultiChannelDiffuser *> >
 ?dtor$1@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$1
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22478,7 +21963,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@QEAA@XZ ; std::vector<LowPassFilter *,std::allocator<LowPassFilter *> >::~vector<LowPassFilter *,std::allocator<LowPassFilter *> >
 ?dtor$2@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$2
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22489,7 +21974,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@QEAA@XZ ; std::vector<Modulation *,std::allocator<Modulation *> >::~vector<Modulation *,std::allocator<Modulation *> >
 ?dtor$3@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$3
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22500,7 +21985,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAA@XZ ; std::vector<HighPassFilter *,std::allocator<HighPassFilter *> >::~vector<HighPassFilter *,std::allocator<HighPassFilter *> >
 ?dtor$4@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$4
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22511,7 +21996,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ ; std::vector<float,std::allocator<float> >::~vector<float,std::allocator<float> >
 ?dtor$5@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$5
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22522,7 +22007,7 @@ numModDiffusers$dead$ = 104
 	jmp	??1?$vector@MV?$allocator@M@std@@@std@@QEAA@XZ ; std::vector<float,std::allocator<float> >::~vector<float,std::allocator<float> >
 ?dtor$6@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$6
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22537,7 +22022,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22552,7 +22037,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22567,7 +22052,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22582,7 +22067,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22597,7 +22082,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22612,7 +22097,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22627,7 +22112,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22642,7 +22127,7 @@ text$x	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 this$ = 64
-numChIn$dead$ = 72
+numChIn$ = 72
 numChInt$dead$ = 80
 numChOut$dead$ = 88
 numDiffStep$dead$ = 96
@@ -22654,97 +22139,95 @@ numModDiffusers$dead$ = 104
 ?dtor$7@?0???0FDN@@QEAA@HHHHH@Z@4HA ENDP		; `FDN::FDN'::`1'::dtor$7
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Hadamard.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -22760,9 +22243,11 @@ text$x	ENDS
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File E:\prova\Shimmer\include\FDN.h
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ??1FDN@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 64
@@ -22808,7 +22293,7 @@ $LN17@FDN:
 	mov	r13d, 48				; 00000030H
 	mov	rax, QWORD PTR [rbx+32]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 582  : 		if (!fdn_Diffuser.empty()) {
 
@@ -22818,7 +22303,7 @@ $LN17@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -22828,7 +22313,7 @@ $LN17@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -22840,7 +22325,7 @@ $LN17@FDN:
 
 	mov	rsi, r15
 $LL22@FDN:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 585  : 				delete fdn_Diffuser[i];
 
@@ -22858,7 +22343,7 @@ $LN20@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+24]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -22868,7 +22353,7 @@ $LN20@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+32]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -22878,7 +22363,7 @@ $LN20@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -22888,7 +22373,7 @@ $LN20@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -22909,7 +22394,7 @@ $LN26@FDN:
 	mov	rdx, QWORD PTR [rbx+48]
 	mov	rax, QWORD PTR [rbx+56]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 592  : 		if (!fdn_ModDiffuser.empty()) {
 
@@ -22919,7 +22404,7 @@ $LN26@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -22929,7 +22414,7 @@ $LN26@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -22941,7 +22426,7 @@ $LN26@FDN:
 
 	mov	rsi, r15
 $LL25@FDN:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 594  : 				delete fdn_ModDiffuser[i];
 
@@ -22959,7 +22444,7 @@ $LN23@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+48]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -22969,7 +22454,7 @@ $LN23@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+56]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -22979,7 +22464,7 @@ $LN23@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -22989,7 +22474,7 @@ $LN23@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -23034,7 +22519,7 @@ $LN61@FDN:
 
 	mov	rax, QWORD PTR [rbx+192]
 	cmp	rax, QWORD PTR [rbx+200]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 639  : 		if (!fdn_tmpDiffuser.empty())
 
@@ -23050,7 +22535,7 @@ $LN64@FDN:
 
 	mov	rax, QWORD PTR [rbx+216]
 	cmp	rax, QWORD PTR [rbx+224]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 641  : 		if (!fdn_tmpFeedback.empty())
 
@@ -23066,7 +22551,7 @@ $LN65@FDN:
 
 	mov	rax, QWORD PTR [rbx+240]
 	cmp	rax, QWORD PTR [rbx+248]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 643  : 		if (!fdn_outEarly.empty())		
 
@@ -23084,7 +22569,7 @@ $LN66@FDN:
 	mov	ebp, 60					; 0000003cH
 	mov	rax, QWORD PTR [rbx+88]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 609  : 		if (!fdn_LPFOutput.empty()) {
 
@@ -23094,7 +22579,7 @@ $LN66@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -23104,7 +22589,7 @@ $LN66@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -23116,7 +22601,7 @@ $LN66@FDN:
 
 	mov	rdi, r15
 $LL77@FDN:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 611  : 				delete fdn_LPFOutput[i];
 
@@ -23131,7 +22616,7 @@ $LN75@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+80]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -23141,7 +22626,7 @@ $LN75@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+88]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -23151,7 +22636,7 @@ $LN75@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -23161,7 +22646,7 @@ $LN75@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -23180,7 +22665,7 @@ $LN81@FDN:
 	mov	rdx, QWORD PTR [rbx+144]
 	mov	rax, QWORD PTR [rbx+152]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 614  : 		if (!fdn_HPFOutput.empty()) {
 
@@ -23190,7 +22675,7 @@ $LN81@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -23200,7 +22685,7 @@ $LN81@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -23212,7 +22697,7 @@ $LN81@FDN:
 
 	mov	rdi, r15
 $LL80@FDN:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 616  : 				delete fdn_HPFOutput[i];
 
@@ -23227,7 +22712,7 @@ $LN78@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+144]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -23237,7 +22722,7 @@ $LN78@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+152]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -23247,7 +22732,7 @@ $LN78@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -23257,7 +22742,7 @@ $LN78@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -23276,7 +22761,7 @@ $LN82@FDN:
 	mov	rdx, QWORD PTR [rbx+104]
 	mov	rax, QWORD PTR [rbx+112]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 623  : 		if (!fdn_Modulation.empty()) {
 
@@ -23286,7 +22771,7 @@ $LN82@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -23296,7 +22781,7 @@ $LN82@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -23308,14 +22793,14 @@ $LN82@FDN:
 
 	mov	r14, r15
 $LL109@FDN:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 625  : 				delete fdn_Modulation[i];
 
 	mov	rdi, QWORD PTR [r14+rdx]
 	test	rdi, rdi
 	je	SHORT $LN107@FDN
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
@@ -23344,7 +22829,7 @@ $LN107@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -23354,7 +22839,7 @@ $LN107@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+112]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -23364,7 +22849,7 @@ $LN107@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -23374,7 +22859,7 @@ $LN107@FDN:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -23414,7 +22899,7 @@ $LN135@FDN:
 	mov	rdi, QWORD PTR [rbx+128]
 	test	rdi, rdi
 	je	SHORT $LN138@FDN
-; File E:\prova\Shimmer\include\Hadamard.h
+; File E:\FoxSuite\shimmer\include\Hadamard.h
 
 ; 29   : 		if (had_matrix) {
 
@@ -24034,7 +23519,7 @@ $LN336@FDN:
 
 	mov	QWORD PTR [rbx+40], r15
 $LN320@FDN:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 140  : 	}	
 
@@ -24058,145 +23543,143 @@ $LN365@FDN:
 ??1FDN@@QEAA@XZ ENDP					; FDN::~FDN
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?initialize@FDN@@QEAAXMMHM@Z
 _TEXT	SEGMENT
-this$ = 96
-diffusionMaximumLength$dead$ = 104
-i$1$ = 112
-feedbackMaxLength$dead$ = 112
-sampleRate$ = 120
-earlyrefBuffLength$dead$ = 128
+this$ = 80
+diffusionMaximumLength$dead$ = 88
+feedbackMaxLength$dead$ = 96
+i$1$ = 104
+sampleRate$ = 104
+earlyrefBuffLength$dead$ = 112
 ?initialize@FDN@@QEAAXMMHM@Z PROC			; FDN::initialize, COMDAT
 
 ; 143  : 	void initialize(float diffusionMaximumLength, float feedbackMaxLength, int sampleRate, float earlyrefBuffLength = DEFAULT_EARLYREFL_BUFFER_LENGTH) {
 
-$LN434:
-	mov	QWORD PTR [rsp+32], rbx
-	movss	DWORD PTR [rsp+24], xmm2
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	push	rsi
+$LN436:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+8], rbx
+	mov	QWORD PTR [rax+16], rbp
+	mov	QWORD PTR [rax+24], rsi
+	mov	DWORD PTR [rax+32], r9d
 	push	rdi
 	push	r12
 	push	r13
@@ -24218,34 +23701,34 @@ $LN434:
 ; 155  : 		// Early reflections
 ; 156  : 		fdn_EarlyReflections->initDelayLines(earlyrefBuffLength, sampleRate);
 
-	mov	rbx, QWORD PTR [rcx+16]
-	xor	edi, edi
+	mov	rsi, QWORD PTR [rcx+16]
+	xor	ebx, ebx
 	mov	eax, 1157234688				; 44fa0000H
 	mov	DWORD PTR [rcx+264], r9d
 	mov	DWORD PTR [rcx+268], 1101004800		; 41a00000H
-	mov	r10d, 1065353216			; 3f800000H
+	mov	r15d, 1065353216			; 3f800000H
 	mov	DWORD PTR [rcx+272], eax
-	mov	ebp, r9d
+	mov	r12d, r9d
 	mov	DWORD PTR [rcx+276], eax
-	lea	r13d, QWORD PTR [rdi+1]
+	lea	r13d, QWORD PTR [rbx+1]
 	mov	DWORD PTR [rcx+280], r13d
-	mov	rsi, rcx
+	mov	rdi, rcx
 	mov	DWORD PTR [rcx+284], r13d
-	mov	QWORD PTR [rcx+288], rdi
-	mov	DWORD PTR [rcx+296], edi
-	mov	DWORD PTR [rcx+300], r10d
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+	mov	QWORD PTR [rcx+288], rbx
+	mov	DWORD PTR [rcx+296], ebx
+	mov	DWORD PTR [rcx+300], r15d
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 36   : 		mdel_sampleRate = sampleRate;
 
-	mov	DWORD PTR [rbx+40], r9d
+	mov	DWORD PTR [rsi+40], r9d
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
-	mov	rax, QWORD PTR [rbx+16]
-	cmp	QWORD PTR [rbx+8], rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+	mov	rax, QWORD PTR [rsi+16]
+	cmp	QWORD PTR [rsi+8], rax
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 37   : 		if (!mdel_DelayLines.empty()) {
 
@@ -24253,68 +23736,67 @@ $LN434:
 
 ; 38   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r14d, edi
-	cmp	DWORD PTR [rbx], edi
+	mov	ebp, ebx
+	cmp	DWORD PTR [rsi], ebx
 	jle	SHORT $LN17@initialize
-	mov	r15d, edi
+	mov	r14d, ebx
 $LL18@initialize:
 
 ; 39   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
 
-	mov	rax, QWORD PTR [rbx+8]
-	mov	r8d, ebp
+	mov	rax, QWORD PTR [rsi+8]
+	mov	r8d, r12d
 	movss	xmm1, DWORD PTR __real@41a00000
-	mov	rcx, QWORD PTR [r15+rax]
+	mov	rcx, QWORD PTR [r14+rax]
 	mov	rax, QWORD PTR [rcx]
 	call	QWORD PTR [rax]
-	add	r14d, r13d
-	lea	r15, QWORD PTR [r15+8]
-	cmp	r14d, DWORD PTR [rbx]
+	add	ebp, r13d
+	lea	r14, QWORD PTR [r14+8]
+	cmp	ebp, DWORD PTR [rsi]
 	jl	SHORT $LL18@initialize
-	mov	r10d, 1065353216			; 3f800000H
 $LN17@initialize:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 160  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
-	mov	eax, DWORD PTR [rsi+180]
-	mov	r15d, edi
-	mov	ecx, DWORD PTR [rsi+184]
+	mov	eax, DWORD PTR [rdi+180]
+	mov	ebp, ebx
+	mov	ecx, DWORD PTR [rdi+184]
 	sub	eax, ecx
 
 ; 328  : 		fdn_earlyWeight = weight;
 
-	mov	DWORD PTR [rsi+304], r10d
+	mov	DWORD PTR [rdi+304], r15d
 
 ; 160  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
 	test	eax, eax
 	jle	SHORT $LN3@initialize
-	mov	r14, rdi
+	mov	r14, rbx
 $LL4@initialize:
 
 ; 161  : 			fdn_Diffuser[i]->init(diffusionMaximumLength, sampleRate);
 
-	mov	rax, QWORD PTR [rsi+24]
+	mov	rax, QWORD PTR [rdi+24]
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 38   : 		mdiff_MultiChDelay->initDelayLines(bufferLengthMs, sampleRate);
 
-	mov	rbx, QWORD PTR [rcx+24]
-	mov	DWORD PTR [rcx+4], ebp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+	mov	rsi, QWORD PTR [rcx+24]
+	mov	DWORD PTR [rcx+4], r12d
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 36   : 		mdel_sampleRate = sampleRate;
 
-	mov	DWORD PTR [rbx+40], ebp
+	mov	DWORD PTR [rsi+40], r12d
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
-	mov	rax, QWORD PTR [rbx+16]
-	cmp	QWORD PTR [rbx+8], rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+	mov	rax, QWORD PTR [rsi+16]
+	cmp	QWORD PTR [rsi+8], rax
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 37   : 		if (!mdel_DelayLines.empty()) {
 
@@ -24322,70 +23804,75 @@ $LL4@initialize:
 
 ; 38   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r13d, edi
-	cmp	DWORD PTR [rbx], edi
-	jle	SHORT $LN430@initialize
-	mov	r12, rdi
+	mov	r12d, ebx
+	cmp	DWORD PTR [rsi], ebx
+	jle	SHORT $LN431@initialize
+	mov	r13d, DWORD PTR sampleRate$[rsp]
+	mov	r15, rbx
 $LL34@initialize:
 
 ; 39   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
 
-	mov	rax, QWORD PTR [rbx+8]
-	mov	r8d, ebp
+	mov	rax, QWORD PTR [rsi+8]
+	mov	r8d, r13d
 	movss	xmm1, DWORD PTR __real@44fa0000
-	mov	rcx, QWORD PTR [r12+rax]
+	mov	rcx, QWORD PTR [r15+rax]
 	mov	rax, QWORD PTR [rcx]
 	call	QWORD PTR [rax]
-	inc	r13d
-	lea	r12, QWORD PTR [r12+8]
-	cmp	r13d, DWORD PTR [rbx]
+	inc	r12d
+	lea	r15, QWORD PTR [r15+8]
+	cmp	r12d, DWORD PTR [rsi]
 	jl	SHORT $LL34@initialize
-$LN430@initialize:
-; File E:\prova\Shimmer\include\FDN.h
+
+; 38   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
+
+	mov	r13d, 1
+$LN431@initialize:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 160  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
-	mov	r13d, 1
+	mov	r12d, DWORD PTR sampleRate$[rsp]
 $LN2@initialize:
-	mov	eax, DWORD PTR [rsi+180]
-	add	r15d, r13d
-	mov	ecx, DWORD PTR [rsi+184]
+	mov	eax, DWORD PTR [rdi+180]
+	add	ebp, r13d
+	mov	ecx, DWORD PTR [rdi+184]
 	add	r14, 8
 	sub	eax, ecx
-	cmp	r15d, eax
+	cmp	ebp, eax
 	jl	SHORT $LL4@initialize
 $LN3@initialize:
 
 ; 163  : 		for (int i = 0; i < fdn_numModDiffuser; i++) {
 
-	mov	DWORD PTR i$1$[rsp], edi
+	mov	DWORD PTR i$1$[rsp], ebx
 	test	ecx, ecx
 	jle	$LN6@initialize
-	mov	r14, rdi
+	mov	r14, rbx
 $LL7@initialize:
 
 ; 164  : 			fdn_ModDiffuser[i]->init(diffusionMaximumLength, sampleRate);
 
-	mov	rax, QWORD PTR [rsi+48]
+	mov	rax, QWORD PTR [rdi+48]
 	mov	r13, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 39   : 		mdiff_MultiChDelay->initDelayLines(bufferLengthMs, sampleRate);
 
-	mov	r15, QWORD PTR [r13+24]
-	mov	DWORD PTR [r13+4], ebp
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rsi, QWORD PTR [r13+24]
+	mov	DWORD PTR [r13+4], r12d
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 38   : 		mdel_sampleRate = sampleRate;
 
-	mov	DWORD PTR [r15+40], ebp
+	mov	DWORD PTR [rsi+40], r12d
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
-	mov	rax, QWORD PTR [r15+16]
-	cmp	QWORD PTR [r15+8], rax
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rax, QWORD PTR [rsi+16]
+	cmp	QWORD PTR [rsi+8], rax
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 39   : 		if (!mdel_DelayLines.empty()) {
 
@@ -24393,186 +23880,106 @@ $LL7@initialize:
 
 ; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	cmp	DWORD PTR [r15], edi
+	mov	ebp, ebx
+	cmp	DWORD PTR [rsi], ebx
 	jle	SHORT $LN47@initialize
-	mov	r12, rdi
-	mov	esi, edi
+	mov	r15, rbx
 $LL48@initialize:
 
 ; 41   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
 
-	mov	rax, QWORD PTR [r15+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	r8d, ebp
+	mov	rcx, QWORD PTR [rsi+8]
+	mov	r8d, r12d
 	movss	xmm1, DWORD PTR __real@44fa0000
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 41   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
-
-	mov	rbx, QWORD PTR [r12+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
-
-	mov	rcx, rbx
-	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
-
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+104]
-	mov	eax, 1
-	mov	DWORD PTR [rbx+116], eax
-; File E:\prova\Shimmer\include\LFO.h
-
-; 62   : 		lfo_waveform = waveform;
-
-	mov	QWORD PTR [rcx+12], rax
-
-; 132  : 		lfo_table.clear();
-
-	mov	rax, QWORD PTR [rcx+24]
-	mov	QWORD PTR [rcx+32], rax
-
-; 61   : 		lfo_amplitude = 1.0;
-
-	mov	DWORD PTR [rcx+8], 1065353216		; 3f800000H
-
-; 63   : 		lfo_frequency = 0.0;
-
-	mov	DWORD PTR [rcx], edi
-
-; 64   : 		lfo_sampleRate = sampleRate;		
-
-	mov	DWORD PTR [rcx+4], ebp
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	mov	DWORD PTR [rcx+20], edi
-
-; 67   : 		createTable();
-
-	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	rax, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	lea	r12, QWORD PTR [r12+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 95   : 		mdly_isUnipolar = isUnipolar;
-
-	mov	BYTE PTR [rbx+112], dil
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	inc	esi
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	BYTE PTR [rax+48], dil
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 40   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	cmp	esi, DWORD PTR [r15]
+	mov	rcx, QWORD PTR [r15+rcx]
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
+	inc	ebp
+	lea	r15, QWORD PTR [r15+8]
+	cmp	ebp, DWORD PTR [rsi]
 	jl	SHORT $LL48@initialize
-	mov	rsi, QWORD PTR this$[rsp]
 $LN47@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 57   : 	void setMakeUpGainDB(float makeUpGain) { mdiff_MultiChDelay->setMakeUpGaindB(makeUpGain); }
 
-	mov	rbx, QWORD PTR [r13+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rsi, QWORD PTR [r13+24]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r12d, edi
+	mov	ebp, ebx
 	mov	r13d, 1
-	cmp	DWORD PTR [rbx], edi
-	jle	SHORT $LN427@initialize
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	cmp	DWORD PTR [rsi], ebx
+	jle	SHORT $LN429@initialize
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 57   : 	void setMakeUpGainDB(float makeUpGain) { mdiff_MultiChDelay->setMakeUpGaindB(makeUpGain); }
 
-	mov	r15, rdi
-$LL70@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	r15, rbx
+$LL60@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 84   : 			mdel_DelayLines[i]->setMakeUpGaindB(makeUpGain);
 
-	mov	rax, QWORD PTR [rbx+8]
+	mov	rax, QWORD PTR [rsi+8]
 	mov	rcx, QWORD PTR [r15+rax]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 136  : 	dly_makeUpGaindB = gaindB;
+; 135  : 	dly_makeUpGaindB = gaindB;
 
 	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
 
-; 137  : 
-; 138  : 	// update parameters
-; 139  : 	updateParameters();
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
 
 	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 83   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	add	r12d, r13d
+	add	ebp, r13d
 	lea	r15, QWORD PTR [r15+8]
-	cmp	r12d, DWORD PTR [rbx]
-	jl	SHORT $LL70@initialize
-$LN427@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL60@initialize
+$LN429@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 68   : 		mdiff_MultiChDelay->setModValueInMsec(val);
 
-	mov	rax, QWORD PTR [rsi+48]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rax, QWORD PTR [rdi+48]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 98   : 		mdel_modValmsec = modVal;
 
-	mov	r10d, 1065353216			; 3f800000H
+	mov	r15d, 1065353216			; 3f800000H
 
 ; 99   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r9d, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	mov	r9d, ebx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 68   : 		mdiff_MultiChDelay->setModValueInMsec(val);
 
 	mov	rcx, QWORD PTR [r14+rax]
 	mov	rdx, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 98   : 		mdel_modValmsec = modVal;
 
-	mov	DWORD PTR [rdx+48], r10d
+	mov	DWORD PTR [rdx+48], r15d
 
 ; 99   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	cmp	DWORD PTR [rdx], edi
-	jle	SHORT $LN428@initialize
+	cmp	DWORD PTR [rdx], ebx
+	jle	SHORT $LN430@initialize
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	r8, rdi
-$LL83@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	r8, rbx
+$LL73@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
 
@@ -24580,63 +23987,63 @@ $LL83@initialize:
 	add	r9d, r13d
 	mov	rcx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
-	mov	DWORD PTR [rcx+124], r10d
+	mov	DWORD PTR [rcx+124], r15d
 	cmp	r9d, DWORD PTR [rdx]
-	jl	SHORT $LL83@initialize
-$LN428@initialize:
+	jl	SHORT $LL73@initialize
+$LN430@initialize:
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rcx, QWORD PTR [rsi+48]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rcx, QWORD PTR [rdi+48]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r9d, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	mov	r9d, ebx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 64   : 		mdiff_MultiChDelay->setModRate(rate);
 
 	mov	rax, QWORD PTR [r14+rcx]
 	mov	rdx, QWORD PTR [rax+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	cmp	DWORD PTR [rdx], edi
-	jle	SHORT $LN93@initialize
+	cmp	DWORD PTR [rdx], ebx
+	jle	SHORT $LN83@initialize
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	r8, rdi
-$LL94@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	r8, rbx
+$LL84@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 94   : 			mdel_DelayLines[i]->setModRate(freq);
 
 	mov	rax, QWORD PTR [rdx+8]
 	add	r9d, r13d
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movss	xmm1, DWORD PTR __real@45800000
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 94   : 			mdel_DelayLines[i]->setModRate(freq);
 
 	mov	rcx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
-	mov	DWORD PTR [rcx+136], r10d
+	mov	DWORD PTR [rcx+136], r15d
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -24644,63 +24051,63 @@ $LL94@initialize:
 
 ; 71   : 		lfo_frequency = frequency;
 
-	mov	DWORD PTR [rax], r10d
+	mov	DWORD PTR [rax], r15d
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	cmp	r9d, DWORD PTR [rdx]
-	jl	SHORT $LL94@initialize
-	mov	rcx, QWORD PTR [rsi+48]
-$LN93@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	jl	SHORT $LL84@initialize
+	mov	rcx, QWORD PTR [rdi+48]
+$LN83@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 72   : 		mdiff_MultiChDelay->setOscillatorType(type);
 
 	mov	rax, QWORD PTR [r14+rcx]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r12d, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	mov	ebp, ebx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 72   : 		mdiff_MultiChDelay->setOscillatorType(type);
 
-	mov	rbx, QWORD PTR [rax+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rsi, QWORD PTR [rax+24]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	cmp	DWORD PTR [rbx], edi
-	jle	SHORT $LN110@initialize
+	cmp	DWORD PTR [rsi], ebx
+	jle	SHORT $LN100@initialize
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	r15, rdi
-$LL111@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	r15, rbx
+$LL101@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 105  : 			mdel_DelayLines[i]->setLFOWaveform(type);
 
-	mov	rax, QWORD PTR [rbx+8]
+	mov	rax, QWORD PTR [rsi+8]
 	mov	rcx, QWORD PTR [r15+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
 	mov	DWORD PTR [rcx+116], r13d
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -24715,44 +24122,44 @@ $LL111@initialize:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 104  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	add	r12d, r13d
+	add	ebp, r13d
 	lea	r15, QWORD PTR [r15+8]
-	cmp	r12d, DWORD PTR [rbx]
-	jl	SHORT $LL111@initialize
-	mov	rcx, QWORD PTR [rsi+48]
-$LN110@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL101@initialize
+	mov	rcx, QWORD PTR [rdi+48]
+$LN100@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 76   : 		mdiff_MultiChDelay->setOscillatorIsUnipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [r14+rcx]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r8d, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	mov	r8d, ebx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 76   : 		mdiff_MultiChDelay->setOscillatorIsUnipolar(isUnipolar);
 
 	mov	rcx, QWORD PTR [rax+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	cmp	DWORD PTR [rcx], edi
+	cmp	DWORD PTR [rcx], ebx
 	jle	SHORT $LN5@initialize
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rdx, rdi
-$LL128@initialize:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rdx, rbx
+$LL118@initialize:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 110  : 			mdel_DelayLines[i]->setLFOUnipolar(isUnipolar);
 
@@ -24760,24 +24167,24 @@ $LL128@initialize:
 	add	r8d, r13d
 	mov	rax, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
-	mov	BYTE PTR [rax+112], dil
+	mov	BYTE PTR [rax+112], bl
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rax+104]
-	mov	BYTE PTR [rax+48], dil
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	BYTE PTR [rax+48], bl
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 109  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	cmp	r8d, DWORD PTR [rcx]
-	jl	SHORT $LL128@initialize
+	jl	SHORT $LL118@initialize
 $LN5@initialize:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 163  : 		for (int i = 0; i < fdn_numModDiffuser; i++) {
 
@@ -24785,97 +24192,56 @@ $LN5@initialize:
 	add	r14, 8
 	add	edx, r13d
 	mov	DWORD PTR i$1$[rsp], edx
-	cmp	edx, DWORD PTR [rsi+184]
+	cmp	edx, DWORD PTR [rdi+184]
 	jl	$LL7@initialize
 $LN6@initialize:
 
 ; 172  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+172]
-	mov	r14d, edi
+	mov	eax, DWORD PTR [rdi+172]
+	mov	ebp, ebx
 	test	eax, eax
 	jle	$LN9@initialize
-	mov	r15, rdi
-	mov	r12d, 1065353216			; 3f800000H
+	mov	r14, rbx
+	mov	r15d, 1084017869			; 409ccccdH
 $LL10@initialize:
 
 ; 173  : 			fdn_Modulation[i]->init(DEFAULT_MODULATION_TYPE, sampleRate);
 
-	mov	rax, QWORD PTR [rsi+104]
-; File E:\prova\Shimmer\include\ModDelay.h
+	mov	rax, QWORD PTR [rdi+104]
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
+; 49   : 		ModDelay::init(DEFAULT_MOD_BUFFER_LENGTH, sampleRate);
 
-	mov	r8d, ebp
+	mov	r8d, r12d
 	movss	xmm1, DWORD PTR __real@42200000
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 173  : 			fdn_Modulation[i]->init(DEFAULT_MODULATION_TYPE, sampleRate);
 
-	mov	rbx, QWORD PTR [r15+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
+	mov	rsi, QWORD PTR [r14+rax]
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
-; 58   : 		LPCombFilter::init(bufferLengthMs, sampleRate);
+; 49   : 		ModDelay::init(DEFAULT_MOD_BUFFER_LENGTH, sampleRate);
 
-	mov	rcx, rbx
-	call	?init@LPCombFilter@@UEAAXMH@Z		; LPCombFilter::init
+	mov	rcx, rsi
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 59   : 
-; 60   : 		// initialize LFO
-; 61   : 		mdly_lfoWaveform = type;
-; 62   : 		mdly_LFO->init(type, sampleRate);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
-	mov	rcx, QWORD PTR [rbx+104]
-	mov	DWORD PTR [rbx+116], r13d
-; File E:\prova\Shimmer\include\LFO.h
-
-; 132  : 		lfo_table.clear();
-
-	mov	rax, QWORD PTR [rcx+24]
-	mov	QWORD PTR [rcx+32], rax
-
-; 62   : 		lfo_waveform = waveform;
-
-	mov	QWORD PTR [rcx+12], 1
-	mov	DWORD PTR [rcx+8], r12d
-
-; 63   : 		lfo_frequency = 0.0;
-
-	mov	DWORD PTR [rcx], edi
-
-; 64   : 		lfo_sampleRate = sampleRate;		
-
-	mov	DWORD PTR [rcx+4], ebp
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	mov	DWORD PTR [rcx+20], edi
-
-; 67   : 		createTable();
-
-	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
-	mov	rax, QWORD PTR [rbx+104]
-	mov	BYTE PTR [rbx+112], dil
-	mov	BYTE PTR [rax+48], dil
-
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
-
-	mov	rcx, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+	mov	rcx, QWORD PTR [rsi+104]
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 85   : 		mod_type = modType;
 
-	mov	DWORD PTR [rbx+144], r13d
-; File E:\prova\Shimmer\include\ModDelay.h
+	mov	DWORD PTR [rsi+144], r13d
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
-	mov	DWORD PTR [rbx+116], r13d
-; File E:\prova\Shimmer\include\LFO.h
+	mov	DWORD PTR [rsi+116], r13d
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -24890,180 +24256,201 @@ $LL10@initialize:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
-	mov	rax, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 172  : 		for (int i = 0; i < fdn_internalChannels; i++)
-
-	lea	r15, QWORD PTR [r15+8]
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 95   : 		mdly_isUnipolar = isUnipolar;
-
-	mov	BYTE PTR [rbx+112], r13b
-; File E:\prova\Shimmer\include\FDN.h
-
-; 172  : 		for (int i = 0; i < fdn_internalChannels; i++)
-
-	add	r14d, r13d
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
-
+	mov	rax, QWORD PTR [rsi+104]
+	mov	BYTE PTR [rsi+112], r13b
 	mov	BYTE PTR [rax+48], r13b
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	movss	xmm0, DWORD PTR [rsi+16]
+	comiss	xmm0, DWORD PTR __real@3dcccccd
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+
+; 84   : 		mdly_meanDelayValue = delay;
+
+	mov	DWORD PTR [rsi+120], 1036831949		; 3dcccccdH
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 118  : 	if (delayInmsec > dly_lineLengthInmsec)
+
+	jb	SHORT $LN149@initialize
+
+; 119  : 		delayInmsec = dly_lineLengthInmsec;
+; 120  : 	else if (delayInmsec < 0.0)
+; 121  : 		delayInmsec = 0.0;
+
+	movss	xmm0, DWORD PTR __real@3dcccccd
+$LN149@initialize:
+
+; 122  : 
+; 123  : 	// Set delay line length in milliseconds
+; 124  : 	dly_delayInmsec = delayInmsec;
+; 125  : 
+; 126  : 	// Update parameters based on new delay length
+; 127  : 	updateParameters();
+
+	mov	rcx, rsi
+	movss	DWORD PTR [rsi+24], xmm0
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 38   : 		mod_modValue = modVal;
 
-	mov	eax, 1084017869				; 409ccccdH
-	mov	DWORD PTR [rbx+172], eax
-
-; 39   : 		ModDelay::setDeltaDelayValue(modVal);
-
-	mov	DWORD PTR [rbx+124], eax
-
-; 153  : 		ModDelay::setDelayInmsec(meanDel);
-
-	mov	DWORD PTR [rbx+120], 1036831949		; 3dcccccdH
-
-; 154  : 		setModulationValue(deltaDel);
-; 155  : 		setModMix(mix);
-; 156  : 		setModDry(dry);
-
-	mov	QWORD PTR [rbx+152], rdi
-
-; 157  : 		setModWet(wet);
-
-	mov	DWORD PTR [rbx+148], r12d
-
-; 72   : 		mod_fb = fb;
-
-	mov	DWORD PTR [rbx+160], edi
-
-; 73   : 		ModDelay::setFeedback(fb);
-
-	mov	DWORD PTR [rbx+72], edi
-; File E:\prova\Shimmer\include\FDN.h
+	mov	DWORD PTR [rsi+172], r15d
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 172  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+172]
-	cmp	r14d, eax
+	add	ebp, r13d
+; File E:\FoxSuite\shimmer\include\Modulation.h
+
+; 39   : 		ModDelay::setDeltaDelayValue(modVal);
+
+	mov	DWORD PTR [rsi+124], r15d
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 172  : 		for (int i = 0; i < fdn_internalChannels; i++)
+
+	add	r14, 8
+; File E:\FoxSuite\shimmer\include\Modulation.h
+
+; 156  : 		setModDry(dry);
+
+	mov	QWORD PTR [rsi+152], rbx
+
+; 157  : 		setModWet(wet);
+
+	mov	DWORD PTR [rsi+148], 1065353216		; 3f800000H
+
+; 72   : 		mod_fb = fb;
+
+	mov	DWORD PTR [rsi+160], ebx
+
+; 73   : 		ModDelay::setFeedback(fb);
+
+	mov	DWORD PTR [rsi+72], ebx
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 172  : 		for (int i = 0; i < fdn_internalChannels; i++)
+
+	mov	eax, DWORD PTR [rdi+172]
+	cmp	ebp, eax
 	jl	$LL10@initialize
 $LN9@initialize:
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	r8d, edi
+	mov	r8d, ebx
 	test	eax, eax
-	jle	SHORT $LN170@initialize
-	mov	rdx, rdi
-$LL171@initialize:
+	jle	SHORT $LN157@initialize
+	mov	rdx, rbx
+$LL158@initialize:
 
 ; 236  : 			fdn_Modulation[i]->setModDepth(depth);	
 
-	mov	rax, QWORD PTR [rsi+104]
+	mov	rax, QWORD PTR [rdi+104]
 	add	r8d, r13d
 	mov	rcx, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 62   : 		mod_depth = depth;
 
-	mov	DWORD PTR [rcx+168], edi
+	mov	DWORD PTR [rcx+168], ebx
 
 ; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
 
-	mov	DWORD PTR [rcx+124], edi
-; File E:\prova\Shimmer\include\FDN.h
+	mov	DWORD PTR [rcx+124], ebx
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+172]
+	mov	eax, DWORD PTR [rdi+172]
 	cmp	r8d, eax
-	jl	SHORT $LL171@initialize
-$LN170@initialize:
+	jl	SHORT $LL158@initialize
+$LN157@initialize:
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	edx, edi
+	mov	edx, ebx
 	test	eax, eax
-	jle	SHORT $LN179@initialize
-	mov	rcx, rdi
-$LL180@initialize:
+	jle	SHORT $LN166@initialize
+	mov	rcx, rbx
+$LL167@initialize:
 
 ; 230  : 			fdn_Modulation[i]->setModRate(rate);
 
-	mov	rax, QWORD PTR [rsi+104]
+	mov	rax, QWORD PTR [rdi+104]
 	add	edx, r13d
 	mov	rax, QWORD PTR [rcx+rax]
 	lea	rcx, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 67   : 		mod_rate = rate;
 
-	mov	DWORD PTR [rax+164], edi
-; File E:\prova\Shimmer\include\ModDelay.h
+	mov	DWORD PTR [rax+164], ebx
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 85   : 		mdly_rate = modRate;
+; 89   : 		mdly_rate = modRate;
 
-	mov	DWORD PTR [rax+136], edi
+	mov	DWORD PTR [rax+136], ebx
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rax+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 71   : 		lfo_frequency = frequency;
 
-	mov	DWORD PTR [rax], edi
+	mov	DWORD PTR [rax], ebx
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
-	mov	DWORD PTR [rax+20], edi
-; File E:\prova\Shimmer\include\FDN.h
+	mov	DWORD PTR [rax+20], ebx
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+172]
+	mov	eax, DWORD PTR [rdi+172]
 	cmp	edx, eax
-	jl	SHORT $LL180@initialize
-$LN179@initialize:
+	jl	SHORT $LL167@initialize
+$LN166@initialize:
 
 ; 241  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	mov	r8d, edi
+	mov	r8d, ebx
 	test	eax, eax
-	jle	SHORT $LN194@initialize
-	mov	rdx, rdi
-$LL195@initialize:
+	jle	SHORT $LN181@initialize
+	mov	rdx, rbx
+$LL182@initialize:
 
 ; 242  : 			fdn_Modulation[i]->setModFeedback(fb);
 
-	mov	rax, QWORD PTR [rsi+104]
+	mov	rax, QWORD PTR [rdi+104]
 	add	r8d, r13d
 	mov	rcx, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 72   : 		mod_fb = fb;
 
-	mov	DWORD PTR [rcx+160], edi
+	mov	DWORD PTR [rcx+160], ebx
 
 ; 73   : 		ModDelay::setFeedback(fb);
 
-	mov	DWORD PTR [rcx+72], edi
-; File E:\prova\Shimmer\include\FDN.h
+	mov	DWORD PTR [rcx+72], ebx
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 241  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	cmp	r8d, DWORD PTR [rsi+172]
-	jl	SHORT $LL195@initialize
-$LN194@initialize:
+	cmp	r8d, DWORD PTR [rdi+172]
+	jl	SHORT $LL182@initialize
+$LN181@initialize:
 
 ; 247  : 		fdn_modWet = sin(mix * 0.5 * M_PI);
 
@@ -25075,7 +24462,7 @@ $LN194@initialize:
 ; 248  : 		fdn_modDry = cos(mix * 0.5 * M_PI);
 
 	movsd	xmm0, QWORD PTR __real@3ff921fb54442d18
-	movss	DWORD PTR [rsi+312], xmm1
+	movss	DWORD PTR [rdi+312], xmm1
 	call	QWORD PTR __imp_cos
 
 ; 174  : 		setModDepth(0.0);
@@ -25086,42 +24473,77 @@ $LN194@initialize:
 ; 179  : 		// Feedback
 ; 180  : 		fdn_Feedback->init(feedbackMaxLength, sampleRate);
 
-	mov	rcx, QWORD PTR [rsi+72]
+	mov	rsi, QWORD PTR [rdi+72]
 
 ; 248  : 		fdn_modDry = cos(mix * 0.5 * M_PI);
 
 	xorps	xmm1, xmm1
 	cvtsd2ss xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
-; 174  : 		setModDepth(0.0);
-; 175  : 		setModRate(0.0);
-; 176  : 		setModFeedback(0.0);
-; 177  : 		setModMix(1.0);
-; 178  : 
-; 179  : 		// Feedback
-; 180  : 		fdn_Feedback->init(feedbackMaxLength, sampleRate);
+; 59   : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
 
-	mov	r8d, ebp
+	mov	ebp, ebx
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 248  : 		fdn_modDry = cos(mix * 0.5 * M_PI);
 
-	movss	DWORD PTR [rsi+316], xmm1
+	movss	DWORD PTR [rdi+316], xmm1
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
-; 174  : 		setModDepth(0.0);
-; 175  : 		setModRate(0.0);
-; 176  : 		setModFeedback(0.0);
-; 177  : 		setModMix(1.0);
-; 178  : 
-; 179  : 		// Feedback
-; 180  : 		fdn_Feedback->init(feedbackMaxLength, sampleRate);
+; 57   : 		mcf_delayBufferSizeMs = delayMs;
 
+	mov	DWORD PTR [rsi+16], 1157234688		; 44fa0000H
+
+; 58   : 		mcf_sampleRate = sampleRate;
+
+	mov	DWORD PTR [rsi+4], r12d
+
+; 59   : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
+
+	cmp	DWORD PTR [rsi], ebx
+	jle	SHORT $LN192@initialize
+	mov	r14, rbx
+$LL193@initialize:
+
+; 60   : 			mcf_DelayLines[i]->init(delayMs, sampleRate);
+
+	mov	rcx, QWORD PTR [rsi+40]
+	mov	r8d, r12d
 	movss	xmm1, DWORD PTR __real@44fa0000
-	call	?init@ModMultiChannelFeedback@@QEAAXMH@Z ; ModMultiChannelFeedback::init
+	mov	rcx, QWORD PTR [r14+rcx]
+	call	?init@ModDelay@@QEAAXMHW4OscillatorType@@@Z ; ModDelay::init
+
+; 61   : 			mcf_DelayLines[i]->setMakeUpGaindB(_DELAY_MAKEUP_GAIN_VALUE);
+
+	mov	rax, QWORD PTR [rsi+40]
+	mov	rcx, QWORD PTR [r14+rax]
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+
+; 135  : 	dly_makeUpGaindB = gaindB;
+
+	mov	DWORD PTR [rcx+64], 1069547520		; 3fc00000H
+
+; 136  : 
+; 137  : 	// update parameters
+; 138  : 	updateParameters();
+
+	call	?updateParameters@Delay@@AEAAXXZ	; Delay::updateParameters
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 59   : 		for (int i = 0; i < mcf_numberOfChannels; i++) {
+
+	add	ebp, r13d
+	lea	r14, QWORD PTR [r14+8]
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL193@initialize
+$LN192@initialize:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 181  : 		fdn_Feedback->setModValue(_FEEDBACK_MAX_MODULATION_VALUE);
 
-	mov	r8, QWORD PTR [rsi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	rdx, QWORD PTR [rdi+72]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 98   : 		mcf_modValmsec = val;
 
@@ -25129,63 +24551,63 @@ $LN194@initialize:
 
 ; 99   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	r9d, edi
-	mov	DWORD PTR [r8+64], r10d
-	cmp	DWORD PTR [r8], edi
-	jle	SHORT $LN205@initialize
-	mov	rdx, rdi
-$LL206@initialize:
+	mov	r8d, ebx
+	mov	DWORD PTR [rdx+64], r10d
+	cmp	DWORD PTR [rdx], ebx
+	jle	SHORT $LN203@initialize
+	mov	r9, rbx
+$LL204@initialize:
 
 ; 100  : 			mcf_DelayLines[i]->setDeltaDelayValue(val);
 
-	mov	rax, QWORD PTR [r8+40]
-	add	r9d, r13d
-	mov	rcx, QWORD PTR [rdx+rax]
-	lea	rdx, QWORD PTR [rdx+8]
+	mov	rax, QWORD PTR [rdx+40]
+	add	r8d, r13d
+	mov	rcx, QWORD PTR [r9+rax]
+	lea	r9, QWORD PTR [r9+8]
 	mov	DWORD PTR [rcx+124], r10d
-	cmp	r9d, DWORD PTR [r8]
-	jl	SHORT $LL206@initialize
-$LN205@initialize:
-; File E:\prova\Shimmer\include\FDN.h
+	cmp	r8d, DWORD PTR [rdx]
+	jl	SHORT $LL204@initialize
+$LN203@initialize:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 182  : 		fdn_Feedback->setModRate(_FEEDBACK_MAX_MODULATION_RATE);
 
-	mov	rbx, QWORD PTR [rsi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	rsi, QWORD PTR [rdi+72]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	r8d, edi
-	mov	eax, DWORD PTR [rbx]
+	mov	r8d, ebx
+	mov	eax, DWORD PTR [rsi]
 	test	eax, eax
-	jle	SHORT $LN212@initialize
-	mov	rdx, rdi
+	jle	SHORT $LN210@initialize
+	mov	rdx, rbx
 	mov	r9d, 1053609165				; 3ecccccdH
-$LL213@initialize:
+$LL211@initialize:
 
 ; 109  : 			mcf_DelayLines[i]->setModRate(freq);
 
-	mov	rax, QWORD PTR [rbx+40]
+	mov	rax, QWORD PTR [rsi+40]
 	add	r8d, r13d
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movss	xmm1, DWORD PTR __real@44cccccd
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 109  : 			mcf_DelayLines[i]->setModRate(freq);
 
 	mov	rcx, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	mov	DWORD PTR [rcx+136], r9d
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -25199,38 +24621,38 @@ $LL213@initialize:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	cmp	r8d, DWORD PTR [rbx]
-	jl	SHORT $LL213@initialize
-	mov	rbx, QWORD PTR [rsi+72]
-	mov	eax, DWORD PTR [rbx]
-$LN212@initialize:
+	cmp	r8d, DWORD PTR [rsi]
+	jl	SHORT $LL211@initialize
+	mov	rsi, QWORD PTR [rdi+72]
+	mov	eax, DWORD PTR [rsi]
+$LN210@initialize:
 
 ; 113  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	r15d, edi
+	mov	ebp, ebx
 	test	eax, eax
-	jle	SHORT $LN225@initialize
-	mov	r14, rdi
-$LL226@initialize:
+	jle	SHORT $LN223@initialize
+	mov	r14, rbx
+$LL224@initialize:
 
 ; 114  : 			mcf_DelayLines[i]->setLFOWaveform(type);
 
-	mov	rax, QWORD PTR [rbx+40]
+	mov	rax, QWORD PTR [rsi+40]
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 90   : 		mdly_lfoWaveform = wave;
+; 94   : 		mdly_lfoWaveform = wave;
 
 	mov	DWORD PTR [rcx+116], r13d
 
-; 91   : 		mdly_LFO->setLFOWaveform(wave);
+; 95   : 		mdly_LFO->setLFOWaveform(wave);
 
 	mov	rcx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 132  : 		lfo_table.clear();
 
@@ -25245,67 +24667,67 @@ $LL226@initialize:
 ; 78   : 		createTable();
 
 	call	?createTable@LFO@@AEAAXXZ		; LFO::createTable
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 113  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	add	r15d, r13d
+	add	ebp, r13d
 	lea	r14, QWORD PTR [r14+8]
-	cmp	r15d, DWORD PTR [rbx]
-	jl	SHORT $LL226@initialize
-	mov	rbx, QWORD PTR [rsi+72]
-	mov	eax, DWORD PTR [rbx]
-$LN225@initialize:
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL224@initialize
+	mov	rsi, QWORD PTR [rdi+72]
+	mov	eax, DWORD PTR [rsi]
+$LN223@initialize:
 
 ; 118  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	edx, edi
+	mov	edx, ebx
 	test	eax, eax
-	jle	SHORT $LN238@initialize
-	mov	rcx, rdi
-$LL239@initialize:
+	jle	SHORT $LN236@initialize
+	mov	rcx, rbx
+$LL237@initialize:
 
 ; 119  : 			mcf_DelayLines[i]->setLFOUnipolar(isUnipolar);
 
-	mov	rax, QWORD PTR [rbx+40]
+	mov	rax, QWORD PTR [rsi+40]
 	add	edx, r13d
 	mov	rax, QWORD PTR [rcx+rax]
 	lea	rcx, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 95   : 		mdly_isUnipolar = isUnipolar;
+; 99   : 		mdly_isUnipolar = isUnipolar;
 
-	mov	BYTE PTR [rax+112], dil
+	mov	BYTE PTR [rax+112], bl
 
-; 96   : 		mdly_LFO->setLFOunipolar(isUnipolar);
+; 100  : 		mdly_LFO->setLFOunipolar(isUnipolar);
 
 	mov	rax, QWORD PTR [rax+104]
-	mov	BYTE PTR [rax+48], dil
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	BYTE PTR [rax+48], bl
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 118  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	cmp	edx, DWORD PTR [rbx]
-	jl	SHORT $LL239@initialize
-	mov	rbx, QWORD PTR [rsi+72]
-	mov	eax, DWORD PTR [rbx]
-$LN238@initialize:
+	cmp	edx, DWORD PTR [rsi]
+	jl	SHORT $LL237@initialize
+	mov	rsi, QWORD PTR [rdi+72]
+	mov	eax, DWORD PTR [rsi]
+$LN236@initialize:
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	r15d, edi
+	mov	ebp, ebx
 	test	eax, eax
-	jle	SHORT $LN249@initialize
-	mov	r14, rdi
-$LL250@initialize:
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+	jle	SHORT $LN247@initialize
+	mov	r14, rbx
+$LL248@initialize:
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 32   : 	lpcf_feedbackLPF->setFilterType(type);
 
-	mov	rax, QWORD PTR [rbx+40]
-	mov	rcx, QWORD PTR [rax+r14]
+	mov	rax, QWORD PTR [rsi+40]
+	mov	rcx, QWORD PTR [r14+rax]
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -25316,153 +24738,153 @@ $LL250@initialize:
 ; 79   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	add	r15d, r13d
+	add	ebp, r13d
 	lea	r14, QWORD PTR [r14+8]
-	cmp	r15d, DWORD PTR [rbx]
-	jl	SHORT $LL250@initialize
-	mov	rbx, QWORD PTR [rsi+72]
-	mov	eax, DWORD PTR [rbx]
-$LN249@initialize:
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL248@initialize
+	mov	rsi, QWORD PTR [rdi+72]
+	mov	eax, DWORD PTR [rsi]
+$LN247@initialize:
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	r15d, edi
-	mov	r12d, 1184645120			; 469c4000H
+	mov	ebp, ebx
+	mov	r15d, 1184645120			; 469c4000H
 	test	eax, eax
-	jle	SHORT $LN262@initialize
-	mov	r14, rdi
-$LL263@initialize:
+	jle	SHORT $LN260@initialize
+	mov	r14, rbx
+$LL261@initialize:
 
 ; 89   : 			mcf_DelayLines[i]->setCutoffFrequency(freq);
 
-	mov	rax, QWORD PTR [rbx+40]
+	mov	rax, QWORD PTR [rsi+40]
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 25   : 	lpcf_cutoffFreq = cutoffFreq;
 
-	mov	DWORD PTR [rcx+96], r12d
+	mov	DWORD PTR [rcx+96], r15d
 
 ; 26   : 
 ; 27   : 	// set LPF cutoff frequency to the inserted value
 ; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
 
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
-	mov	DWORD PTR [rcx+4], r12d
+	mov	DWORD PTR [rcx+4], r15d
 
 ; 69   : 
 ; 70   : 		// update lpf gains
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	add	r15d, r13d
+	add	ebp, r13d
 	lea	r14, QWORD PTR [r14+8]
-	cmp	r15d, DWORD PTR [rbx]
-	jl	SHORT $LL263@initialize
-$LN262@initialize:
-; File E:\prova\Shimmer\include\FDN.h
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL261@initialize
+$LN260@initialize:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 189  : 		fdn_OutputDiffusion->init(diffusionMaximumLength, sampleRate);
 
-	mov	rax, QWORD PTR [rsi+136]
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+	mov	rax, QWORD PTR [rdi+136]
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 38   : 		mdiff_MultiChDelay->initDelayLines(bufferLengthMs, sampleRate);
 
-	mov	rbx, QWORD PTR [rax+24]
-	mov	DWORD PTR [rax+4], ebp
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+	mov	rsi, QWORD PTR [rax+24]
+	mov	DWORD PTR [rax+4], r12d
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 36   : 		mdel_sampleRate = sampleRate;
 
-	mov	DWORD PTR [rbx+40], ebp
+	mov	DWORD PTR [rsi+40], r12d
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
-	mov	rax, QWORD PTR [rbx+16]
-	cmp	QWORD PTR [rbx+8], rax
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+	mov	rax, QWORD PTR [rsi+16]
+	cmp	QWORD PTR [rsi+8], rax
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 37   : 		if (!mdel_DelayLines.empty()) {
 
-	je	SHORT $LN275@initialize
+	je	SHORT $LN273@initialize
 
 ; 38   : 			for (int i = 0; i < mdel_numberOfChannels; i++)
 
-	mov	r15d, edi
-	cmp	DWORD PTR [rbx], edi
-	jle	SHORT $LN275@initialize
-	mov	r14, rdi
-$LL276@initialize:
+	mov	ebp, ebx
+	cmp	DWORD PTR [rsi], ebx
+	jle	SHORT $LN273@initialize
+	mov	r14, rbx
+$LL274@initialize:
 
 ; 39   : 				mdel_DelayLines[i]->init(bufferLengthMs, sampleRate);
 
-	mov	rax, QWORD PTR [rbx+8]
-	mov	r8d, ebp
+	mov	rax, QWORD PTR [rsi+8]
+	mov	r8d, r12d
 	movss	xmm1, DWORD PTR __real@44fa0000
 	mov	rcx, QWORD PTR [r14+rax]
 	mov	rax, QWORD PTR [rcx]
 	call	QWORD PTR [rax]
-	add	r15d, r13d
+	add	ebp, r13d
 	lea	r14, QWORD PTR [r14+8]
-	cmp	r15d, DWORD PTR [rbx]
-	jl	SHORT $LL276@initialize
-$LN275@initialize:
-; File E:\prova\Shimmer\include\FDN.h
+	cmp	ebp, DWORD PTR [rsi]
+	jl	SHORT $LL274@initialize
+$LN273@initialize:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 192  : 		for (int i = 0; i < fdn_outputChannels; i++) {
 
-	mov	eax, DWORD PTR [rsi+176]
-	mov	r8d, edi
+	mov	eax, DWORD PTR [rdi+176]
+	mov	r8d, ebx
 	test	eax, eax
 	jle	SHORT $LN12@initialize
-	mov	rdx, rdi
+	mov	rdx, rbx
 $LL13@initialize:
 
 ; 193  : 			fdn_LPFOutput[i]->init(sampleRate);
 
-	mov	rax, QWORD PTR [rsi+80]
+	mov	rax, QWORD PTR [rdi+80]
 	add	r8d, r13d
-	mov	rcx, QWORD PTR [rax+rdx]
-	mov	DWORD PTR [rcx+8], ebp
+	mov	rcx, QWORD PTR [rdx+rax]
+	mov	DWORD PTR [rcx+8], r12d
 
 ; 194  : 			fdn_HPFOutput[i]->init(sampleRate);
 
-	mov	rax, QWORD PTR [rsi+144]
-	mov	rcx, QWORD PTR [rax+rdx]
+	mov	rax, QWORD PTR [rdi+144]
+	mov	rcx, QWORD PTR [rdx+rax]
 	lea	rdx, QWORD PTR [rdx+8]
-	mov	DWORD PTR [rcx+8], ebp
-	mov	eax, DWORD PTR [rsi+176]
+	mov	DWORD PTR [rcx+8], r12d
+	mov	eax, DWORD PTR [rdi+176]
 	cmp	r8d, eax
 	jl	SHORT $LL13@initialize
 $LN12@initialize:
 
 ; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	mov	ebp, edi
+	mov	ebp, ebx
 	test	eax, eax
-	jle	SHORT $LN289@initialize
-	mov	rbx, rdi
-$LL290@initialize:
+	jle	SHORT $LN287@initialize
+	mov	rsi, rbx
+$LL288@initialize:
 
 ; 281  : 			fdn_LPFOutput[i]->setFilterType(type);
 
-	mov	rax, QWORD PTR [rsi+80]
-	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+	mov	rax, QWORD PTR [rdi+80]
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -25473,30 +24895,30 @@ $LL290@initialize:
 ; 79   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+176]
-	lea	rbx, QWORD PTR [rbx+8]
+	mov	eax, DWORD PTR [rdi+176]
+	lea	rsi, QWORD PTR [rsi+8]
 	add	ebp, r13d
 	cmp	ebp, eax
-	jl	SHORT $LL290@initialize
-$LN289@initialize:
+	jl	SHORT $LL288@initialize
+$LN287@initialize:
 
 ; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	mov	ebp, edi
+	mov	ebp, ebx
 	test	eax, eax
-	jle	SHORT $LN298@initialize
-	mov	rbx, rdi
-$LL299@initialize:
+	jle	SHORT $LN296@initialize
+	mov	rsi, rbx
+$LL297@initialize:
 
 ; 287  : 			fdn_HPFOutput[i]->setFilterType(type);
 
-	mov	rax, QWORD PTR [rsi+144]
-	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+	mov	rax, QWORD PTR [rdi+144]
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 76   : 		hpf_type = type;
 
@@ -25507,62 +24929,62 @@ $LL299@initialize:
 ; 79   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+176]
-	lea	rbx, QWORD PTR [rbx+8]
+	mov	eax, DWORD PTR [rdi+176]
+	lea	rsi, QWORD PTR [rsi+8]
 	add	ebp, r13d
 	cmp	ebp, eax
-	jl	SHORT $LL299@initialize
-$LN298@initialize:
+	jl	SHORT $LL297@initialize
+$LN296@initialize:
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	mov	ebp, edi
+	mov	ebp, ebx
 	test	eax, eax
-	jle	SHORT $LN316@initialize
-	mov	rbx, rdi
-$LL308@initialize:
+	jle	SHORT $LN314@initialize
+	mov	rsi, rbx
+$LL306@initialize:
 
 ; 269  : 			fdn_LPFOutput[i]->setCutoffFrequency(freq);
 
-	mov	rax, QWORD PTR [rsi+80]
-	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+	mov	rax, QWORD PTR [rdi+80]
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
-	mov	DWORD PTR [rcx+4], r12d
+	mov	DWORD PTR [rcx+4], r15d
 
 ; 69   : 
 ; 70   : 		// update lpf gains
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	mov	eax, DWORD PTR [rsi+176]
-	lea	rbx, QWORD PTR [rbx+8]
+	mov	eax, DWORD PTR [rdi+176]
+	lea	rsi, QWORD PTR [rsi+8]
 	add	ebp, r13d
 	cmp	ebp, eax
-	jl	SHORT $LL308@initialize
+	jl	SHORT $LL306@initialize
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	test	eax, eax
-	jle	SHORT $LN316@initialize
-	mov	rbx, rdi
-$LL317@initialize:
+	jle	SHORT $LN314@initialize
+	mov	rsi, rbx
+$LL315@initialize:
 
 ; 275  : 			fdn_HPFOutput[i]->setCutoffFrequency(freq);
 
-	mov	rax, QWORD PTR [rsi+144]
-	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+	mov	rax, QWORD PTR [rdi+144]
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 68   : 		hpf_cutoffFreq = cutoffFreq;
 
@@ -25573,15 +24995,15 @@ $LL317@initialize:
 ; 71   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
-	add	edi, r13d
-	lea	rbx, QWORD PTR [rbx+8]
-	cmp	edi, DWORD PTR [rsi+176]
-	jl	SHORT $LL317@initialize
-$LN316@initialize:
+	add	ebx, r13d
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebx, DWORD PTR [rdi+176]
+	jl	SHORT $LL315@initialize
+$LN314@initialize:
 
 ; 195  : 		}	
 ; 196  : 		setLowPassType(LPF_FILTER_TYPE);
@@ -25590,66 +25012,195 @@ $LN316@initialize:
 ; 199  : 		setHighPassFrequency(MIN_HPF_FREQUENCY);
 ; 200  : 	}	
 
-	mov	rbx, QWORD PTR [rsp+120]
+	mov	rbx, QWORD PTR [rsp+80]
+	mov	rbp, QWORD PTR [rsp+88]
+	mov	rsi, QWORD PTR [rsp+96]
 	add	rsp, 32					; 00000020H
 	pop	r15
 	pop	r14
 	pop	r13
 	pop	r12
 	pop	rdi
-	pop	rsi
-	pop	rbp
 	ret	0
 ?initialize@FDN@@QEAAXMMHM@Z ENDP			; FDN::initialize
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setDecayInSeconds@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
-this$ = 8
-decaySeconds$ = 16
+this$ = 64
+decaySeconds$ = 72
 ?setDecayInSeconds@FDN@@QEAAXM@Z PROC			; FDN::setDecayInSeconds, COMDAT
 
-; 204  : 		fdn_decay = decaySeconds;
+; 203  : 	void setDecayInSeconds(float decaySeconds) {	
 
-	movss	DWORD PTR [rcx+296], xmm1
+$LN20:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+8], rbx
+	mov	QWORD PTR [rax+16], rsi
+	mov	QWORD PTR [rax+24], rdi
+	push	r14
+	sub	rsp, 48					; 00000030H
 
 ; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
 
-	mulss	xmm1, DWORD PTR [rcx+300]
-	mov	rcx, QWORD PTR [rcx+72]
-	jmp	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
+	mov	rdi, QWORD PTR [rcx+72]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	xor	ebx, ebx
+	movaps	XMMWORD PTR [rax-24], xmm6
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 203  : 	void setDecayInSeconds(float decaySeconds) {	
+
+	movaps	xmm6, xmm1
+
+; 204  : 		fdn_decay = decaySeconds;
+
+	movss	DWORD PTR [rcx+296], xmm6
+
+; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
+
+	mulss	xmm6, DWORD PTR [rcx+300]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 51   : 		mcf_decay = decay;
+
+	movss	DWORD PTR [rdi+20], xmm6
+
+; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	cmp	DWORD PTR [rdi], ebx
+	jle	SHORT $LN5@setDecayIn
+	mov	r14d, ebx
+$LL6@setDecayIn:
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+
+; 24   : 	float feedbackModule = (cf_decayInSeconds > 0.0) ? pow(10, -3.0 * dly_delayInmsec / (cf_decayInSeconds * 1000.0)) : 0.0;
+
+	comiss	xmm6, DWORD PTR __real@00000000
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 53   : 			mcf_DelayLines[i]->setFeedbackFromDecay(decay);
+
+	mov	rax, QWORD PTR [rdi+40]
+	mov	rsi, QWORD PTR [r14+rax]
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+
+; 21   : 	cf_decayInSeconds = decayInSeconds;
+
+	movss	DWORD PTR [rsi+76], xmm6
+
+; 24   : 	float feedbackModule = (cf_decayInSeconds > 0.0) ? pow(10, -3.0 * dly_delayInmsec / (cf_decayInSeconds * 1000.0)) : 0.0;
+
+	xorps	xmm0, xmm0
+	jbe	SHORT $LN13@setDecayIn
+	movsd	xmm1, QWORD PTR __real@bf689374bc6a7efa
+	movss	xmm2, DWORD PTR [rsi+24]
+	cvtss2sd xmm0, xmm6
+	cvtps2pd xmm2, xmm2
+	divsd	xmm1, xmm0
+	movsd	xmm0, QWORD PTR __real@4024000000000000
+	mulsd	xmm1, xmm2
+	call	QWORD PTR __imp_pow
+$LN13@setDecayIn:
+	movd	xmm1, DWORD PTR [rsi+80]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	inc	ebx
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+
+; 27   : 	cf_feedbackGain = cf_feedbackGainSign * feedbackModule;
+
+	cvtdq2ps xmm1, xmm1
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	add	r14, 8
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+
+; 24   : 	float feedbackModule = (cf_decayInSeconds > 0.0) ? pow(10, -3.0 * dly_delayInmsec / (cf_decayInSeconds * 1000.0)) : 0.0;
+
+	cvtsd2ss xmm0, xmm0
+
+; 27   : 	cf_feedbackGain = cf_feedbackGainSign * feedbackModule;
+
+	mulss	xmm1, xmm0
+	movss	DWORD PTR [rsi+72], xmm1
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 52   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	cmp	ebx, DWORD PTR [rdi]
+	jl	SHORT $LL6@setDecayIn
+$LN5@setDecayIn:
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 206  : 	}	
+
+	mov	rbx, QWORD PTR [rsp+64]
+	mov	rsi, QWORD PTR [rsp+72]
+	mov	rdi, QWORD PTR [rsp+80]
+	movaps	xmm6, XMMWORD PTR [rsp+32]
+	add	rsp, 48					; 00000030H
+	pop	r14
+	ret	0
 ?setDecayInSeconds@FDN@@QEAAXM@Z ENDP			; FDN::setDecayInSeconds
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z
 _TEXT	SEGMENT
 this$ = 128
@@ -25661,7 +25212,7 @@ feedDistr$dead$ = 160
 
 ; 209  : 	void setRoomSize(float size, DiffuserDelayLogic logic = DiffuserDelayLogic::Empty, DelayDistribution diffDistr = DelayDistribution::Empty, DelayDistribution feedDistr = DelayDistribution::Empty) {
 
-$LN110:
+$LN113:
 	mov	rax, rsp
 	mov	QWORD PTR [rax+8], rbx
 	mov	QWORD PTR [rax+16], rbp
@@ -25688,46 +25239,54 @@ $LN110:
 
 	xor	edi, edi
 	movaps	XMMWORD PTR [rax-56], xmm7
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
 	movss	xmm7, DWORD PTR [rbx+272]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 213  : 			diffDistr = fdn_diffDelDistr;
 
-	mov	ebp, DWORD PTR [rbx+280]
+	mov	r15d, DWORD PTR [rbx+280]
 
 ; 214  : 		if (feedDistr == DelayDistribution::Empty)
 ; 215  : 			feedDistr = fdn_feedDelDistr;
 
-	mov	r15d, DWORD PTR [rbx+284]
+	mov	esi, DWORD PTR [rbx+284]
 	movaps	XMMWORD PTR [rax-72], xmm8
-	movaps	xmm8, xmm1
-	movaps	XMMWORD PTR [rax-88], xmm9
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
-	movss	xmm9, DWORD PTR [rbx+276]
+	movss	xmm8, DWORD PTR [rbx+276]
+	movaps	XMMWORD PTR [rax-88], xmm10
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 209  : 	void setRoomSize(float size, DiffuserDelayLogic logic = DiffuserDelayLogic::Empty, DelayDistribution diffDistr = DelayDistribution::Empty, DelayDistribution feedDistr = DelayDistribution::Empty) {
+
+	movaps	xmm10, xmm1
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 61   :     return minvalue + value * (maxValue - minvalue);
+
 	subss	xmm7, DWORD PTR __real@41f00000
 	mulss	xmm7, xmm0
 	addss	xmm7, DWORD PTR __real@41f00000
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 218  : 		float feedMaxdel = mapValueIntoRange(size, diffMaxdel + 20.0, fdn_feedBufferLength);
 
 	movaps	xmm0, xmm7
 	addss	xmm0, DWORD PTR __real@41a00000
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
-	subss	xmm9, xmm0
-	mulss	xmm9, xmm8
-	addss	xmm9, xmm0
-; File E:\prova\Shimmer\include\FDN.h
+	subss	xmm8, xmm0
+	mulss	xmm8, xmm10
+	addss	xmm8, xmm0
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 307  : 		switch (logic) {
 
@@ -25739,70 +25298,70 @@ $LN110:
 ; 511  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
 	mov	eax, DWORD PTR [rbx+180]
-	mov	r14d, edi
+	mov	ebp, edi
 	mov	ecx, DWORD PTR [rbx+184]
 	sub	eax, ecx
 	test	eax, eax
 	jle	SHORT $LN36@setRoomSiz
-	mov	esi, edi
+	mov	r14d, edi
 $LL37@setRoomSiz:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	mov	rax, QWORD PTR [rbx+24]
-	mov	r9d, ebp
+	mov	r9d, r15d
 	movaps	xmm2, xmm7
-	mov	rcx, QWORD PTR [rsi+rax]
+	mov	rcx, QWORD PTR [r14+rax]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 511  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
 	mov	eax, DWORD PTR [rbx+180]
-	lea	rsi, QWORD PTR [rsi+8]
+	lea	r14, QWORD PTR [r14+8]
 	mov	ecx, DWORD PTR [rbx+184]
-	inc	r14d
+	inc	ebp
 	sub	eax, ecx
-	cmp	r14d, eax
+	cmp	ebp, eax
 	jl	SHORT $LL37@setRoomSiz
 $LN36@setRoomSiz:
 
 ; 513  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
-	mov	r14d, edi
+	mov	ebp, edi
 	test	ecx, ecx
 	jle	SHORT $LN39@setRoomSiz
-	mov	rsi, rdi
+	mov	r14, rdi
 $LL40@setRoomSiz:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 52   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	mov	rax, QWORD PTR [rbx+48]
-	mov	r9d, ebp
+	mov	r9d, r15d
 	movaps	xmm2, xmm7
-	mov	rcx, QWORD PTR [rsi+rax]
+	mov	rcx, QWORD PTR [r14+rax]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 513  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
-	inc	r14d
-	lea	rsi, QWORD PTR [rsi+8]
-	cmp	r14d, DWORD PTR [rbx+184]
+	inc	ebp
+	lea	r14, QWORD PTR [r14+8]
+	cmp	ebp, DWORD PTR [rbx+184]
 	jl	SHORT $LL40@setRoomSiz
 $LN39@setRoomSiz:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	movaps	xmm2, xmm7
-	jmp	SHORT $LN106@setRoomSiz
+	jmp	SHORT $LN109@setRoomSiz
 $LN13@setRoomSiz:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 498  : 		for (int i = fdn_numModDiffuser - 1; i >=0; i--) {
 
@@ -25818,28 +25377,28 @@ $LN13@setRoomSiz:
 
 ; 309  : 			setDoubledDiffuserDelayLengths(delayMinLength, delayMaxLength, distr);
 
-	movsxd	rsi, eax
+	movsxd	rbp, eax
 
 ; 498  : 		for (int i = fdn_numModDiffuser - 1; i >=0; i--) {
 
 	test	eax, eax
 	js	SHORT $LN18@setRoomSiz
 $LL19@setRoomSiz:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 52   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	mov	rax, QWORD PTR [rbx+48]
-	mov	r9d, ebp
+	mov	r9d, r15d
 	movaps	xmm2, xmm6
-	mov	rcx, QWORD PTR [rax+rsi*8]
+	mov	rcx, QWORD PTR [rax+rbp*8]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 498  : 		for (int i = fdn_numModDiffuser - 1; i >=0; i--) {
 
-	sub	rsi, 1
+	sub	rbp, 1
 
 ; 499  : 			fdn_ModDiffuser[i]->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 ; 500  : 			maxDelayMs *= 0.5;
@@ -25854,24 +25413,24 @@ $LN18@setRoomSiz:
 	mov	eax, DWORD PTR [rbx+180]
 	sub	eax, ecx
 	sub	eax, 1
-	movsxd	rsi, eax
+	movsxd	rbp, eax
 	js	SHORT $LN21@setRoomSiz
 $LL22@setRoomSiz:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	mov	rax, QWORD PTR [rbx+24]
-	mov	r9d, ebp
+	mov	r9d, r15d
 	movaps	xmm2, xmm6
-	mov	rcx, QWORD PTR [rax+rsi*8]
+	mov	rcx, QWORD PTR [rax+rbp*8]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 502  : 		for (int i = fdn_diffusionSteps - fdn_numModDiffuser - 1; i >= 0; i--) {
 
-	sub	rsi, 1
+	sub	rbp, 1
 
 ; 503  : 			fdn_Diffuser[i]->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 ; 504  : 			maxDelayMs *= 0.5;
@@ -25884,111 +25443,163 @@ $LN21@setRoomSiz:
 ; 506  : 		fdn_OutputDiffusion->setDelayLinesLength(minDelayMs, maxDelayMs * 2.0, distr);
 
 	addss	xmm6, xmm6
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	movaps	xmm2, xmm6
-$LN106@setRoomSiz:
-; File E:\prova\Shimmer\include\FDN.h
+$LN109@setRoomSiz:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 321  : 		fdn_feedDelDistr = distr;
 
 	mov	rcx, QWORD PTR [rbx+136]
-	mov	r9d, ebp
+	mov	r9d, r15d
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
 $LN11@setRoomSiz:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 72   : 		if (maxDelay != 0.0)
+
+	ucomiss	xmm8, DWORD PTR __real@00000000
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 322  : 		fdn_Feedback->setDelayLengths(mindelay, maxDelay, distr);
+
+	mov	rcx, QWORD PTR [rbx+72]
+	mov	DWORD PTR [rbx+284], esi
 
 ; 219  : 		setDiffuserDelayLengths(diffMaxdel, logic, diffDistr, DEFAULT_DIFFUSER_MIN_DELAY);
 ; 220  : 		setFeedbackDelayLengths(0.5 * diffMaxdel, feedMaxdel, feedDistr);
 
 	mulss	xmm7, DWORD PTR __real@3f000000
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
-; 322  : 		fdn_Feedback->setDelayLengths(mindelay, maxDelay, distr);
+; 71   : 		mcf_minDelayLength = minDelay;
 
-	mov	r9d, r15d
-	mov	rcx, QWORD PTR [rbx+72]
-	movaps	xmm2, xmm9
-	mov	DWORD PTR [rbx+284], r15d
-	movaps	xmm1, xmm7
-	call	?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelFeedback::setDelayLengths
+	movss	DWORD PTR [rcx+8], xmm7
 
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
+; 72   : 		if (maxDelay != 0.0)
+
+	je	SHORT $LN57@setRoomSiz
+
+; 73   : 			mcf_maxDelayLength = maxDelay;
+
+	movss	DWORD PTR [rcx+12], xmm8
+$LN57@setRoomSiz:
+
+; 74   : 		mcf_delayDistribution = distr;
+
+	mov	DWORD PTR [rcx+24], esi
+
+; 75   : 		switch (distr) {
+
+	test	esi, esi
+	je	SHORT $LN58@setRoomSiz
+	cmp	esi, 1
+	jne	SHORT $LN55@setRoomSiz
+
+; 78   : 			break;
+; 79   : 		}
+; 80   : 		case DelayDistribution::RandomInRange: {
+; 81   : 			setRandomInRangeDelayLines();
+
+	call	?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::setRandomInRangeDelayLines
+	jmp	SHORT $LN55@setRoomSiz
+$LN58@setRoomSiz:
+
+; 76   : 		case DelayDistribution::Exponential: {
+; 77   : 			setDelayExponential();
+
+	call	?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::setDelayExponential
+$LN55@setRoomSiz:
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 323  : 		setDecayInSeconds(fdn_decay);
 
 	movss	xmm1, DWORD PTR [rbx+296]
-	mulss	xmm1, DWORD PTR [rbx+300]
-	mov	rcx, QWORD PTR [rbx+72]
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-	mov	rcx, QWORD PTR [rbx+72]
-; File E:\prova\Shimmer\include\utils.h
+	mov	rcx, rbx
+	call	?setDecayInSeconds@FDN@@QEAAXM@Z	; FDN::setDecayInSeconds
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 222  : 		setDecayInSeconds(fdn_decay);
 
-	movaps	xmm1, xmm8
-	mulss	xmm1, DWORD PTR __real@3ff33333
-	addss	xmm1, DWORD PTR __real@3dcccccd
-; File E:\prova\Shimmer\include\FDN.h
+	movss	xmm1, DWORD PTR [rbx+296]
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 61   :     return minvalue + value * (maxValue - minvalue);
+
+	movaps	xmm0, xmm10
+	mulss	xmm0, DWORD PTR __real@3ff33333
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 222  : 		setDecayInSeconds(fdn_decay);
+
+	mov	rcx, rbx
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 61   :     return minvalue + value * (maxValue - minvalue);
+
+	addss	xmm0, DWORD PTR __real@3dcccccd
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 221  : 		fdn_decayMultiplier = mapValueIntoRange(size, 0.1, 2.0);
 
-	movss	DWORD PTR [rbx+300], xmm1
-
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
-
-	mulss	xmm1, DWORD PTR [rbx+296]
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
+	movss	DWORD PTR [rbx+300], xmm0
 
 ; 222  : 		setDecayInSeconds(fdn_decay);
-; 223  : 		fdn_Feedback->setModDepth(size);
+
+	call	?setDecayInSeconds@FDN@@QEAAXM@Z	; FDN::setDecayInSeconds
+
+; 223  : 		fdn_Feedback->setModDepth(size);		
 
 	mov	rdx, QWORD PTR [rbx+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 103  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	mov	r9d, edi
 	mov	eax, DWORD PTR [rdx]
 	test	eax, eax
-	jle	$LN71@setRoomSiz
+	jle	$LN74@setRoomSiz
 	mov	r8, rdi
-$LL63@setRoomSiz:
+$LL66@setRoomSiz:
 
 ; 104  : 			mcf_DelayLines[i]->setDeltaDelayValue(depth* mcf_modValmsec);
 
 	mov	rax, QWORD PTR [rdx+40]
-	movaps	xmm0, xmm8
+	movaps	xmm0, xmm10
 	mulss	xmm0, DWORD PTR [rdx+64]
 	inc	r9d
 	mov	rcx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
 	movss	DWORD PTR [rcx+124], xmm0
 	cmp	r9d, DWORD PTR [rdx]
-	jl	SHORT $LL63@setRoomSiz
+	jl	SHORT $LL66@setRoomSiz
 	mov	rdx, QWORD PTR [rbx+72]
 	mov	eax, DWORD PTR [rdx]
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	test	eax, eax
-	jle	SHORT $LN71@setRoomSiz
+	jle	SHORT $LN74@setRoomSiz
 	movss	xmm2, DWORD PTR __real@3f800000
 	mov	r8, rdi
-	subss	xmm2, xmm8
+	subss	xmm2, xmm10
 	mulss	xmm2, DWORD PTR __real@3ecccccd
 	movaps	xmm3, xmm2
 	mulss	xmm3, DWORD PTR __real@45800000
-$LL72@setRoomSiz:
+$LL75@setRoomSiz:
 
 ; 109  : 			mcf_DelayLines[i]->setModRate(freq);
 
 	mov	rax, QWORD PTR [rdx+40]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movaps	xmm1, xmm3
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -25998,14 +25609,14 @@ $LL72@setRoomSiz:
 
 	mov	rcx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
 	movss	DWORD PTR [rcx+136], xmm2
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -26019,14 +25630,14 @@ $LL72@setRoomSiz:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 108  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	cmp	edi, DWORD PTR [rdx]
-	jl	SHORT $LL72@setRoomSiz
-$LN71@setRoomSiz:
-; File E:\prova\Shimmer\include\FDN.h
+	jl	SHORT $LL75@setRoomSiz
+$LN74@setRoomSiz:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 225  : 	}	
 
@@ -26036,7 +25647,7 @@ $LN71@setRoomSiz:
 	mov	rbp, QWORD PTR [r11+40]
 	mov	rsi, QWORD PTR [r11+48]
 	movaps	xmm8, XMMWORD PTR [r11-48]
-	movaps	xmm9, XMMWORD PTR [r11-64]
+	movaps	xmm10, XMMWORD PTR [r11-64]
 	movaps	xmm7, XMMWORD PTR [rsp+64]
 	mov	rsp, r11
 	pop	r15
@@ -26046,14 +25657,14 @@ $LN71@setRoomSiz:
 ?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z ENDP ; FDN::setRoomSize
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setModRate@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -26075,12 +25686,12 @@ $LL4@setModRate:
 ; 230  : 			fdn_Modulation[i]->setModRate(rate);
 
 	mov	rax, QWORD PTR [r8+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movaps	xmm1, xmm3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -26090,23 +25701,23 @@ $LL4@setModRate:
 
 	mov	rcx, QWORD PTR [r9+rax]
 	lea	r9, QWORD PTR [r9+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 67   : 		mod_rate = rate;
 
 	movss	DWORD PTR [rcx+164], xmm2
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 85   : 		mdly_rate = modRate;
+; 89   : 		mdly_rate = modRate;
 
 	movss	DWORD PTR [rcx+136], xmm2
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -26120,7 +25731,7 @@ $LL4@setModRate:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -26134,11 +25745,11 @@ $LN3@setModRate:
 ?setModRate@FDN@@QEAAXM@Z ENDP				; FDN::setModRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setModDepth@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -26156,12 +25767,12 @@ $LL4@setModDept:
 ; 236  : 			fdn_Modulation[i]->setModDepth(depth);	
 
 	mov	rax, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
 
 	movaps	xmm0, xmm1
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -26171,14 +25782,14 @@ $LL4@setModDept:
 
 	mov	rdx, QWORD PTR [r9+rax]
 	lea	r9, QWORD PTR [r9+8]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
 
 	mulss	xmm0, DWORD PTR [rdx+172]
 	movss	DWORD PTR [rdx+168], xmm1
 	movss	DWORD PTR [rdx+124], xmm0
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -26192,9 +25803,9 @@ $LN3@setModDept:
 ?setModDepth@FDN@@QEAAXM@Z ENDP				; FDN::setModDepth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setModFeedback@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -26216,7 +25827,7 @@ $LL4@setModFeed:
 	inc	r9d
 	mov	rdx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 72   : 		mod_fb = fb;
 
@@ -26225,7 +25836,7 @@ $LL4@setModFeed:
 ; 73   : 		ModDelay::setFeedback(fb);
 
 	mov	DWORD PTR [rdx+72], r10d
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 241  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -26239,7 +25850,7 @@ $LN3@setModFeed:
 ?setModFeedback@FDN@@QEAAXM@Z ENDP			; FDN::setModFeedback
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setModMix@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -26277,14 +25888,14 @@ $LN4:
 ?setModMix@FDN@@QEAAXM@Z ENDP				; FDN::setModMix
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setDampingFrequency@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -26302,18 +25913,18 @@ $LN20:
 ; 258  : 		fdn_Feedback->setDampingFrequency(freq);
 
 	mov	rdi, QWORD PTR [rcx+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	xor	ebx, ebx
 	movaps	XMMWORD PTR [rsp+32], xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 257  : 	void setDampingFrequency(float freq) {
 
 	movaps	xmm6, xmm1
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -26326,7 +25937,7 @@ $LL6@setDamping:
 
 	mov	rax, QWORD PTR [rdi+40]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 25   : 	lpcf_cutoffFreq = cutoffFreq;
 
@@ -26337,7 +25948,7 @@ $LL6@setDamping:
 ; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
 
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -26348,7 +25959,7 @@ $LL6@setDamping:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -26357,7 +25968,7 @@ $LL6@setDamping:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL6@setDamping
 $LN5@setDamping:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 259  : 	}
 
@@ -26370,12 +25981,12 @@ $LN5@setDamping:
 ?setDampingFrequency@FDN@@QEAAXM@Z ENDP			; FDN::setDampingFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setDampingType@FDN@@QEAAXW4LPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -26393,7 +26004,7 @@ $LN20:
 ; 263  : 		fdn_Feedback->setFilterType(type);
 
 	mov	rdi, QWORD PTR [rcx+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -26402,14 +26013,14 @@ $LN20:
 	jle	SHORT $LN5@setDamping
 	mov	esi, ebx
 $LL6@setDamping:
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 32   : 	lpcf_feedbackLPF->setFilterType(type);
 
 	mov	rax, QWORD PTR [rdi+40]
 	mov	rcx, QWORD PTR [rax+rsi]
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -26420,7 +26031,7 @@ $LL6@setDamping:
 ; 79   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -26429,7 +26040,7 @@ $LL6@setDamping:
 	cmp	ebx, DWORD PTR [rdi]
 	jl	SHORT $LL6@setDamping
 $LN5@setDamping:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 264  : 	}
 
@@ -26441,9 +26052,9 @@ $LN5@setDamping:
 ?setDampingType@FDN@@QEAAXW4LPFilterType@@@Z ENDP	; FDN::setDampingType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setLowPassFrequency@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -26473,7 +26084,7 @@ $LL4@setLowPass:
 
 	mov	rax, QWORD PTR [rdi+80]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -26484,7 +26095,7 @@ $LL4@setLowPass:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
@@ -26505,9 +26116,9 @@ $LN3@setLowPass:
 ?setLowPassFrequency@FDN@@QEAAXM@Z ENDP			; FDN::setLowPassFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setHighPassFrequency@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -26537,7 +26148,7 @@ $LL4@setHighPas:
 
 	mov	rax, QWORD PTR [rdi+144]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 68   : 		hpf_cutoffFreq = cutoffFreq;
 
@@ -26548,7 +26159,7 @@ $LL4@setHighPas:
 ; 71   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
@@ -26569,9 +26180,9 @@ $LN3@setHighPas:
 ?setHighPassFrequency@FDN@@QEAAXM@Z ENDP		; FDN::setHighPassFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setLowPassType@FDN@@QEAAXW4LPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -26601,7 +26212,7 @@ $LL4@setLowPass:
 
 	mov	rax, QWORD PTR [rdi+80]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -26612,7 +26223,7 @@ $LL4@setLowPass:
 ; 79   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
@@ -26633,9 +26244,9 @@ $LN3@setLowPass:
 ?setLowPassType@FDN@@QEAAXW4LPFilterType@@@Z ENDP	; FDN::setLowPassType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setHighPassType@FDN@@QEAAXW4HPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -26663,7 +26274,7 @@ $LL4@setHighPas:
 
 	mov	rax, QWORD PTR [rdi+144]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 76   : 		hpf_type = type;
 
@@ -26674,7 +26285,7 @@ $LL4@setHighPas:
 ; 79   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
@@ -26694,14 +26305,14 @@ $LN3@setHighPas:
 ?setHighPassType@FDN@@QEAAXW4HPFilterType@@@Z ENDP	; FDN::setHighPassType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setStereoSpread@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -26722,23 +26333,23 @@ $LN29:
 	jle	SHORT $LN3@setStereoS
 	xor	r9d, r9d
 $LL4@setStereoS:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
 
 	mov	rax, QWORD PTR [rdx+48]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	xor	ebx, ebx
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
 
 	mov	rcx, QWORD PTR [rax+r9]
 	mov	r10, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -26750,7 +26361,7 @@ $LL4@setStereoS:
 
 	xor	r11d, r11d
 $LL13@setStereoS:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 89   : 			mdel_DelayLines[i]->setDeltaDelayValue(depth*mdel_modValmsec);
 
@@ -26764,7 +26375,7 @@ $LL13@setStereoS:
 	cmp	ebx, DWORD PTR [r10]
 	jl	SHORT $LL13@setStereoS
 $LN2@setStereoS:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
@@ -26782,17 +26393,17 @@ $LN3@setStereoS:
 ?setStereoSpread@FDN@@QEAAXM@Z ENDP			; FDN::setStereoSpread
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setDiffuserDelayLengths@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@M@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -26839,7 +26450,7 @@ $LN61:
 	jle	SHORT $LN27@setDiffuse
 	mov	ebp, edi
 $LL28@setDiffuse:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -26849,7 +26460,7 @@ $LL28@setDiffuse:
 	mov	rcx, QWORD PTR [rax+rbp]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 511  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
@@ -26868,7 +26479,7 @@ $LN27@setDiffuse:
 	jle	$LN30@setDiffuse
 	mov	rbp, rdi
 $LL31@setDiffuse:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 52   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -26878,7 +26489,7 @@ $LL31@setDiffuse:
 	mov	rcx, QWORD PTR [rax+rbp]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 513  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
@@ -26886,13 +26497,13 @@ $LL31@setDiffuse:
 	lea	rbp, QWORD PTR [rbp+8]
 	cmp	edi, DWORD PTR [rbx+184]
 	jl	SHORT $LL31@setDiffuse
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	jmp	SHORT $LN30@setDiffuse
 $LN4@setDiffuse:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 498  : 		for (int i = fdn_numModDiffuser - 1; i >=0; i--) {
 
@@ -26909,7 +26520,7 @@ $LN4@setDiffuse:
 	test	eax, eax
 	js	SHORT $LN9@setDiffuse
 $LL10@setDiffuse:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 52   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -26919,7 +26530,7 @@ $LL10@setDiffuse:
 	mov	rcx, QWORD PTR [rax+rbp*8]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 498  : 		for (int i = fdn_numModDiffuser - 1; i >=0; i--) {
 
@@ -26941,7 +26552,7 @@ $LN9@setDiffuse:
 	movsxd	rbp, eax
 	js	SHORT $LN12@setDiffuse
 $LL13@setDiffuse:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -26951,7 +26562,7 @@ $LL13@setDiffuse:
 	mov	rcx, QWORD PTR [rax+rbp*8]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 502  : 		for (int i = fdn_diffusionSteps - fdn_numModDiffuser - 1; i >= 0; i--) {
 
@@ -26996,7 +26607,11 @@ $LN2@setDiffuse:
 ?setDiffuserDelayLengths@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@M@Z ENDP ; FDN::setDiffuserDelayLengths
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setFeedbackDelayLengths@FDN@@QEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -27007,39 +26622,83 @@ distr$ = 72
 
 ; 320  : 	void setFeedbackDelayLengths(float mindelay, float maxDelay, DelayDistribution distr = DEFAULT_FEEDBACK_DELAY_DISTRIBUTION) {
 
-$LN6:
+$LN11:
 	push	rbx
 	sub	rsp, 32					; 00000020H
-	mov	rbx, rcx
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 72   : 		if (maxDelay != 0.0)
+
+	ucomiss	xmm2, DWORD PTR __real@00000000
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 321  : 		fdn_feedDelDistr = distr;
 
 	mov	DWORD PTR [rcx+284], r9d
+	mov	rbx, rcx
 
 ; 322  : 		fdn_Feedback->setDelayLengths(mindelay, maxDelay, distr);
 
 	mov	rcx, QWORD PTR [rcx+72]
-	call	?setDelayLengths@ModMultiChannelFeedback@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelFeedback::setDelayLengths
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
+; 71   : 		mcf_minDelayLength = minDelay;
 
-	movss	xmm1, DWORD PTR [rbx+300]
-	mulss	xmm1, DWORD PTR [rbx+296]
-	mov	rcx, QWORD PTR [rbx+72]
+	movss	DWORD PTR [rcx+8], xmm1
+
+; 72   : 		if (maxDelay != 0.0)
+
+	je	SHORT $LN6@setFeedbac
+
+; 73   : 			mcf_maxDelayLength = maxDelay;
+
+	movss	DWORD PTR [rcx+12], xmm2
+$LN6@setFeedbac:
+
+; 74   : 		mcf_delayDistribution = distr;
+
+	mov	DWORD PTR [rcx+24], r9d
+
+; 75   : 		switch (distr) {
+
+	test	r9d, r9d
+	je	SHORT $LN7@setFeedbac
+	cmp	r9d, 1
+	jne	SHORT $LN4@setFeedbac
+
+; 78   : 			break;
+; 79   : 		}
+; 80   : 		case DelayDistribution::RandomInRange: {
+; 81   : 			setRandomInRangeDelayLines();
+
+	call	?setRandomInRangeDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::setRandomInRangeDelayLines
+	jmp	SHORT $LN4@setFeedbac
+$LN7@setFeedbac:
+
+; 76   : 		case DelayDistribution::Exponential: {
+; 77   : 			setDelayExponential();
+
+	call	?setDelayExponential@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::setDelayExponential
+$LN4@setFeedbac:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 323  : 		setDecayInSeconds(fdn_decay);
+
+	movss	xmm1, DWORD PTR [rbx+296]
+	mov	rcx, rbx
+
 ; 324  : 	}
 
 	add	rsp, 32					; 00000020H
 	pop	rbx
 
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
+; 323  : 		setDecayInSeconds(fdn_decay);
 
-	jmp	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
+	jmp	?setDecayInSeconds@FDN@@QEAAXM@Z	; FDN::setDecayInSeconds
 ?setFeedbackDelayLengths@FDN@@QEAAXMMW4DelayDistribution@@@Z ENDP ; FDN::setFeedbackDelayLengths
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setEarlyReflWeight@FDN@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -27056,35 +26715,35 @@ weight$dead$ = 16
 ?setEarlyReflWeight@FDN@@QEAAXM@Z ENDP			; FDN::setEarlyReflWeight
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setSampleRate@FDN@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -27107,19 +26766,19 @@ $LN112:
 ; 404  : 		fdn_EarlyReflections->setSampleRate(sampleRate);
 
 	mov	rbp, QWORD PTR [rcx+16]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	xor	ebx, ebx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 403  : 		fdn_sampleRate = sampleRate;		
 
 	mov	DWORD PTR [rcx+264], edx
 	mov	esi, edx
 	mov	rdi, rcx
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -27145,7 +26804,7 @@ $LL18@setSampleR:
 	cmp	r15d, DWORD PTR [rbp]
 	jl	SHORT $LL18@setSampleR
 $LN17@setSampleR:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 405  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
@@ -27161,23 +26820,23 @@ $LL4@setSampleR:
 ; 406  : 			fdn_Diffuser[i]->setSampleRate(sampleRate);		
 
 	mov	rax, QWORD PTR [rdi+24]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	mov	r13d, ebx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 406  : 			fdn_Diffuser[i]->setSampleRate(sampleRate);		
 
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 59   : 		mdiff_MultiChDelay->setSampleRate(sampleRate); 
 
 	mov	r15, QWORD PTR [rcx+24]
 	mov	DWORD PTR [rcx+4], esi
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -27189,7 +26848,7 @@ $LL4@setSampleR:
 
 	mov	r12, rbx
 $LL29@setSampleR:
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 87   : 			mdel_sampleRate = sampleRate;
 
@@ -27207,7 +26866,7 @@ $LL29@setSampleR:
 	cmp	r13d, DWORD PTR [r15]
 	jl	SHORT $LL29@setSampleR
 $LN2@setSampleR:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 405  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
@@ -27231,23 +26890,23 @@ $LL7@setSampleR:
 ; 408  : 			fdn_ModDiffuser[i]->setSampleRate(sampleRate);
 
 	mov	rax, QWORD PTR [rdi+48]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 114  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	mov	r13d, ebx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 408  : 			fdn_ModDiffuser[i]->setSampleRate(sampleRate);
 
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 81   : 		mdiff_MultiChDelay->setSampleRate(sampleRate);
 
 	mov	r15, QWORD PTR [rcx+24]
 	mov	DWORD PTR [rcx+4], esi
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 114  : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -27259,7 +26918,7 @@ $LL7@setSampleR:
 
 	mov	r12, rbx
 $LL40@setSampleR:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 115  : 			mdel_sampleRate = sampleRate;
 
@@ -27277,7 +26936,7 @@ $LL40@setSampleR:
 	cmp	r13d, DWORD PTR [r15]
 	jl	SHORT $LL40@setSampleR
 $LN5@setSampleR:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 407  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
@@ -27311,18 +26970,18 @@ $LN9@setSampleR:
 ; 411  : 		fdn_OutputDiffusion->setSampleRate(sampleRate);
 
 	mov	rax, QWORD PTR [rdi+136]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
 	mov	r14d, ebx
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 59   : 		mdiff_MultiChDelay->setSampleRate(sampleRate); 
 
 	mov	rbp, QWORD PTR [rax+24]
 	mov	DWORD PTR [rax+4], esi
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 86   : 		for (int i = 0; i < mdel_numberOfChannels; i++) {
 
@@ -27347,12 +27006,12 @@ $LL51@setSampleR:
 	cmp	r14d, DWORD PTR [rbp]
 	jl	SHORT $LL51@setSampleR
 $LN50@setSampleR:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 412  : 		fdn_Feedback->setSampleRate(sampleRate);
 
 	mov	rbp, QWORD PTR [rdi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 66   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
@@ -27374,7 +27033,7 @@ $LL58@setSampleR:
 	cmp	r14d, DWORD PTR [rbp]
 	jl	SHORT $LL58@setSampleR
 $LN57@setSampleR:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 413  : 		for (int i = 0; i < fdn_outputChannels; i++) {
 
@@ -27387,7 +27046,7 @@ $LL13@setSampleR:
 
 	mov	rax, QWORD PTR [rdi+80]
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 60   : 		lpf_sampleRate = sampleRate;
 
@@ -27398,13 +27057,13 @@ $LL13@setSampleR:
 ; 63   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 415  : 			fdn_HPFOutput[i]->setSampleRate(sampleRate);
 
 	mov	rax, QWORD PTR [rdi+144]
 	mov	rcx, QWORD PTR [r14+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 60   : 		hpf_sampleRate = sampleRate;
 
@@ -27415,7 +27074,7 @@ $LL13@setSampleR:
 ; 63   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 413  : 		for (int i = 0; i < fdn_outputChannels; i++) {
 
@@ -27441,7 +27100,7 @@ $LN12@setSampleR:
 ?setSampleRate@FDN@@QEAAXH@Z ENDP			; FDN::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setMixMode@FDN@@QEAAXW4MixMode@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -27459,43 +27118,43 @@ mode$dead$ = 16
 ?setMixMode@FDN@@QEAAXW4MixMode@@@Z ENDP		; FDN::setMixMode
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ChannelSplitter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ChannelSplitter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FlipPolarity.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FlipPolarity.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ChannelMixer.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?processAudio@FDN@@QEAAXPEAM0@Z
 _TEXT	SEGMENT
 tv2065 = 32
@@ -27527,23 +27186,23 @@ $LN178:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rcx, QWORD PTR [rcx+192]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 439  : 	void processAudio(float* in, float* out) { 
 
 	mov	rsi, r8
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 
 ; 36   : 		if (cspl_numberOfChannelsIn != 1) {
 
 	xor	edi, edi
 	xorps	xmm6, xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 441  : 		fdn_Splitter->processAudio(in, &fdn_tmpDiffuser[0]);
 
 	mov	r8, QWORD PTR [rbx]
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 
 ; 36   : 		if (cspl_numberOfChannelsIn != 1) {
 
@@ -27599,7 +27258,7 @@ $LL27@processAud:
 	cmp	eax, DWORD PTR [r8+4]
 	jl	SHORT $LL27@processAud
 $LN26@processAud:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 444  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
@@ -27645,18 +27304,18 @@ $LL7@processAud:
 
 	mov	r8, QWORD PTR [rbx+192]
 	mov	QWORD PTR $T28[rsp], r8
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 449  : 			fdn_ModDiffuser[i]->processAudio(&fdn_tmpDiffuser[0], &fdn_tmpDiffuser[0]);
 
 	mov	rbp, QWORD PTR [r15+rax]
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 85   : 		mdiff_MultiChDelay->processAudio(in, mdiff_outMultiChDel);
 
 	mov	rsi, QWORD PTR [rbp+24]
 	mov	r14, QWORD PTR [rbp+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 121  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -27670,7 +27329,7 @@ $LL7@processAud:
 	mov	ebx, edi
 	sub	r13, r14
 $LL48@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 122  : 			out[i] = mdel_DelayLines[i]->processAudio(in[i]);
 
@@ -27689,22 +27348,22 @@ $LL48@processAud:
 	xor	edi, edi
 	mov	r8, QWORD PTR $T28[rsp]
 $LN173@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 86   : 		mdiff_Polarity->processAudio(mdiff_outMultiChDel, mdiff_outMultiChDel);
 
 	mov	rcx, QWORD PTR [rbp+40]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
 	mov	r9d, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 86   : 		mdiff_Polarity->processAudio(mdiff_outMultiChDel, mdiff_outMultiChDel);
 
 	mov	rdx, QWORD PTR [rbp+8]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -27719,7 +27378,7 @@ $LN173@processAud:
 	sub	r10, rdx
 $LL55@processAud:
 	movd	xmm0, DWORD PTR [r10+rax]
-; File E:\prova\Shimmer\include\FlipPolarity.h
+; File E:\FoxSuite\shimmer\include\FlipPolarity.h
 
 ; 29   : 		for (int i = 0; i < fp_numofChannels; i++) {			
 
@@ -27734,13 +27393,13 @@ $LL55@processAud:
 	cmp	r9d, DWORD PTR [rcx+24]
 	jl	SHORT $LL55@processAud
 $LN174@processAud:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 87   : 		mdiff_Hadamard->processAudio(mdiff_outMultiChDel, out);
 
 	mov	rcx, QWORD PTR [rbp+32]
 	call	?processAudio@Hadamard@@QEAAXPEAM0@Z	; Hadamard::processAudio
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 448  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
@@ -27756,7 +27415,7 @@ $LN6@processAud:
 ; 452  : 		fdn_EarlyReflections->processAudio(&fdn_tmpDiffuser[0], &fdn_outEarly[0]);
 
 	mov	r15, QWORD PTR [rbx+16]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++) 
 
@@ -27767,7 +27426,7 @@ $LN6@processAud:
 
 	mov	r14, QWORD PTR [rbx+240]
 	mov	rbp, QWORD PTR [rbx+192]
-; File E:\prova\Shimmer\include\MultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDelay.h
 
 ; 93   : 		for (int i = 0; i < mdel_numberOfChannels; i++) 
 
@@ -27792,7 +27451,7 @@ $LL66@processAud:
 	jl	SHORT $LL66@processAud
 	mov	rbp, QWORD PTR [rbx+192]
 $LN65@processAud:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 455  : 		fdn_Feedback->processAudio(&fdn_tmpDiffuser[0], &fdn_tmpFeedback[0]);
 
@@ -27821,7 +27480,7 @@ $LN65@processAud:
 
 ; 462  : 
 ; 463  : 		// Sum-up early reflections and reverbered signals
-; 464  : 		for (int i = 0; i < fdn_internalChannels; i++)		
+; 464  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	mov	ecx, DWORD PTR [rbx+172]
 	mov	edx, edi
@@ -27835,7 +27494,7 @@ $LN65@processAud:
 	mov	rax, rdi
 	mov	r9, QWORD PTR [rbx+240]
 $LL10@processAud:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 465  : 			fdn_tmpFeedback[i] += fdn_earlyWeight * fdn_outEarly[i];		
 
@@ -27872,7 +27531,7 @@ $LL13@processAud:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rdx, QWORD PTR [rbx+216]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 468  : 		for (int i = 0; i < fdn_internalChannels; i++) {
 
@@ -27897,7 +27556,7 @@ $LN161@processAud:
 ; 474  : 		fdn_Mixer->processAudio(&fdn_tmpFeedback[0], out);
 
 	mov	rcx, QWORD PTR [rbx+8]
-; File E:\prova\Shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 
 ; 40   : 		switch (mix_mode) {
 
@@ -27987,7 +27646,7 @@ $LN107@processAud:
 
 	movss	DWORD PTR [rsi+4], xmm0
 $LN108@processAud:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 477  : 		if (fdn_outputChannels == 2) {
 
@@ -28045,14 +27704,14 @@ $LN175@processAud:
 	mov	rcx, QWORD PTR [rbx+80]
 	sub	rcx, rdx
 $LL16@processAud:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 488  : 			out[i] = fdn_LPFOutput[i]->processAudio(out[i]);
 
 	mov	rax, QWORD PTR [rcx+rdx]
 	inc	edi
 	movss	xmm4, DWORD PTR [rsi]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 200  : 		float yn = lpf_a0 * xn + lpf_a1 * lpf_xn_1 + lpf_a2 * lpf_xn_2 - lpf_b1 * lpf_yn_1 - lpf_b2 * lpf_yn_2;
 
@@ -28101,13 +27760,13 @@ $LL16@processAud:
 ; 205  : 		return lpf_c0 * yn;
 
 	mulss	xmm5, DWORD PTR [rax+40]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 489  : 			out[i] = fdn_HPFOutput[i]->processAudio(out[i]);
 
 	mov	rax, QWORD PTR [rdx]
 	add	rdx, 8
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 155  : 		float yn = hpf_a0 * xn + hpf_a1 * hpf_xn_1 + hpf_a2 * hpf_xn_2 - hpf_b1 * hpf_yn_1 - hpf_b2 * hpf_yn_2;
 
@@ -28156,7 +27815,7 @@ $LL16@processAud:
 ; 160  : 		return hpf_c0 * yn;
 
 	mulss	xmm4, DWORD PTR [rax+40]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 489  : 			out[i] = fdn_HPFOutput[i]->processAudio(out[i]);
 
@@ -28184,17 +27843,17 @@ $LN15@processAud:
 ?processAudio@FDN@@QEAAXPEAM0@Z ENDP			; FDN::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setDoubledDiffuserDelayLengths@FDN@@AEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -28223,7 +27882,7 @@ $LN29:
 	test	eax, eax
 	js	SHORT $LN3@setDoubled
 $LL4@setDoubled:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 52   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28233,7 +27892,7 @@ $LL4@setDoubled:
 	mov	rcx, QWORD PTR [rax+rdi*8]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 498  : 		for (int i = fdn_numModDiffuser - 1; i >=0; i--) {
 
@@ -28255,7 +27914,7 @@ $LN3@setDoubled:
 	movsxd	rdi, eax
 	js	SHORT $LN6@setDoubled
 $LL7@setDoubled:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28265,7 +27924,7 @@ $LL7@setDoubled:
 	mov	rcx, QWORD PTR [rax+rdi*8]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 502  : 		for (int i = fdn_diffusionSteps - fdn_numModDiffuser - 1; i >= 0; i--) {
 
@@ -28277,24 +27936,24 @@ $LL7@setDoubled:
 	mulss	xmm6, DWORD PTR __real@3f000000
 	jns	SHORT $LL7@setDoubled
 $LN6@setDoubled:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	mov	rcx, QWORD PTR [rbx+136]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 506  : 		fdn_OutputDiffusion->setDelayLinesLength(minDelayMs, maxDelayMs * 2.0, distr);
 
 	addss	xmm6, xmm6
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
 	mov	r9d, esi
 	mov	rcx, QWORD PTR [rcx+24]
 	movaps	xmm2, xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 507  : 	}
 
@@ -28303,7 +27962,7 @@ $LN6@setDoubled:
 	movaps	xmm6, XMMWORD PTR [rsp+32]
 	add	rsp, 48					; 00000030H
 	pop	rdi
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28311,15 +27970,15 @@ $LN6@setDoubled:
 ?setDoubledDiffuserDelayLengths@FDN@@AEAAXMMW4DelayDistribution@@@Z ENDP ; FDN::setDoubledDiffuserDelayLengths
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?setEqualDiffuserDelayLengths@FDN@@AEAAXMMW4DelayDistribution@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -28354,7 +28013,7 @@ $LN29:
 	jle	SHORT $LN3@setEqualDi
 	mov	esi, ebx
 $LL4@setEqualDi:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28364,7 +28023,7 @@ $LL4@setEqualDi:
 	mov	rcx, QWORD PTR [rax+rsi]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@MultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; MultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 511  : 		for (int i = 0; i < fdn_diffusionSteps - fdn_numModDiffuser; i++)
 
@@ -28383,7 +28042,7 @@ $LN3@setEqualDi:
 	jle	SHORT $LN6@setEqualDi
 	mov	rsi, rbx
 $LL7@setEqualDi:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 52   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28393,7 +28052,7 @@ $LL7@setEqualDi:
 	mov	rcx, QWORD PTR [rax+rsi]
 	mov	rcx, QWORD PTR [rcx+24]
 	call	?setDelayLinesLength@ModMultiChannelDelay@@QEAAXMMW4DelayDistribution@@@Z ; ModMultiChannelDelay::setDelayLinesLength
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 513  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
@@ -28402,7 +28061,7 @@ $LL7@setEqualDi:
 	cmp	ebx, DWORD PTR [rdi+184]
 	jl	SHORT $LL7@setEqualDi
 $LN6@setEqualDi:
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28410,7 +28069,7 @@ $LN6@setEqualDi:
 	mov	r9d, ebp
 	movaps	xmm2, xmm6
 	mov	rcx, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 516  : 	}
 
@@ -28421,7 +28080,7 @@ $LN6@setEqualDi:
 	movaps	xmm6, XMMWORD PTR [rsp+32]
 	add	rsp, 48					; 00000030H
 	pop	r14
-; File E:\prova\Shimmer\include\MultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\MultiChannelDiffuser.h
 
 ; 50   : 		mdiff_MultiChDelay->setDelayLinesLength(minDelayMs, maxDelayMs, distr);
 
@@ -28429,55 +28088,74 @@ $LN6@setEqualDi:
 ?setEqualDiffuserDelayLengths@FDN@@AEAAXMMW4DelayDistribution@@@Z ENDP ; FDN::setEqualDiffuserDelayLengths
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ChannelSplitter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ChannelMixer.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\Householder.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?constructFDN@FDN@@AEAAXHHHHH@Z
 _TEXT	SEGMENT
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?constructFDN@FDN@@AEAAXHHHHH@Z PROC			; FDN::constructFDN, COMDAT
 
 ; 519  : 	void constructFDN(int numChIn, int numChInt, int numChOut, int numDiffStep, int numModDiffuser = DEFAULT_NUMBER_MOD_DIFFUSER) {
 
-$LN81:
+$LN120:
 	mov	QWORD PTR [rsp+16], rbx
-	mov	QWORD PTR [rsp+24], rbp
-	mov	QWORD PTR [rsp+32], rsi
+	mov	QWORD PTR [rsp+24], rsi
+	mov	DWORD PTR [rsp+32], r9d
+	push	rbp
 	push	rdi
+	push	r12
 	push	r14
 	push	r15
+	mov	rbp, rsp
 	sub	rsp, 48					; 00000030H
-	mov	rbx, rcx
+	mov	ebx, edx
+	mov	rdi, rcx
 
 ; 520  : 		srand(_SEED_FOR_RAND_GENERATION);
 
@@ -28486,64 +28164,63 @@ $LN81:
 
 ; 521  : 		fdn_inputChannels = numChIn;
 
-	mov	eax, 2
-	mov	DWORD PTR [rbx+168], eax
+	mov	DWORD PTR [rdi+168], ebx
 
 ; 522  : 		fdn_internalChannels = numChInt;
 
-	mov	DWORD PTR [rbx+172], 16
+	mov	DWORD PTR [rdi+172], 16
 
 ; 523  : 		fdn_outputChannels = numChOut;
 
-	mov	DWORD PTR [rbx+176], eax
+	mov	DWORD PTR [rdi+176], 2
 
 ; 524  : 		fdn_diffusionSteps = numDiffStep;	
 
-	mov	DWORD PTR [rbx+180], 5
+	mov	DWORD PTR [rdi+180], 5
 
 ; 525  : 		fdn_numModDiffuser = numModDiffuser;		
 
-	mov	DWORD PTR [rbx+184], 1
+	mov	DWORD PTR [rdi+184], 1
 
 ; 526  : 
 ; 527  : 		constructDiffusionBlocks();
 
-	mov	rcx, rbx
+	mov	rcx, rdi
 	call	?constructDiffusionBlocks@FDN@@AEAAXXZ	; FDN::constructDiffusionBlocks
 
 ; 530  : 		fdn_Splitter = new ChannelSplitter(fdn_inputChannels, fdn_internalChannels);
 
 	mov	ecx, 8
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T1[rsp], rax
-	mov	edx, DWORD PTR [rbx+172]
-; File E:\prova\Shimmer\include\ChannelSplitter.h
+	mov	QWORD PTR $T1[rbp-48], rax
+	mov	edx, DWORD PTR [rdi+172]
+; File E:\FoxSuite\shimmer\include\ChannelSplitter.h
 
 ; 20   : 		setNumberOfChannelsIn(numChIn); 
 
-	mov	ecx, DWORD PTR [rbx+168]
+	mov	ecx, DWORD PTR [rdi+168]
 	mov	DWORD PTR [rax], ecx
 
 ; 21   : 		setNumberOfChannelsOut(numChOut); 
 
 	mov	DWORD PTR [rax+4], edx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 530  : 		fdn_Splitter = new ChannelSplitter(fdn_inputChannels, fdn_internalChannels);
 
-	mov	QWORD PTR [rbx], rax
+	mov	QWORD PTR [rdi], rax
 
 ; 531  : 		fdn_Mixer = new ChannelMixer(fdn_internalChannels, fdn_outputChannels);
 
 	mov	ecx, 12
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T3[rsp], rax
-	mov	edx, DWORD PTR [rbx+176]
-; File E:\prova\Shimmer\include\ChannelMixer.h
+	mov	QWORD PTR $T3[rbp-48], rax
+	mov	edx, DWORD PTR [rdi+176]
+; File E:\FoxSuite\shimmer\include\ChannelMixer.h
 
 ; 26   : 		setNumberOfInputChannels(numChIn);
 
-	mov	ecx, DWORD PTR [rbx+172]
+	mov	ecx, DWORD PTR [rdi+172]
 	mov	DWORD PTR [rax], ecx
 
 ; 27   : 		setNumberOfOutputChannels(numChOut);
@@ -28552,55 +28229,158 @@ $LN81:
 
 ; 28   : 		mix_mode = DEFAULT_MIXING_LOGIC;
 
-	xor	edi, edi
-	mov	DWORD PTR [rax+8], edi
-; File E:\prova\Shimmer\include\FDN.h
+	xor	esi, esi
+	mov	DWORD PTR [rax+8], esi
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 531  : 		fdn_Mixer = new ChannelMixer(fdn_internalChannels, fdn_outputChannels);
 
-	mov	QWORD PTR [rbx+8], rax
+	mov	QWORD PTR [rdi+8], rax
 
-; 532  : 		
-; 533  : 		// Construct objects used for feedback delay purposes and set their internal channels correctly (MultiChannelFeedback)
 ; 534  : 		fdn_Feedback = new ModMultiChannelFeedback(fdn_internalChannels);
 
-	lea	ecx, QWORD PTR [rdi+72]
+	lea	ecx, QWORD PTR [rsi+72]
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T5[rsp], rax
-	mov	edx, DWORD PTR [rbx+172]
+	mov	r15, rax
+	mov	QWORD PTR $T5[rbp-48], rax
+	mov	ebx, DWORD PTR [rdi+172]
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 401  :     _CONSTEXPR20_CONTAINER _Vector_val() noexcept : _Myfirst(), _Mylast(), _Myend() {}
+
+	mov	QWORD PTR [rax+40], rsi
+	mov	QWORD PTR [rax+48], rsi
+	mov	QWORD PTR [rax+56], rsi
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 168  : 		mcf_Householder = new Householder(numCh);
+
+	lea	ecx, QWORD PTR [rsi+8]
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	QWORD PTR $T6[rbp-48], rax
+	movd	xmm0, ebx
+; File E:\FoxSuite\shimmer\include\Householder.h
+
+; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
+
+	cvtdq2pd xmm0, xmm0
+	movsd	xmm1, QWORD PTR __real@c000000000000000
+	divsd	xmm1, xmm0
+	cvtpd2ps xmm2, xmm1
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 168  : 		mcf_Householder = new Householder(numCh);
+
+	mov	QWORD PTR [r15+32], rax
+
+; 169  : 		mcf_numberOfChannels = numCh;
+
+	mov	DWORD PTR [r15], ebx
+; File E:\FoxSuite\shimmer\include\Householder.h
+
+; 18   : 		hou_numberOfChannels = numCh;
+
+	mov	DWORD PTR [rax], ebx
+
+; 19   : 		hou_multiplier = -2.0 / hou_numberOfChannels;
+
+	movss	DWORD PTR [rax+4], xmm2
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 171  : 		deleteDelayLines();
+
+	mov	rcx, r15
+	call	?deleteDelayLines@ModMultiChannelFeedback@@AEAAXXZ ; ModMultiChannelFeedback::deleteDelayLines
+
+; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	mov	ebx, esi
+	cmp	DWORD PTR [r15], esi
+	jle	SHORT $LN44@constructF
+$LL45@constructF:
+
+; 184  : 			mcf_DelayLines.push_back(new ModDelay);
+
+	mov	ecx, 144				; 00000090H
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	QWORD PTR $T8[rbp-48], rax
 	mov	rcx, rax
-	call	??0ModMultiChannelFeedback@@QEAA@H@Z	; ModMultiChannelFeedback::ModMultiChannelFeedback
+	call	??0ModDelay@@QEAA@XZ			; ModDelay::ModDelay
 	npad	1
-	mov	QWORD PTR [rbx+72], rax
+	mov	QWORD PTR $T10[rbp-48], rax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 743  :         if (_Mylast != _My_data._Myend) {
+
+	mov	rdx, QWORD PTR [r15+48]
+	cmp	rdx, QWORD PTR [r15+56]
+	je	SHORT $LN53@constructF
+
+; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
+
+	mov	QWORD PTR [rdx], rax
+
+; 727  :         _Orphan_range(_Mylast, _Mylast);
+; 728  :         _Ty& _Result = *_Mylast;
+; 729  :         ++_Mylast;
+
+	add	QWORD PTR [r15+48], 8
+
+; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
+
+	jmp	SHORT $LN43@constructF
+$LN53@constructF:
+
+; 745  :         }
+; 746  : 
+; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
+
+	lea	r8, QWORD PTR $T10[rbp-48]
+	lea	rcx, QWORD PTR [r15+40]
+	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
+$LN43@constructF:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 183  : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	inc	ebx
+	cmp	ebx, DWORD PTR [r15]
+	jl	SHORT $LL45@constructF
+$LN44@constructF:
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 534  : 		fdn_Feedback = new ModMultiChannelFeedback(fdn_internalChannels);
+
+	mov	QWORD PTR [rdi+72], r15
 
 ; 535  : 		
 ; 536  : 		// Construct objects used for early reflection purposes and set their internal channels correctly (MultiChannelDelay)
 ; 537  : 		fdn_EarlyReflections = new MultiChannelDelay(fdn_internalChannels);
 
-	lea	ecx, QWORD PTR [rdi+48]
+	mov	ecx, 48					; 00000030H
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T7[rsp], rax
-	mov	edx, DWORD PTR [rbx+172]
+	mov	QWORD PTR $T12[rbp-48], rax
+	mov	edx, DWORD PTR [rdi+172]
 	mov	rcx, rax
 	call	??0MultiChannelDelay@@QEAA@H@Z		; MultiChannelDelay::MultiChannelDelay
 	npad	1
-	mov	QWORD PTR [rbx+16], rax
+	mov	QWORD PTR [rdi+16], rax
 
 ; 561  : 		for (int i = 0; i < fdn_outputChannels; i++) {
 
-	mov	r15d, edi
-	cmp	DWORD PTR [rbx+176], edi
-	jle	$LN24@constructF
-	lea	r14, QWORD PTR [rbx+144]
-$LL25@constructF:
+	mov	r12d, esi
+	cmp	DWORD PTR [rdi+176], esi
+	jle	$LN59@constructF
+	lea	r15, QWORD PTR [rdi+144]
+$LL60@constructF:
 
 ; 562  : 			fdn_LPFOutput.push_back(new LowPassFilter());
 
 	mov	ecx, 60					; 0000003cH
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	rsi, rax
-	mov	QWORD PTR $T9[rsp], rax
-; File E:\prova\Shimmer\include\LowPassFilter.h
+	mov	rbx, rax
+	mov	QWORD PTR $T14[rbp-48], rax
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 39   : 			lpf_cutoffFreq = freq;
 
@@ -28612,7 +28392,7 @@ $LL25@constructF:
 
 ; 41   : 			lpf_type = type;
 
-	mov	DWORD PTR [rax], edi
+	mov	DWORD PTR [rax], esi
 
 ; 42   : 			lpf_shelvingGaindB = DEFAULT_SHELVING_GAIN;
 
@@ -28624,63 +28404,63 @@ $LL25@constructF:
 
 ; 44   : 			lpf_xn_1 = 0.0;
 
-	mov	QWORD PTR [rax+44], rdi
+	mov	QWORD PTR [rax+44], rsi
 
 ; 45   : 			lpf_xn_2 = 0.0;
 ; 46   : 			lpf_yn_1 = 0.0;
 
-	mov	QWORD PTR [rax+52], rdi
+	mov	QWORD PTR [rax+52], rsi
 
 ; 47   : 			lpf_yn_2 = 0.0;
 ; 48   : 			updateGains();
 
 	mov	rcx, rax
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 562  : 			fdn_LPFOutput.push_back(new LowPassFilter());
 
-	mov	QWORD PTR $T11[rsp], rsi
+	mov	QWORD PTR $T16[rbp-48], rbx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
-	mov	rdx, QWORD PTR [rbx+88]
-	cmp	rdx, QWORD PTR [rbx+96]
-	je	SHORT $LN38@constructF
+	mov	rdx, QWORD PTR [rdi+88]
+	cmp	rdx, QWORD PTR [rdi+96]
+	je	SHORT $LN73@constructF
 
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
-	mov	QWORD PTR [rdx], rsi
+	mov	QWORD PTR [rdx], rbx
 
 ; 727  :         _Orphan_range(_Mylast, _Mylast);
 ; 728  :         _Ty& _Result = *_Mylast;
 ; 729  :         ++_Mylast;
 
-	add	QWORD PTR [rbx+88], 8
+	add	QWORD PTR [rdi+88], 8
 
 ; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
 
-	jmp	SHORT $LN37@constructF
-$LN38@constructF:
+	jmp	SHORT $LN72@constructF
+$LN73@constructF:
 
 ; 745  :         }
 ; 746  : 
 ; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
 
-	lea	r8, QWORD PTR $T11[rsp]
-	lea	rcx, QWORD PTR [rbx+80]
+	lea	r8, QWORD PTR $T16[rbp-48]
+	lea	rcx, QWORD PTR [rdi+80]
 	call	??$_Emplace_reallocate@PEAVLowPassFilter@@@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@QEAAPEAPEAVLowPassFilter@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<LowPassFilter *,std::allocator<LowPassFilter *> >::_Emplace_reallocate<LowPassFilter *>
-$LN37@constructF:
-; File E:\prova\Shimmer\include\FDN.h
+$LN72@constructF:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 563  : 			fdn_HPFOutput.push_back(new HighPassFilter());
 
 	mov	ecx, 60					; 0000003cH
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	rsi, rax
-	mov	QWORD PTR $T12[rsp], rax
-; File E:\prova\Shimmer\include\HighPassFilter.h
+	mov	rbx, rax
+	mov	QWORD PTR $T17[rbp-48], rax
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 39   : 		hpf_cutoffFreq = freq;
 
@@ -28692,7 +28472,7 @@ $LN37@constructF:
 
 ; 41   : 		hpf_type = type;
 
-	mov	DWORD PTR [rax], edi
+	mov	DWORD PTR [rax], esi
 
 ; 42   : 		hpf_shelvingGaindB = DEFAULT_SHELVING_GAIN;
 
@@ -28704,76 +28484,76 @@ $LN37@constructF:
 
 ; 44   : 		hpf_xn_1 = 0.0;
 
-	mov	QWORD PTR [rax+44], rdi
+	mov	QWORD PTR [rax+44], rsi
 
 ; 45   : 		hpf_xn_2 = 0.0;
 ; 46   : 		hpf_yn_1 = 0.0;
 
-	mov	QWORD PTR [rax+52], rdi
+	mov	QWORD PTR [rax+52], rsi
 
 ; 47   : 		hpf_yn_2 = 0.0;
 ; 48   : 		updateGains();
 
 	mov	rcx, rax
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 563  : 			fdn_HPFOutput.push_back(new HighPassFilter());
 
-	mov	QWORD PTR $T14[rsp], rsi
+	mov	QWORD PTR $T19[rbp-48], rbx
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
-	mov	rdx, QWORD PTR [r14+8]
-	cmp	rdx, QWORD PTR [r14+16]
-	je	SHORT $LN47@constructF
+	mov	rdx, QWORD PTR [r15+8]
+	cmp	rdx, QWORD PTR [r15+16]
+	je	SHORT $LN82@constructF
 
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
-	mov	QWORD PTR [rdx], rsi
+	mov	QWORD PTR [rdx], rbx
 
 ; 727  :         _Orphan_range(_Mylast, _Mylast);
 ; 728  :         _Ty& _Result = *_Mylast;
 ; 729  :         ++_Mylast;
 
-	add	QWORD PTR [r14+8], 8
+	add	QWORD PTR [r15+8], 8
 
 ; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
 
-	jmp	SHORT $LN23@constructF
-$LN47@constructF:
+	jmp	SHORT $LN58@constructF
+$LN82@constructF:
 
 ; 745  :         }
 ; 746  : 
 ; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
 
-	lea	r8, QWORD PTR $T14[rsp]
-	mov	rcx, r14
+	lea	r8, QWORD PTR $T19[rbp-48]
+	mov	rcx, r15
 	call	??$_Emplace_reallocate@PEAVHighPassFilter@@@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAAPEAPEAVHighPassFilter@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<HighPassFilter *,std::allocator<HighPassFilter *> >::_Emplace_reallocate<HighPassFilter *>
-$LN23@constructF:
-; File E:\prova\Shimmer\include\FDN.h
+$LN58@constructF:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 561  : 		for (int i = 0; i < fdn_outputChannels; i++) {
 
-	inc	r15d
-	cmp	r15d, DWORD PTR [rbx+176]
-	jl	$LL25@constructF
-$LN24@constructF:
+	inc	r12d
+	cmp	r12d, DWORD PTR [rdi+176]
+	jl	$LL60@constructF
+$LN59@constructF:
 
 ; 569  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	cmp	DWORD PTR [rbx+172], edi
-	jle	SHORT $LN53@constructF
-$LL54@constructF:
+	cmp	DWORD PTR [rdi+172], esi
+	jle	SHORT $LN88@constructF
+$LL89@constructF:
 
 ; 570  : 			fdn_Modulation.push_back(new Modulation());
 
 	mov	ecx, 176				; 000000b0H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	r14, rax
-	mov	QWORD PTR $T15[rsp], rax
-; File E:\prova\Shimmer\include\Modulation.h
+	mov	QWORD PTR $T20[rbp-48], rax
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 44   : 	Modulation() {}
 
@@ -28781,18 +28561,18 @@ $LL54@constructF:
 	call	??0ModDelay@@QEAA@XZ			; ModDelay::ModDelay
 	lea	rax, OFFSET FLAT:??_7Modulation@@6B@
 	mov	QWORD PTR [r14], rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 570  : 			fdn_Modulation.push_back(new Modulation());
 
-	mov	QWORD PTR $T17[rsp], r14
+	mov	QWORD PTR $T22[rbp-48], r14
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
-	mov	rdx, QWORD PTR [rbx+112]
-	cmp	rdx, QWORD PTR [rbx+120]
-	je	SHORT $LN65@constructF
+	mov	rdx, QWORD PTR [rdi+112]
+	cmp	rdx, QWORD PTR [rdi+120]
+	je	SHORT $LN100@constructF
 
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
@@ -28802,101 +28582,112 @@ $LL54@constructF:
 ; 728  :         _Ty& _Result = *_Mylast;
 ; 729  :         ++_Mylast;
 
-	add	QWORD PTR [rbx+112], 8
+	add	QWORD PTR [rdi+112], 8
 
 ; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
 
-	jmp	SHORT $LN52@constructF
-$LN65@constructF:
+	jmp	SHORT $LN87@constructF
+$LN100@constructF:
 
 ; 745  :         }
 ; 746  : 
 ; 747  :         _Ty& _Result = *_Emplace_reallocate(_Mylast, _STD forward<_Valty>(_Val)...);
 
-	lea	r8, QWORD PTR $T17[rsp]
-	lea	rcx, QWORD PTR [rbx+104]
+	lea	r8, QWORD PTR $T22[rbp-48]
+	lea	rcx, QWORD PTR [rdi+104]
 	call	??$_Emplace_reallocate@PEAVModulation@@@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@QEAAPEAPEAVModulation@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<Modulation *,std::allocator<Modulation *> >::_Emplace_reallocate<Modulation *>
-$LN52@constructF:
-; File E:\prova\Shimmer\include\FDN.h
+$LN87@constructF:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 569  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
-	inc	edi
-	cmp	edi, DWORD PTR [rbx+172]
-	jl	SHORT $LL54@constructF
-$LN53@constructF:
+	inc	esi
+	cmp	esi, DWORD PTR [rdi+172]
+	jl	SHORT $LL89@constructF
+$LN88@constructF:
 
 ; 538  : 
 ; 539  : 		// Construct filters
 ; 540  : 		constructFilters();
-; 541  : 		constructChorus();
+; 541  : 		constructModulation();
 ; 542  : 
 ; 543  : 		// Construct mix matrix for output mixing after feedback stage
 ; 544  : 		fdn_MixMatrix = new Hadamard(fdn_internalChannels);
 
 	mov	ecx, 16
 	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T18[rsp], rax
-	mov	edx, DWORD PTR [rbx+172]
+	mov	QWORD PTR $T23[rbp-48], rax
+	mov	edx, DWORD PTR [rdi+172]
 	mov	rcx, rax
 	call	??0Hadamard@@QEAA@H@Z			; Hadamard::Hadamard
 	npad	1
-	mov	QWORD PTR [rbx+128], rax
+	mov	QWORD PTR [rdi+128], rax
 
-; 632  : 		fdn_tmpDiffuser.resize(fdn_internalChannels);
+; 632  : 		fdn_tmpDiffuser.resize(fdn_internalChannels, 0.0);
 
-	movsxd	rdx, DWORD PTR [rbx+172]
-	lea	rcx, QWORD PTR [rbx+192]
-	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+	and	DWORD PTR $T25[rbp-48], 0
+	movsxd	rdx, DWORD PTR [rdi+172]
+	lea	rcx, QWORD PTR [rdi+192]
+	lea	r8, QWORD PTR $T25[rbp-48]
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 
-; 633  : 		fdn_tmpFeedback.resize(fdn_internalChannels);
+; 633  : 		fdn_tmpFeedback.resize(fdn_internalChannels, 0.0);
 
-	movsxd	rdx, DWORD PTR [rbx+172]
-	lea	rcx, QWORD PTR [rbx+216]
-	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+	and	DWORD PTR $T26[rbp-48], 0
+	movsxd	rdx, DWORD PTR [rdi+172]
+	lea	rcx, QWORD PTR [rdi+216]
+	lea	r8, QWORD PTR $T26[rbp-48]
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 
-; 634  : 		fdn_outEarly.resize(fdn_internalChannels);
+; 634  : 		fdn_outEarly.resize(fdn_internalChannels, 0.0);
 
-	movsxd	rdx, DWORD PTR [rbx+172]
-	lea	rcx, QWORD PTR [rbx+240]
+	and	DWORD PTR $T27[rbp-48], 0
+	movsxd	rdx, DWORD PTR [rdi+172]
+	lea	rcx, QWORD PTR [rdi+240]
+	lea	r8, QWORD PTR $T27[rbp-48]
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 
 ; 545  : 		
 ; 546  : 		// Init vectors for tmp storage
 ; 547  : 		initInternalArrays();
 ; 548  : 	}	
 
-	mov	rbx, QWORD PTR [rsp+88]
-	mov	rbp, QWORD PTR [rsp+96]
-	mov	rsi, QWORD PTR [rsp+104]
+	mov	rbx, QWORD PTR [rsp+104]
+	mov	rsi, QWORD PTR [rsp+112]
 	add	rsp, 48					; 00000030H
 	pop	r15
 	pop	r14
+	pop	r12
 	pop	rdi
-
-; 634  : 		fdn_outEarly.resize(fdn_internalChannels);
-
-	jmp	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+	pop	rbp
+	ret	0
 ?constructFDN@FDN@@AEAAXHHHHH@Z ENDP			; FDN::constructFDN
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?dtor$2@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -28908,85 +28699,165 @@ numModDiffuser$dead$ = 120
 	pop	rbp
 	ret	0
 ?dtor$2@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$2
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
-?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$3
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 48					; 00000030H
-	mov	rcx, QWORD PTR $T7[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$3
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
+?dtor$5@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$5
+	mov	rcx, QWORD PTR $T5[rdx]
+	add	rcx, 40					; 00000028H
+	jmp	??1?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAA@XZ ; std::vector<ModDelay *,std::allocator<ModDelay *> >::~vector<ModDelay *,std::allocator<ModDelay *> >
+?dtor$5@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$5
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$7
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
-	mov	edx, 176				; 000000b0H
-	mov	rcx, QWORD PTR $T15[rbp]
+	mov	edx, 144				; 00000090H
+	mov	rcx, QWORD PTR $T8[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
 ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$7
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
+?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$3
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	mov	rbp, rdx
+	mov	edx, 48					; 00000030H
+	mov	rcx, QWORD PTR $T12[rbp]
+	call	??3@YAXPEAX_K@Z				; operator delete
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$3
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
+?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$10
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	mov	rbp, rdx
+	mov	edx, 176				; 000000b0H
+	mov	rcx, QWORD PTR $T20[rbp]
+	call	??3@YAXPEAX_K@Z				; operator delete
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$10
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?dtor$4@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 16
-	mov	rcx, QWORD PTR $T18[rbp]
+	mov	rcx, QWORD PTR $T23[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -28996,23 +28867,29 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?dtor$2@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -29028,61 +28905,67 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
-?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$3
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 48					; 00000030H
-	mov	rcx, QWORD PTR $T7[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$3
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
+?dtor$5@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$5
+	mov	rcx, QWORD PTR $T5[rdx]
+	add	rcx, 40					; 00000028H
+	jmp	??1?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAA@XZ ; std::vector<ModDelay *,std::allocator<ModDelay *> >::~vector<ModDelay *,std::allocator<ModDelay *> >
+?dtor$5@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$5
 text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?dtor$7@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$7
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
-	mov	edx, 176				; 000000b0H
-	mov	rcx, QWORD PTR $T15[rbp]
+	mov	edx, 144				; 00000090H
+	mov	rcx, QWORD PTR $T8[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -29092,29 +28975,111 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-$T15 = 32
-$T17 = 80
-$T12 = 80
-$T14 = 80
-$T9 = 80
-$T11 = 80
-$T18 = 80
-$T7 = 80
-$T5 = 80
-$T3 = 80
-$T1 = 80
-this$ = 80
-numChIn$dead$ = 88
-numChInt$dead$ = 96
-numChOut$dead$ = 104
-numDiffStep$dead$ = 112
-numModDiffuser$dead$ = 120
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
+?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$3
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	mov	rbp, rdx
+	mov	edx, 48					; 00000030H
+	mov	rcx, QWORD PTR $T12[rbp]
+	call	??3@YAXPEAX_K@Z				; operator delete
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$3@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$3
+text$x	ENDS
+; Function compile flags: /Ogspy
+;	COMDAT text$x
+text$x	SEGMENT
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
+?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$10
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	mov	rbp, rdx
+	mov	edx, 176				; 000000b0H
+	mov	rcx, QWORD PTR $T20[rbp]
+	call	??3@YAXPEAX_K@Z				; operator delete
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+?dtor$10@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$10
+text$x	ENDS
+; Function compile flags: /Ogspy
+;	COMDAT text$x
+text$x	SEGMENT
+$T5 = 32
+$T20 = 40
+$T8 = 40
+$T22 = 96
+$T17 = 96
+$T19 = 96
+$T14 = 96
+$T10 = 96
+$T6 = 96
+$T16 = 96
+$T23 = 96
+$T12 = 96
+$T3 = 96
+$T1 = 96
+this$ = 96
+numChIn$ = 104
+numChInt$dead$ = 112
+numChOut$dead$ = 120
+$T26 = 120
+$T27 = 120
+$T25 = 120
+numDiffStep$dead$ = 128
+numModDiffuser$dead$ = 136
 ?dtor$4@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA PROC	; `FDN::constructFDN'::`1'::dtor$4
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 16
-	mov	rcx, QWORD PTR $T18[rbp]
+	mov	rcx, QWORD PTR $T23[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -29122,21 +29087,21 @@ numModDiffuser$dead$ = 120
 ?dtor$4@?0??constructFDN@FDN@@AEAAXHHHHH@Z@4HA ENDP	; `FDN::constructFDN'::`1'::dtor$4
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?constructDiffusionBlocks@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 $T11 = 32
@@ -29219,7 +29184,7 @@ $LN21@constructD:
 	lea	rcx, QWORD PTR [rdi+24]
 	call	??$_Emplace_reallocate@PEAVMultiChannelDiffuser@@@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@QEAAPEAPEAVMultiChannelDiffuser@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<MultiChannelDiffuser *,std::allocator<MultiChannelDiffuser *> >::_Emplace_reallocate<MultiChannelDiffuser *>
 $LN2@constructD:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 552  : 		for (int i = 0; i < fdn_diffusionSteps-fdn_numModDiffuser; i++)
 
@@ -29244,7 +29209,7 @@ $LL7@constructD:
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	r14, rax
 	mov	QWORD PTR $T4[rbp-56], rax
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 93   : 		mdiff_numberOfChannels = numCh;
 
@@ -29266,7 +29231,7 @@ $LL7@constructD:
 	mov	rbx, rax
 	mov	QWORD PTR $T5[rbp-56], rax
 	mov	ecx, DWORD PTR [r14]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 31   : 	ModMultiChannelDelay(int numCh) {
 
@@ -29278,7 +29243,7 @@ $LL7@constructD:
 	mov	QWORD PTR [rsi], r13
 	mov	QWORD PTR [rsi+8], r13
 	mov	QWORD PTR [rsi+16], r13
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 163  : 		mdel_numberOfChannels = numCh;
 
@@ -29334,7 +29299,7 @@ $LN64@constructD:
 	mov	rcx, rsi
 	call	??$_Emplace_reallocate@PEAVModDelay@@@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@QEAAPEAPEAVModDelay@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Emplace_reallocate<ModDelay *>
 $LN54@constructD:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 158  : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
@@ -29430,7 +29395,7 @@ $LL71@constructD:
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	rax, QWORD PTR [rsi]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 100  : 			mdel_DelayLines[i]->setDeltaDelayValue(modVal);
 
@@ -29444,7 +29409,7 @@ $LL71@constructD:
 	cmp	edx, DWORD PTR [rbx]
 	jl	SHORT $LL71@constructD
 $LN70@constructD:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 132  : 		mdiff_MultiChDelay = new ModMultiChannelDelay(mdiff_numberOfChannels);
 
@@ -29504,7 +29469,7 @@ $LN70@constructD:
 	mov	rcx, QWORD PTR [r14+16]
 	call	QWORD PTR __imp_memset
 	npad	1
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 555  : 			fdn_ModDiffuser.push_back(new ModMultiChannelDiffuser(fdn_internalChannels));
 
@@ -29540,7 +29505,7 @@ $LN80@constructD:
 	lea	rcx, QWORD PTR [rdi+48]
 	call	??$_Emplace_reallocate@PEAVModMultiChannelDiffuser@@@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@QEAAPEAPEAVModMultiChannelDiffuser@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<ModMultiChannelDiffuser *,std::allocator<ModMultiChannelDiffuser *> >::_Emplace_reallocate<ModMultiChannelDiffuser *>
 $LN5@constructD:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 554  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
@@ -29950,21 +29915,21 @@ $T6 = 152
 ?dtor$2@?0??constructDiffusionBlocks@FDN@@AEAAXXZ@4HA ENDP ; `FDN::constructDiffusionBlocks'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?constructFilters@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 $T4 = 64
@@ -29998,17 +29963,17 @@ $LL4@constructF:
 	mov	ecx, 60					; 0000003cH
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 48   : 			updateGains();
 
 	mov	rcx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 562  : 			fdn_LPFOutput.push_back(new LowPassFilter());
 
 	mov	rbx, rax
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 41   : 			lpf_type = type;
 
@@ -30044,7 +30009,7 @@ $LL4@constructF:
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
 	mov	rdx, QWORD PTR [rdi+88]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 562  : 			fdn_LPFOutput.push_back(new LowPassFilter());
 
@@ -30079,24 +30044,24 @@ $LN17@constructF:
 	lea	rcx, QWORD PTR [rdi+80]
 	call	??$_Emplace_reallocate@PEAVLowPassFilter@@@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@QEAAPEAPEAVLowPassFilter@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<LowPassFilter *,std::allocator<LowPassFilter *> >::_Emplace_reallocate<LowPassFilter *>
 $LN16@constructF:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 563  : 			fdn_HPFOutput.push_back(new HighPassFilter());
 
 	mov	ecx, 60					; 0000003cH
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T4[rsp], rax
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 48   : 		updateGains();
 
 	mov	rcx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 563  : 			fdn_HPFOutput.push_back(new HighPassFilter());
 
 	mov	rbx, rax
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 41   : 		hpf_type = type;
 
@@ -30132,7 +30097,7 @@ $LN16@constructF:
 ; 743  :         if (_Mylast != _My_data._Myend) {
 
 	mov	rdx, QWORD PTR [r14+8]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 563  : 			fdn_HPFOutput.push_back(new HighPassFilter());
 
@@ -30167,7 +30132,7 @@ $LN26@constructF:
 	mov	rcx, r14
 	call	??$_Emplace_reallocate@PEAVHighPassFilter@@@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAAPEAPEAVHighPassFilter@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<HighPassFilter *,std::allocator<HighPassFilter *> >::_Emplace_reallocate<HighPassFilter *>
 $LN2@constructF:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 561  : 		for (int i = 0; i < fdn_outputChannels; i++) {
 
@@ -30189,19 +30154,19 @@ $LN3@constructF:
 ?constructFilters@FDN@@AEAAXXZ ENDP			; FDN::constructFilters
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-;	COMDAT ?constructChorus@FDN@@AEAAXXZ
+; File E:\FoxSuite\shimmer\include\FDN.h
+;	COMDAT ?constructModulation@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 $T3 = 64
 this$ = 64
 $T1 = 72
-?constructChorus@FDN@@AEAAXXZ PROC			; FDN::constructChorus, COMDAT
+?constructModulation@FDN@@AEAAXXZ PROC			; FDN::constructModulation, COMDAT
 
-; 568  : 	void constructChorus() {
+; 568  : 	void constructModulation() {
 
 $LN25:
 	mov	QWORD PTR [rsp+24], rbx
@@ -30215,8 +30180,8 @@ $LN25:
 
 	xor	ebx, ebx
 	cmp	DWORD PTR [rcx+172], ebx
-	jle	SHORT $LN3@constructC
-$LL4@constructC:
+	jle	SHORT $LN3@constructM
+$LL4@constructM:
 
 ; 570  : 			fdn_Modulation.push_back(new Modulation());
 
@@ -30224,7 +30189,7 @@ $LL4@constructC:
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	r14, rax
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 44   : 	Modulation() {}
 
@@ -30232,7 +30197,7 @@ $LL4@constructC:
 	call	??0ModDelay@@QEAA@XZ			; ModDelay::ModDelay
 	lea	rax, OFFSET FLAT:??_7Modulation@@6B@
 	mov	QWORD PTR [r14], rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 570  : 			fdn_Modulation.push_back(new Modulation());
 
@@ -30243,7 +30208,7 @@ $LL4@constructC:
 
 	mov	rdx, QWORD PTR [rsi+112]
 	cmp	rdx, QWORD PTR [rsi+120]
-	je	SHORT $LN15@constructC
+	je	SHORT $LN15@constructM
 
 ; 726  :         _Alty_traits::construct(_Getal(), _Unfancy(_Mylast), _STD forward<_Valty>(_Val)...);
 
@@ -30257,8 +30222,8 @@ $LL4@constructC:
 
 ; 744  :             return _Emplace_back_with_unused_capacity(_STD forward<_Valty>(_Val)...);
 
-	jmp	SHORT $LN2@constructC
-$LN15@constructC:
+	jmp	SHORT $LN2@constructM
+$LN15@constructM:
 
 ; 745  :         }
 ; 746  : 
@@ -30267,15 +30232,15 @@ $LN15@constructC:
 	lea	r8, QWORD PTR $T3[rsp]
 	lea	rcx, QWORD PTR [rsi+104]
 	call	??$_Emplace_reallocate@PEAVModulation@@@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@QEAAPEAPEAVModulation@@QEAPEAV2@$$QEAPEAV2@@Z ; std::vector<Modulation *,std::allocator<Modulation *> >::_Emplace_reallocate<Modulation *>
-$LN2@constructC:
-; File E:\prova\Shimmer\include\FDN.h
+$LN2@constructM:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 569  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	inc	ebx
 	cmp	ebx, DWORD PTR [rsi+172]
-	jl	SHORT $LL4@constructC
-$LN3@constructC:
+	jl	SHORT $LL4@constructM
+$LN3@constructM:
 
 ; 571  : 	}
 
@@ -30285,14 +30250,14 @@ $LN3@constructC:
 	pop	rdi
 	pop	rsi
 	ret	0
-?constructChorus@FDN@@AEAAXXZ ENDP			; FDN::constructChorus
+?constructModulation@FDN@@AEAAXXZ ENDP			; FDN::constructModulation
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
 $T3 = 64
 this$ = 64
 $T1 = 72
-?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA PROC	; `FDN::constructChorus'::`1'::dtor$0
+?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA PROC	; `FDN::constructModulation'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
@@ -30302,7 +30267,7 @@ $T1 = 72
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
-?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA ENDP	; `FDN::constructChorus'::`1'::dtor$0
+?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA ENDP	; `FDN::constructModulation'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
@@ -30310,7 +30275,7 @@ text$x	SEGMENT
 $T3 = 64
 this$ = 64
 $T1 = 72
-?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA PROC	; `FDN::constructChorus'::`1'::dtor$0
+?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA PROC	; `FDN::constructModulation'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
@@ -30320,10 +30285,10 @@ $T1 = 72
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
-?dtor$0@?0??constructChorus@FDN@@AEAAXXZ@4HA ENDP	; `FDN::constructChorus'::`1'::dtor$0
+?dtor$0@?0??constructModulation@FDN@@AEAAXXZ@4HA ENDP	; `FDN::constructModulation'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?deleteInterfaceBlocks@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -30362,41 +30327,41 @@ $LN11@deleteInte:
 ?deleteInterfaceBlocks@FDN@@AEAAXXZ ENDP		; FDN::deleteInterfaceBlocks
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?deleteDiffusionBlocks@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -30417,7 +30382,7 @@ $LN48:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rdx, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 580  : 	void deleteDiffusionBlocks() {
 
@@ -30429,7 +30394,7 @@ $LN48:
 	mov	rax, QWORD PTR [rcx+32]
 	mov	r14d, 48				; 00000030H
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 582  : 		if (!fdn_Diffuser.empty()) {
 
@@ -30439,7 +30404,7 @@ $LN48:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -30449,7 +30414,7 @@ $LN48:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -30461,7 +30426,7 @@ $LN48:
 
 	xor	esi, esi
 $LL4@deleteDiff:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 585  : 				delete fdn_Diffuser[i];
 
@@ -30479,7 +30444,7 @@ $LN2@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+24]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -30489,7 +30454,7 @@ $LN2@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+32]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -30499,7 +30464,7 @@ $LN2@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -30509,7 +30474,7 @@ $LN2@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 584  : 			for (int i = 0; i < fdn_Diffuser.size(); i++) 
 
@@ -30530,7 +30495,7 @@ $LN8@deleteDiff:
 	mov	rdx, QWORD PTR [rbx+48]
 	mov	rax, QWORD PTR [rbx+56]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 592  : 		if (!fdn_ModDiffuser.empty()) {
 
@@ -30540,7 +30505,7 @@ $LN8@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -30550,7 +30515,7 @@ $LN8@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -30562,7 +30527,7 @@ $LN8@deleteDiff:
 
 	xor	esi, esi
 $LL7@deleteDiff:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 594  : 				delete fdn_ModDiffuser[i];
 
@@ -30580,7 +30545,7 @@ $LN5@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+48]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -30590,7 +30555,7 @@ $LN5@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+56]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -30600,7 +30565,7 @@ $LN5@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -30610,7 +30575,7 @@ $LN5@deleteDiff:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 593  : 			for (int i = 0; i < fdn_ModDiffuser.size(); i++)
 
@@ -30650,7 +30615,7 @@ $LN36@deleteDiff:
 ?deleteDiffusionBlocks@FDN@@AEAAXXZ ENDP		; FDN::deleteDiffusionBlocks
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?deleteFeedbackBlock@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -30682,41 +30647,41 @@ $LN6@deleteFeed:
 ?deleteFeedbackBlock@FDN@@AEAAXXZ ENDP			; FDN::deleteFeedbackBlock
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?deleteFilters@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -30734,7 +30699,7 @@ $LN43:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rdx, QWORD PTR [rcx+80]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 608  : 	void deleteFilters() {
 
@@ -30745,7 +30710,7 @@ $LN43:
 
 	mov	rax, QWORD PTR [rcx+88]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 609  : 		if (!fdn_LPFOutput.empty()) {
 
@@ -30755,7 +30720,7 @@ $LN43:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -30765,7 +30730,7 @@ $LN43:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -30777,7 +30742,7 @@ $LN43:
 
 	xor	edi, edi
 $LL4@deleteFilt:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 611  : 				delete fdn_LPFOutput[i];
 
@@ -30792,7 +30757,7 @@ $LN2@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+80]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -30802,7 +30767,7 @@ $LN2@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+88]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -30812,7 +30777,7 @@ $LN2@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -30822,7 +30787,7 @@ $LN2@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 610  : 			for (int i = 0; i < fdn_LPFOutput.size(); i++)
 
@@ -30841,7 +30806,7 @@ $LN8@deleteFilt:
 	mov	rdx, QWORD PTR [rbx+144]
 	mov	rax, QWORD PTR [rbx+152]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 614  : 		if (!fdn_HPFOutput.empty()) {
 
@@ -30851,7 +30816,7 @@ $LN8@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -30861,7 +30826,7 @@ $LN8@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -30873,7 +30838,7 @@ $LN8@deleteFilt:
 
 	xor	edi, edi
 $LL7@deleteFilt:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 616  : 				delete fdn_HPFOutput[i];
 
@@ -30888,7 +30853,7 @@ $LN5@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+144]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -30898,7 +30863,7 @@ $LN5@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+152]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -30908,7 +30873,7 @@ $LN5@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -30918,7 +30883,7 @@ $LN5@deleteFilt:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 615  : 			for (int i = 0; i < fdn_HPFOutput.size(); i++)
 
@@ -30942,26 +30907,26 @@ $LN9@deleteFilt:
 ?deleteFilters@FDN@@AEAAXXZ ENDP			; FDN::deleteFilters
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?deleteChorus@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -30982,7 +30947,7 @@ $LN35:
 ; 1544 :         return _My_data._Myfirst == _My_data._Mylast;
 
 	mov	rdx, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 622  : 	void deleteChorus() {
 
@@ -30993,7 +30958,7 @@ $LN35:
 
 	mov	rax, QWORD PTR [rcx+112]
 	cmp	rdx, rax
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 623  : 		if (!fdn_Modulation.empty()) {
 
@@ -31003,7 +30968,7 @@ $LN35:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rax, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -31013,7 +30978,7 @@ $LN35:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rax, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -31025,14 +30990,14 @@ $LN35:
 
 	xor	r14d, r14d
 $LL4@deleteChor:
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 625  : 				delete fdn_Modulation[i];
 
 	mov	rdi, QWORD PTR [r14+rdx]
 	test	rdi, rdi
 	je	SHORT $LN2@deleteChor
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
 ; 51   : 		delete mdly_LFO;
 
@@ -31061,7 +31026,7 @@ $LN2@deleteChor:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rdx, QWORD PTR [rbx+104]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -31071,7 +31036,7 @@ $LN2@deleteChor:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	mov	rcx, QWORD PTR [rbx+112]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -31081,7 +31046,7 @@ $LN2@deleteChor:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sub	rcx, rdx
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -31091,7 +31056,7 @@ $LN2@deleteChor:
 ; 1549 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
 	sar	rcx, 3
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 624  : 			for (int i = 0; i < fdn_Modulation.size(); i++)
 
@@ -31117,9 +31082,12 @@ $LN5@deleteChor:
 ?deleteChorus@FDN@@AEAAXXZ ENDP				; FDN::deleteChorus
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?initInternalArrays@FDN@@AEAAXXZ
 _TEXT	SEGMENT
+$T3 = 48
+$T2 = 48
+$T1 = 48
 this$ = 48
 ?initInternalArrays@FDN@@AEAAXXZ PROC			; FDN::initInternalArrays, COMDAT
 
@@ -31129,42 +31097,46 @@ $LN4:
 	push	rbx
 	sub	rsp, 32					; 00000020H
 
-; 632  : 		fdn_tmpDiffuser.resize(fdn_internalChannels);
+; 632  : 		fdn_tmpDiffuser.resize(fdn_internalChannels, 0.0);
 
 	movsxd	rdx, DWORD PTR [rcx+172]
+	lea	r8, QWORD PTR $T1[rsp]
+	and	DWORD PTR $T1[rsp], 0
 	mov	rbx, rcx
 	add	rcx, 192				; 000000c0H
-	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 
-; 633  : 		fdn_tmpFeedback.resize(fdn_internalChannels);
+; 633  : 		fdn_tmpFeedback.resize(fdn_internalChannels, 0.0);
 
 	movsxd	rdx, DWORD PTR [rbx+172]
 	lea	rcx, QWORD PTR [rbx+216]
-	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+	and	DWORD PTR $T2[rsp], 0
+	lea	r8, QWORD PTR $T2[rsp]
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 
-; 634  : 		fdn_outEarly.resize(fdn_internalChannels);
+; 634  : 		fdn_outEarly.resize(fdn_internalChannels, 0.0);
 
 	movsxd	rdx, DWORD PTR [rbx+172]
 	lea	rcx, QWORD PTR [rbx+240]
+	and	DWORD PTR $T3[rsp], 0
+	lea	r8, QWORD PTR $T3[rsp]
+	call	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_KAEBM@Z ; std::vector<float,std::allocator<float> >::resize
 
 ; 635  : 	}	
 
 	add	rsp, 32					; 00000020H
 	pop	rbx
-
-; 634  : 		fdn_outEarly.resize(fdn_internalChannels);
-
-	jmp	?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ; std::vector<float,std::allocator<float> >::resize
+	ret	0
 ?initInternalArrays@FDN@@AEAAXXZ ENDP			; FDN::initInternalArrays
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ;	COMDAT ?deleteInternalArrays@FDN@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -31175,7 +31147,7 @@ this$ = 8
 
 	mov	rax, QWORD PTR [rcx+192]
 	cmp	rax, QWORD PTR [rcx+200]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 639  : 		if (!fdn_tmpDiffuser.empty())
 
@@ -31191,7 +31163,7 @@ $LN2@deleteInte:
 
 	mov	rax, QWORD PTR [rcx+216]
 	cmp	rax, QWORD PTR [rcx+224]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 641  : 		if (!fdn_tmpFeedback.empty())
 
@@ -31207,7 +31179,7 @@ $LN3@deleteInte:
 
 	mov	rax, QWORD PTR [rcx+240]
 	cmp	rax, QWORD PTR [rcx+248]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 643  : 		if (!fdn_outEarly.empty())		
 
@@ -31338,7 +31310,7 @@ $LN6:
 ??_GHighPassFilter@@QEAAPEAXI@Z ENDP			; HighPassFilter::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 ;	COMDAT ??_GModulation@@QEAAPEAXI@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -31379,7 +31351,7 @@ $LN13@scalar:
 ??_GModulation@@QEAAPEAXI@Z ENDP			; Modulation::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorZero@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorZero@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorZero'', COMDAT
@@ -31396,7 +31368,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorZero@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorZero''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorUnity@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorUnity@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorUnity'', COMDAT
@@ -31409,7 +31381,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorUnity@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorUnity''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorAntiUnity@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorAntiUnity@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorAntiUnity'', COMDAT
@@ -31422,7 +31394,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorAntiUnity@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorAntiUnity''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorAntiLog@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorAntiLog@@YAXXZ PROC			; `dynamic initializer for 'kCTCorrFactorAntiLog'', COMDAT
@@ -31440,7 +31412,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorAntiLog@@YAXXZ ENDP			; `dynamic initializer for 'kCTCorrFactorAntiLog''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\guiconstants.h
+; File E:\FoxSuite\shimmer\include\guiconstants.h
 ;	COMDAT ??__EkCTCorrFactorAntiLogScale@@YAXXZ
 text$di	SEGMENT
 ??__EkCTCorrFactorAntiLogScale@@YAXXZ PROC		; `dynamic initializer for 'kCTCorrFactorAntiLogScale'', COMDAT
@@ -31452,7 +31424,7 @@ text$di	SEGMENT
 ??__EkCTCorrFactorAntiLogScale@@YAXXZ ENDP		; `dynamic initializer for 'kCTCorrFactorAntiLogScale''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?getMagnitude@@YANNN@Z
 _TEXT	SEGMENT
 re$ = 8
@@ -31468,7 +31440,7 @@ im$ = 16
 ?getMagnitude@@YANNN@Z ENDP				; getMagnitude
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?getPhase@@YANNN@Z
 _TEXT	SEGMENT
 re$ = 8
@@ -31487,7 +31459,7 @@ im$ = 16
 ?getPhase@@YANNN@Z ENDP					; getPhase
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?principalArg@@YANN@Z
 _TEXT	SEGMENT
 phaseIn$ = 48
@@ -31529,7 +31501,7 @@ $LN3@principalA:
 ?principalArg@@YANN@Z ENDP				; principalArg
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?doLinearInterpolation@@YANNNN@Z
 _TEXT	SEGMENT
 y1$ = 8
@@ -31569,7 +31541,7 @@ $LN2@doLinearIn:
 ?doLinearInterpolation@@YANNNN@Z ENDP			; doLinearInterpolation
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?doLagrangeInterpolation@@YANPEAN0HN@Z
 _TEXT	SEGMENT
 x$ = 8
@@ -31642,7 +31614,7 @@ $LN5@doLagrange:
 ?doLagrangeInterpolation@@YANPEAN0HN@Z ENDP		; doLagrangeInterpolation
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?resample@@YA_NPEAN0IIW4interpolation@@N0@Z
 _TEXT	SEGMENT
 input$ = 8
@@ -31878,7 +31850,7 @@ $LN1@resample:
 ?resample@@YA_NPEAN0IIW4interpolation@@N0@Z ENDP	; resample
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?setSampleRate@IAudioSignalProcessor@@UEAAXN@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -31891,7 +31863,7 @@ _sampleRate$ = 16
 ?setSampleRate@IAudioSignalProcessor@@UEAAXN@Z ENDP	; IAudioSignalProcessor::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?enableAuxInput@IAudioSignalProcessor@@UEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -31904,7 +31876,7 @@ enableAuxInput$ = 16
 ?enableAuxInput@IAudioSignalProcessor@@UEAAX_N@Z ENDP	; IAudioSignalProcessor::enableAuxInput
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?processAuxInputAudioSample@IAudioSignalProcessor@@UEAANN@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -31922,7 +31894,7 @@ xn$ = 16
 ?processAuxInputAudioSample@IAudioSignalProcessor@@UEAANN@Z ENDP ; IAudioSignalProcessor::processAuxInputAudioSample
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?processAudioFrame@IAudioSignalProcessor@@UEAA_NPEBMPEAMII@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -31943,7 +31915,7 @@ outputChannels$ = 40
 ?processAudioFrame@IAudioSignalProcessor@@UEAA_NPEBMPEAMII@Z ENDP ; IAudioSignalProcessor::processAudioFrame
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??0PSMVocoderParameters@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -31976,7 +31948,7 @@ this$ = 8
 ??0PSMVocoderParameters@@QEAA@XZ ENDP			; PSMVocoderParameters::PSMVocoderParameters
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??4PSMVocoderParameters@@QEAAAEAU0@AEBU0@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -32015,7 +31987,7 @@ $LN4@operator:
 ??4PSMVocoderParameters@@QEAAAEAU0@AEBU0@@Z ENDP	; PSMVocoderParameters::operator=
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??0BinData@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -32075,7 +32047,7 @@ this$ = 8
 ??0BinData@@QEAA@XZ ENDP				; BinData::BinData
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??4BinData@@QEAAAEAU0@AEBU0@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -32135,7 +32107,7 @@ $LN4@operator:
 ??4BinData@@QEAAAEAU0@AEBU0@@Z ENDP			; BinData::operator=
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?reset@BinData@@QEAAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -32167,7 +32139,7 @@ this$ = 8
 ?reset@BinData@@QEAAXXZ ENDP				; BinData::reset
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??0PhaseVocoder@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -32297,7 +32269,7 @@ this$ = 8
 ??0PhaseVocoder@@QEAA@XZ ENDP				; PhaseVocoder::PhaseVocoder
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??1PhaseVocoder@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -32349,7 +32321,7 @@ $LN4@PhaseVocod:
 ??1PhaseVocoder@@QEAA@XZ ENDP				; PhaseVocoder::~PhaseVocoder
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?getFFTData@PhaseVocoder@@QEAAPEAY01NXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -32362,7 +32334,7 @@ this$ = 8
 ?getFFTData@PhaseVocoder@@QEAAPEAY01NXZ ENDP		; PhaseVocoder::getFFTData
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?getIFFTData@PhaseVocoder@@QEAAPEAY01NXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -32375,7 +32347,7 @@ this$ = 8
 ?getIFFTData@PhaseVocoder@@QEAAPEAY01NXZ ENDP		; PhaseVocoder::getIFFTData
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??0PSMVocoder@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -33067,7 +33039,7 @@ this$ = 48
 ?dtor$0@?0???0PSMVocoder@@QEAA@XZ@4HA ENDP		; `PSMVocoder::PSMVocoder'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ??1PSMVocoder@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -33138,7 +33110,7 @@ $LN8@PSMVocoder:
 ??1PSMVocoder@@QEAA@XZ ENDP				; PSMVocoder::~PSMVocoder
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?reset@PSMVocoder@@UEAA_NN@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -33283,7 +33255,7 @@ $LL4@reset:
 ?reset@PSMVocoder@@UEAA_NN@Z ENDP			; PSMVocoder::reset
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?canProcessAudioFrame@PSMVocoder@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -33296,7 +33268,7 @@ this$ = 8
 ?canProcessAudioFrame@PSMVocoder@@UEAA_NXZ ENDP		; PSMVocoder::canProcessAudioFrame
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?setPitchShift@PSMVocoder@@QEAAXN@Z
 _TEXT	SEGMENT
 this$ = 96
@@ -33470,7 +33442,7 @@ $LN1@setPitchSh:
 ?setPitchShift@PSMVocoder@@QEAAXN@Z ENDP		; PSMVocoder::setPitchShift
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?findPreviousNearestPeak@PSMVocoder@@QEAAHH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -33592,7 +33564,7 @@ $LN1@findPrevio:
 ?findPreviousNearestPeak@PSMVocoder@@QEAAHH@Z ENDP	; PSMVocoder::findPreviousNearestPeak
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?findPeaksAndRegionsOfInfluence@PSMVocoder@@QEAAXXZ
 _TEXT	SEGMENT
 localWindow$ = 32
@@ -34065,15 +34037,15 @@ $LN6@findPeaksA:
 ?findPeaksAndRegionsOfInfluence@PSMVocoder@@QEAAXXZ ENDP ; PSMVocoder::findPeaksAndRegionsOfInfluence
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?processAudioSample@PSMVocoder@@UEAANN@Z
 _TEXT	SEGMENT
 ifft$11 = 32
@@ -34105,12 +34077,12 @@ $LN161:
 
 	lea	rsi, QWORD PTR [rcx+24]
 	movaps	XMMWORD PTR [rsp+32896], xmm7
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 
 ; 440  : 	if (needInverseFFT)
 
 	xor	r12d, r12d
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 
 ; 850  : 	{
 
@@ -34122,7 +34094,7 @@ $LN161:
 	movaps	XMMWORD PTR [rsp+32832], xmm11
 	movaps	XMMWORD PTR [rsp+32816], xmm12
 	movaps	XMMWORD PTR [rsp+32800], xmm13
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 
 ; 440  : 	if (needInverseFFT)
 
@@ -34132,7 +34104,7 @@ $LN161:
 ; 479  : 	fftw_execute(plan_backward);
 
 	mov	rcx, QWORD PTR [rsi+32]
-	call	QWORD PTR __imp_fftw_execute
+	call	fftw_execute
 
 ; 482  : 	needInverseFFT = false;
 
@@ -34202,7 +34174,7 @@ $LN30@processAud:
 	mov	rcx, rsi
 	mov	DWORD PTR [rsi+64], eax
 	call	?advanceAndCheckFFT@PhaseVocoder@@QEAA_NXZ ; PhaseVocoder::advanceAndCheckFFT
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 
 ; 858  : 		if (fftReady)
 
@@ -34827,23 +34799,23 @@ $LN69@processAud:
 	cmp	ebp, r15d
 	jb	$LL16@processAud
 $LN15@processAud:
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 
 ; 479  : 	fftw_execute(plan_backward);
 
 	mov	rcx, QWORD PTR [rbx+56]
-	call	QWORD PTR __imp_fftw_execute
-; File E:\prova\Shimmer\include\PSMVocoder.h
+	call	fftw_execute
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 
 ; 993  : 			double ifft[PSM_FFT_LEN] = { 0.0 };
 
 	xor	edx, edx
-; File E:\prova\Shimmer\include\src\PSMVocoder.cpp
+; File E:\FoxSuite\shimmer\include\src\PSMVocoder.cpp
 
 ; 482  : 	needInverseFFT = false;
 
 	mov	BYTE PTR [rbx+120], r12b
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 
 ; 990  : 			fftw_complex* inv_fftData = vocoder.getIFFTData();
 
@@ -35100,7 +35072,7 @@ $LN20@processAud:
 ?processAudioSample@PSMVocoder@@UEAANN@Z ENDP		; PSMVocoder::processAudioSample
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?getParameters@PSMVocoder@@QEAA?AUPSMVocoderParameters@@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -35119,7 +35091,7 @@ __$ReturnUdt$ = 16
 ?getParameters@PSMVocoder@@QEAA?AUPSMVocoderParameters@@XZ ENDP ; PSMVocoder::getParameters
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
 ;	COMDAT ?setParameters@PSMVocoder@@QEAAXAEBUPSMVocoderParameters@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -35194,7 +35166,7 @@ this$ = 8
 ??0IAudioSignalProcessor@@QEAA@XZ ENDP			; IAudioSignalProcessor::IAudioSignalProcessor
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ??__EMIN_DAMPING_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_DAMPING_FREQUENCY_LOG@@YAXXZ PROC		; `dynamic initializer for 'MIN_DAMPING_FREQUENCY_LOG'', COMDAT
@@ -35212,7 +35184,7 @@ text$di	SEGMENT
 ??__EMIN_DAMPING_FREQUENCY_LOG@@YAXXZ ENDP		; `dynamic initializer for 'MIN_DAMPING_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ??__EMAX_DAMPING_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_DAMPING_FREQUENCY_LOG@@YAXXZ PROC		; `dynamic initializer for 'MAX_DAMPING_FREQUENCY_LOG'', COMDAT
@@ -35230,7 +35202,7 @@ text$di	SEGMENT
 ??__EMAX_DAMPING_FREQUENCY_LOG@@YAXXZ ENDP		; `dynamic initializer for 'MAX_DAMPING_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ??__ELPF_FILTER_MAX_FREQ_LOG@@YAXXZ
 text$di	SEGMENT
 ??__ELPF_FILTER_MAX_FREQ_LOG@@YAXXZ PROC		; `dynamic initializer for 'LPF_FILTER_MAX_FREQ_LOG'', COMDAT
@@ -35248,7 +35220,7 @@ text$di	SEGMENT
 ??__ELPF_FILTER_MAX_FREQ_LOG@@YAXXZ ENDP		; `dynamic initializer for 'LPF_FILTER_MAX_FREQ_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ??__ELPF_FILTER_MIN_FREQ_LOG@@YAXXZ
 text$di	SEGMENT
 ??__ELPF_FILTER_MIN_FREQ_LOG@@YAXXZ PROC		; `dynamic initializer for 'LPF_FILTER_MIN_FREQ_LOG'', COMDAT
@@ -35266,7 +35238,7 @@ text$di	SEGMENT
 ??__ELPF_FILTER_MIN_FREQ_LOG@@YAXXZ ENDP		; `dynamic initializer for 'LPF_FILTER_MIN_FREQ_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?updateMix@Shimmer@@AEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -35292,12 +35264,12 @@ $LN4:
 ; 62   :     _dry = cos(shim_mix * M_PI * 0.5);
 
 	cvtps2pd xmm0, xmm0
-	movss	DWORD PTR [rbx+344], xmm1
+	movss	DWORD PTR [rbx+328], xmm1
 	mulsd	xmm0, QWORD PTR __real@3ff921fb54442d18
 	call	QWORD PTR __imp_cos
 	xorps	xmm1, xmm1
 	cvtsd2ss xmm1, xmm0
-	movss	DWORD PTR [rbx+348], xmm1
+	movss	DWORD PTR [rbx+332], xmm1
 
 ; 63   : }
 
@@ -35307,7 +35279,7 @@ $LN4:
 ?updateMix@Shimmer@@AEAAXXZ ENDP			; Shimmer::updateMix
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?updateMixPitchShifters@Shimmer@@AEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -35317,22 +35289,22 @@ pitch2$ = 16
 ; 67   :     _mixP1 = 1.0;
 ; 68   :     _mixP2 = 0.0;
 
-	and	DWORD PTR [rcx+356], 0
+	and	DWORD PTR [rcx+340], 0
 
 ; 69   :     if (pitch2 != 0.0) {
 
 	ucomiss	xmm1, DWORD PTR __real@00000000
-	mov	DWORD PTR [rcx+352], 1065353216		; 3f800000H
+	mov	DWORD PTR [rcx+336], 1065353216		; 3f800000H
 	je	SHORT $LN2@updateMixP
 
 ; 70   :         _mixP1 = 0.5;
 
 	mov	eax, 1056964608				; 3f000000H
-	mov	DWORD PTR [rcx+352], eax
+	mov	DWORD PTR [rcx+336], eax
 
 ; 71   :         _mixP2 = 0.5;
 
-	mov	DWORD PTR [rcx+356], eax
+	mov	DWORD PTR [rcx+340], eax
 $LN2@updateMixP:
 
 ; 72   :     }
@@ -35342,9 +35314,9 @@ $LN2@updateMixP:
 ?updateMixPitchShifters@Shimmer@@AEAAXM@Z ENDP		; Shimmer::updateMixPitchShifters
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ??0Shimmer@@QEAA@P6A_JPEAUAEffect@@HH_JPEAXM@Z@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -35359,7 +35331,7 @@ $LN14:
 	push	rdi
 	sub	rsp, 32					; 00000020H
 	mov	rdi, rcx
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
 
 ; 107  : {
 
@@ -35462,7 +35434,7 @@ $LN14:
 
 	lea	rax, OFFSET FLAT:?processClassDoubleReplacing@AudioEffect@@KAXPEAUAEffect@@PEAPEAN1H@Z ; AudioEffect::processClassDoubleReplacing
 	mov	QWORD PTR [rdi+176], rax
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
 ; 79   : {
 
@@ -35531,7 +35503,7 @@ $LN6:
 	call	??1Shimmer@@UEAA@XZ			; Shimmer::~Shimmer
 	test	bl, 1
 	je	SHORT $LN2@scalar
-	mov	edx, 360				; 00000168H
+	mov	edx, 344				; 00000158H
 	mov	rcx, rdi
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN2@scalar:
@@ -35543,412 +35515,171 @@ $LN2@scalar:
 ??_GShimmer@@UEAAPEAXI@Z ENDP				; Shimmer::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\PSMVocoder.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?InitPlugin@Shimmer@@AEAAXXZ
 _TEXT	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?InitPlugin@Shimmer@@AEAAXXZ PROC			; Shimmer::InitPlugin, COMDAT
 
 ; 97   : {
 
-$LN353:
-	mov	rax, rsp
-	mov	QWORD PTR [rax+16], rbx
-	mov	QWORD PTR [rax+24], rbp
-	mov	QWORD PTR [rax+32], rsi
+$LN206:
+	mov	QWORD PTR [rsp+16], rbx
+	mov	QWORD PTR [rsp+24], rbp
+	push	rsi
 	push	rdi
 	push	r12
-	push	r13
 	push	r14
 	push	r15
-	sub	rsp, 144				; 00000090H
-	movaps	XMMWORD PTR [rax-56], xmm6
-	movaps	XMMWORD PTR [rax-72], xmm7
-	mov	rbx, rcx
+	sub	rsp, 96					; 00000060H
+	movaps	XMMWORD PTR [rsp+80], xmm6
+	mov	rdi, rcx
 
-; 98   :     /*.......................................*/
-; 99   :     // initialize reverb plug-in parameters
-; 100  :     InitPresets();
+; 98   :     // get current sample rate
+; 99   :     int sampleRate = getSampleRate();
 
-	call	?InitPresets@Shimmer@@AEAAXXZ		; Shimmer::InitPresets
-
-; 101  : 
-; 102  :     // get current sample rate
-; 103  :     int sampleRate = getSampleRate();
-
-	mov	rax, QWORD PTR [rbx]
-	mov	rcx, rbx
+	mov	rax, QWORD PTR [rcx]
 	call	QWORD PTR [rax+248]
 	cvttss2si r14d, xmm0
 
-; 104  :     shim_mix = 0.5;    
-
-	mov	eax, 1056964608				; 3f000000H
-	mov	DWORD PTR [rbx+248], eax
-
-; 105  :     shim_roomSize = 0.5;
-
-	mov	DWORD PTR [rbx+252], eax
-
-; 106  :     shim_decay = 0.2;
-
-	mov	DWORD PTR [rbx+264], 1045220557		; 3e4ccccdH
-
-; 107  :     shim_damping = 0.5;    
-
-	mov	DWORD PTR [rbx+268], eax
-
-; 108  :     shim_spread = 0.5;
-
-	mov	QWORD PTR [rbx+272], rax
-
-; 109  :     shim_shimmer = 0.5;
-
-	mov	DWORD PTR [rbx+256], eax
-
-; 110  :     shim_intervals = 0.1;
-
-	mov	DWORD PTR [rbx+260], 1036831949		; 3dcccccdH
-
-; 111  :     shim_modRate = 0.0;
-
-	xor	r15d, r15d
-
-; 112  :     shim_modDepth = 0.0;
-
-	mov	DWORD PTR [rbx+280], r15d
-
-; 113  :     shim_lpf = MAX_LPF_FREQUENCY;
-
-	mov	DWORD PTR [rbx+284], 1184645120		; 469c4000H
-
-; 114  :     shim_hpf = MIN_HPF_FREQUENCY;           
-
-	mov	DWORD PTR [rbx+288], 1101004800		; 41a00000H
-
-; 115  :     updateMix();
-
-	mov	rcx, rbx
-	call	?updateMix@Shimmer@@AEAAXXZ		; Shimmer::updateMix
-
-; 116  : 
-; 117  :     /*.......................................*/
-; 118  :     // Create FDN Branch Reverb
-; 119  :     BranchReverb = new FDN(2, DEFAULT_NUMBER_OF_INTERNAL_CHANNELS_FDN, 2, NUMBER_OF_DIFFUSION_STEPS, 1);
+; 100  : 
+; 101  :     /*.......................................*/
+; 102  :     // Create FDN Branch Reverb
+; 103  :     BranchReverb = new FDN(1, DEFAULT_NUMBER_OF_INTERNAL_CHANNELS_FDN, 2, NUMBER_OF_DIFFUSION_STEPS, 1);
 
 	mov	ecx, 320				; 00000140H
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	QWORD PTR $T1[rsp], rax
+	mov	r12d, 1
+	mov	edx, r12d
 	mov	rcx, rax
 	call	??0FDN@@QEAA@HHHHH@Z			; FDN::FDN
 	npad	1
-	mov	QWORD PTR [rbx+296], rax
+	mov	QWORD PTR [rdi+296], rax
 
-; 120  : 
-; 121  :     // Initialize objects (allocate delay lines)
-; 122  :     BranchReverb->initialize(DIFFUSER_DELAY_BUFFER_SIZE_MS, FEEDBACK_DELAY_BUFFER_SIZE_MS, sampleRate);
+; 104  : 
+; 105  :     // Initialize objects (allocate delay lines)
+; 106  :     BranchReverb->initialize(DIFFUSER_DELAY_BUFFER_SIZE_MS, FEEDBACK_DELAY_BUFFER_SIZE_MS, sampleRate);
 
 	mov	r9d, r14d
 	mov	rcx, rax
 	call	?initialize@FDN@@QEAAXMMHM@Z		; FDN::initialize
 
-; 123  : 
-; 124  :     // Set room size
-; 125  :     BranchReverb->setRoomSize(shim_roomSize);
+; 107  :     
+; 108  :     // output mixing mode
+; 109  :     BranchReverb->setMixMode(MixMode::First);
 
-	movss	xmm1, DWORD PTR [rbx+252]
-	mov	rcx, QWORD PTR [rbx+296]
-	call	?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z ; FDN::setRoomSize
+	mov	rax, QWORD PTR [rdi+296]
+; File E:\FoxSuite\shimmer\include\FDN.h
 
-; 126  : 
-; 127  :     // Set decay
-; 128  :     BranchReverb->setDecayInSeconds(0.25 * shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
+; 421  : 		fdn_Mixer->setMixMode(mode); 
 
-	movss	xmm1, DWORD PTR [rbx+264]
-	mulss	xmm1, DWORD PTR __real@40f00000
-	mov	rcx, QWORD PTR [rbx+296]
-; File E:\prova\Shimmer\include\FDN.h
+	mov	rcx, QWORD PTR [rax+8]
+	mov	DWORD PTR [rcx+8], r12d
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 204  : 		fdn_decay = decaySeconds;
+; 112  :     BranchReverb->setDampingType(DAMPING_LPF_TYPE);
 
-	movss	DWORD PTR [rcx+296], xmm1
-
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
-
-	mulss	xmm1, DWORD PTR [rcx+300]
-	mov	rcx, QWORD PTR [rcx+72]
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-; File E:\prova\Shimmer\include\utils.h
-
-; 60   :     return minvalue + value * (maxValue - minvalue);
-
-	movss	xmm2, DWORD PTR ?MAX_DAMPING_FREQUENCY_LOG@@3MB
-	subss	xmm2, DWORD PTR ?MIN_DAMPING_FREQUENCY_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 131  :     BranchReverb->setDampingFrequency(exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG)));
-
-	movss	xmm7, DWORD PTR __real@3f800000
-	movaps	xmm0, xmm7
-	subss	xmm0, DWORD PTR [rbx+268]
-; File E:\prova\Shimmer\include\utils.h
-
-; 60   :     return minvalue + value * (maxValue - minvalue);
-
-	mulss	xmm2, xmm0
-	addss	xmm2, DWORD PTR ?MIN_DAMPING_FREQUENCY_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 131  :     BranchReverb->setDampingFrequency(exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG)));
-
-	cvtps2pd xmm0, xmm2
-	call	QWORD PTR __imp_exp
-	xorps	xmm6, xmm6
-	cvtsd2ss xmm6, xmm0
-	mov	rdi, QWORD PTR [rbx+296]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 258  : 		fdn_Feedback->setDampingFrequency(freq);
-
-	mov	rbp, QWORD PTR [rdi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	mov	esi, r15d
-	lea	r12d, QWORD PTR [r15+1]
-	lea	r13d, QWORD PTR [r15+8]
-	cmp	DWORD PTR [rbp], r15d
-	jle	SHORT $LN29@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	edi, r15d
-$LL30@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rbp+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 89   : 			mcf_DelayLines[i]->setCutoffFrequency(freq);
-
-	mov	rcx, QWORD PTR [rdi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-
-; 25   : 	lpcf_cutoffFreq = cutoffFreq;
-
-	movss	DWORD PTR [rcx+96], xmm6
-
-; 26   : 
-; 27   : 	// set LPF cutoff frequency to the inserted value
-; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
-
-	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
-
-; 68   : 		lpf_cutoffFreq = cutoffFreq;
-
-	movss	DWORD PTR [rcx+4], xmm6
-
-; 69   : 
-; 70   : 		// update lpf gains
-; 71   : 		updateGains();
-
-	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	add	esi, r12d
-	add	rdi, r13
-	cmp	esi, DWORD PTR [rbp]
-	jl	SHORT $LL30@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN29@InitPlugin:
-; File E:\prova\Shimmer\include\FDN.h
+	mov	rbx, QWORD PTR [rdi+296]
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 263  : 		fdn_Feedback->setFilterType(type);
 
-	mov	rsi, QWORD PTR [rdi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	rbp, QWORD PTR [rbx+72]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	mov	ebp, r15d
-	cmp	DWORD PTR [rsi], r15d
-	jle	SHORT $LN42@InitPlugin
+	xor	r15d, r15d
+	mov	esi, r15d
+	cmp	DWORD PTR [rbp], r15d
+	jle	SHORT $LN21@InitPlugin
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1563 :         auto& _My_data = _Mypair._Myval2;
 
-	mov	rdi, r15
-$LL43@InitPlugin:
+	mov	ebx, r15d
+$LL22@InitPlugin:
 
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rax, QWORD PTR [rsi+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+	mov	rax, QWORD PTR [rbp+40]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 94   : 			mcf_DelayLines[i]->setFilterType(type);
 
-	mov	rax, QWORD PTR [rdi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+	mov	rax, QWORD PTR [rbx+rax]
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 32   : 	lpcf_feedbackLPF->setFilterType(type);
 
 	mov	rcx, QWORD PTR [rax+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -35959,44 +35690,418 @@ $LL43@InitPlugin:
 ; 79   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
-	add	ebp, r12d
-	add	rdi, r13
-	cmp	ebp, DWORD PTR [rsi]
-	jl	SHORT $LL43@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN42@InitPlugin:
-; File E:\prova\Shimmer\include\FDN.h
+	add	esi, r12d
+	lea	rbx, QWORD PTR [rbx+8]
+	cmp	esi, DWORD PTR [rbp]
+	jl	SHORT $LL22@InitPlugin
+	mov	rbx, QWORD PTR [rdi+296]
+$LN21@InitPlugin:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
-; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
+; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN53@InitPlugin
+	cmp	DWORD PTR [rbx+176], r15d
+	jle	SHORT $LN32@InitPlugin
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1563 :         auto& _My_data = _Mypair._Myval2;
 
 	mov	rsi, r15
-$LL54@InitPlugin:
+$LL33@InitPlugin:
 
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rax, QWORD PTR [rdi+80]
-; File E:\prova\Shimmer\include\FDN.h
+	mov	rax, QWORD PTR [rbx+80]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 281  : 			fdn_LPFOutput[i]->setFilterType(type);
+
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+
+; 76   : 		lpf_type = type;
+
+	mov	DWORD PTR [rcx], 2
+
+; 77   : 
+; 78   : 		// update lpf gains
+; 79   : 		updateGains();
+
+	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	add	ebp, r12d
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebp, DWORD PTR [rbx+176]
+	jl	SHORT $LL33@InitPlugin
+	mov	rbx, QWORD PTR [rdi+296]
+$LN32@InitPlugin:
+
+; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	mov	ebp, r15d
+	cmp	DWORD PTR [rbx+176], r15d
+	jle	SHORT $LN41@InitPlugin
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1563 :         auto& _My_data = _Mypair._Myval2;
+
+	mov	rsi, r15
+$LL42@InitPlugin:
+
+; 1569 :         return _My_data._Myfirst[_Pos];
+
+	mov	rax, QWORD PTR [rbx+144]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 287  : 			fdn_HPFOutput[i]->setFilterType(type);
+
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+
+; 76   : 		hpf_type = type;
+
+	mov	DWORD PTR [rcx], 2
+
+; 77   : 
+; 78   : 		// update hpf gains
+; 79   : 		updateGains();
+
+	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	add	ebp, r12d
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebp, DWORD PTR [rbx+176]
+	jl	SHORT $LL42@InitPlugin
+$LN41@InitPlugin:
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 118  :     MasterReverb = new FDN(2, DEFAULT_NUMBER_OF_INTERNAL_CHANNELS_FDN, 2, NUMBER_OF_DIFFUSION_STEPS, 1);
+
+	mov	ecx, 320				; 00000140H
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	QWORD PTR $T6[rsp], rax
+	mov	edx, 2
+	mov	rcx, rax
+	call	??0FDN@@QEAA@HHHHH@Z			; FDN::FDN
+	npad	1
+	mov	QWORD PTR [rdi+304], rax
+
+; 119  : 
+; 120  :     // Initialize objects (allocate delay lines)
+; 121  :     MasterReverb->initialize(DIFFUSER_DELAY_BUFFER_SIZE_MS, FEEDBACK_DELAY_BUFFER_SIZE_MS, sampleRate);
+
+	mov	r9d, r14d
+	mov	rcx, rax
+	call	?initialize@FDN@@QEAAXMMHM@Z		; FDN::initialize
+
+; 122  : 
+; 123  :     // output mixing mode
+; 124  :     MasterReverb->setMixMode(MixMode::First);
+
+	mov	rax, QWORD PTR [rdi+304]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 421  : 		fdn_Mixer->setMixMode(mode); 
+
+	mov	rcx, QWORD PTR [rax+8]
+	mov	DWORD PTR [rcx+8], r12d
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 127  :     MasterReverb->setDampingType(DAMPING_LPF_TYPE);
+
+	mov	rbx, QWORD PTR [rdi+304]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 263  : 		fdn_Feedback->setFilterType(type);
+
+	mov	rbp, QWORD PTR [rbx+72]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	mov	esi, r15d
+	cmp	DWORD PTR [rbp], r15d
+	jle	SHORT $LN54@InitPlugin
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1563 :         auto& _My_data = _Mypair._Myval2;
+
+	mov	rbx, r15
+$LL55@InitPlugin:
+
+; 1569 :         return _My_data._Myfirst[_Pos];
+
+	mov	rax, QWORD PTR [rbp+40]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 94   : 			mcf_DelayLines[i]->setFilterType(type);
+
+	mov	rax, QWORD PTR [rbx+rax]
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+
+; 32   : 	lpcf_feedbackLPF->setFilterType(type);
+
+	mov	rcx, QWORD PTR [rax+88]
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+
+; 76   : 		lpf_type = type;
+
+	mov	DWORD PTR [rcx], 6
+
+; 77   : 
+; 78   : 		// update lpf gains
+; 79   : 		updateGains();
+
+	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+
+; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
+
+	add	esi, r12d
+	lea	rbx, QWORD PTR [rbx+8]
+	cmp	esi, DWORD PTR [rbp]
+	jl	SHORT $LL55@InitPlugin
+	mov	rbx, QWORD PTR [rdi+304]
+$LN54@InitPlugin:
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	mov	ebp, r15d
+	cmp	DWORD PTR [rbx+176], r15d
+	jle	SHORT $LN65@InitPlugin
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1563 :         auto& _My_data = _Mypair._Myval2;
+
+	mov	rsi, r15
+$LL66@InitPlugin:
+
+; 1569 :         return _My_data._Myfirst[_Pos];
+
+	mov	rax, QWORD PTR [rbx+80]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 281  : 			fdn_LPFOutput[i]->setFilterType(type);
+
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+
+; 76   : 		lpf_type = type;
+
+	mov	DWORD PTR [rcx], 2
+
+; 77   : 
+; 78   : 		// update lpf gains
+; 79   : 		updateGains();
+
+	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	add	ebp, r12d
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebp, DWORD PTR [rbx+176]
+	jl	SHORT $LL66@InitPlugin
+	mov	rbx, QWORD PTR [rdi+304]
+$LN65@InitPlugin:
+
+; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	mov	ebp, r15d
+	cmp	DWORD PTR [rbx+176], r15d
+	jle	SHORT $LN74@InitPlugin
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1563 :         auto& _My_data = _Mypair._Myval2;
+
+	mov	rsi, r15
+$LL75@InitPlugin:
+
+; 1569 :         return _My_data._Myfirst[_Pos];
+
+	mov	rax, QWORD PTR [rbx+144]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 287  : 			fdn_HPFOutput[i]->setFilterType(type);
+
+	mov	rcx, QWORD PTR [rsi+rax]
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+
+; 76   : 		hpf_type = type;
+
+	mov	DWORD PTR [rcx], 2
+
+; 77   : 
+; 78   : 		// update hpf gains
+; 79   : 		updateGains();
+
+	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	add	ebp, r12d
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebp, DWORD PTR [rbx+176]
+	jl	SHORT $LL75@InitPlugin
+$LN74@InitPlugin:
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 133  :     PitchShift_1oct = new PSMVocoder();
+
+	mov	ebx, 491736				; 000780d8H
+	mov	ecx, ebx
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	QWORD PTR $T11[rsp], rax
+	mov	rcx, rax
+	call	??0PSMVocoder@@QEAA@XZ			; PSMVocoder::PSMVocoder
+	npad	1
+	mov	QWORD PTR [rdi+312], rax
+
+; 134  :     PitchShift_2oct = new PSMVocoder();
+
+	mov	ecx, ebx
+	call	??2@YAPEAX_K@Z				; operator new
+	mov	QWORD PTR $T13[rsp], rax
+	mov	rcx, rax
+	call	??0PSMVocoder@@QEAA@XZ			; PSMVocoder::PSMVocoder
+	npad	1
+	mov	QWORD PTR [rdi+320], rax
+
+; 135  : 
+; 136  :     // set sample rate
+; 137  :     PitchShift_1oct->reset((double)sampleRate);
+
+	mov	rcx, QWORD PTR [rdi+312]
+	movd	xmm6, r14d
+	cvtdq2pd xmm6, xmm6
+	mov	rax, QWORD PTR [rcx]
+	movaps	xmm1, xmm6
+	call	QWORD PTR [rax]
+
+; 138  :     PitchShift_2oct->reset((double)sampleRate);
+
+	mov	rcx, QWORD PTR [rdi+320]
+	mov	rax, QWORD PTR [rcx]
+	movaps	xmm1, xmm6
+	call	QWORD PTR [rax]
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+
+; 1013 : 		return parameters;
+
+	mov	rcx, QWORD PTR [rdi+312]
+	movups	xmm6, XMMWORD PTR [rcx+8]
+	mov	rax, QWORD PTR [rdi+320]
+	movups	xmm0, XMMWORD PTR [rax+8]
+	movdqu	XMMWORD PTR params2$[rsp], xmm0
+
+; 1022 : 		if (params.pitchShiftSemitones != parameters.pitchShiftSemitones)
+
+	lea	rbx, QWORD PTR [rcx+8]
+	ucomisd	xmm6, QWORD PTR [rbx]
+	je	SHORT $LN86@InitPlugin
+
+; 1023 : 		{
+; 1024 : 			setPitchShift(params.pitchShiftSemitones);
+
+	movaps	xmm1, xmm6
+	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
+$LN86@InitPlugin:
+
+; 430  : 		if (this == &params)
+
+	lea	rax, QWORD PTR params1$[rsp]
+	cmp	rbx, rax
+	je	SHORT $LN88@InitPlugin
+
+; 431  : 			return *this;
+; 432  : 
+; 433  : 		pitchShiftSemitones = params.pitchShiftSemitones;
+
+	movsd	QWORD PTR [rbx], xmm6
+
+; 434  : 		enablePeakPhaseLocking = params.enablePeakPhaseLocking;
+
+	mov	WORD PTR [rbx+8], 257			; 00000101H
+$LN88@InitPlugin:
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 150  :     PitchShift_2oct->setParameters(params2);
+
+	mov	rcx, QWORD PTR [rdi+320]
+; File E:\FoxSuite\shimmer\include\PSMVocoder.h
+
+; 1022 : 		if (params.pitchShiftSemitones != parameters.pitchShiftSemitones)
+
+	lea	rbx, QWORD PTR [rcx+8]
+	movsd	xmm6, QWORD PTR params2$[rsp]
+	ucomisd	xmm6, QWORD PTR [rbx]
+	je	SHORT $LN92@InitPlugin
+
+; 1023 : 		{
+; 1024 : 			setPitchShift(params.pitchShiftSemitones);
+
+	movaps	xmm1, xmm6
+	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
+$LN92@InitPlugin:
+
+; 430  : 		if (this == &params)
+
+	lea	rax, QWORD PTR params2$[rsp]
+	cmp	rbx, rax
+	je	SHORT $LN94@InitPlugin
+
+; 431  : 			return *this;
+; 432  : 
+; 433  : 		pitchShiftSemitones = params.pitchShiftSemitones;
+
+	movsd	QWORD PTR [rbx], xmm6
+
+; 434  : 		enablePeakPhaseLocking = params.enablePeakPhaseLocking;
+
+	mov	WORD PTR [rbx+8], 257			; 00000101H
+$LN94@InitPlugin:
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 154  :     InitPresets();  
+
+	mov	rcx, rdi
+	call	?InitPresets@Shimmer@@AEAAXXZ		; Shimmer::InitPresets
+
+; 155  :     
+; 156  :     /*.......................................*/
+; 157  :     // set fixed parameters for BranchReverb
+; 158  :     BranchReverb->setLowPassFrequency(LPF_FILTER_MAX_FREQ);
+
+	mov	rbx, QWORD PTR [rdi+296]
+; File E:\FoxSuite\shimmer\include\FDN.h
+
+; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
+
+	mov	ebp, r15d
+	cmp	DWORD PTR [rbx+176], r15d
+	jle	SHORT $LN99@InitPlugin
+	mov	rsi, r15
+$LL100@InitPlugin:
 
 ; 269  : 			fdn_LPFOutput[i]->setCutoffFrequency(freq);
 
+	mov	rax, QWORD PTR [rbx+80]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -36007,137 +36112,30 @@ $LL54@InitPlugin:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL54@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN53@InitPlugin:
-
-; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN62@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rsi, r15
-$LL63@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+80]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 281  : 			fdn_LPFOutput[i]->setFilterType(type);
-
-	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
-
-; 76   : 		lpf_type = type;
-
-	mov	DWORD PTR [rcx], 2
-
-; 77   : 
-; 78   : 		// update lpf gains
-; 79   : 		updateGains();
-
-	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
-
-; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL63@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN62@InitPlugin:
-
-; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN71@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rsi, r15
-$LL72@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+144]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 287  : 			fdn_HPFOutput[i]->setFilterType(type);
-
-	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
-
-; 76   : 		hpf_type = type;
-
-	mov	DWORD PTR [rcx], 2
-
-; 77   : 
-; 78   : 		// update hpf gains
-; 79   : 		updateGains();
-
-	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
-
-; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL72@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN71@InitPlugin:
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebp, DWORD PTR [rbx+176]
+	jl	SHORT $LL100@InitPlugin
+	mov	rbx, QWORD PTR [rdi+296]
+$LN99@InitPlugin:
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN80@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
+	cmp	DWORD PTR [rbx+176], r15d
+	jle	SHORT $LN108@InitPlugin
 	mov	rsi, r15
-$LL81@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+144]
-; File E:\prova\Shimmer\include\FDN.h
+$LL109@InitPlugin:
 
 ; 275  : 			fdn_HPFOutput[i]->setCutoffFrequency(freq);
 
+	mov	rax, QWORD PTR [rbx+144]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 68   : 		hpf_cutoffFreq = cutoffFreq;
 
@@ -36148,43 +36146,30 @@ $LL81@InitPlugin:
 ; 71   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL81@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN80@InitPlugin:
+	lea	rsi, QWORD PTR [rsi+8]
+	cmp	ebp, DWORD PTR [rbx+176]
+	jl	SHORT $LL109@InitPlugin
+	mov	rbx, QWORD PTR [rdi+296]
+$LN108@InitPlugin:
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	mov	r8d, r15d
-	cmp	DWORD PTR [rdi+172], r15d
-	jle	SHORT $LN89@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
+	cmp	DWORD PTR [rbx+172], r15d
+	jle	SHORT $LN117@InitPlugin
 	mov	rdx, r15
-$LL90@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+104]
-; File E:\prova\Shimmer\include\FDN.h
+$LL118@InitPlugin:
 
 ; 236  : 			fdn_Modulation[i]->setModDepth(depth);	
 
+	mov	rax, QWORD PTR [rbx+104]
 	mov	rcx, QWORD PTR [rdx+rax]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 62   : 		mod_depth = depth;
 
@@ -36193,57 +36178,44 @@ $LL90@InitPlugin:
 ; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
 
 	mov	DWORD PTR [rcx+124], r15d
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	add	r8d, r12d
-	add	rdx, r13
-	cmp	r8d, DWORD PTR [rdi+172]
-	jl	SHORT $LL90@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN89@InitPlugin:
+	lea	rdx, QWORD PTR [rdx+8]
+	cmp	r8d, DWORD PTR [rbx+172]
+	jl	SHORT $LL118@InitPlugin
+	mov	rbx, QWORD PTR [rdi+296]
+$LN117@InitPlugin:
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	mov	edx, r15d
-	cmp	DWORD PTR [rdi+172], r15d
-	jle	SHORT $LN98@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
+	cmp	DWORD PTR [rbx+172], r15d
+	jle	SHORT $LN126@InitPlugin
 	mov	rcx, r15
-$LL99@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+104]
-; File E:\prova\Shimmer\include\FDN.h
+$LL127@InitPlugin:
 
 ; 230  : 			fdn_Modulation[i]->setModRate(rate);
 
+	mov	rax, QWORD PTR [rbx+104]
 	mov	rax, QWORD PTR [rcx+rax]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 67   : 		mod_rate = rate;
 
 	mov	DWORD PTR [rax+164], r15d
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 85   : 		mdly_rate = modRate;
+; 89   : 		mdly_rate = modRate;
 
 	mov	DWORD PTR [rax+136], r15d
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rax+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 71   : 		lfo_frequency = frequency;
 
@@ -36252,1003 +36224,100 @@ $LL99@InitPlugin:
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	mov	DWORD PTR [rax+20], r15d
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	add	edx, r12d
-	add	rcx, r13
-	cmp	edx, DWORD PTR [rdi+172]
-	jl	SHORT $LL99@InitPlugin
-	mov	rdi, QWORD PTR [rbx+296]
-$LN98@InitPlugin:
+	lea	rcx, QWORD PTR [rcx+8]
+	cmp	edx, DWORD PTR [rbx+172]
+	jl	SHORT $LL127@InitPlugin
+	mov	rbx, QWORD PTR [rdi+296]
+$LN126@InitPlugin:
 
 ; 292  : 		fdn_stereoSpread = spread;
 
-	mov	DWORD PTR [rdi+308], 1056964608		; 3f000000H
+	mov	DWORD PTR [rbx+308], 1056964608		; 3f000000H
 
 ; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
-	mov	r9d, r15d
-	cmp	DWORD PTR [rdi+184], r15d
-	jle	SHORT $LN113@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	r8, r15
-$LL114@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+48]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 294  : 			fdn_ModDiffuser[i]->setModDepth(spread);		
-
-	mov	rax, QWORD PTR [r8+rax]
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+	mov	r8d, r15d
+	cmp	DWORD PTR [rbx+184], r15d
+	jle	SHORT $LN141@InitPlugin
+	mov	r9, r15
+$LL142@InitPlugin:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
 
-	mov	rdx, QWORD PTR [rax+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	rax, QWORD PTR [rbx+48]
+	mov	rcx, QWORD PTR [rax+r9]
+	mov	rdx, QWORD PTR [rcx+24]
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	mov	r11d, r15d
 	cmp	DWORD PTR [rdx], r15d
-	jle	SHORT $LN112@InitPlugin
+	jle	SHORT $LN140@InitPlugin
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	r10, r15
-$LL123@InitPlugin:
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
-	mov	rax, QWORD PTR [rdx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+	mov	r10, r15
+$LL151@InitPlugin:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 89   : 			mdel_DelayLines[i]->setDeltaDelayValue(depth*mdel_modValmsec);
 
 	movss	xmm0, DWORD PTR [rdx+48]
 	mulss	xmm0, DWORD PTR __real@3f000000
-	mov	rax, QWORD PTR [r10+rax]
-	movss	DWORD PTR [rax+124], xmm0
+	mov	rax, QWORD PTR [rdx+8]
+	mov	rcx, QWORD PTR [r10+rax]
+	movss	DWORD PTR [rcx+124], xmm0
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	add	r11d, r12d
-	add	r10, r13
+	lea	r10, QWORD PTR [r10+8]
 	cmp	r11d, DWORD PTR [rdx]
-	jl	SHORT $LL123@InitPlugin
-$LN112@InitPlugin:
-; File E:\prova\Shimmer\include\FDN.h
-
-; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
-
-	add	r9d, r12d
-	add	r8, r13
-	cmp	r9d, DWORD PTR [rdi+184]
-	jl	SHORT $LL114@InitPlugin
-$LN113@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 148  :     BranchReverb->setMixMode(MixMode::First);
-
-	mov	rax, QWORD PTR [rbx+296]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 421  : 		fdn_Mixer->setMixMode(mode); 
-
-	mov	rdx, QWORD PTR [rax+8]
-	mov	DWORD PTR [rdx+8], r12d
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 153  :     MasterReverb = new FDN(2, DEFAULT_NUMBER_OF_INTERNAL_CHANNELS_FDN, 2, NUMBER_OF_DIFFUSION_STEPS, 1);
-
-	mov	ecx, 320				; 00000140H
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T14[rsp], rax
-	mov	rcx, rax
-	call	??0FDN@@QEAA@HHHHH@Z			; FDN::FDN
-	npad	1
-	mov	QWORD PTR [rbx+304], rax
-
-; 154  : 
-; 155  :     // Initialize objects (allocate delay lines)
-; 156  :     MasterReverb->initialize(DIFFUSER_DELAY_BUFFER_SIZE_MS, FEEDBACK_DELAY_BUFFER_SIZE_MS, sampleRate);
-
-	mov	r9d, r14d
-	mov	rcx, rax
-	call	?initialize@FDN@@QEAAXMMHM@Z		; FDN::initialize
-
-; 157  : 
-; 158  :     // Set room size
-; 159  :     MasterReverb->setRoomSize(shim_roomSize);
-
-	movss	xmm1, DWORD PTR [rbx+252]
-	mov	rcx, QWORD PTR [rbx+304]
-	call	?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z ; FDN::setRoomSize
-
-; 160  : 
-; 161  :     // Set decay
-; 162  :     MasterReverb->setDecayInSeconds(shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
-
-	movss	xmm1, DWORD PTR [rbx+264]
-	mulss	xmm1, DWORD PTR __real@41f00000
-	mov	rcx, QWORD PTR [rbx+304]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 204  : 		fdn_decay = decaySeconds;
-
-	movss	DWORD PTR [rcx+296], xmm1
-
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
-
-	mulss	xmm1, DWORD PTR [rcx+300]
-	mov	rcx, QWORD PTR [rcx+72]
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-; File E:\prova\Shimmer\include\utils.h
-
-; 60   :     return minvalue + value * (maxValue - minvalue);
-
-	movss	xmm1, DWORD PTR ?MAX_DAMPING_FREQUENCY_LOG@@3MB
-	subss	xmm1, DWORD PTR ?MIN_DAMPING_FREQUENCY_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 165  :     MasterReverb->setDampingFrequency(exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG)));
-
-	subss	xmm7, DWORD PTR [rbx+268]
-; File E:\prova\Shimmer\include\utils.h
-
-; 60   :     return minvalue + value * (maxValue - minvalue);
-
-	mulss	xmm1, xmm7
-	addss	xmm1, DWORD PTR ?MIN_DAMPING_FREQUENCY_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 165  :     MasterReverb->setDampingFrequency(exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG)));
-
-	cvtps2pd xmm0, xmm1
-	call	QWORD PTR __imp_exp
-	xorps	xmm6, xmm6
-	cvtsd2ss xmm6, xmm0
-	mov	rdi, QWORD PTR [rbx+304]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 258  : 		fdn_Feedback->setDampingFrequency(freq);
-
-	mov	rbp, QWORD PTR [rdi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	mov	esi, r15d
-	cmp	DWORD PTR [rbp], r15d
-	jle	SHORT $LN137@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rdi, r15
-$LL138@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rbp+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 89   : 			mcf_DelayLines[i]->setCutoffFrequency(freq);
-
-	mov	rcx, QWORD PTR [rdi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-
-; 25   : 	lpcf_cutoffFreq = cutoffFreq;
-
-	movss	DWORD PTR [rcx+96], xmm6
-
-; 26   : 
-; 27   : 	// set LPF cutoff frequency to the inserted value
-; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
-
-	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
-
-; 68   : 		lpf_cutoffFreq = cutoffFreq;
-
-	movss	DWORD PTR [rcx+4], xmm6
-
-; 69   : 
-; 70   : 		// update lpf gains
-; 71   : 		updateGains();
-
-	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	add	esi, r12d
-	add	rdi, r13
-	cmp	esi, DWORD PTR [rbp]
-	jl	SHORT $LL138@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN137@InitPlugin:
-; File E:\prova\Shimmer\include\FDN.h
-
-; 263  : 		fdn_Feedback->setFilterType(type);
-
-	mov	rsi, QWORD PTR [rdi+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rsi], r15d
-	jle	SHORT $LN150@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rdi, r15
-$LL151@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rsi+40]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 94   : 			mcf_DelayLines[i]->setFilterType(type);
-
-	mov	rax, QWORD PTR [rdi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-
-; 32   : 	lpcf_feedbackLPF->setFilterType(type);
-
-	mov	rcx, QWORD PTR [rax+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
-
-; 76   : 		lpf_type = type;
-
-	mov	DWORD PTR [rcx], 6
-
-; 77   : 
-; 78   : 		// update lpf gains
-; 79   : 		updateGains();
-
-	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-
-; 93   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
-
-	add	ebp, r12d
-	add	rdi, r13
-	cmp	ebp, DWORD PTR [rsi]
 	jl	SHORT $LL151@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN150@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 169  :     MasterReverb->setLowPassFrequency(shim_lpf);
-
-	movss	xmm6, DWORD PTR [rbx+284]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN161@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rsi, r15
-$LL162@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+80]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 269  : 			fdn_LPFOutput[i]->setCutoffFrequency(freq);
-
-	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
-
-; 68   : 		lpf_cutoffFreq = cutoffFreq;
-
-	movss	DWORD PTR [rcx+4], xmm6
-
-; 69   : 
-; 70   : 		// update lpf gains
-; 71   : 		updateGains();
-
-	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
-
-; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL162@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN161@InitPlugin:
-
-; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN170@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rsi, r15
-$LL171@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+80]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 281  : 			fdn_LPFOutput[i]->setFilterType(type);
-
-	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
-
-; 76   : 		lpf_type = type;
-
-	mov	DWORD PTR [rcx], 2
-
-; 77   : 
-; 78   : 		// update lpf gains
-; 79   : 		updateGains();
-
-	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
-
-; 280  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL171@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN170@InitPlugin:
-
-; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN179@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rsi, r15
-$LL180@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+144]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 287  : 			fdn_HPFOutput[i]->setFilterType(type);
-
-	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
-
-; 76   : 		hpf_type = type;
-
-	mov	DWORD PTR [rcx], 2
-
-; 77   : 
-; 78   : 		// update hpf gains
-; 79   : 		updateGains();
-
-	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
-
-; 286  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL180@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN179@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 172  :     MasterReverb->setHighPassFrequency(shim_hpf);
-
-	movss	xmm6, DWORD PTR [rbx+288]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	mov	ebp, r15d
-	cmp	DWORD PTR [rdi+176], r15d
-	jle	SHORT $LN188@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rsi, r15
-$LL189@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+144]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 275  : 			fdn_HPFOutput[i]->setCutoffFrequency(freq);
-
-	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
-
-; 68   : 		hpf_cutoffFreq = cutoffFreq;
-
-	movss	DWORD PTR [rcx+4], xmm6
-
-; 69   : 
-; 70   : 		// update hpf gains
-; 71   : 		updateGains();
-
-	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
-
-; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
-
-	add	ebp, r12d
-	add	rsi, r13
-	cmp	ebp, DWORD PTR [rdi+176]
-	jl	SHORT $LL189@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN188@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 175  :     MasterReverb->setModDepth(shim_modDepth);
-
-	movss	xmm1, DWORD PTR [rbx+280]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
-
-	mov	r8d, r15d
-	cmp	DWORD PTR [rdi+172], r15d
-	jle	SHORT $LN197@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rdx, r15
-$LL198@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+104]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 236  : 			fdn_Modulation[i]->setModDepth(depth);	
-
-	mov	rcx, QWORD PTR [rdx+rax]
-; File E:\prova\Shimmer\include\Modulation.h
-
-; 62   : 		mod_depth = depth;
-
-	movss	DWORD PTR [rcx+168], xmm1
-
-; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
-
-	movaps	xmm0, xmm1
-	mulss	xmm0, DWORD PTR [rcx+172]
-	movss	DWORD PTR [rcx+124], xmm0
-; File E:\prova\Shimmer\include\FDN.h
-
-; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
-
-	add	r8d, r12d
-	add	rdx, r13
-	cmp	r8d, DWORD PTR [rdi+172]
-	jl	SHORT $LL198@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN197@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 176  :     MasterReverb->setModRate(shim_modRate);
-
-	movss	xmm2, DWORD PTR [rbx+276]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
-
-	mov	r8d, r15d
-	cmp	DWORD PTR [rdi+172], r15d
-	jle	SHORT $LN206@InitPlugin
-	movaps	xmm3, xmm2
-	mulss	xmm3, DWORD PTR __real@45800000
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	rdx, r15
-$LL207@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+104]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 230  : 			fdn_Modulation[i]->setModRate(rate);
-
-	mov	rcx, QWORD PTR [rdx+rax]
-; File E:\prova\Shimmer\include\Modulation.h
-
-; 67   : 		mod_rate = rate;
-
-	movss	DWORD PTR [rcx+164], xmm2
-; File E:\prova\Shimmer\include\ModDelay.h
-
-; 85   : 		mdly_rate = modRate;
-
-	movss	DWORD PTR [rcx+136], xmm2
-
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
-
-	mov	rax, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\LFO.h
-
-; 71   : 		lfo_frequency = frequency;
-
-	movss	DWORD PTR [rax], xmm2
-	movd	xmm0, DWORD PTR [rax+4]
-
-; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
-
-	cvtdq2ps xmm0, xmm0
-	movaps	xmm1, xmm3
-	divss	xmm1, xmm0
-	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\FDN.h
-
-; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
-
-	add	r8d, r12d
-	add	rdx, r13
-	cmp	r8d, DWORD PTR [rdi+172]
-	jl	SHORT $LL207@InitPlugin
-	mov	rdi, QWORD PTR [rbx+304]
-$LN206@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 179  :     MasterReverb->setStereoSpread(shim_spread);
-
-	movss	xmm1, DWORD PTR [rbx+272]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 292  : 		fdn_stereoSpread = spread;
-
-	movss	DWORD PTR [rdi+308], xmm1
+$LN140@InitPlugin:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
-	mov	edx, r15d
-	cmp	DWORD PTR [rdi+184], r15d
-	jle	SHORT $LN221@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	r8, r15
-$LL222@InitPlugin:
-
-; 1564 : #if _CONTAINER_DEBUG_LEVEL > 0
-; 1565 :         _STL_VERIFY(
-; 1566 :             _Pos < static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst), "vector subscript out of range");
-; 1567 : #endif // _CONTAINER_DEBUG_LEVEL > 0
-; 1568 : 
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rdi+48]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 294  : 			fdn_ModDiffuser[i]->setModDepth(spread);		
-
-	mov	rax, QWORD PTR [r8+rax]
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-
-; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
-
-	mov	rcx, QWORD PTR [rax+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	mov	r10d, r15d
-	cmp	DWORD PTR [rcx], r15d
-	jle	SHORT $LN220@InitPlugin
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1563 :         auto& _My_data = _Mypair._Myval2;
-
-	mov	r9, r15
-$LL231@InitPlugin:
-
-; 1569 :         return _My_data._Myfirst[_Pos];
-
-	mov	rax, QWORD PTR [rcx+8]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-
-; 89   : 			mdel_DelayLines[i]->setDeltaDelayValue(depth*mdel_modValmsec);
-
-	movaps	xmm0, xmm1
-	mulss	xmm0, DWORD PTR [rcx+48]
-	mov	rax, QWORD PTR [r9+rax]
-	movss	DWORD PTR [rax+124], xmm0
-
-; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
-
-	add	r10d, r12d
-	add	r9, r13
-	cmp	r10d, DWORD PTR [rcx]
-	jl	SHORT $LL231@InitPlugin
-$LN220@InitPlugin:
-; File E:\prova\Shimmer\include\FDN.h
-
-; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
-
-	add	edx, r12d
-	add	r8, r13
-	cmp	edx, DWORD PTR [rdi+184]
-	jl	SHORT $LL222@InitPlugin
-$LN221@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 182  :     MasterReverb->setMixMode(MixMode::First);
-
-	mov	rax, QWORD PTR [rbx+304]
-; File E:\prova\Shimmer\include\FDN.h
-
-; 421  : 		fdn_Mixer->setMixMode(mode); 
-
-	mov	rcx, QWORD PTR [rax+8]
-	mov	DWORD PTR [rcx+8], r12d
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 187  :     PitchShift_1octL = new PSMVocoder();
-
-	mov	edi, 491736				; 000780d8H
-	mov	ecx, edi
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T27[rsp], rax
-	mov	rcx, rax
-	call	??0PSMVocoder@@QEAA@XZ			; PSMVocoder::PSMVocoder
-	npad	1
-	mov	QWORD PTR [rbx+312], rax
-
-; 188  :     PitchShift_1octR = new PSMVocoder();
-
-	mov	ecx, edi
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T29[rsp], rax
-	mov	rcx, rax
-	call	??0PSMVocoder@@QEAA@XZ			; PSMVocoder::PSMVocoder
-	npad	1
-	mov	QWORD PTR [rbx+320], rax
-
-; 189  :     PitchShift_2octL = new PSMVocoder();
-
-	mov	ecx, edi
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T31[rsp], rax
-	mov	rcx, rax
-	call	??0PSMVocoder@@QEAA@XZ			; PSMVocoder::PSMVocoder
-	npad	1
-	mov	QWORD PTR [rbx+328], rax
-
-; 190  :     PitchShift_2octR = new PSMVocoder();
-
-	mov	ecx, edi
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	QWORD PTR $T33[rsp], rax
-	mov	rcx, rax
-	call	??0PSMVocoder@@QEAA@XZ			; PSMVocoder::PSMVocoder
-	npad	1
-	mov	QWORD PTR [rbx+336], rax
-
-; 191  :     // set sample rate
-; 192  :     PitchShift_1octL->reset((double)sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+312]
-	movd	xmm6, r14d
-	cvtdq2pd xmm6, xmm6
-	mov	rax, QWORD PTR [rcx]
-	movaps	xmm1, xmm6
-	call	QWORD PTR [rax]
-
-; 193  :     PitchShift_1octR->reset((double)sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+320]
-	mov	rax, QWORD PTR [rcx]
-	movaps	xmm1, xmm6
-	call	QWORD PTR [rax]
-
-; 194  :     PitchShift_2octL->reset((double)sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+328]
-	mov	rax, QWORD PTR [rcx]
-	movaps	xmm1, xmm6
-	call	QWORD PTR [rax]
-
-; 195  :     PitchShift_2octR->reset((double)sampleRate);
-
-	mov	rcx, QWORD PTR [rbx+336]
-	mov	rax, QWORD PTR [rcx]
-	movaps	xmm1, xmm6
-	call	QWORD PTR [rax]
-; File E:\prova\Shimmer\include\PSMVocoder.h
-
-; 1013 : 		return parameters;
-
-	mov	rcx, QWORD PTR [rbx+312]
-	movups	xmm6, XMMWORD PTR [rcx+8]
-	mov	rax, QWORD PTR [rbx+320]
-	movups	xmm0, XMMWORD PTR [rax+8]
-	movdqu	XMMWORD PTR params1R$[rsp], xmm0
-	mov	rax, QWORD PTR [rbx+328]
-	movups	xmm1, XMMWORD PTR [rax+8]
-	movdqu	XMMWORD PTR params2L$[rsp], xmm1
-	mov	rax, QWORD PTR [rbx+336]
-	movups	xmm0, XMMWORD PTR [rax+8]
-	movdqu	XMMWORD PTR params2R$[rsp], xmm0
-
-; 1022 : 		if (params.pitchShiftSemitones != parameters.pitchShiftSemitones)
-
-	lea	rdi, QWORD PTR [rcx+8]
-	ucomisd	xmm6, QWORD PTR [rdi]
-	je	SHORT $LN246@InitPlugin
-
-; 1023 : 		{
-; 1024 : 			setPitchShift(params.pitchShiftSemitones);
-
-	movaps	xmm1, xmm6
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-$LN246@InitPlugin:
-
-; 430  : 		if (this == &params)
-
-	lea	rax, QWORD PTR params1L$[rsp]
-	cmp	rdi, rax
-	je	SHORT $LN248@InitPlugin
-
-; 431  : 			return *this;
-; 432  : 
-; 433  : 		pitchShiftSemitones = params.pitchShiftSemitones;
-
-	movsd	QWORD PTR [rdi], xmm6
-
-; 434  : 		enablePeakPhaseLocking = params.enablePeakPhaseLocking;
-
-	mov	WORD PTR [rdi+8], 257			; 00000101H
-$LN248@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 211  :     PitchShift_1octR->setParameters(params1R);
-
-	mov	rcx, QWORD PTR [rbx+320]
-; File E:\prova\Shimmer\include\PSMVocoder.h
-
-; 1022 : 		if (params.pitchShiftSemitones != parameters.pitchShiftSemitones)
-
-	lea	rdi, QWORD PTR [rcx+8]
-	movsd	xmm6, QWORD PTR params1R$[rsp]
-	ucomisd	xmm6, QWORD PTR [rdi]
-	je	SHORT $LN252@InitPlugin
-
-; 1023 : 		{
-; 1024 : 			setPitchShift(params.pitchShiftSemitones);
-
-	movaps	xmm1, xmm6
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-$LN252@InitPlugin:
-
-; 430  : 		if (this == &params)
-
-	lea	rax, QWORD PTR params1R$[rsp]
-	cmp	rdi, rax
-	je	SHORT $LN254@InitPlugin
-
-; 431  : 			return *this;
-; 432  : 
-; 433  : 		pitchShiftSemitones = params.pitchShiftSemitones;
-
-	movsd	QWORD PTR [rdi], xmm6
-
-; 434  : 		enablePeakPhaseLocking = params.enablePeakPhaseLocking;
-
-	mov	WORD PTR [rdi+8], 257			; 00000101H
-$LN254@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 212  :     PitchShift_2octL->setParameters(params2L);
-
-	mov	rcx, QWORD PTR [rbx+328]
-; File E:\prova\Shimmer\include\PSMVocoder.h
-
-; 1022 : 		if (params.pitchShiftSemitones != parameters.pitchShiftSemitones)
-
-	lea	rdi, QWORD PTR [rcx+8]
-	movsd	xmm6, QWORD PTR params2L$[rsp]
-	ucomisd	xmm6, QWORD PTR [rdi]
-	je	SHORT $LN258@InitPlugin
-
-; 1023 : 		{
-; 1024 : 			setPitchShift(params.pitchShiftSemitones);
-
-	movaps	xmm1, xmm6
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-$LN258@InitPlugin:
-
-; 430  : 		if (this == &params)
-
-	lea	rax, QWORD PTR params2L$[rsp]
-	cmp	rdi, rax
-	je	SHORT $LN260@InitPlugin
-
-; 431  : 			return *this;
-; 432  : 
-; 433  : 		pitchShiftSemitones = params.pitchShiftSemitones;
-
-	movsd	QWORD PTR [rdi], xmm6
-
-; 434  : 		enablePeakPhaseLocking = params.enablePeakPhaseLocking;
-
-	mov	WORD PTR [rdi+8], 257			; 00000101H
-$LN260@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 213  :     PitchShift_2octR->setParameters(params2R);
-
-	mov	rcx, QWORD PTR [rbx+336]
-; File E:\prova\Shimmer\include\PSMVocoder.h
-
-; 1022 : 		if (params.pitchShiftSemitones != parameters.pitchShiftSemitones)
-
-	lea	rdi, QWORD PTR [rcx+8]
-	movsd	xmm6, QWORD PTR params2R$[rsp]
-	ucomisd	xmm6, QWORD PTR [rdi]
-	je	SHORT $LN264@InitPlugin
-
-; 1023 : 		{
-; 1024 : 			setPitchShift(params.pitchShiftSemitones);
-
-	movaps	xmm1, xmm6
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-$LN264@InitPlugin:
-
-; 430  : 		if (this == &params)
-
-	lea	rax, QWORD PTR params2R$[rsp]
-	cmp	rdi, rax
-	je	SHORT $LN266@InitPlugin
-
-; 431  : 			return *this;
-; 432  : 
-; 433  : 		pitchShiftSemitones = params.pitchShiftSemitones;
-
-	movsd	QWORD PTR [rdi], xmm6
-
-; 434  : 		enablePeakPhaseLocking = params.enablePeakPhaseLocking;
-
-	mov	WORD PTR [rdi+8], 257			; 00000101H
-$LN266@InitPlugin:
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 215  :     PitchShift_1octL->setPitchShift(12.0);
-
-	movsd	xmm1, QWORD PTR __real@4028000000000000
-	mov	rcx, QWORD PTR [rbx+312]
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-
-; 216  :     PitchShift_1octR->setPitchShift(12.0);
-
-	movsd	xmm1, QWORD PTR __real@4028000000000000
-	mov	rcx, QWORD PTR [rbx+320]
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-
-; 217  :     PitchShift_2octL->setPitchShift(24.0);
-
-	movsd	xmm1, QWORD PTR __real@4038000000000000
-	mov	rcx, QWORD PTR [rbx+328]
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-
-; 218  :     PitchShift_2octR->setPitchShift(24.0);
-
-	movsd	xmm1, QWORD PTR __real@4038000000000000
-	mov	rcx, QWORD PTR [rbx+336]
-
-; 219  : }
-
-	lea	r11, QWORD PTR [rsp+144]
+	add	r8d, r12d
+	add	r9, 8
+	cmp	r8d, DWORD PTR [rbx+184]
+	jl	SHORT $LL142@InitPlugin
+$LN141@InitPlugin:
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 168  : }
+
+	lea	r11, QWORD PTR [rsp+96]
 	mov	rbx, QWORD PTR [r11+56]
 	mov	rbp, QWORD PTR [r11+64]
-	mov	rsi, QWORD PTR [r11+72]
-	movaps	xmm6, XMMWORD PTR [r11-16]
-	movaps	xmm7, XMMWORD PTR [rsp+112]
+	movaps	xmm6, XMMWORD PTR [rsp+80]
 	mov	rsp, r11
 	pop	r15
 	pop	r14
-	pop	r13
 	pop	r12
 	pop	rdi
-
-; 218  :     PitchShift_2octR->setPitchShift(24.0);
-
-	jmp	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
+	pop	rsi
+	ret	0
 ?InitPlugin@Shimmer@@AEAAXXZ ENDP			; Shimmer::InitPlugin
 _TEXT	ENDS
 ;	COMDAT text$x
 text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$0@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -37260,131 +36329,71 @@ this$ = 192
 	pop	rbp
 	ret	0
 ?dtor$0@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$0
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$1@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 320				; 00000140H
-	mov	rcx, QWORD PTR $T14[rbp]
+	mov	rcx, QWORD PTR $T6[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
 ?dtor$1@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$1
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$2@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T27[rbp]
+	mov	rcx, QWORD PTR $T11[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
 ?dtor$2@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$2
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T29[rbp]
+	mov	rcx, QWORD PTR $T13[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
 	ret	0
 ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$3
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
-?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$4
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T31[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$4
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
-?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$5
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T33[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$5
 text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$0@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$0
 	push	rbp
 	sub	rsp, 32					; 00000020H
@@ -37400,23 +36409,19 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$1@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$1
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 320				; 00000140H
-	mov	rcx, QWORD PTR $T14[rbp]
+	mov	rcx, QWORD PTR $T6[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -37426,23 +36431,19 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$2@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$2
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T27[rbp]
+	mov	rcx, QWORD PTR $T11[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -37452,23 +36453,19 @@ text$x	ENDS
 ; Function compile flags: /Ogspy
 ;	COMDAT text$x
 text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
+params2$ = 48
+params1$ = 64
+$T13 = 144
+$T11 = 144
+$T6 = 144
+$T1 = 144
+this$ = 144
 ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$3
 	push	rbp
 	sub	rsp, 32					; 00000020H
 	mov	rbp, rdx
 	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T29[rbp]
+	mov	rcx, QWORD PTR $T13[rbp]
 	call	??3@YAXPEAX_K@Z				; operator delete
 	add	rsp, 32					; 00000020H
 	pop	rbp
@@ -37476,66 +36473,14 @@ this$ = 192
 ?dtor$3@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$3
 text$x	ENDS
 ; Function compile flags: /Ogspy
-;	COMDAT text$x
-text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
-?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$4
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T31[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$4@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$4
-text$x	ENDS
-; Function compile flags: /Ogspy
-;	COMDAT text$x
-text$x	SEGMENT
-params1R$ = 48
-params2L$ = 64
-params2R$ = 80
-params1L$ = 96
-$T33 = 192
-$T31 = 192
-$T29 = 192
-$T27 = 192
-$T14 = 192
-$T1 = 192
-this$ = 192
-?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA PROC	; `Shimmer::InitPlugin'::`1'::dtor$5
-	push	rbp
-	sub	rsp, 32					; 00000020H
-	mov	rbp, rdx
-	mov	edx, 491736				; 000780d8H
-	mov	rcx, QWORD PTR $T33[rbp]
-	call	??3@YAXPEAX_K@Z				; operator delete
-	add	rsp, 32					; 00000020H
-	pop	rbp
-	ret	0
-?dtor$5@?0??InitPlugin@Shimmer@@AEAAXXZ@4HA ENDP	; `Shimmer::InitPlugin'::`1'::dtor$5
-text$x	ENDS
-; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?setSampleRate@Shimmer@@UEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
 sampleRate$ = 72
 ?setSampleRate@Shimmer@@UEAAXM@Z PROC			; Shimmer::setSampleRate, COMDAT
 
-; 225  : {
+; 174  : {
 
 $LN4:
 	mov	QWORD PTR [rsp+8], rbx
@@ -37545,27 +36490,27 @@ $LN4:
 	movaps	XMMWORD PTR [rsp+32], xmm6
 	movaps	xmm6, xmm1
 
-; 226  :     // Call AudioEffect "setSampleRate" method
-; 227  :     AudioEffect::setSampleRate(sampleRate);
+; 175  :     // Call AudioEffect "setSampleRate" method
+; 176  :     AudioEffect::setSampleRate(sampleRate);
 
 	movss	DWORD PTR [rcx+24], xmm6
 
-; 228  : 
-; 229  :     // Call setSampleRate on every needed module
-; 230  :     BranchReverb->setSampleRate(sampleRate);
+; 177  : 
+; 178  :     // Call setSampleRate on every needed module
+; 179  :     BranchReverb->setSampleRate(sampleRate);
 
 	mov	rcx, QWORD PTR [rcx+296]
 	cvttss2si ebx, xmm6
 	mov	edx, ebx
 	call	?setSampleRate@FDN@@QEAAXH@Z		; FDN::setSampleRate
 
-; 231  :     MasterReverb->setSampleRate(sampleRate);
+; 180  :     MasterReverb->setSampleRate(sampleRate);
 
 	mov	rcx, QWORD PTR [rdi+304]
 	mov	edx, ebx
 	call	?setSampleRate@FDN@@QEAAXH@Z		; FDN::setSampleRate
 
-; 232  :     PitchShift_1octL->reset(sampleRate);
+; 181  :     PitchShift_1oct->reset(sampleRate);
 
 	mov	rcx, QWORD PTR [rdi+312]
 	cvtss2sd xmm6, xmm6
@@ -37573,335 +36518,290 @@ $LN4:
 	movaps	xmm1, xmm6
 	call	QWORD PTR [rax]
 
-; 233  :     PitchShift_1octR->reset(sampleRate);
+; 182  :     PitchShift_2oct->reset(sampleRate);
 
 	mov	rcx, QWORD PTR [rdi+320]
 	movaps	xmm1, xmm6
 	mov	rax, QWORD PTR [rcx]
-	call	QWORD PTR [rax]
 
-; 234  :     PitchShift_2octL->reset(sampleRate);
-
-	mov	rcx, QWORD PTR [rdi+328]
-	movaps	xmm1, xmm6
-	mov	rax, QWORD PTR [rcx]
-	call	QWORD PTR [rax]
-
-; 235  :     PitchShift_2octR->reset(sampleRate);
-
-	mov	rcx, QWORD PTR [rdi+336]
-	movaps	xmm1, xmm6
-	mov	rax, QWORD PTR [rcx]
-
-; 236  : }
+; 183  : }
 
 	mov	rbx, QWORD PTR [rsp+64]
 	movaps	xmm6, XMMWORD PTR [rsp+32]
 	add	rsp, 48					; 00000030H
 	pop	rdi
 
-; 235  :     PitchShift_2octR->reset(sampleRate);
+; 182  :     PitchShift_2oct->reset(sampleRate);
 
 	rex_jmp	QWORD PTR [rax]
 ?setSampleRate@Shimmer@@UEAAXM@Z ENDP			; Shimmer::setSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z
 _TEXT	SEGMENT
-pitch_summed_output$1 = 32
-mast_rev_in$2 = 40
-this$ = 176
-bran_rev_out$3 = 184
-inputs$ = 184
-mast_rev_out$4 = 192
-outputs$ = 192
-sampleFrames$ = 200
+mast_rev_in$1 = 32
+this$ = 144
+bran_rev_out$2 = 152
+inputs$ = 152
+mast_rev_out$3 = 160
+outputs$ = 160
+pitchOut$4 = 168
+sampleFrames$ = 168
 ?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z PROC	; Shimmer::processReplacing, COMDAT
 
-; 243  : {
+; 190  : {
 
 $LN12:
 
-; 250  : 
-; 251  :     // Cycle over the sample frames number
-; 252  :     for (int i = 0; i < sampleFrames; i++) {
+; 197  : 
+; 198  :     // write input to file
+; 199  :     //string pre = "test_input.txt";
+; 200  :     //WriteBufferToFile(inputs, sampleFrames, pre); 
+; 201  :     
+; 202  :     // Cycle over the sample frames number
+; 203  :     for (int i = 0; i < sampleFrames; i++) {
 
 	test	r9d, r9d
 	jle	$LN10@processRep
-	mov	rax, rsp
-	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+32], rsi
 	push	rbp
+	push	rbx
+	push	rsi
 	push	rdi
 	push	r13
 	push	r14
 	push	r15
 	mov	rbp, rsp
-	sub	rsp, 128				; 00000080H
+	sub	rsp, 80					; 00000050H
 
-; 244  :     // Extract input and output buffers
-; 245  :     float* inL = inputs[0]; // buffer input left
+; 191  :     // Extract input and output buffers
+; 192  :     float* inL = inputs[0]; // buffer input left
 
 	mov	rbx, QWORD PTR [rdx]
 	mov	r13, rcx
 
-; 246  :     float* inR = inputs[1]; // buffer input right
+; 193  :     float* inR = inputs[1]; // buffer input right
 
 	mov	rdi, QWORD PTR [rdx+8]
 
-; 247  : 
-; 248  :     float* outL = outputs[0]; // buffer output left
+; 194  : 
+; 195  :     float* outL = outputs[0]; // buffer output left
 
 	mov	rsi, QWORD PTR [r8]
 	sub	rdi, rbx
 
-; 249  :     float* outR = outputs[1]; // buffer output right
+; 196  :     float* outR = outputs[1]; // buffer output right
 
 	mov	r14, QWORD PTR [r8+8]
 	sub	rsi, rbx
-	movaps	XMMWORD PTR [rax-56], xmm6
+	movaps	XMMWORD PTR [rsp+64], xmm6
 
-; 253  : 
-; 254  :         // Create tmp arrays for processing
-; 255  :         float pitch_input[2] = {inL[i], inR[i]};
+; 204  : 
+; 205  :         // Create tmp arrays for processing
+; 206  :         float pitchIn = (inL[i] + inR[i]) / 2;
 
 	sub	r14, rbx
-	movaps	XMMWORD PTR [rax-72], xmm7
-	movaps	XMMWORD PTR [rax-88], xmm8
-	movaps	XMMWORD PTR [rax-104], xmm9
-	movaps	XMMWORD PTR [rax-120], xmm10
+	movaps	XMMWORD PTR [rsp+48], xmm7
 	movsxd	r15, r9d
 $LL4@processRep:
+	movss	xmm0, DWORD PTR [rbx]
+	addss	xmm0, DWORD PTR [rdi+rbx]
 
-; 256  :         float pitch_output_1oct[2] = { 0.0, 0.0 };
-; 257  :         float pitch_output_2oct[2] = { 0.0, 0.0 };        
-; 258  :         float pitch_summed_output[2] = { pitch_input[0], pitch_input[1] };
-; 259  :         float bran_rev_out[2] = { 0.0, 0.0 };
-; 260  :         float mast_rev_out[2] = { 0.0, 0.0 };
-; 261  :         float mast_rev_in[2];
-; 262  : 
-; 263  :         // --- Pitch Shifting        
-; 264  :         // Process pitch shifting 1 octave
-; 265  :         pitch_output_1oct[0] = PitchShift_1octL->processAudioSample(pitch_input[0]);
+; 207  :         double pitchOut1 = 0.0;
+; 208  :         double pitchOut2 = 0.0;
+; 209  :         float pitchOut;
+; 210  :         float bran_rev_out[2] = { 0.0, 0.0 };
+; 211  :         float mast_rev_out[2] = { 0.0, 0.0 };
+; 212  :         float mast_rev_in[2];
+; 213  : 
+; 214  :         // --- Pitch Shifting        
+; 215  :         // Process pitch shifting 1 octave
+; 216  :         pitchOut1 = PitchShift_1oct->processAudioSample(pitchIn);
 
-	movss	xmm8, DWORD PTR [rbx]
 	mov	rcx, QWORD PTR [r13+312]
-	movss	xmm6, DWORD PTR [rdi+rbx]
-	and	DWORD PTR bran_rev_out$3[rbp-128], 0
-	and	DWORD PTR bran_rev_out$3[rbp-124], 0
+	and	DWORD PTR bran_rev_out$2[rbp-80], 0
+	and	DWORD PTR bran_rev_out$2[rbp-76], 0
+	and	DWORD PTR mast_rev_out$3[rbp-80], 0
+	mulss	xmm0, DWORD PTR __real@3f000000
 	mov	rax, QWORD PTR [rcx]
-	and	DWORD PTR mast_rev_out$4[rbp-128], 0
-	and	DWORD PTR mast_rev_out$4[rbp-124], 0
-	cvtps2pd xmm8, xmm8
-	movaps	xmm1, xmm8
+	and	DWORD PTR mast_rev_out$3[rbp-76], 0
+	cvtps2pd xmm6, xmm0
+	movaps	xmm1, xmm6
 	call	QWORD PTR [rax+8]
 
-; 266  :         pitch_output_1oct[1] = PitchShift_1octR->processAudioSample(pitch_input[1]);
+; 217  : 
+; 218  :         // Process pitch shifting 2 octaves
+; 219  :         pitchOut2 = PitchShift_2oct->processAudioSample(pitchIn);
 
 	mov	rcx, QWORD PTR [r13+320]
-	xorps	xmm9, xmm9
-	cvtps2pd xmm7, xmm6
-	mov	rax, QWORD PTR [rcx]
-	cvtsd2ss xmm9, xmm0
-	movaps	xmm1, xmm7
-	call	QWORD PTR [rax+8]
-
-; 267  : 
-; 268  :         // Process pitch shifting 2 octaves
-; 269  :         pitch_output_2oct[0] = PitchShift_2octL->processAudioSample(pitch_input[0]);
-
-	mov	rcx, QWORD PTR [r13+328]
-	xorps	xmm10, xmm10
-	movaps	xmm1, xmm8
-	cvtsd2ss xmm10, xmm0
+	movaps	xmm1, xmm6
+	movaps	xmm7, xmm0
 	mov	rax, QWORD PTR [rcx]
 	call	QWORD PTR [rax+8]
 
-; 270  :         pitch_output_2oct[1] = PitchShift_2octR->processAudioSample(pitch_input[1]);
+; 220  : 
+; 221  :         // Sum outputs
+; 222  :         pitchOut = _mixP1 * (float)pitchOut1 + _mixP2 * (float)pitchOut2;
+; 223  :               
+; 224  :         // --- Branch Reverb        
+; 225  :         BranchReverb->processAudio(&pitchOut, bran_rev_out);
 
-	mov	rcx, QWORD PTR [r13+336]
-	xorps	xmm6, xmm6
-	movaps	xmm1, xmm7
-	cvtsd2ss xmm6, xmm0
-	mov	rax, QWORD PTR [rcx]
-	call	QWORD PTR [rax+8]
-
-; 271  : 
-; 272  :         // Sum outputs
-; 273  :         pitch_summed_output[0] = _mixP1 * pitch_output_1oct[0] + _mixP2 * pitch_output_2oct[0];
-
-	movss	xmm4, DWORD PTR [r13+356]
-
-; 274  :         pitch_summed_output[1] = _mixP1 * pitch_output_1oct[1] + _mixP2 * pitch_output_2oct[1];
-; 275  :               
-; 276  :         // --- Branch Reverb        
-; 277  :         BranchReverb->processAudio(pitch_summed_output, bran_rev_out);
-
-	lea	r8, QWORD PTR bran_rev_out$3[rbp-128]
-	movss	xmm3, DWORD PTR [r13+352]
-	lea	rdx, QWORD PTR pitch_summed_output$1[rbp-128]
 	mov	rcx, QWORD PTR [r13+296]
-	movaps	xmm1, xmm3
+	lea	r8, QWORD PTR bran_rev_out$2[rbp-80]
 	xorps	xmm2, xmm2
-	mulss	xmm1, xmm9
+	lea	rdx, QWORD PTR pitchOut$4[rbp-80]
+	xorps	xmm1, xmm1
 	cvtsd2ss xmm2, xmm0
-	movaps	xmm0, xmm4
-	mulss	xmm3, xmm10
-	mulss	xmm4, xmm2
-	mulss	xmm0, xmm6
-	addss	xmm4, xmm3
-	addss	xmm1, xmm0
-	movss	DWORD PTR pitch_summed_output$1[rbp-124], xmm4
-	movss	DWORD PTR pitch_summed_output$1[rbp-128], xmm1
+	cvtsd2ss xmm1, xmm7
+	mulss	xmm2, DWORD PTR [r13+340]
+	mulss	xmm1, DWORD PTR [r13+336]
+	addss	xmm2, xmm1
+	movss	DWORD PTR pitchOut$4[rbp-80], xmm2
 	call	?processAudio@FDN@@QEAAXPEAM0@Z		; FDN::processAudio
 
-; 278  : 
-; 279  :         // --- Master Reverb        
-; 280  :         // Mix branch reverb output with dry input
-; 281  :         mast_rev_in[0] = shim_shimmer * bran_rev_out[0] + (1 - shim_shimmer) * inL[i];
+; 226  : 
+; 227  :         // --- Master Reverb        
+; 228  :         // Mix branch reverb output with dry input
+; 229  :         mast_rev_in[0] = shim_shimmer * bran_rev_out[0] + (1 - shim_shimmer) * inL[i];
 
-	movss	xmm3, DWORD PTR [r13+256]
+	movss	xmm2, DWORD PTR [r13+256]
 
-; 282  :         mast_rev_in[1] = shim_shimmer * bran_rev_out[1] + (1 - shim_shimmer) * inR[i];
-; 283  : 
-; 284  :         // Process master reverb        
-; 285  :         MasterReverb->processAudio(mast_rev_in, mast_rev_out);        
+; 230  :         mast_rev_in[1] = shim_shimmer * bran_rev_out[1] + (1 - shim_shimmer) * inR[i];
+; 231  : 
+; 232  :         // Process master reverb        
+; 233  :         MasterReverb->processAudio(mast_rev_in, mast_rev_out);        
 
-	lea	r8, QWORD PTR mast_rev_out$4[rbp-128]
-	movss	xmm2, DWORD PTR __real@3f800000
-	lea	rdx, QWORD PTR mast_rev_in$2[rbp-128]
+	lea	r8, QWORD PTR mast_rev_out$3[rbp-80]
+	movss	xmm3, DWORD PTR __real@3f800000
+	lea	rdx, QWORD PTR mast_rev_in$1[rbp-80]
 	mov	rcx, QWORD PTR [r13+304]
-	subss	xmm2, xmm3
-	movaps	xmm0, xmm3
-	mulss	xmm3, DWORD PTR bran_rev_out$3[rbp-124]
-	mulss	xmm0, DWORD PTR bran_rev_out$3[rbp-128]
-	movaps	xmm1, xmm2
-	mulss	xmm2, DWORD PTR [rdi+rbx]
+	subss	xmm3, xmm2
+	movaps	xmm0, xmm2
+	mulss	xmm2, DWORD PTR bran_rev_out$2[rbp-76]
+	mulss	xmm0, DWORD PTR bran_rev_out$2[rbp-80]
+	movaps	xmm1, xmm3
+	mulss	xmm3, DWORD PTR [rdi+rbx]
 	mulss	xmm1, DWORD PTR [rbx]
 	addss	xmm3, xmm2
 	addss	xmm1, xmm0
-	movss	DWORD PTR mast_rev_in$2[rbp-124], xmm3
-	movss	DWORD PTR mast_rev_in$2[rbp-128], xmm1
+	movss	DWORD PTR mast_rev_in$1[rbp-76], xmm3
+	movss	DWORD PTR mast_rev_in$1[rbp-80], xmm1
 	call	?processAudio@FDN@@QEAAXPEAM0@Z		; FDN::processAudio
 
-; 286  : 
-; 287  :         // Stereo spread processing + output allocation
-; 288  :         outL[i] = _wet * mast_rev_out[0] + _dry * inL[i];
+; 234  : 
+; 235  :         // Stereo spread processing + output allocation
+; 236  :         outL[i] = _wet * mast_rev_out[0] + _dry * inL[i];
 
-	movss	xmm0, DWORD PTR [r13+348]
-	mulss	xmm0, DWORD PTR [rbx]
-	movss	xmm1, DWORD PTR mast_rev_out$4[rbp-128]
-	mulss	xmm1, DWORD PTR [r13+344]
+	movss	xmm1, DWORD PTR [rbx]
+	mulss	xmm1, DWORD PTR [r13+332]
+	movss	xmm0, DWORD PTR mast_rev_out$3[rbp-80]
+	mulss	xmm0, DWORD PTR [r13+328]
 
-; 289  :         outR[i] = _wet * mast_rev_out[1] + _dry * inR[i];
+; 237  :         outR[i] = _wet * mast_rev_out[1] + _dry * inR[i];
 
-	movss	xmm2, DWORD PTR mast_rev_out$4[rbp-124]
+	movss	xmm2, DWORD PTR mast_rev_out$3[rbp-76]
 	addss	xmm1, xmm0
 	movss	DWORD PTR [rsi+rbx], xmm1
-	movss	xmm0, DWORD PTR [rdi+rbx]
-	mulss	xmm0, DWORD PTR [r13+348]
-	mulss	xmm2, DWORD PTR [r13+344]
+	movss	xmm0, DWORD PTR [r13+332]
+	mulss	xmm0, DWORD PTR [rdi+rbx]
+	mulss	xmm2, DWORD PTR [r13+328]
 	addss	xmm2, xmm0
 	movss	DWORD PTR [r14+rbx], xmm2
 	add	rbx, 4
 	sub	r15, 1
 	jne	$LL4@processRep
 
-; 290  :     }
-; 291  : }
+; 238  :     }
+; 239  : 
+; 240  :    // Write samples to file
+; 241  :    //string post = "test_output.txt";
+; 242  :    //WriteBufferToFile(outputs, sampleFrames, post);
+; 243  : 
+; 244  : }
 
-	movaps	xmm6, XMMWORD PTR [rsp+112]
-	lea	r11, QWORD PTR [rsp+128]
-	mov	rbx, QWORD PTR [r11+48]
-	mov	rsi, QWORD PTR [r11+72]
-	movaps	xmm8, XMMWORD PTR [r11-48]
-	movaps	xmm9, XMMWORD PTR [r11-64]
-	movaps	xmm10, XMMWORD PTR [r11-80]
-	movaps	xmm7, XMMWORD PTR [rsp+96]
-	mov	rsp, r11
+	movaps	xmm6, XMMWORD PTR [rsp+64]
+	movaps	xmm7, XMMWORD PTR [rsp+48]
+	add	rsp, 80					; 00000050H
 	pop	r15
 	pop	r14
 	pop	r13
 	pop	rdi
+	pop	rsi
+	pop	rbx
 	pop	rbp
 $LN10@processRep:
 	ret	0
 ?processReplacing@Shimmer@@UEAAXPEAPEAM0H@Z ENDP	; Shimmer::processReplacing
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\HighPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\ModDelay.h
-; File E:\prova\Shimmer\include\LFO.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\Modulation.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
-; File E:\prova\Shimmer\include\FDN.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?setParameter@Shimmer@@UEAAXHM@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -37909,9 +36809,9 @@ index$ = 88
 value$ = 96
 ?setParameter@Shimmer@@UEAAXHM@Z PROC			; Shimmer::setParameter, COMDAT
 
-; 301  : {
+; 254  : {
 
-$LN152:
+$LN150:
 	mov	rax, rsp
 	mov	QWORD PTR [rax+8], rbx
 	mov	QWORD PTR [rax+16], rbp
@@ -37923,7 +36823,7 @@ $LN152:
 	movaps	xmm6, xmm2
 	mov	rsi, rcx
 
-; 302  :     switch (index) {
+; 255  :     switch (index) {
 
 	cmp	edx, 5
 	jg	$LN18@setParamet
@@ -37937,27 +36837,27 @@ $LN152:
 	sub	edx, 1
 	je	$LN6@setParamet
 	cmp	edx, 1
-	jne	$LN53@setParamet
+	jne	$LN51@setParamet
 
-; 334  :         break;
-; 335  :     }
-; 336  :     case Param_shimIntrvals: {        
-; 337  :         if (value == 1)
+; 287  :         break;
+; 288  :     }
+; 289  :     case Param_intervals: {        
+; 290  :         if (value == 1)
 
 	ucomiss	xmm6, DWORD PTR __real@3f800000
 	jne	SHORT $LN11@setParamet
 
-; 338  :             value = 0.99; // if value = 1, then pitIdx = NUM_OF_PITCH_INTRVL_ALLOWED + 1 -> outside of array boundaries
+; 291  :             value = 0.99; // if value = 1, then pitIdx = NUM_OF_PITCH_INTRVL_ALLOWED + 1 -> outside of array boundaries
 
 	movss	xmm6, DWORD PTR __real@3f7d70a4
 $LN11@setParamet:
 
-; 339  :         shim_intervals = value;
+; 292  :         shim_intervals = value;
 
 	movss	DWORD PTR [rcx+260], xmm6
 
-; 340  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
-; 341  :         PitchShift_1octL->setPitchShift(INTERVALS_IN_SEMITONES_PITCH1[pitIdx]);
+; 293  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
+; 294  :         PitchShift_1oct->setPitchShift(INTERVALS_IN_SEMITONES_PITCH1[pitIdx]);
 
 	lea	rbp, OFFSET FLAT:__ImageBase
 	mulss	xmm6, DWORD PTR __real@41200000
@@ -37967,217 +36867,201 @@ $LN11@setParamet:
 	movss	xmm1, DWORD PTR ?INTERVALS_IN_SEMITONES_PITCH1@@3QBMB[rbp+rbx*4]
 	cvtps2pd xmm1, xmm1
 	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-	movss	xmm1, DWORD PTR ?INTERVALS_IN_SEMITONES_PITCH1@@3QBMB[rbp+rbx*4]
+	movss	xmm1, DWORD PTR ?INTERVALS_IN_SEMITONES_PITCH2@@3QBMB[rbp+rbx*4]
 
-; 342  :         PitchShift_1octR->setPitchShift(INTERVALS_IN_SEMITONES_PITCH1[pitIdx]);
+; 295  :         PitchShift_2oct->setPitchShift(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
 
 	mov	rcx, QWORD PTR [rsi+320]
-	cvtps2pd xmm1, xmm1
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-	movss	xmm1, DWORD PTR ?INTERVALS_IN_SEMITONES_PITCH2@@3QBMB[rbp+rbx*4]
-
-; 343  :         PitchShift_2octL->setPitchShift(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
-
-	mov	rcx, QWORD PTR [rsi+328]
-	cvtps2pd xmm1, xmm1
-	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
-	movss	xmm1, DWORD PTR ?INTERVALS_IN_SEMITONES_PITCH2@@3QBMB[rbp+rbx*4]
-
-; 344  :         PitchShift_2octR->setPitchShift(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
-
-	mov	rcx, QWORD PTR [rsi+336]
 	cvtps2pd xmm1, xmm1
 	call	?setPitchShift@PSMVocoder@@QEAAXN@Z	; PSMVocoder::setPitchShift
 	xorps	xmm0, xmm0
 
 ; 67   :     _mixP1 = 1.0;
 
-	mov	QWORD PTR [rsi+352], 1065353216		; 3f800000H
+	mov	QWORD PTR [rsi+336], 1065353216		; 3f800000H
 
 ; 68   :     _mixP2 = 0.0;
 ; 69   :     if (pitch2 != 0.0) {
 
 	ucomiss	xmm0, DWORD PTR ?INTERVALS_IN_SEMITONES_PITCH2@@3QBMB[rbp+rbx*4]
-	je	$LN53@setParamet
+	je	$LN51@setParamet
 
 ; 70   :         _mixP1 = 0.5;
 
 	mov	eax, 1056964608				; 3f000000H
-	mov	DWORD PTR [rsi+352], eax
+	mov	DWORD PTR [rsi+336], eax
 
 ; 71   :         _mixP2 = 0.5;
 
-	mov	DWORD PTR [rsi+356], eax
+	mov	DWORD PTR [rsi+340], eax
 
-; 345  :         updateMixPitchShifters(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
-; 346  :         break;
+; 296  :         updateMixPitchShifters(INTERVALS_IN_SEMITONES_PITCH2[pitIdx]);
+; 297  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN6@setParamet:
 
-; 313  :     }
-; 314  :     case Param_shimmer: {
-; 315  :         shim_shimmer = value;
+; 266  :     }
+; 267  :     case Param_shimmer: {
+; 268  :         shim_shimmer = value;
 
 	movss	DWORD PTR [rcx+256], xmm6
 
-; 316  :         break;
+; 269  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN7@setParamet:
 
-; 317  :     }
-; 318  :     case Param_decay: {
-; 319  :         shim_decay = value;
+; 270  :     }
+; 271  :     case Param_decay: {
+; 272  :         shim_decay = value;
 
 	movss	DWORD PTR [rcx+264], xmm6
 
-; 320  :         BranchReverb->setDecayInSeconds(0.25 * shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
+; 273  :         BranchReverb->setDecayInSeconds(0.25 * shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
 
-	mov	rcx, QWORD PTR [rcx+296]
 	mulss	xmm6, DWORD PTR __real@40f00000
-; File E:\prova\Shimmer\include\FDN.h
-
-; 204  : 		fdn_decay = decaySeconds;
-
-	movss	DWORD PTR [rcx+296], xmm6
-
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
-
-	mulss	xmm6, DWORD PTR [rcx+300]
-	mov	rcx, QWORD PTR [rcx+72]
+	mov	rcx, QWORD PTR [rcx+296]
 	movaps	xmm1, xmm6
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-; File E:\prova\Shimmer\Shimmer.cpp
+	call	?setDecayInSeconds@FDN@@QEAAXM@Z	; FDN::setDecayInSeconds
 
-; 321  :         MasterReverb->setDecayInSeconds(shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
+; 274  :         MasterReverb->setDecayInSeconds(shim_decay * MAX_REVERB_DECAY_IN_SECONDS);
 
-	mov	rcx, QWORD PTR [rsi+304]
 	movss	xmm1, DWORD PTR [rsi+264]
 	mulss	xmm1, DWORD PTR __real@41f00000
-; File E:\prova\Shimmer\include\FDN.h
+	mov	rcx, QWORD PTR [rsi+304]
+	call	?setDecayInSeconds@FDN@@QEAAXM@Z	; FDN::setDecayInSeconds
 
-; 204  : 		fdn_decay = decaySeconds;
+; 275  :         break;
 
-	movss	DWORD PTR [rcx+296], xmm1
-
-; 205  : 		fdn_Feedback->setDecayInSeconds(fdn_decay * fdn_decayMultiplier);
-
-	mulss	xmm1, DWORD PTR [rcx+300]
-	mov	rcx, QWORD PTR [rcx+72]
-	call	?setDecayInSeconds@ModMultiChannelFeedback@@QEAAXM@Z ; ModMultiChannelFeedback::setDecayInSeconds
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 322  :         break;
-
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN5@setParamet:
 
-; 307  :     }
-; 308  :     case Param_roomSize: {
-; 309  :         shim_roomSize = value;
+; 260  :     }
+; 261  :     case Param_roomSize: {
+; 262  :         shim_roomSize = value;
 
 	movss	DWORD PTR [rcx+252], xmm6
 
-; 310  :         BranchReverb->setRoomSize(shim_roomSize);
+; 263  :         BranchReverb->setRoomSize(shim_roomSize);
 
 	movaps	xmm1, xmm6
 	mov	rcx, QWORD PTR [rcx+296]
 	call	?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z ; FDN::setRoomSize
 
-; 311  :         MasterReverb->setRoomSize(shim_roomSize);
+; 264  :         MasterReverb->setRoomSize(shim_roomSize);
 
 	movss	xmm1, DWORD PTR [rsi+252]
 	mov	rcx, QWORD PTR [rsi+304]
 	call	?setRoomSize@FDN@@QEAAXMW4DiffuserDelayLogic@@W4DelayDistribution@@1@Z ; FDN::setRoomSize
 
-; 312  :         break;
+; 265  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN4@setParamet:
 
-; 303  :     case Param_mix: {
-; 304  :         shim_mix = value;        
+; 61   :     _wet = sin(shim_mix * M_PI * 0.5);
+
+	xorps	xmm0, xmm0
+
+; 256  :     case Param_mix: {
+; 257  :         shim_mix = value;        
 
 	movss	DWORD PTR [rcx+248], xmm6
 
-; 305  :         updateMix();
+; 61   :     _wet = sin(shim_mix * M_PI * 0.5);
 
-	call	?updateMix@Shimmer@@AEAAXXZ		; Shimmer::updateMix
+	cvtss2sd xmm0, xmm6
+	mulsd	xmm0, QWORD PTR __real@3ff921fb54442d18
+	call	QWORD PTR __imp_sin
+	xorps	xmm1, xmm1
+	cvtsd2ss xmm1, xmm0
+	movss	xmm0, DWORD PTR [rsi+248]
 
-; 306  :         break;
+; 62   :     _dry = cos(shim_mix * M_PI * 0.5);
 
-	jmp	$LN53@setParamet
+	cvtps2pd xmm0, xmm0
+	movss	DWORD PTR [rsi+328], xmm1
+	mulsd	xmm0, QWORD PTR __real@3ff921fb54442d18
+	call	QWORD PTR __imp_cos
+	xorps	xmm1, xmm1
+	cvtsd2ss xmm1, xmm0
+	movss	DWORD PTR [rsi+332], xmm1
+
+; 258  :         updateMix();
+; 259  :         break;
+
+	jmp	$LN51@setParamet
 $LN8@setParamet:
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
 	movss	xmm2, DWORD PTR ?MAX_DAMPING_FREQUENCY_LOG@@3MB
 	subss	xmm2, DWORD PTR ?MIN_DAMPING_FREQUENCY_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 326  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
+; 279  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
 
 	movss	xmm0, DWORD PTR __real@3f800000
 	subss	xmm0, xmm6
 	movss	DWORD PTR [rcx+268], xmm6
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
 	mulss	xmm2, xmm0
 	addss	xmm2, DWORD PTR ?MIN_DAMPING_FREQUENCY_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 326  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
+; 279  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
 
 	cvtps2pd xmm0, xmm2
 	call	QWORD PTR __imp_exp
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 258  : 		fdn_Feedback->setDampingFrequency(freq);
 
 	mov	rax, QWORD PTR [rsi+296]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	xor	edi, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 326  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
+; 279  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
 
 	xorps	xmm6, xmm6
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	mov	ebp, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 326  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
+; 279  :         float freq = exp(mapValueIntoRange(1.0 - shim_damping, MIN_DAMPING_FREQUENCY_LOG, MAX_DAMPING_FREQUENCY_LOG));
 
 	cvtsd2ss xmm6, xmm0
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 258  : 		fdn_Feedback->setDampingFrequency(freq);
 
 	mov	r14, QWORD PTR [rax+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	cmp	DWORD PTR [r14], edi
-	jle	SHORT $LN29@setParamet
+	jle	SHORT $LN27@setParamet
 	mov	ebx, edi
-$LL30@setParamet:
+$LL28@setParamet:
 
 ; 89   : 			mcf_DelayLines[i]->setCutoffFrequency(freq);
 
 	mov	rax, QWORD PTR [r14+40]
 	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 25   : 	lpcf_cutoffFreq = cutoffFreq;
 
@@ -38188,7 +37072,7 @@ $LL30@setParamet:
 ; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
 
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -38199,35 +37083,35 @@ $LL30@setParamet:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	inc	ebp
 	lea	rbx, QWORD PTR [rbx+8]
 	cmp	ebp, DWORD PTR [r14]
-	jl	SHORT $LL30@setParamet
-$LN29@setParamet:
-; File E:\prova\Shimmer\include\FDN.h
+	jl	SHORT $LL28@setParamet
+$LN27@setParamet:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 258  : 		fdn_Feedback->setDampingFrequency(freq);
 
 	mov	rax, QWORD PTR [rsi+304]
 	mov	rbx, QWORD PTR [rax+72]
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	cmp	DWORD PTR [rbx], edi
-	jle	$LN53@setParamet
+	jle	$LN51@setParamet
 	mov	rsi, rdi
-$LL43@setParamet:
+$LL41@setParamet:
 
 ; 89   : 			mcf_DelayLines[i]->setCutoffFrequency(freq);
 
 	mov	rax, QWORD PTR [rbx+40]
 	mov	rcx, QWORD PTR [rsi+rax]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 25   : 	lpcf_cutoffFreq = cutoffFreq;
 
@@ -38238,7 +37122,7 @@ $LL43@setParamet:
 ; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
 
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -38249,22 +37133,22 @@ $LL43@setParamet:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\ModMultiChannelFeedback.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelFeedback.h
 
 ; 88   : 		for (int i = 0; i < mcf_numberOfChannels; i++)
 
 	inc	edi
 	lea	rsi, QWORD PTR [rsi+8]
 	cmp	edi, DWORD PTR [rbx]
-	jl	SHORT $LL43@setParamet
-; File E:\prova\Shimmer\Shimmer.cpp
+	jl	SHORT $LL41@setParamet
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 329  :         break;
+; 282  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN18@setParamet:
 
-; 302  :     switch (index) {
+; 255  :     switch (index) {
 
 	sub	edx, 6
 	je	$LN9@setParamet
@@ -38275,46 +37159,42 @@ $LN18@setParamet:
 	sub	edx, 1
 	je	SHORT $LN14@setParamet
 	cmp	edx, 1
-	jne	$LN53@setParamet
-; File E:\prova\Shimmer\include\utils.h
+	jne	$LN51@setParamet
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 317  :         float hpf = mapValueIntoRange(value, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+; 318  :         MasterReverb->setHighPassFrequency(hpf);
 
-	mulss	xmm6, DWORD PTR __real@45d98000
-; File E:\prova\Shimmer\include\FDN.h
+	mov	rsi, QWORD PTR [rcx+304]
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	xor	edi, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 365  :         MasterReverb->setHighPassFrequency(shim_hpf);
-
-	mov	rsi, QWORD PTR [rcx+304]
-; File E:\prova\Shimmer\include\utils.h
-
-; 60   :     return minvalue + value * (maxValue - minvalue);
-
-	addss	xmm6, DWORD PTR __real@42200000
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 364  :         shim_hpf = mapValueIntoRange(value, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+; 316  :         shim_hpf = value;
 
 	movss	DWORD PTR [rcx+288], xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 61   :     return minvalue + value * (maxValue - minvalue);
+
+	mulss	xmm6, DWORD PTR __real@45d98000
+	addss	xmm6, DWORD PTR __real@42200000
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	cmp	DWORD PTR [rsi+176], edi
-	jle	$LN53@setParamet
+	jle	$LN51@setParamet
 	mov	ebx, edi
-$LL110@setParamet:
+$LL108@setParamet:
 
 ; 275  : 			fdn_HPFOutput[i]->setCutoffFrequency(freq);
 
 	mov	rax, QWORD PTR [rsi+144]
 	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\HighPassFilter.h
+; File E:\FoxSuite\shimmer\include\HighPassFilter.h
 
 ; 68   : 		hpf_cutoffFreq = cutoffFreq;
 
@@ -38325,64 +37205,72 @@ $LL110@setParamet:
 ; 71   : 		updateGains();
 
 	call	?updateGains@HighPassFilter@@QEAAXXZ	; HighPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 274  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	inc	edi
 	lea	rbx, QWORD PTR [rbx+8]
 	cmp	edi, DWORD PTR [rsi+176]
-	jl	SHORT $LL110@setParamet
-; File E:\prova\Shimmer\Shimmer.cpp
+	jl	SHORT $LL108@setParamet
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 366  :         break;
+; 319  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN14@setParamet:
-; File E:\prova\Shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 60   :     return minvalue + value * (maxValue - minvalue);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
 	movss	xmm1, DWORD PTR ?LPF_FILTER_MAX_FREQ_LOG@@3MB
 	subss	xmm1, DWORD PTR ?LPF_FILTER_MIN_FREQ_LOG@@3MB
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 310  :         shim_lpf = value;
+
+	movss	DWORD PTR [rcx+284], xmm6
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 61   :     return minvalue + value * (maxValue - minvalue);
+
 	mulss	xmm1, xmm6
 	addss	xmm1, DWORD PTR ?LPF_FILTER_MIN_FREQ_LOG@@3MB
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 359  :         shim_lpf = exp(mapValueIntoRange(value, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
+; 311  :         float lpf = exp(mapValueIntoRange(value, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
 
 	cvtps2pd xmm0, xmm1
 	call	QWORD PTR __imp_exp
-	xorps	xmm6, xmm6
-; File E:\prova\Shimmer\include\FDN.h
+
+; 312  :         MasterReverb->setLowPassFrequency(lpf);
+
+	mov	rsi, QWORD PTR [rsi+304]
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	xor	edi, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 359  :         shim_lpf = exp(mapValueIntoRange(value, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
+; 311  :         float lpf = exp(mapValueIntoRange(value, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
 
+	xorps	xmm6, xmm6
 	cvtsd2ss xmm6, xmm0
-	movss	DWORD PTR [rsi+284], xmm6
-
-; 360  :         MasterReverb->setLowPassFrequency(shim_lpf);
-
-	mov	rsi, QWORD PTR [rsi+304]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	cmp	DWORD PTR [rsi+176], edi
-	jle	$LN53@setParamet
+	jle	$LN51@setParamet
 	mov	ebx, edi
-$LL99@setParamet:
+$LL97@setParamet:
 
 ; 269  : 			fdn_LPFOutput[i]->setCutoffFrequency(freq);
 
 	mov	rax, QWORD PTR [rsi+80]
 	mov	rcx, QWORD PTR [rbx+rax]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -38393,58 +37281,58 @@ $LL99@setParamet:
 ; 71   : 		updateGains();
 
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 268  : 		for (int i = 0; i < fdn_outputChannels; i++)
 
 	inc	edi
 	lea	rbx, QWORD PTR [rbx+8]
 	cmp	edi, DWORD PTR [rsi+176]
-	jl	SHORT $LL99@setParamet
-; File E:\prova\Shimmer\Shimmer.cpp
+	jl	SHORT $LL97@setParamet
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 361  :         break;
+; 313  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN13@setParamet:
 
-; 355  :         MasterReverb->setModRate(shim_modRate * MAX_MOD_RATE);
+; 306  :         MasterReverb->setModRate(shim_modRate * MAX_MOD_RATE);
 
 	mov	rdx, QWORD PTR [rcx+304]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	xor	edi, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 354  :         shim_modRate = value;
+; 305  :         shim_modRate = value;
 
 	movss	DWORD PTR [rcx+276], xmm6
 
-; 355  :         MasterReverb->setModRate(shim_modRate * MAX_MOD_RATE);
+; 306  :         MasterReverb->setModRate(shim_modRate * MAX_MOD_RATE);
 
 	mulss	xmm6, DWORD PTR __real@40a00000
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	cmp	DWORD PTR [rdx+172], edi
-	jle	$LN53@setParamet
+	jle	$LN51@setParamet
 	movaps	xmm2, xmm6
 	mov	r8d, edi
 	mulss	xmm2, DWORD PTR __real@45800000
-$LL82@setParamet:
+$LL80@setParamet:
 
 ; 230  : 			fdn_Modulation[i]->setModRate(rate);
 
 	mov	rax, QWORD PTR [rdx+104]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
 	movaps	xmm1, xmm2
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -38454,23 +37342,23 @@ $LL82@setParamet:
 
 	mov	rcx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 86   : 		mdly_LFO->setLFOfrequency(mdly_rate);
+; 90   : 		mdly_LFO->setLFOfrequency(mdly_rate);
 
 	mov	rax, QWORD PTR [rcx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 67   : 		mod_rate = rate;
 
 	movss	DWORD PTR [rcx+164], xmm6
-; File E:\prova\Shimmer\include\ModDelay.h
+; File E:\FoxSuite\shimmer\include\ModDelay.h
 
-; 85   : 		mdly_rate = modRate;
+; 89   : 		mdly_rate = modRate;
 
 	movss	DWORD PTR [rcx+136], xmm6
 	movd	xmm0, DWORD PTR [rax+4]
-; File E:\prova\Shimmer\include\LFO.h
+; File E:\FoxSuite\shimmer\include\LFO.h
 
 ; 122  : 		lfo_inc = WAVETABLE_SIZE * lfo_frequency / (float)lfo_sampleRate;
 
@@ -38484,50 +37372,50 @@ $LL82@setParamet:
 
 	divss	xmm1, xmm0
 	movss	DWORD PTR [rax+20], xmm1
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 229  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	cmp	edi, DWORD PTR [rdx+172]
-	jl	SHORT $LL82@setParamet
-; File E:\prova\Shimmer\Shimmer.cpp
+	jl	SHORT $LL80@setParamet
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 356  :         break;
+; 307  :         break;
 
-	jmp	$LN53@setParamet
+	jmp	$LN51@setParamet
 $LN12@setParamet:
 
-; 350  :         MasterReverb->setModDepth(shim_modDepth);
+; 301  :         MasterReverb->setModDepth(shim_modDepth);
 
 	mov	rdx, QWORD PTR [rcx+304]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	xor	edi, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 349  :         shim_modDepth = value;
+; 300  :         shim_modDepth = value;
 
 	movss	DWORD PTR [rcx+280], xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	cmp	DWORD PTR [rdx+172], edi
-	jle	$LN53@setParamet
+	jle	$LN51@setParamet
 	mov	r8d, edi
-$LL73@setParamet:
+$LL71@setParamet:
 
 ; 236  : 			fdn_Modulation[i]->setModDepth(depth);	
 
 	mov	rax, QWORD PTR [rdx+104]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
 
 	movaps	xmm0, xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
@@ -38537,78 +37425,78 @@ $LL73@setParamet:
 
 	mov	rcx, QWORD PTR [r8+rax]
 	lea	r8, QWORD PTR [r8+8]
-; File E:\prova\Shimmer\include\Modulation.h
+; File E:\FoxSuite\shimmer\include\Modulation.h
 
 ; 63   : 		ModDelay::setDeltaDelayValue(mod_modValue * mod_depth);
 
 	mulss	xmm0, DWORD PTR [rcx+172]
 	movss	DWORD PTR [rcx+168], xmm6
 	movss	DWORD PTR [rcx+124], xmm0
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 235  : 		for (int i = 0; i < fdn_internalChannels; i++)
 
 	cmp	edi, DWORD PTR [rdx+172]
-	jl	SHORT $LL73@setParamet
-; File E:\prova\Shimmer\Shimmer.cpp
+	jl	SHORT $LL71@setParamet
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 351  :         break;
+; 302  :         break;
 
-	jmp	SHORT $LN53@setParamet
+	jmp	SHORT $LN51@setParamet
 $LN9@setParamet:
 
-; 333  :         MasterReverb->setStereoSpread(shim_spread);
+; 286  :         MasterReverb->setStereoSpread(shim_space);
 
 	mov	rdx, QWORD PTR [rcx+304]
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
 	xor	edi, edi
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 332  :         shim_spread = value;
+; 285  :         shim_space = value;
 
 	movss	DWORD PTR [rcx+272], xmm6
-; File E:\prova\Shimmer\include\FDN.h
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
 	mov	r8d, edi
 	movss	DWORD PTR [rdx+308], xmm6
 	cmp	DWORD PTR [rdx+184], edi
-	jle	SHORT $LN53@setParamet
+	jle	SHORT $LN51@setParamet
 	mov	r9d, edi
-$LL54@setParamet:
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+$LL52@setParamet:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
 
 	mov	rax, QWORD PTR [rdx+48]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	mov	ebx, edi
-; File E:\prova\Shimmer\include\ModMultiChannelDiffuser.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDiffuser.h
 
 ; 60   : 		mdiff_MultiChDelay->setModDepth(depth);
 
 	mov	rcx, QWORD PTR [rax+r9]
 	mov	r10, QWORD PTR [rcx+24]
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 88   : 		for (int i = 0; i < mdel_numberOfChannels; i++)
 
 	cmp	DWORD PTR [r10], edi
-	jle	SHORT $LN52@setParamet
+	jle	SHORT $LN50@setParamet
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 
 ; 1569 :         return _My_data._Myfirst[_Pos];
 
 	mov	r11, rdi
-$LL63@setParamet:
-; File E:\prova\Shimmer\include\ModMultiChannelDelay.h
+$LL61@setParamet:
+; File E:\FoxSuite\shimmer\include\ModMultiChannelDelay.h
 
 ; 89   : 			mdel_DelayLines[i]->setDeltaDelayValue(depth*mdel_modValmsec);
 
@@ -38616,24 +37504,24 @@ $LL63@setParamet:
 	movaps	xmm0, xmm6
 	mulss	xmm0, DWORD PTR [r10+48]
 	inc	ebx
-	mov	rcx, QWORD PTR [r11+rax]
+	mov	rcx, QWORD PTR [rax+r11]
 	lea	r11, QWORD PTR [r11+8]
 	movss	DWORD PTR [rcx+124], xmm0
 	cmp	ebx, DWORD PTR [r10]
-	jl	SHORT $LL63@setParamet
-$LN52@setParamet:
-; File E:\prova\Shimmer\include\FDN.h
+	jl	SHORT $LL61@setParamet
+$LN50@setParamet:
+; File E:\FoxSuite\shimmer\include\FDN.h
 
 ; 293  : 		for (int i = 0; i < fdn_numModDiffuser; i++)
 
 	inc	r8d
 	add	r9, 8
 	cmp	r8d, DWORD PTR [rdx+184]
-	jl	SHORT $LL54@setParamet
-$LN53@setParamet:
-; File E:\prova\Shimmer\Shimmer.cpp
+	jl	SHORT $LL52@setParamet
+$LN51@setParamet:
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 371  : }
+; 324  : }
 
 	mov	rbx, QWORD PTR [rsp+80]
 	mov	rbp, QWORD PTR [rsp+88]
@@ -38646,27 +37534,19 @@ $LN53@setParamet:
 ?setParameter@Shimmer@@UEAAXHM@Z ENDP			; Shimmer::setParameter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\include\utils.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getParameter@Shimmer@@UEAAMH@Z
 _TEXT	SEGMENT
-this$ = 80
-index$ = 88
+this$ = 8
+index$ = 16
 ?getParameter@Shimmer@@UEAAMH@Z PROC			; Shimmer::getParameter, COMDAT
 
-; 377  : {
+; 330  : {
 
-$LN23:
-	sub	rsp, 72					; 00000048H
-	movaps	XMMWORD PTR [rsp+48], xmm6
 	xorps	xmm0, xmm0
-	movaps	XMMWORD PTR [rsp+32], xmm7
 
-; 378  :     float param = 0;
-; 379  :     switch (index) {
+; 331  :     float param = 0;
+; 332  :     switch (index) {
 
 	cmp	edx, 5
 	jg	SHORT $LN17@getParamet
@@ -38680,81 +37560,122 @@ $LN23:
 	sub	edx, 1
 	je	SHORT $LN6@getParamet
 	cmp	edx, 1
-	jne	$LN15@getParamet
+	jne	SHORT $LN15@getParamet
 
-; 407  :         break;
-; 408  :     }
-; 409  :     case Param_shimIntrvals:
-; 410  :     {
-; 411  :         param = shim_intervals;
+; 361  :         break;
+; 362  :     }
+; 363  :     case Param_intervals:
+; 364  :     {
+; 365  :         param = shim_intervals;
 
 	movss	xmm0, DWORD PTR [rcx+260]
 
-; 412  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	$LN15@getParamet
+	ret	0
 $LN6@getParamet:
 
-; 388  :     }
-; 389  :     case Param_shimmer:
-; 390  :     {
-; 391  :         param = shim_shimmer;
+; 341  :         break;
+; 342  :     }
+; 343  :     case Param_shimmer:
+; 344  :     {
+; 345  :         param = shim_shimmer;
 
 	movss	xmm0, DWORD PTR [rcx+256]
 
-; 392  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	$LN15@getParamet
+	ret	0
 $LN7@getParamet:
 
-; 393  :     }
-; 394  :     case Param_decay:
-; 395  :     {
-; 396  :         param = shim_decay;
+; 346  :         break;
+; 347  :     }
+; 348  :     case Param_decay:
+; 349  :     {
+; 350  :         param = shim_decay;
 
 	movss	xmm0, DWORD PTR [rcx+264]
 
-; 397  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	$LN15@getParamet
+	ret	0
 $LN5@getParamet:
 
-; 384  :     }
-; 385  :     case Param_roomSize: {
-; 386  :         param = shim_roomSize;
+; 336  :         break;
+; 337  :     }
+; 338  :     case Param_roomSize: 
+; 339  :     {
+; 340  :         param = shim_roomSize;
 
 	movss	xmm0, DWORD PTR [rcx+252]
 
-; 387  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	$LN15@getParamet
+	ret	0
 $LN4@getParamet:
 
-; 380  :     case Param_mix:
-; 381  :     {
-; 382  :         param = shim_mix;
+; 333  :     case Param_mix:
+; 334  :     {
+; 335  :         param = shim_mix;
 
 	movss	xmm0, DWORD PTR [rcx+248]
 
-; 383  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	$LN15@getParamet
+	ret	0
 $LN8@getParamet:
 
-; 398  :     }    
-; 399  :     case Param_damping:
-; 400  :     {
-; 401  :         param = shim_damping;
+; 351  :         break;
+; 352  :     }    
+; 353  :     case Param_damping:
+; 354  :     {
+; 355  :         param = shim_damping;
 
 	movss	xmm0, DWORD PTR [rcx+268]
 
-; 402  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	$LN15@getParamet
+	ret	0
 $LN17@getParamet:
 
-; 378  :     float param = 0;
-; 379  :     switch (index) {
+; 331  :     float param = 0;
+; 332  :     switch (index) {
 
 	sub	edx, 6
 	je	SHORT $LN9@getParamet
@@ -38766,95 +37687,113 @@ $LN17@getParamet:
 	je	SHORT $LN13@getParamet
 	cmp	edx, 1
 	jne	SHORT $LN15@getParamet
-; File E:\prova\Shimmer\include\utils.h
 
-; 68   :     return (value - minValue) / (maxValue - minValue);
+; 382  :         break;
+; 383  :     }
+; 384  :     case Param_hpf: 
+; 385  :     {        
+; 386  :         //param = mapValueOutsideRange(shim_hpf, HPF_FILTER_MIN_FREQ, HPF_FILTER_MAX_FREQ);
+; 387  :         param = shim_hpf;
 
 	movss	xmm0, DWORD PTR [rcx+288]
-	subss	xmm0, DWORD PTR __real@42200000
-	mulss	xmm0, DWORD PTR __real@3916a850
-; File E:\prova\Shimmer\Shimmer.cpp
 
-; 428  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	SHORT $LN15@getParamet
+	ret	0
 $LN13@getParamet:
+
+; 376  :         break;
+; 377  :     }
+; 378  :     case Param_lpf: 
+; 379  :     {
+; 380  :         //param = mapValueOutsideRange(log(shim_lpf), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+; 381  :         param = shim_lpf;
+
 	movss	xmm0, DWORD PTR [rcx+284]
 
-; 421  :     }
-; 422  :     case Param_lpf: {
-; 423  :         param = mapValueOutsideRange(log(shim_lpf), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	movss	xmm7, DWORD PTR ?MAX_LPF_FREQUENCY_LOG@@3MB
-	movss	xmm6, DWORD PTR ?MIN_LPF_FREQUENCY_LOG@@3MB
-	cvtps2pd xmm0, xmm0
-	call	QWORD PTR __imp_log
-	cvtsd2ss xmm0, xmm0
-; File E:\prova\Shimmer\include\utils.h
-
-; 68   :     return (value - minValue) / (maxValue - minValue);
-
-	subss	xmm7, xmm6
-	subss	xmm0, xmm6
-	divss	xmm0, xmm7
-; File E:\prova\Shimmer\Shimmer.cpp
-
-; 424  :         break;
-
-	jmp	SHORT $LN15@getParamet
+	ret	0
 $LN12@getParamet:
 
-; 417  :     }
-; 418  :     case Param_modRate: {
-; 419  :         param = shim_modRate;
+; 371  :         break;
+; 372  :     }
+; 373  :     case Param_modRate: 
+; 374  :     {
+; 375  :         param = shim_modRate;
 
 	movss	xmm0, DWORD PTR [rcx+276]
 
-; 420  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	SHORT $LN15@getParamet
+	ret	0
 $LN11@getParamet:
 
-; 413  :     }
-; 414  :     case Param_modDepth: {
-; 415  :         param = shim_modDepth;
+; 366  :         break;
+; 367  :     }
+; 368  :     case Param_modDepth: 
+; 369  :     {
+; 370  :         param = shim_modDepth;
 
 	movss	xmm0, DWORD PTR [rcx+280]
 
-; 416  :         break;
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	jmp	SHORT $LN15@getParamet
+	ret	0
 $LN9@getParamet:
 
-; 403  :     }    
-; 404  :     case Param_spread:
-; 405  :     {
-; 406  :         param = shim_spread;
+; 356  :         break;
+; 357  :     }    
+; 358  :     case Param_space:
+; 359  :     {
+; 360  :         param = shim_space;
 
 	movss	xmm0, DWORD PTR [rcx+272]
 $LN15@getParamet:
 
-; 429  :     }    
-; 430  :     default:
-; 431  :         break;
-; 432  :     }
-; 433  :     return param;
-; 434  : }
+; 388  :         break;
+; 389  :     }    
+; 390  :     default:
+; 391  :         break;
+; 392  :     }
+; 393  :     return param;
+; 394  : }
 
-	movaps	xmm6, XMMWORD PTR [rsp+48]
-	movaps	xmm7, XMMWORD PTR [rsp+32]
-	add	rsp, 72					; 00000048H
 	ret	0
 ?getParameter@Shimmer@@UEAAMH@Z ENDP			; Shimmer::getParameter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getParameterLabel@Shimmer@@UEAAXHPEAD@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -38862,14 +37801,14 @@ index$ = 56
 label$ = 64
 ?getParameterLabel@Shimmer@@UEAAXHPEAD@Z PROC		; Shimmer::getParameterLabel, COMDAT
 
-; 440  : {
+; 400  : {
 
 $LN42:
 	push	rbx
 	sub	rsp, 32					; 00000020H
 	mov	rbx, r8
 
-; 441  :     switch (index) {
+; 401  :     switch (index) {
 
 	cmp	edx, 5
 	jg	SHORT $LN17@getParamet
@@ -38885,15 +37824,15 @@ $LN42:
 	cmp	edx, 1
 	jne	SHORT $LN15@getParamet
 $LN9@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_00CNPNBAHC@@
 $LN40@getParamet:
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 490  : }
+; 450  : }
 
 	mov	r8d, 8
 	mov	rcx, rbx
@@ -38904,19 +37843,19 @@ $LN15@getParamet:
 	pop	rbx
 	ret	0
 $LN7@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_01LKDEMHDF@s@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 456  :         break;
+; 416  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN17@getParamet:
 
-; 441  :     switch (index) {
+; 401  :     switch (index) {
 
 	sub	edx, 6
 	je	SHORT $LN9@getParamet
@@ -38929,26 +37868,30 @@ $LN17@getParamet:
 	cmp	edx, 1
 	jne	SHORT $LN15@getParamet
 $LN11@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_02KLOHGLOJ@Hz@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 472  :         break;
+; 432  :         break;
 
 	jmp	SHORT $LN40@getParamet
 ?getParameterLabel@Shimmer@@UEAAXHPEAD@Z ENDP		; Shimmer::getParameterLabel
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -38956,20 +37899,22 @@ index$ = 56
 text$ = 64
 ?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z PROC		; Shimmer::getParameterDisplay, COMDAT
 
-; 496  : {    
+; 456  : {    
 
-$LN23:
-	push	rbx
+$LN28:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
 	sub	rsp, 32					; 00000020H
-	mov	rbx, r8
+	mov	rdi, r8
+	mov	rbx, rcx
 
-; 497  :     switch (index) {
+; 457  :     switch (index) {
 
 	cmp	edx, 5
 	jg	$LN17@getParamet
 	je	$LN8@getParamet
 	test	edx, edx
-	je	SHORT $LN4@getParamet
+	je	$LN4@getParamet
 	sub	edx, 1
 	je	SHORT $LN5@getParamet
 	sub	edx, 1
@@ -38979,35 +37924,35 @@ $LN23:
 	cmp	edx, 1
 	jne	$LN15@getParamet
 
-; 523  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
+; 483  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
 
 	movss	xmm0, DWORD PTR [rcx+260]
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	mov	r8d, 8
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 523  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
+; 483  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
 
 	mulss	xmm0, DWORD PTR __real@41200000
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
-	mov	rcx, rbx
-; File E:\prova\Shimmer\Shimmer.cpp
+	mov	rcx, rdi
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 523  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
+; 483  :         int pitIdx = shim_intervals / DELTA_PARAMETER_BETWEEN_INTERVALS;
 
 	cvttss2si eax, xmm0
 
-; 524  :         vst_strncpy(text, INTERVALS_NAMES_STRING[pitIdx], kVstMaxParamStrLen);
+; 484  :         vst_strncpy(text, INTERVALS_NAMES_STRING[pitIdx], kVstMaxParamStrLen);
 
 	movsxd	rdx, eax
 	lea	rax, OFFSET FLAT:?INTERVALS_NAMES_STRING@@3PAPEADA ; INTERVALS_NAMES_STRING
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
@@ -39016,75 +37961,73 @@ $LN23:
 
 ; 297  : 	dst[maxLen] = 0;
 
-	mov	BYTE PTR [rbx+8], 0
-; File E:\prova\Shimmer\Shimmer.cpp
+	mov	BYTE PTR [rdi+8], 0
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 547  : }
+; 485  :         break; 
 
-	add	rsp, 32					; 00000020H
-	pop	rbx
-	ret	0
+	jmp	$LN15@getParamet
 $LN6@getParamet:
 
-; 505  :     }
-; 506  :     case Param_shimmer: {
-; 507  :         float2string(shim_shimmer * 10, text, kVstMaxParamStrLen);
+; 465  :     }
+; 466  :     case Param_shimmer: {
+; 467  :         float2string(shim_shimmer * 10, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+256]
 
-; 508  :         break;
+; 468  :         break;
 
-	jmp	$LN20@getParamet
+	jmp	$LN24@getParamet
 $LN7@getParamet:
 
-; 509  :     }
-; 510  :     case Param_decay: {
-; 511  :         float2string(shim_decay * MAX_REVERB_DECAY_IN_SECONDS, text, kVstMaxParamStrLen);
+; 469  :     }
+; 470  :     case Param_decay: {
+; 471  :         float2string(shim_decay * MAX_REVERB_DECAY_IN_SECONDS, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+264]
 	mulss	xmm1, DWORD PTR __real@41f00000
 
-; 512  :         break;
+; 472  :         break;
 
-	jmp	SHORT $LN21@getParamet
+	jmp	$LN25@getParamet
 $LN5@getParamet:
 
-; 501  :     }
-; 502  :     case Param_roomSize: {
-; 503  :         float2string(shim_roomSize * 10, text, kVstMaxParamStrLen);
+; 461  :     }
+; 462  :     case Param_roomSize: {
+; 463  :         float2string(shim_roomSize * 10, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+252]
 
-; 504  :         break;
+; 464  :         break;
 
-	jmp	SHORT $LN20@getParamet
+	jmp	$LN24@getParamet
 $LN4@getParamet:
 
-; 498  :     case Param_mix: {
-; 499  :         float2string(shim_mix * 10, text, kVstMaxParamStrLen);
+; 458  :     case Param_mix: {
+; 459  :         float2string(shim_mix * 10, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+248]
 
-; 500  :         break;
+; 460  :         break;
 
-	jmp	SHORT $LN20@getParamet
+	jmp	$LN24@getParamet
 $LN8@getParamet:
 
-; 513  :     }
-; 514  :     case Param_damping: {
-; 515  :         float2string(shim_damping * 10, text, kVstMaxParamStrLen);
+; 473  :     }
+; 474  :     case Param_damping: {
+; 475  :         float2string(shim_damping * 10, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+268]
 
-; 516  :         break;
+; 476  :         break;
 
-	jmp	SHORT $LN20@getParamet
+	jmp	$LN24@getParamet
 $LN17@getParamet:
 
-; 497  :     switch (index) {
+; 457  :     switch (index) {
 
 	sub	edx, 6
-	je	SHORT $LN9@getParamet
+	je	$LN9@getParamet
 	sub	edx, 1
 	je	SHORT $LN12@getParamet
 	sub	edx, 1
@@ -39092,98 +38035,122 @@ $LN17@getParamet:
 	sub	edx, 1
 	je	SHORT $LN13@getParamet
 	cmp	edx, 1
-	jne	SHORT $LN15@getParamet
+	jne	$LN15@getParamet
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 538  :     }
-; 539  :     case Param_hpf: {
-; 540  :         float2string(shim_hpf, text, kVstMaxParamStrLen);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
 	movss	xmm1, DWORD PTR [rcx+288]
+	mulss	xmm1, DWORD PTR __real@45d98000
+	addss	xmm1, DWORD PTR __real@42200000
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 541  :         break;
+; 503  :         break;
 
-	jmp	SHORT $LN21@getParamet
+	jmp	SHORT $LN25@getParamet
 $LN13@getParamet:
+; File E:\FoxSuite\shimmer\include\utils.h
 
-; 534  :     }
-; 535  :     case Param_lpf: {
-; 536  :         float2string(shim_lpf, text, kVstMaxParamStrLen);
+; 61   :     return minvalue + value * (maxValue - minvalue);
 
-	movss	xmm1, DWORD PTR [rcx+284]
+	movss	xmm1, DWORD PTR ?LPF_FILTER_MAX_FREQ_LOG@@3MB
+	subss	xmm1, DWORD PTR ?LPF_FILTER_MIN_FREQ_LOG@@3MB
+	mulss	xmm1, DWORD PTR [rcx+284]
+	addss	xmm1, DWORD PTR ?LPF_FILTER_MIN_FREQ_LOG@@3MB
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 537  :         break;
+; 496  :         float lpf = exp(mapValueIntoRange(shim_lpf, LPF_FILTER_MIN_FREQ_LOG, LPF_FILTER_MAX_FREQ_LOG));
 
-	jmp	SHORT $LN21@getParamet
+	cvtps2pd xmm0, xmm1
+	call	QWORD PTR __imp_exp
+
+; 497  :         float2string(lpf, text, kVstMaxParamStrLen);
+
+	mov	rax, QWORD PTR [rbx]
+	xorps	xmm1, xmm1
+	cvtsd2ss xmm1, xmm0
+	mov	r8, rdi
+	mov	rcx, rbx
+
+; 498  :         break;
+
+	jmp	SHORT $LN26@getParamet
 $LN11@getParamet:
 
-; 525  :         break; 
-; 526  :     }
-; 527  :     case Param_modRate: {
-; 528  :         float2string(shim_modRate * MAX_MOD_RATE, text, kVstMaxParamStrLen);
+; 486  :     }
+; 487  :     case Param_modRate: {
+; 488  :         float2string(shim_modRate * MAX_MOD_RATE, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+276]
 	mulss	xmm1, DWORD PTR __real@40a00000
 
-; 529  :         break;
+; 489  :         break;
 
-	jmp	SHORT $LN21@getParamet
+	jmp	SHORT $LN25@getParamet
 $LN12@getParamet:
 
-; 530  :     }
-; 531  :     case Param_modDepth: {
-; 532  :         float2string(shim_modDepth * 10, text, kVstMaxParamStrLen);
+; 490  :     }
+; 491  :     case Param_modDepth: {
+; 492  :         float2string(shim_modDepth * 10, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+280]
 
-; 533  :         break;
+; 493  :         break;
 
-	jmp	SHORT $LN20@getParamet
+	jmp	SHORT $LN24@getParamet
 $LN9@getParamet:
 
-; 517  :     }
-; 518  :     case Param_spread: {
-; 519  :         float2string(shim_spread * 10, text, kVstMaxParamStrLen);
+; 477  :     }
+; 478  :     case Param_space: {
+; 479  :         float2string(shim_space * 10, text, kVstMaxParamStrLen);
 
 	movss	xmm1, DWORD PTR [rcx+272]
-$LN20@getParamet:
+$LN24@getParamet:
 
-; 547  : }
+; 504  :     }      
+; 505  :     default: {
+; 506  :         break;
+; 507  :     }
+; 508  :     }
+; 509  : }
 
 	mulss	xmm1, DWORD PTR __real@41200000
-$LN21@getParamet:
+$LN25@getParamet:
 	mov	rax, QWORD PTR [rcx]
+$LN26@getParamet:
 	mov	r9d, 8
 	call	QWORD PTR [rax+312]
 $LN15@getParamet:
+	mov	rbx, QWORD PTR [rsp+48]
 	add	rsp, 32					; 00000020H
-	pop	rbx
+	pop	rdi
 	ret	0
 ?getParameterDisplay@Shimmer@@UEAAXHPEAD@Z ENDP		; Shimmer::getParameterDisplay
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getParameterName@Shimmer@@UEAAXHPEAD@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -39191,14 +38158,14 @@ index$ = 56
 text$ = 64
 ?getParameterName@Shimmer@@UEAAXHPEAD@Z PROC		; Shimmer::getParameterName, COMDAT
 
-; 553  : {
+; 515  : {
 
 $LN42:
 	push	rbx
 	sub	rsp, 32					; 00000020H
 	mov	rbx, r8
 
-; 554  :     switch (index) {
+; 516  :     switch (index) {
 
 	cmp	edx, 5
 	jg	SHORT $LN17@getParamet
@@ -39213,74 +38180,74 @@ $LN42:
 	je	SHORT $LN6@getParamet
 	cmp	edx, 1
 	jne	$LN15@getParamet
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_09ONNCCMEP@Intervals@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 581  :         break;
+; 543  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN6@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_07CNCNAGDO@Shimmer@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 565  :         break;
+; 527  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN7@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_05BFFNNFFO@Decay@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 569  :         break;
+; 531  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN5@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_04EBKMHHBE@Size@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 561  :         break;
+; 523  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN4@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
-	lea	rdx, OFFSET FLAT:??_C@_03INCOKCMB@Wet@
-; File E:\prova\Shimmer\Shimmer.cpp
+	lea	rdx, OFFSET FLAT:??_C@_03BHCFKDFC@Mix@
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 557  :         break;
+; 519  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN8@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_07HJKIPEFI@Damping@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 573  :         break;
+; 535  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN17@getParamet:
 
-; 554  :     switch (index) {
+; 516  :     switch (index) {
 
 	sub	edx, 6
 	je	SHORT $LN9@getParamet
@@ -39292,59 +38259,59 @@ $LN17@getParamet:
 	je	SHORT $LN13@getParamet
 	cmp	edx, 1
 	jne	SHORT $LN15@getParamet
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_03EKIEJGAC@HPF@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 597  :         break;
+; 559  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN13@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_03MFOGABFF@LPF@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 593  :         break;
+; 555  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN11@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_08MNIOIDHF@Mod?5Rate@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 585  :         break;
+; 547  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN12@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
 	lea	rdx, OFFSET FLAT:??_C@_09DPAPPDMJ@Mod?5Depth@
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 589  :         break;
+; 551  :         break;
 
 	jmp	SHORT $LN40@getParamet
 $LN9@getParamet:
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
-	lea	rdx, OFFSET FLAT:??_C@_06NMIAHCPF@Stereo@
+	lea	rdx, OFFSET FLAT:??_C@_05OMHELODH@Space@
 $LN40@getParamet:
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 603  : }
+; 565  : }
 
 	mov	r8d, 8
 	mov	rcx, rbx
@@ -39357,233 +38324,417 @@ $LN15@getParamet:
 ?getParameterName@Shimmer@@UEAAXHPEAD@Z ENDP		; Shimmer::getParameterName
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\include\utils.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?InitPresets@Shimmer@@AEAAXXZ
 _TEXT	SEGMENT
-this$ = 48
+this$ = 80
 ?InitPresets@Shimmer@@AEAAXXZ PROC			; Shimmer::InitPresets, COMDAT
 
-; 614  : {
+; 576  : {
 
-$LN4:
-	push	rbx
-	sub	rsp, 32					; 00000020H
+$LN10:
+	mov	rax, rsp
+	mov	QWORD PTR [rax+8], rbx
+	mov	QWORD PTR [rax+16], rsi
+	mov	QWORD PTR [rax+24], rdi
+	push	r15
+	sub	rsp, 64					; 00000040H
+	movaps	XMMWORD PTR [rax-24], xmm6
+
+; 577  :     // Instruction to allow the DAW to save parameters as currently shown on the UI
+; 578  :     programsAreChunks(true);
+
+	mov	dl, 1
+	movaps	XMMWORD PTR [rax-40], xmm7
 	mov	rbx, rcx
+	mov	rax, QWORD PTR [rcx]
+	call	QWORD PTR [rax+216]
 
-; 615  :     shim_presets = new ShimmerPresets[NUM_PRESETS];
+; 579  : 
+; 580  :     // Create object for presets
+; 581  :     shim_presets = new ShimmerPresets[NUM_PRESETS];
 
 	mov	ecx, 340				; 00000154H
 	call	??_U@YAPEAX_K@Z				; operator new[]
 
-; 616  : 
-; 617  :     /*----------------------------------------------------*/
-; 618  :     // "Default" preset
-; 619  :     strcpy(shim_presets[0].name, "Default");
+; 582  : 
+; 583  :     /*----------------------------------------------------*/
+; 584  :     // "Default" preset
+; 585  :     strcpy(shim_presets[0].name, "Default");    
 
 	lea	rdx, OFFSET FLAT:??_C@_07MCAEODGB@Default@
 	mov	QWORD PTR [rbx+240], rax
 	lea	rcx, QWORD PTR [rax+44]
 	call	QWORD PTR __imp_strcpy
 
-; 620  :     shim_presets[0].shim_mix = 0.2;                        // given as a number between 0 and 1
+; 586  :     shim_presets[0].shim_mix = 0.5;
 
 	mov	rax, QWORD PTR [rbx+240]
 
-; 621  :     shim_presets[0].shim_decay = 1.0;                      // given in seconds
-; 622  :     shim_presets[0].shim_shimmer = 0.7;                   // given as a number between 0 and 1
-; 623  :     shim_presets[0].shim_damping = 0.5;                    // given as a number between 0 and 1
-; 624  :     shim_presets[0].shim_spread = 0.3;                     // given as a number between 0 and 1
-; 625  : 
-; 626  :     /*----------------------------------------------------*/
-; 627  :     // "Dreamy" preset
-; 628  :     strcpy(shim_presets[1].name, "Dreamy");
+; 587  :     shim_presets[0].shim_roomSize = 0.4;
+; 588  :     shim_presets[0].shim_decay = 0.2;
+; 589  :     shim_presets[0].shim_damping = 0.5;
+; 590  :     shim_presets[0].shim_space = 0.5;
+; 591  :     shim_presets[0].shim_shimmer = 0.5;
+; 592  :     shim_presets[0].shim_intervals = 0.71;
+; 593  :     shim_presets[0].shim_modRate = 0.0;
+; 594  :     shim_presets[0].shim_modDepth = 0.0;
+; 595  :     shim_presets[0].shim_lpf = 1.0;
+; 596  :     shim_presets[0].shim_hpf = 0.0;
+; 597  : 
+; 598  :     /*----------------------------------------------------*/
+; 599  :     // "Small Room" 
+; 600  :     strcpy(shim_presets[1].name, "Small Room");
 
-	lea	rdx, OFFSET FLAT:??_C@_06PIIHCPLG@Dreamy@
-	mov	DWORD PTR [rax], 1045220557		; 3e4ccccdH
+	lea	rdx, OFFSET FLAT:??_C@_0L@GEJFJLEL@Small?5Room@
+	mov	edi, 1056964608				; 3f000000H
+	xor	esi, esi
+	mov	r15d, 1065353216			; 3f800000H
+	mov	DWORD PTR [rax], edi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+16], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+4], 1053609165		; 3ecccccdH
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+8], 1060320051		; 3f333333H
+	mov	DWORD PTR [rax+16], 1045220557		; 3e4ccccdH
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+20], 1056964608		; 3f000000H
+	mov	DWORD PTR [rax+20], edi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+24], 1050253722		; 3e99999aH
+	mov	DWORD PTR [rax+24], edi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+8], edi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+12], 1060487823		; 3f35c28fH
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+28], esi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+32], esi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+36], r15d
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+40], esi
 	mov	rcx, QWORD PTR [rbx+240]
 	add	rcx, 112				; 00000070H
 	call	QWORD PTR __imp_strcpy
 
-; 629  :     shim_presets[1].shim_mix = 0.5;
+; 601  :     shim_presets[1].shim_mix = 0.5;
 
 	mov	rax, QWORD PTR [rbx+240]
 
-; 630  :     shim_presets[1].shim_decay = 3.3;
-; 631  :     shim_presets[1].shim_shimmer = 0.8;
-; 632  :     shim_presets[1].shim_damping = 0.6;
-; 633  :     shim_presets[1].shim_spread = 1.0;
-; 634  : 
-; 635  :     /*----------------------------------------------------*/
-; 636  :     // "Short" preset
-; 637  :     strcpy(shim_presets[2].name, "Short");
+; 602  :     shim_presets[1].shim_roomSize = 0.1;
+; 603  :     shim_presets[1].shim_decay = 0.1;
+; 604  :     shim_presets[1].shim_damping = 0.15;
+; 605  :     shim_presets[1].shim_space = 0.25;
+; 606  :     shim_presets[1].shim_shimmer = 0.0;
+; 607  :     shim_presets[1].shim_intervals = 0.1;
+; 608  :     shim_presets[1].shim_modRate = 0.0;
+; 609  :     shim_presets[1].shim_modDepth = 0.0;
+; 610  :     shim_presets[1].shim_lpf = 1.0;
+; 611  :     shim_presets[1].shim_hpf = 0.0;
+; 612  :      
+; 613  :     // "Hall" 
+; 614  :     strcpy(shim_presets[2].name, "Hall");
 
-	lea	rdx, OFFSET FLAT:??_C@_05BCAGPPBA@Short@
-	mov	DWORD PTR [rax+68], 1056964608		; 3f000000H
+	lea	rdx, OFFSET FLAT:??_C@_04FKEBJNOD@Hall@
+	mov	DWORD PTR [rax+68], edi
+	mov	edi, 1036831949				; 3dcccccdH
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+84], 1079194419		; 40533333H
+	mov	DWORD PTR [rax+72], edi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+76], 1061997773		; 3f4ccccdH
+	mov	DWORD PTR [rax+84], edi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+88], 1058642330		; 3f19999aH
+	mov	DWORD PTR [rax+88], 1041865114		; 3e19999aH
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+92], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+92], 1048576000		; 3e800000H
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+76], esi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+80], edi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+96], esi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+100], esi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+104], r15d
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+108], esi
 	mov	rcx, QWORD PTR [rbx+240]
 	add	rcx, 180				; 000000b4H
 	call	QWORD PTR __imp_strcpy
 
-; 638  :     shim_presets[2].shim_mix = 0.2;
+; 615  :     shim_presets[2].shim_mix = 0.7;
 
 	mov	rax, QWORD PTR [rbx+240]
 
-; 639  :     shim_presets[2].shim_decay = 2;
-; 640  :     shim_presets[2].shim_shimmer = 0.5;
-; 641  :     shim_presets[2].shim_damping = 0.4;
-; 642  :     shim_presets[2].shim_spread = 0.2;
-; 643  : 
-; 644  :     /*----------------------------------------------------*/
-; 645  :     // "Metallic" preset
-; 646  :     strcpy(shim_presets[3].name, "Metallic");
+; 616  :     shim_presets[2].shim_roomSize = 0.6;
 
-	lea	rdx, OFFSET FLAT:??_C@_08FBELJDCF@Metallic@
-	mov	DWORD PTR [rax+136], 1045220557		; 3e4ccccdH
+	mov	esi, 1058642330				; 3f19999aH
+
+; 617  :     shim_presets[2].shim_decay = 0.4;
+; 618  :     shim_presets[2].shim_damping = 0.3;
+; 619  :     shim_presets[2].shim_space = 0.6;
+; 620  :     shim_presets[2].shim_shimmer = 0.0;
+
+	xor	ecx, ecx
+	mov	DWORD PTR [rax+136], 1060320051		; 3f333333H
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+152], 1073741824		; 40000000H
+	mov	DWORD PTR [rax+140], esi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+144], 1056964608		; 3f000000H
+	mov	DWORD PTR [rax+152], 1053609165		; 3ecccccdH
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+156], 1053609165		; 3ecccccdH
+	mov	DWORD PTR [rax+156], 1050253722		; 3e99999aH
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+160], 1045220557		; 3e4ccccdH
+	mov	DWORD PTR [rax+160], esi
+	mov	rax, QWORD PTR [rbx+240]
+
+; 624  :     shim_presets[2].shim_lpf = mapValueOutsideRange(log(16000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+
+	movsd	xmm0, QWORD PTR __real@40cf400000000000
+	movss	xmm7, DWORD PTR ?MAX_LPF_FREQUENCY_LOG@@3MB
+	movss	xmm6, DWORD PTR ?MIN_LPF_FREQUENCY_LOG@@3MB
+	mov	DWORD PTR [rax+144], ecx
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+148], edi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+164], ecx
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+168], ecx
+	call	QWORD PTR __imp_log
+	mov	rax, QWORD PTR [rbx+240]
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 69   :     return (value - minValue) / (maxValue - minValue);
+
+	subss	xmm7, xmm6
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 624  :     shim_presets[2].shim_lpf = mapValueOutsideRange(log(16000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+
+	xorps	xmm1, xmm1
+
+; 626  : 
+; 627  :     // "Ambience Damped" 
+; 628  :     strcpy(shim_presets[3].name, "Ambience Damped");
+
+	lea	rdx, OFFSET FLAT:??_C@_0BA@JIEKPJGJ@Ambience?5Damped@
+	cvtsd2ss xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 69   :     return (value - minValue) / (maxValue - minValue);
+
+	subss	xmm1, xmm6
+	divss	xmm1, xmm7
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 624  :     shim_presets[2].shim_lpf = mapValueOutsideRange(log(16000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);
+
+	movss	DWORD PTR [rax+172], xmm1
+
+; 625  :     shim_presets[2].shim_hpf = 0.0;
+
+	mov	rax, QWORD PTR [rbx+240]
+	and	DWORD PTR [rax+176], 0
+
+; 626  : 
+; 627  :     // "Ambience Damped" 
+; 628  :     strcpy(shim_presets[3].name, "Ambience Damped");
+
 	mov	rcx, QWORD PTR [rbx+240]
 	add	rcx, 248				; 000000f8H
 	call	QWORD PTR __imp_strcpy
 
-; 647  :     shim_presets[3].shim_mix = 0.5;
+; 629  :     shim_presets[3].shim_mix = 0.8;
 
 	mov	rax, QWORD PTR [rbx+240]
 
-; 648  :     shim_presets[3].shim_decay = 2.2;
-; 649  :     shim_presets[3].shim_shimmer = 0.0;
-; 650  :     shim_presets[3].shim_damping = 0.0;
-; 651  :     shim_presets[3].shim_spread = 1.0;
-; 652  : 
-; 653  :     /*----------------------------------------------------*/
-; 654  :     // "Wobbly" preset
-; 655  :     strcpy(shim_presets[4].name, "Wobbly");
+; 630  :     shim_presets[3].shim_roomSize = 0.6;
+; 631  :     shim_presets[3].shim_decay = 0.6;
+; 632  :     shim_presets[3].shim_damping = 0.8;
+; 633  :     shim_presets[3].shim_space = 0.7;
+; 634  :     shim_presets[3].shim_shimmer = 1.0;
+; 635  :     shim_presets[3].shim_intervals = 0.71;
+; 636  :     shim_presets[3].shim_modRate = 0.0;
+; 637  :     shim_presets[3].shim_modDepth = 0.0;
+; 638  :     shim_presets[3].shim_lpf = 1.0;
+; 639  :     shim_presets[3].shim_hpf = mapValueOutsideRange(150.0, MIN_HPF_FREQUENCY, MAX_HPF_FREQUENCY);
+; 640  : 
+; 641  :     // "Ambience Modulated" 
+; 642  :     strcpy(shim_presets[4].name, "Ambience Modulated");
 
-	lea	rdx, OFFSET FLAT:??_C@_06LAKOKBGJ@Wobbly@
-	mov	DWORD PTR [rax+204], 1056964608		; 3f000000H
+	lea	rdx, OFFSET FLAT:??_C@_0BD@CJOOIIIC@Ambience?5Modulated@
+	mov	edi, 1061997773				; 3f4ccccdH
+	mov	DWORD PTR [rax+204], edi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+220], 1074580685		; 400ccccdH
+	mov	DWORD PTR [rax+208], esi
 	mov	rax, QWORD PTR [rbx+240]
-	and	DWORD PTR [rax+212], 0
+	mov	DWORD PTR [rax+220], esi
 	mov	rax, QWORD PTR [rbx+240]
-	and	DWORD PTR [rax+224], 0
+	mov	DWORD PTR [rax+224], edi
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+228], 1065353216		; 3f800000H
+	mov	DWORD PTR [rax+228], 1060320051		; 3f333333H
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+212], r15d
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+216], 1060487823		; 3f35c28fH
+	mov	rax, QWORD PTR [rbx+240]
+	and	DWORD PTR [rax+232], 0
+	mov	rax, QWORD PTR [rbx+240]
+	and	DWORD PTR [rax+236], 0
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+240], r15d
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+244], 1006297021		; 3bfadfbdH
 	mov	rcx, QWORD PTR [rbx+240]
 	add	rcx, 316				; 0000013cH
 	call	QWORD PTR __imp_strcpy
 
-; 656  :     shim_presets[4].shim_mix = 0.65;
+; 643  :     shim_presets[4].shim_mix = 0.8;
 
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+272], 1059481190		; 3f266666H
 
-; 657  :     shim_presets[4].shim_decay = 2.0;
+; 652  :     shim_presets[4].shim_lpf = mapValueOutsideRange(log(17000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);;
+
+	movsd	xmm0, QWORD PTR __real@40d09a0000000000
+	movss	xmm7, DWORD PTR ?MAX_LPF_FREQUENCY_LOG@@3MB
+	movss	xmm6, DWORD PTR ?MIN_LPF_FREQUENCY_LOG@@3MB
+	mov	DWORD PTR [rax+272], edi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+276], esi
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+288], 1060320051		; 3f333333H
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+292], 1045220557		; 3e4ccccdH
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+296], 1060320051		; 3f333333H
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+280], r15d
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+284], 1062165545		; 3f4f5c29H
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+300], 1053609165		; 3ecccccdH
+	mov	rax, QWORD PTR [rbx+240]
+	mov	DWORD PTR [rax+304], 1056964608		; 3f000000H
+	call	QWORD PTR __imp_log
+	mov	rax, QWORD PTR [rbx+240]
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 69   :     return (value - minValue) / (maxValue - minValue);
+
+	subss	xmm7, xmm6
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 652  :     shim_presets[4].shim_lpf = mapValueOutsideRange(log(17000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);;
+
+	xorps	xmm1, xmm1
+	cvtsd2ss xmm1, xmm0
+; File E:\FoxSuite\shimmer\include\utils.h
+
+; 69   :     return (value - minValue) / (maxValue - minValue);
+
+	subss	xmm1, xmm6
+	divss	xmm1, xmm7
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+
+; 652  :     shim_presets[4].shim_lpf = mapValueOutsideRange(log(17000.0), MIN_LPF_FREQUENCY_LOG, MAX_LPF_FREQUENCY_LOG);;
+
+	movss	DWORD PTR [rax+308], xmm1
+
+; 653  :     shim_presets[4].shim_hpf = 0.0;    
 
 	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+288], 1073741824		; 40000000H
+	and	DWORD PTR [rax+312], 0
 
-; 658  :     shim_presets[4].shim_shimmer = 0.7;
+; 654  : 
+; 655  :     // Set the program when creating a new plugin instance
+; 656  :     int initIdx = 0;
+; 657  :     Shimmer::setProgram(initIdx);
 
-	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+280], 1060320051		; 3f333333H
+	xor	edx, edx
+	mov	rcx, rbx
+	call	?setProgram@Shimmer@@UEAAXH@Z		; Shimmer::setProgram
 
-; 659  :     shim_presets[4].shim_damping = 0.3;
-
-	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+292], 1050253722		; 3e99999aH
-
-; 660  :     shim_presets[4].shim_spread = 0.3;
-
-	mov	rax, QWORD PTR [rbx+240]
-	mov	DWORD PTR [rax+296], 1050253722		; 3e99999aH
-
-; 661  : 
-; 662  :     // Set the program when creating a new plugin instance
-; 663  :     int initIdx = 0;
-; 664  :     AudioEffect::setProgram(initIdx);
-; 665  :     shim_mix = shim_presets[initIdx].shim_mix;
+; 658  :     shim_mix = shim_presets[initIdx].shim_mix;
 
 	mov	rcx, QWORD PTR [rbx+240]
-	and	DWORD PTR [rbx+40], 0
+
+; 659  :     shim_roomSize = shim_presets[initIdx].shim_roomSize;
+; 660  :     shim_decay = shim_presets[initIdx].shim_decay;
+; 661  :     shim_damping = shim_presets[initIdx].shim_damping;
+; 662  :     shim_space = shim_presets[initIdx].shim_space;
+; 663  :     shim_shimmer = shim_presets[initIdx].shim_shimmer;
+; 664  :     shim_intervals = shim_presets[initIdx].shim_intervals;
+; 665  :     shim_modRate = shim_presets[initIdx].shim_modRate;
+; 666  :     shim_modDepth = shim_presets[initIdx].shim_modDepth;
+; 667  :     shim_lpf = shim_presets[initIdx].shim_lpf;
+; 668  :     shim_hpf = shim_presets[initIdx].shim_hpf;
+; 669  : }
+
+	mov	rsi, QWORD PTR [rsp+88]
+	mov	rdi, QWORD PTR [rsp+96]
+	movaps	xmm6, XMMWORD PTR [rsp+48]
 	mov	eax, DWORD PTR [rcx]
+	movaps	xmm7, XMMWORD PTR [rsp+32]
 	mov	DWORD PTR [rbx+248], eax
-
-; 666  :     shim_decay = shim_presets[initIdx].shim_decay;
-
+	mov	eax, DWORD PTR [rcx+4]
+	mov	DWORD PTR [rbx+252], eax
 	mov	eax, DWORD PTR [rcx+16]
 	mov	DWORD PTR [rbx+264], eax
-
-; 667  :     shim_shimmer = shim_presets[initIdx].shim_shimmer;
-
-	mov	eax, DWORD PTR [rcx+8]
-	mov	DWORD PTR [rbx+256], eax
-
-; 668  :     shim_damping = shim_presets[initIdx].shim_damping;
-
 	mov	eax, DWORD PTR [rcx+20]
 	mov	DWORD PTR [rbx+268], eax
-
-; 669  :     shim_spread = shim_presets[initIdx].shim_spread;
-
 	mov	eax, DWORD PTR [rcx+24]
 	mov	DWORD PTR [rbx+272], eax
-
-; 670  : }
-
-	add	rsp, 32					; 00000020H
-	pop	rbx
+	mov	eax, DWORD PTR [rcx+8]
+	mov	DWORD PTR [rbx+256], eax
+	mov	eax, DWORD PTR [rcx+12]
+	mov	DWORD PTR [rbx+260], eax
+	mov	eax, DWORD PTR [rcx+28]
+	mov	DWORD PTR [rbx+276], eax
+	mov	eax, DWORD PTR [rcx+32]
+	mov	DWORD PTR [rbx+280], eax
+	mov	eax, DWORD PTR [rcx+36]
+	mov	DWORD PTR [rbx+284], eax
+	mov	eax, DWORD PTR [rcx+40]
+	mov	DWORD PTR [rbx+288], eax
+	mov	rbx, QWORD PTR [rsp+80]
+	add	rsp, 64					; 00000040H
+	pop	r15
 	ret	0
 ?InitPresets@Shimmer@@AEAAXXZ ENDP			; Shimmer::InitPresets
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?setProgram@Shimmer@@UEAAXH@Z
 _TEXT	SEGMENT
 this$ = 48
 program$ = 56
 ?setProgram@Shimmer@@UEAAXH@Z PROC			; Shimmer::setProgram, COMDAT
 
-; 675  : {
+; 674  : {
 
 $LN4:
 	mov	QWORD PTR [rsp+8], rbx
 	push	rdi
 	sub	rsp, 32					; 00000020H
 
-; 676  :     // Call the current implementation of "setProgram"
-; 677  :     AudioEffect::setProgram(program);
-; 678  : 
-; 679  :     // Create an instante of ShimmerPresets with current preset
-; 680  :     ShimmerPresets* cp = &shim_presets[curProgram];
+; 675  :     // Call the current implementation of "setProgram"
+; 676  :     AudioEffect::setProgram(program);
+; 677  : 
+; 678  :     // Create an instante of ShimmerPresets with current preset
+; 679  :     ShimmerPresets* cp = &shim_presets[program];
 
 	movsxd	rax, edx
 	mov	rdi, rcx
 	imul	rbx, rax, 68				; 00000044H
 
-; 681  : 
-; 682  :     // Set each parameter
-; 683  :     setParameter(Param_mix, cp->shim_mix);
+; 680  : 
+; 681  :     // Set each parameter
+; 682  :     setParameter(Param_mix, cp->shim_mix);
 
 	mov	rax, QWORD PTR [rcx]
 	add	rbx, QWORD PTR [rcx+240]
@@ -39592,13 +38743,20 @@ $LN4:
 	movss	xmm2, DWORD PTR [rbx]
 	call	QWORD PTR [rax+80]
 
-; 684  :     setParameter(Param_decay, cp->shim_decay / MAX_REVERB_DECAY_IN_SECONDS);
+; 683  :     setParameter(Param_roomSize, cp->shim_roomSize);
 
-	movss	xmm2, DWORD PTR [rbx+16]
-	mov	edx, 2
-	mulss	xmm2, DWORD PTR __real@3d088889
-	mov	rcx, rdi
 	mov	rax, QWORD PTR [rdi]
+	mov	edx, 1
+	movss	xmm2, DWORD PTR [rbx+4]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 684  :     setParameter(Param_decay, cp->shim_decay);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 2
+	movss	xmm2, DWORD PTR [rbx+16]
+	mov	rcx, rdi
 	call	QWORD PTR [rax+80]
 
 ; 685  :     setParameter(Param_damping, cp->shim_damping);
@@ -39609,7 +38767,15 @@ $LN4:
 	mov	rcx, rdi
 	call	QWORD PTR [rax+80]
 
-; 686  :     setParameter(Param_shimmer, cp->shim_shimmer);
+; 686  :     setParameter(Param_space, cp->shim_space);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 6
+	movss	xmm2, DWORD PTR [rbx+24]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 687  :     setParameter(Param_shimmer, cp->shim_shimmer);
 
 	mov	rax, QWORD PTR [rdi]
 	mov	edx, 3
@@ -39617,33 +38783,65 @@ $LN4:
 	mov	rcx, rdi
 	call	QWORD PTR [rax+80]
 
-; 687  :     setParameter(Param_spread, cp->shim_spread);
+; 688  :     setParameter(Param_intervals, cp->shim_intervals);
 
 	mov	rax, QWORD PTR [rdi]
-	mov	edx, 6
-	movss	xmm2, DWORD PTR [rbx+24]
+	mov	edx, 4
+	movss	xmm2, DWORD PTR [rbx+12]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 689  :     setParameter(Param_modRate, cp->shim_modRate);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 8
+	movss	xmm2, DWORD PTR [rbx+28]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 690  :     setParameter(Param_modDepth, cp->shim_modDepth);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 7
+	movss	xmm2, DWORD PTR [rbx+32]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 691  :     setParameter(Param_lpf, cp->shim_lpf);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 9
+	movss	xmm2, DWORD PTR [rbx+36]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 692  :     setParameter(Param_hpf, cp->shim_hpf);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 10
+	movss	xmm2, DWORD PTR [rbx+40]
 	mov	rcx, rdi
 
-; 688  : }
+; 693  : }
 
 	mov	rbx, QWORD PTR [rsp+48]
 	add	rsp, 32					; 00000020H
 	pop	rdi
 
-; 687  :     setParameter(Param_spread, cp->shim_spread);
+; 692  :     setParameter(Param_hpf, cp->shim_hpf);
 
 	rex_jmp	QWORD PTR [rax+80]
 ?setProgram@Shimmer@@UEAAXH@Z ENDP			; Shimmer::setProgram
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getProgramName@Shimmer@@UEAAXPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
 name$ = 16
 ?getProgramName@Shimmer@@UEAAXPEAD@Z PROC		; Shimmer::getProgramName, COMDAT
 
-; 695  :     strcpy(name, shim_presets[curProgram].name);
+; 700  :     strcpy(name, shim_presets[curProgram].name);
 
 	movsxd	rax, DWORD PTR [rcx+40]
 	mov	r9, rdx
@@ -39656,7 +38854,7 @@ name$ = 16
 ?getProgramName@Shimmer@@UEAAXPEAD@Z ENDP		; Shimmer::getProgramName
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -39665,18 +38863,18 @@ index$ = 64
 text$ = 72
 ?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z PROC	; Shimmer::getProgramNameIndexed, COMDAT
 
-; 702  : {
+; 707  : {
 
 $LN5:
 	sub	rsp, 40					; 00000028H
 
-; 703  :     if (index < NUM_PRESETS)
+; 708  :     if (index < NUM_PRESETS)
 
 	cmp	r8d, 5
 	jge	SHORT $LN2@getProgram
 
-; 704  :     {
-; 705  :         strcpy(text, shim_presets[index].name);
+; 709  :     {
+; 710  :         strcpy(text, shim_presets[index].name);
 
 	movsxd	rax, r8d
 	imul	rdx, rax, 68				; 00000044H
@@ -39686,43 +38884,205 @@ $LN5:
 	add	rdx, rax
 	call	QWORD PTR __imp_strcpy
 
-; 706  :         return true;
+; 711  :         return true;
 
 	mov	al, 1
 	jmp	SHORT $LN1@getProgram
 $LN2@getProgram:
 
-; 707  :     }
-; 708  :     return false;
+; 712  :     }
+; 713  :     return false;
 
 	xor	al, al
 $LN1@getProgram:
 
-; 709  : }
+; 714  : }
 
 	add	rsp, 40					; 00000028H
 	ret	0
 ?getProgramNameIndexed@Shimmer@@UEAA_NHHPEAD@Z ENDP	; Shimmer::getProgramNameIndexed
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+;	COMDAT ?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z
+_TEXT	SEGMENT
+params$ = 0
+this$ = 64
+data$ = 72
+isPreset$ = 80
+?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z PROC		; Shimmer::getChunk, COMDAT
+
+; 723  : {    
+
+$LN4:
+	sub	rsp, 56					; 00000038H
+
+; 724  :     ShimmerParameters params;
+; 725  :     params.mix = this->shim_mix;
+; 726  :     params.size = this->shim_roomSize;
+; 727  :     params.decay = shim_decay;
+; 728  :     params.shimmer = shim_shimmer;
+; 729  :     params.interval = shim_intervals;
+; 730  :     params.damping = shim_damping;
+; 731  :     params.rate = shim_modRate;
+; 732  :     params.depth = shim_modDepth;
+; 733  :     params.space = shim_space;
+; 734  :     params.lpf = shim_lpf;
+; 735  :     params.hpf = shim_hpf;   
+; 736  : 
+; 737  :     *data = &params;
+
+	lea	rax, QWORD PTR params$[rsp]
+	mov	QWORD PTR [rdx], rax
+
+; 738  : 
+; 739  :     return sizeof(params);    
+
+	mov	eax, 44					; 0000002cH
+
+; 740  : }
+
+	add	rsp, 56					; 00000038H
+	ret	0
+?getChunk@Shimmer@@UEAAHPEAPEAX_N@Z ENDP		; Shimmer::getChunk
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+;	COMDAT ?setChunk@Shimmer@@UEAAHPEAXH_N@Z
+_TEXT	SEGMENT
+this$ = 48
+data$ = 56
+byteSize$ = 64
+isPreset$ = 72
+?setChunk@Shimmer@@UEAAHPEAXH_N@Z PROC			; Shimmer::setChunk, COMDAT
+
+; 744  : {
+
+$LN4:
+	mov	QWORD PTR [rsp+8], rbx
+	push	rdi
+	sub	rsp, 32					; 00000020H
+
+; 745  :     ShimmerParameters* cp = (ShimmerParameters*)data;
+; 746  :     setParameter(Param_mix, cp->mix);
+
+	movss	xmm2, DWORD PTR [rdx]
+	mov	rbx, rdx
+	mov	rax, QWORD PTR [rcx]
+	xor	edx, edx
+	mov	rdi, rcx
+	call	QWORD PTR [rax+80]
+
+; 747  :     setParameter(Param_roomSize, cp->size);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 1
+	movss	xmm2, DWORD PTR [rbx+4]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 748  :     setParameter(Param_decay, cp->decay);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 2
+	movss	xmm2, DWORD PTR [rbx+8]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 749  :     setParameter(Param_damping, cp->damping);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 5
+	movss	xmm2, DWORD PTR [rbx+20]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 750  :     setParameter(Param_space, cp->space);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 6
+	movss	xmm2, DWORD PTR [rbx+32]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 751  :     setParameter(Param_shimmer, cp->shimmer);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 3
+	movss	xmm2, DWORD PTR [rbx+12]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 752  :     setParameter(Param_intervals, cp->interval);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 4
+	movss	xmm2, DWORD PTR [rbx+16]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 753  :     setParameter(Param_modRate, cp->rate);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 8
+	movss	xmm2, DWORD PTR [rbx+24]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 754  :     setParameter(Param_modDepth, cp->depth);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 7
+	movss	xmm2, DWORD PTR [rbx+28]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 755  :     setParameter(Param_lpf, cp->lpf);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 9
+	movss	xmm2, DWORD PTR [rbx+36]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 756  :     setParameter(Param_hpf, cp->hpf);
+
+	mov	rax, QWORD PTR [rdi]
+	mov	edx, 10
+	movss	xmm2, DWORD PTR [rbx+40]
+	mov	rcx, rdi
+	call	QWORD PTR [rax+80]
+
+; 757  : 
+; 758  :     return 0;
+; 759  : }
+
+	mov	rbx, QWORD PTR [rsp+48]
+	xor	eax, eax
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+?setChunk@Shimmer@@UEAAHPEAXH_N@Z ENDP			; Shimmer::setChunk
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getEffectName@Shimmer@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 48
 name$ = 56
 ?getEffectName@Shimmer@@UEAA_NPEAD@Z PROC		; Shimmer::getEffectName, COMDAT
 
-; 719  : {
+; 767  : {
 
 $LN6:
 	push	rbx
 	sub	rsp, 32					; 00000020H
 	mov	rbx, rdx
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
@@ -39730,19 +39090,19 @@ $LN6:
 	mov	rcx, rbx
 	lea	rdx, OFFSET FLAT:??_C@_07CNCNAGDO@Shimmer@
 	call	QWORD PTR __imp_strncpy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 721  :     return true;
+; 769  :     return true;
 
 	mov	al, 1
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 297  : 	dst[maxLen] = 0;
 
 	mov	BYTE PTR [rbx+32], 0
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 722  : }
+; 770  : }
 
 	add	rsp, 32					; 00000020H
 	pop	rbx
@@ -39750,24 +39110,24 @@ $LN6:
 ?getEffectName@Shimmer@@UEAA_NPEAD@Z ENDP		; Shimmer::getEffectName
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ?getVendorString@Shimmer@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 48
 name$ = 56
 ?getVendorString@Shimmer@@UEAA_NPEAD@Z PROC		; Shimmer::getVendorString, COMDAT
 
-; 727  : {
+; 775  : {
 
 $LN6:
 	push	rbx
 	sub	rsp, 32					; 00000020H
 	mov	rbx, rdx
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
@@ -39775,19 +39135,19 @@ $LN6:
 	mov	rcx, rbx
 	lea	rdx, OFFSET FLAT:??_C@_09KHHOPKD@Fox?5Suite@
 	call	QWORD PTR __imp_strncpy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 729  :     return true;
+; 777  :     return true;
 
 	mov	al, 1
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 297  : 	dst[maxLen] = 0;
 
 	mov	BYTE PTR [rbx+64], 0
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 
-; 730  : }
+; 778  : }
 
 	add	rsp, 32					; 00000020H
 	pop	rbx
@@ -39795,21 +39155,21 @@ $LN6:
 ?getVendorString@Shimmer@@UEAA_NPEAD@Z ENDP		; Shimmer::getVendorString
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\Shimmer.cpp
+; File E:\FoxSuite\shimmer\Shimmer.cpp
 ;	COMDAT ??1Shimmer@@UEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
 ??1Shimmer@@UEAA@XZ PROC				; Shimmer::~Shimmer, COMDAT
 
-; 737  : {
+; 785  : {
 
 $LN23:
 	mov	QWORD PTR [rsp+8], rbx
 	push	rdi
 	sub	rsp, 32					; 00000020H
 
-; 738  :     //Free BranchReverb, delay and pitch shifters
-; 739  :     delete MasterReverb;
+; 786  :     //Free BranchReverb, MasterReverb and pitch shifters
+; 787  :     delete MasterReverb;
 
 	mov	rdi, QWORD PTR [rcx+304]
 	lea	rax, OFFSET FLAT:??_7Shimmer@@6B@
@@ -39824,7 +39184,7 @@ $LN23:
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN10@Shimmer:
 
-; 740  :     delete BranchReverb;
+; 788  :     delete BranchReverb;
 
 	mov	rdi, QWORD PTR [rbx+296]
 	test	rdi, rdi
@@ -39836,7 +39196,7 @@ $LN10@Shimmer:
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN13@Shimmer:
 
-; 741  :     delete PitchShift_1octL, PitchShift_1octR, PitchShift_2octL, PitchShift_2octR;
+; 789  :     delete PitchShift_1oct, PitchShift_2oct;
 
 	mov	rdi, QWORD PTR [rbx+312]
 	test	rdi, rdi
@@ -39849,7 +39209,7 @@ $LN13@Shimmer:
 $LN16@Shimmer:
 	mov	rcx, rbx
 
-; 742  : }
+; 790  : }
 
 	mov	rbx, QWORD PTR [rsp+48]
 	add	rsp, 32					; 00000020H
@@ -42568,119 +41928,44 @@ this$ = 8
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-;	COMDAT ?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z
+;	COMDAT ?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z
 _TEXT	SEGMENT
 this$ = 48
-_Newsize$ = 56
-?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z PROC ; std::vector<float,std::allocator<float> >::resize, COMDAT
+_Newcapacity$dead$ = 56
+?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z PROC ; std::vector<float,std::allocator<float> >::reserve, COMDAT
 
-; 1288 :     _CONSTEXPR20_CONTAINER void resize(_CRT_GUARDOVERFLOW const size_type _Newsize) {
+; 1369 :     _CONSTEXPR20_CONTAINER void reserve(_CRT_GUARDOVERFLOW const size_type _Newcapacity) {
 
-$LN28:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rsi
-	push	rdi
-	sub	rsp, 32					; 00000020H
+$LN9:
+	sub	rsp, 40					; 00000028H
 
-; 1263 :         const auto _Oldsize = static_cast<size_type>(_Mylast - _Myfirst);
+; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
 
-	mov	rsi, QWORD PTR [rcx+8]
-
-; 1288 :     _CONSTEXPR20_CONTAINER void resize(_CRT_GUARDOVERFLOW const size_type _Newsize) {
-
-	mov	rdi, rcx
-
-; 1263 :         const auto _Oldsize = static_cast<size_type>(_Mylast - _Myfirst);
-
-	mov	r8, QWORD PTR [rcx]
-	mov	rcx, rsi
-	sub	rcx, r8
-	sar	rcx, 2
-
-; 1264 :         if (_Newsize < _Oldsize) { // trim
-
-	cmp	rdx, rcx
-	jae	SHORT $LN4@resize
-
-; 1265 :             const pointer _Newlast = _Myfirst + _Newsize;
-
-	lea	rax, QWORD PTR [r8+rdx*4]
-
-; 1266 :             _Orphan_range(_Newlast, _Mylast);
-; 1267 :             _Destroy(_Newlast, _Mylast);
-; 1268 :             _Mylast = _Newlast;
-; 1269 :             return;
-
-	jmp	SHORT $LN25@resize
-$LN4@resize:
-
-; 1270 :         }
-; 1271 : 
-; 1272 :         if (_Newsize > _Oldsize) { // append
-
-	jbe	SHORT $LN5@resize
-
-; 1273 :             const auto _Oldcapacity = static_cast<size_type>(_My_data._Myend - _Myfirst);
-
-	mov	rax, QWORD PTR [rdi+16]
-	sub	rax, r8
+	mov	rax, QWORD PTR [rcx+16]
+	sub	rax, QWORD PTR [rcx]
 	sar	rax, 2
 
-; 1274 :             if (_Newsize > _Oldcapacity) { // reallocate
+; 1370 :         // increase capacity to _Newcapacity (without geometric growth), provide strong guarantee
+; 1371 :         if (_Newcapacity > capacity()) { // something to do (reserve() never shrinks)
 
-	cmp	rdx, rax
-	jbe	SHORT $LN6@resize
+	cmp	rax, 4096				; 00001000H
+	jae	SHORT $LN2@reserve
 
-; 1275 :                 _Resize_reallocate(_Newsize, _Val);
+; 1372 :             if (_Newcapacity > max_size()) {
+; 1373 :                 _Xlength();
+; 1374 :             }
+; 1375 : 
+; 1376 :             _Reallocate_exactly(_Newcapacity);
 
-	mov	rcx, rdi
-	call	??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z ; std::vector<float,std::allocator<float> >::_Resize_reallocate<std::_Value_init_tag>
+	call	?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z ; std::vector<float,std::allocator<float> >::_Reallocate_exactly
+$LN2@reserve:
 
-; 1276 :                 return;
+; 1377 :         }
+; 1378 :     }
 
-	jmp	SHORT $LN5@resize
-$LN6@resize:
-
-; 1277 :             }
-; 1278 : 
-; 1279 :             const pointer _Oldlast = _Mylast;
-; 1280 :             _Mylast                = _Ufill(_Oldlast, _Newsize - _Oldsize, _Val);
-
-	sub	rdx, rcx
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 1789 :     _CSTD memset(_First_ch, 0, static_cast<size_t>(_Last_ch - _First_ch));
-
-	mov	rcx, rsi
-
-; 1804 :             _Zero_range(_PFirst, _PFirst + _Count);
-
-	lea	rbx, QWORD PTR [rdx*4]
-
-; 1789 :     _CSTD memset(_First_ch, 0, static_cast<size_t>(_Last_ch - _First_ch));
-
-	xor	edx, edx
-	mov	r8, rbx
-	call	QWORD PTR __imp_memset
-
-; 1805 :             return _First + _Count;
-
-	lea	rax, QWORD PTR [rbx+rsi]
-$LN25@resize:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1291 :     }
-
-	mov	QWORD PTR [rdi+8], rax
-$LN5@resize:
-	mov	rbx, QWORD PTR [rsp+48]
-	mov	rsi, QWORD PTR [rsp+56]
-	add	rsp, 32					; 00000020H
-	pop	rdi
+	add	rsp, 40					; 00000028H
 	ret	0
-?resize@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ENDP ; std::vector<float,std::allocator<float> >::resize
+?reserve@?$vector@MV?$allocator@M@std@@@std@@QEAAX_K@Z ENDP ; std::vector<float,std::allocator<float> >::reserve
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -44343,6 +43628,180 @@ _Last$dead$ = 24
 
 	ret	0
 ?_Destroy@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@AEAAXPEAPEAVDelay@@0@Z ENDP ; std::vector<Delay *,std::allocator<Delay *> >::_Destroy
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z
+_TEXT	SEGMENT
+this$ = 48
+_Newcapacity$dead$ = 56
+?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z PROC ; std::vector<float,std::allocator<float> >::_Reallocate_exactly, COMDAT
+
+; 1299 :     _CONSTEXPR20_CONTAINER void _Reallocate_exactly(const size_type _Newcapacity) {
+
+$LN78:
+	mov	QWORD PTR [rsp+8], rbx
+	mov	QWORD PTR [rsp+16], rsi
+	push	rdi
+	sub	rsp, 32					; 00000020H
+
+; 1305 :         const auto _Size = static_cast<size_type>(_Mylast - _Myfirst);
+
+	mov	rsi, QWORD PTR [rcx+8]
+	mov	rbx, rcx
+	sub	rsi, QWORD PTR [rcx]
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 85   :         return ::operator new(_Bytes);
+
+	mov	ecx, 16423				; 00004027H
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1305 :         const auto _Size = static_cast<size_type>(_Mylast - _Myfirst);
+
+	sar	rsi, 2
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 85   :         return ::operator new(_Bytes);
+
+	call	??2@YAPEAX_K@Z				; operator new
+
+; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
+
+	test	rax, rax
+	je	SHORT $LN68@Reallocate
+
+; 143  :     void* const _Ptr = reinterpret_cast<void*>((_Ptr_container + _Non_user_size) & ~(_Big_allocation_alignment - 1));
+
+	lea	rdi, QWORD PTR [rax+39]
+	and	rdi, -32				; ffffffffffffffe0H
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rcx, rdi
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 144  :     static_cast<uintptr_t*>(_Ptr)[-1] = _Ptr_container;
+
+	mov	QWORD PTR [rdi-8], rax
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
+
+; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
+
+	mov	r8, QWORD PTR [rbx+8]
+	sub	r8, QWORD PTR [rbx]
+
+; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
+
+	mov	rdx, QWORD PTR [rbx]
+	call	QWORD PTR __imp_memmove
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1745 :         if (_Myfirst) { // destroy and deallocate old array
+
+	mov	rcx, QWORD PTR [rbx]
+	test	rcx, rcx
+	je	SHORT $LN61@Reallocate
+
+; 1746 :             _Destroy(_Myfirst, _Mylast);
+; 1747 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
+
+	mov	rdx, QWORD PTR [rbx+16]
+	sub	rdx, rcx
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
+
+	and	rdx, -4
+
+; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
+
+	cmp	rdx, 4096				; 00001000H
+	jb	SHORT $LN71@Reallocate
+
+; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
+
+	mov	r8, QWORD PTR [rcx-8]
+	add	rdx, 39					; 00000027H
+
+; 159  : 
+; 160  :     // If the following asserts, it likely means that we are performing
+; 161  :     // an aligned delete on memory coming from an unaligned allocation.
+; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
+; 163  : 
+; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
+; 165  :     // in range [_Min_back_shift, _Non_user_size]
+; 166  : #ifdef _DEBUG
+; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
+; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
+; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
+; 170  : #endif // _DEBUG
+; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
+
+	sub	rcx, r8
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	lea	rax, QWORD PTR [rcx-8]
+	cmp	rax, 31
+	ja	SHORT $LN68@Reallocate
+
+; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
+
+	mov	rcx, r8
+$LN71@Reallocate:
+
+; 264  :         ::operator delete(_Ptr, _Bytes);
+
+	call	??3@YAXPEAX_K@Z				; operator delete
+$LN61@Reallocate:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+
+; 1751 :         _Mylast  = _Newvec + _Newsize;
+
+	lea	rax, QWORD PTR [rdi+rsi*4]
+	mov	QWORD PTR [rbx], rdi
+
+; 1317 :     }
+
+	mov	rsi, QWORD PTR [rsp+56]
+
+; 1751 :         _Mylast  = _Newvec + _Newsize;
+
+	mov	QWORD PTR [rbx+8], rax
+
+; 1752 :         _Myend   = _Newvec + _Newcapacity;
+
+	lea	rax, QWORD PTR [rdi+16384]
+	mov	QWORD PTR [rbx+16], rax
+
+; 1317 :     }
+
+	mov	rbx, QWORD PTR [rsp+48]
+	add	rsp, 32					; 00000020H
+	pop	rdi
+	ret	0
+$LN68@Reallocate:
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
+
+; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
+
+	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
+	int	3
+$LN75@Reallocate:
+?_Reallocate_exactly@?$vector@MV?$allocator@M@std@@@std@@AEAAX_K@Z ENDP ; std::vector<float,std::allocator<float> >::_Reallocate_exactly
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -49062,121 +48521,6 @@ __formal$dead$ = 16
 ??$?0$$V@?$_Compressed_pair@V?$allocator@PEAVDelay@@@std@@V?$_Vector_val@U?$_Simple_types@PEAVDelay@@@std@@@2@$00@std@@QEAA@U_Zero_then_variadic_args_t@1@@Z ENDP ; std::_Compressed_pair<std::allocator<Delay *>,std::_Vector_val<std::_Simple_types<Delay *> >,1>::_Compressed_pair<std::allocator<Delay *>,std::_Vector_val<std::_Simple_types<Delay *> >,1><>
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-;	COMDAT ??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z
-_TEXT	SEGMENT
-this$ = 48
-_Newsize$ = 56
-_Val$dead$ = 64
-??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z PROC ; std::vector<float,std::allocator<float> >::_Resize<std::_Value_init_tag>, COMDAT
-
-; 1258 :     _CONSTEXPR20_CONTAINER void _Resize(const size_type _Newsize, const _Ty2& _Val) {
-
-$LN26:
-	mov	QWORD PTR [rsp+8], rbx
-	mov	QWORD PTR [rsp+16], rsi
-	push	rdi
-	sub	rsp, 32					; 00000020H
-
-; 1259 :         // trim or append elements, provide strong guarantee
-; 1260 :         auto& _My_data      = _Mypair._Myval2;
-; 1261 :         pointer& _Myfirst   = _My_data._Myfirst;
-; 1262 :         pointer& _Mylast    = _My_data._Mylast;
-; 1263 :         const auto _Oldsize = static_cast<size_type>(_Mylast - _Myfirst);
-
-	mov	rsi, QWORD PTR [rcx+8]
-	mov	rdi, rcx
-	mov	r8, QWORD PTR [rcx]
-	mov	rcx, rsi
-	sub	rcx, r8
-	sar	rcx, 2
-
-; 1264 :         if (_Newsize < _Oldsize) { // trim
-
-	cmp	rdx, rcx
-	jae	SHORT $LN2@Resize
-
-; 1265 :             const pointer _Newlast = _Myfirst + _Newsize;
-
-	lea	rax, QWORD PTR [r8+rdx*4]
-
-; 1266 :             _Orphan_range(_Newlast, _Mylast);
-; 1267 :             _Destroy(_Newlast, _Mylast);
-; 1268 :             _Mylast = _Newlast;
-; 1269 :             return;
-
-	jmp	SHORT $LN23@Resize
-$LN2@Resize:
-
-; 1270 :         }
-; 1271 : 
-; 1272 :         if (_Newsize > _Oldsize) { // append
-
-	jbe	SHORT $LN3@Resize
-
-; 1273 :             const auto _Oldcapacity = static_cast<size_type>(_My_data._Myend - _Myfirst);
-
-	mov	rax, QWORD PTR [rdi+16]
-	sub	rax, r8
-	sar	rax, 2
-
-; 1274 :             if (_Newsize > _Oldcapacity) { // reallocate
-
-	cmp	rdx, rax
-	jbe	SHORT $LN4@Resize
-
-; 1275 :                 _Resize_reallocate(_Newsize, _Val);
-
-	mov	rcx, rdi
-	call	??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z ; std::vector<float,std::allocator<float> >::_Resize_reallocate<std::_Value_init_tag>
-
-; 1276 :                 return;
-
-	jmp	SHORT $LN3@Resize
-$LN4@Resize:
-
-; 1277 :             }
-; 1278 : 
-; 1279 :             const pointer _Oldlast = _Mylast;
-; 1280 :             _Mylast                = _Ufill(_Oldlast, _Newsize - _Oldsize, _Val);
-
-	sub	rdx, rcx
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 1789 :     _CSTD memset(_First_ch, 0, static_cast<size_t>(_Last_ch - _First_ch));
-
-	mov	rcx, rsi
-
-; 1804 :             _Zero_range(_PFirst, _PFirst + _Count);
-
-	lea	rbx, QWORD PTR [rdx*4]
-
-; 1789 :     _CSTD memset(_First_ch, 0, static_cast<size_t>(_Last_ch - _First_ch));
-
-	xor	edx, edx
-	mov	r8, rbx
-	call	QWORD PTR __imp_memset
-
-; 1805 :             return _First + _Count;
-
-	lea	rax, QWORD PTR [rbx+rsi]
-$LN23@Resize:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1285 :     }
-
-	mov	QWORD PTR [rdi+8], rax
-$LN3@Resize:
-	mov	rbx, QWORD PTR [rsp+48]
-	mov	rsi, QWORD PTR [rsp+56]
-	add	rsp, 32					; 00000020H
-	pop	rdi
-	ret	0
-??$_Resize@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z ENDP ; std::vector<float,std::allocator<float> >::_Resize<std::_Value_init_tag>
-_TEXT	ENDS
-; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xstddef
 ;	COMDAT ??$addressof@V?$vector@MV?$allocator@M@std@@@std@@@std@@YAPEAV?$vector@MV?$allocator@M@std@@@0@AEAV10@@Z
 _TEXT	SEGMENT
@@ -49811,6 +49155,25 @@ this$ = 8
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ PROC ; std::vector<HighPassFilter *,std::allocator<HighPassFilter *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVHighPassFilter@@V?$allocator@PEAVHighPassFilter@@@std@@@std@@CAXXZ ENDP ; std::vector<HighPassFilter *,std::allocator<HighPassFilter *> >::_Xlength
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
@@ -50223,6 +49586,25 @@ this$ = 8
 	mov	rax, rcx
 	ret	0
 ??0?$_Vector_val@U?$_Simple_types@PEAVModulation@@@std@@@std@@QEAA@XZ ENDP ; std::_Vector_val<std::_Simple_types<Modulation *> >::_Vector_val<std::_Simple_types<Modulation *> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ PROC ; std::vector<Modulation *,std::allocator<Modulation *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVModulation@@V?$allocator@PEAVModulation@@@std@@@std@@CAXXZ ENDP ; std::vector<Modulation *,std::allocator<Modulation *> >::_Xlength
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -50641,6 +50023,25 @@ this$ = 8
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ PROC ; std::vector<LowPassFilter *,std::allocator<LowPassFilter *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVLowPassFilter@@V?$allocator@PEAVLowPassFilter@@@std@@@std@@CAXXZ ENDP ; std::vector<LowPassFilter *,std::allocator<LowPassFilter *> >::_Xlength
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
@@ -51053,6 +50454,25 @@ this$ = 8
 	mov	rax, rcx
 	ret	0
 ??0?$_Vector_val@U?$_Simple_types@PEAVModMultiChannelDiffuser@@@std@@@std@@QEAA@XZ ENDP ; std::_Vector_val<std::_Simple_types<ModMultiChannelDiffuser *> >::_Vector_val<std::_Simple_types<ModMultiChannelDiffuser *> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ PROC ; std::vector<ModMultiChannelDiffuser *,std::allocator<ModMultiChannelDiffuser *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVModMultiChannelDiffuser@@V?$allocator@PEAVModMultiChannelDiffuser@@@std@@@std@@CAXXZ ENDP ; std::vector<ModMultiChannelDiffuser *,std::allocator<ModMultiChannelDiffuser *> >::_Xlength
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -51471,6 +50891,25 @@ this$ = 8
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ PROC ; std::vector<MultiChannelDiffuser *,std::allocator<MultiChannelDiffuser *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVMultiChannelDiffuser@@V?$allocator@PEAVMultiChannelDiffuser@@@std@@@std@@CAXXZ ENDP ; std::vector<MultiChannelDiffuser *,std::allocator<MultiChannelDiffuser *> >::_Xlength
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
@@ -51883,6 +51322,25 @@ this$ = 8
 	mov	rax, rcx
 	ret	0
 ??0?$_Vector_val@U?$_Simple_types@PEAVModDelay@@@std@@@std@@QEAA@XZ ENDP ; std::_Vector_val<std::_Simple_types<ModDelay *> >::_Vector_val<std::_Simple_types<ModDelay *> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ PROC ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVModDelay@@V?$allocator@PEAVModDelay@@@std@@@std@@CAXXZ ENDP ; std::vector<ModDelay *,std::allocator<ModDelay *> >::_Xlength
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -52301,6 +51759,25 @@ this$ = 8
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ PROC ; std::vector<int,std::allocator<int> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@HV?$allocator@H@std@@@std@@CAXXZ ENDP ; std::vector<int,std::allocator<int> >::_Xlength
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
@@ -52713,6 +52190,25 @@ this$ = 8
 	mov	rax, rcx
 	ret	0
 ??0?$_Vector_val@U?$_Simple_types@PEAVDelay@@@std@@@std@@QEAA@XZ ENDP ; std::_Vector_val<std::_Simple_types<Delay *> >::_Vector_val<std::_Simple_types<Delay *> >
+_TEXT	ENDS
+; Function compile flags: /Ogspy
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
+;	COMDAT ?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ
+_TEXT	SEGMENT
+?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ PROC ; std::vector<Delay *,std::allocator<Delay *> >::_Xlength, COMDAT
+
+; 1773 :     [[noreturn]] static void _Xlength() {
+
+$LN4:
+	sub	rsp, 40					; 00000028H
+
+; 1774 :         _Xlength_error("vector too long");
+
+	lea	rcx, OFFSET FLAT:??_C@_0BA@FOIKENOD@vector?5too?5long@
+	call	QWORD PTR __imp_?_Xlength_error@std@@YAXPEBD@Z
+	int	3
+$LN3@Xlength:
+?_Xlength@?$vector@PEAVDelay@@V?$allocator@PEAVDelay@@@std@@@std@@CAXXZ ENDP ; std::vector<Delay *,std::allocator<Delay *> >::_Xlength
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -53130,20 +52626,6 @@ _End$ = 32
 	mov	QWORD PTR [rcx+16], r9
 	ret	0
 ??0?$_Vector_val@U?$_Simple_types@M@std@@@std@@QEAA@PEAM00@Z ENDP ; std::_Vector_val<std::_Simple_types<float> >::_Vector_val<std::_Simple_types<float> >
-_TEXT	ENDS
-; Function compile flags: /Ogspy
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-;	COMDAT ?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z
-_TEXT	SEGMENT
-this$dead$ = 8
-__formal$dead$ = 16
-__formal$dead$ = 24
-?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z PROC ; std::vector<float,std::allocator<float> >::_Orphan_range, COMDAT
-
-; 1814 :     _CONSTEXPR20_CONTAINER void _Orphan_range(pointer, pointer) const {}
-
-	ret	0
-?_Orphan_range@?$vector@MV?$allocator@M@std@@@std@@AEBAXPEAM0@Z ENDP ; std::vector<float,std::allocator<float> >::_Orphan_range
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
@@ -54349,340 +53831,6 @@ _It$ = 8
 ??$_Voidify_iter@PEAPEAVDelay@@@std@@YAPEAXPEAPEAVDelay@@@Z ENDP ; std::_Voidify_iter<Delay * *>
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-;	COMDAT ??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z
-_TEXT	SEGMENT
-this$ = 48
-_Newsize$ = 56
-_Val$dead$ = 64
-??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z PROC ; std::vector<float,std::allocator<float> >::_Resize_reallocate<std::_Value_init_tag>, COMDAT
-
-; 1229 :     _CONSTEXPR20_CONTAINER void _Resize_reallocate(const size_type _Newsize, const _Ty2& _Val) {
-
-$LN106:
-	mov	rax, rsp
-	mov	QWORD PTR [rax+8], rbx
-	mov	QWORD PTR [rax+16], rbp
-	mov	QWORD PTR [rax+24], rsi
-	mov	QWORD PTR [rax+32], rdi
-	push	r14
-	sub	rsp, 32					; 00000020H
-
-; 1230 :         if (_Newsize > max_size()) {
-
-	mov	r8, 4611686018427387903			; 3fffffffffffffffH
-	mov	rbp, rdx
-	mov	rdi, rcx
-	cmp	rdx, r8
-	ja	$LN104@Resize_rea
-
-; 1232 :         }
-; 1233 : 
-; 1234 :         auto& _My_data    = _Mypair._Myval2;
-; 1235 :         pointer& _Myfirst = _My_data._Myfirst;
-; 1236 :         pointer& _Mylast  = _My_data._Mylast;
-; 1237 : 
-; 1238 :         const auto _Oldsize          = static_cast<size_type>(_Mylast - _Myfirst);
-
-	mov	r14, QWORD PTR [rcx+8]
-
-; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
-
-	mov	rax, r8
-
-; 1232 :         }
-; 1233 : 
-; 1234 :         auto& _My_data    = _Mypair._Myval2;
-; 1235 :         pointer& _Myfirst = _My_data._Myfirst;
-; 1236 :         pointer& _Mylast  = _My_data._Mylast;
-; 1237 : 
-; 1238 :         const auto _Oldsize          = static_cast<size_type>(_Mylast - _Myfirst);
-
-	sub	r14, QWORD PTR [rcx]
-
-; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
-
-	mov	rcx, QWORD PTR [rcx+16]
-	sub	rcx, QWORD PTR [rdi]
-	sar	rcx, 2
-
-; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
-
-	mov	rdx, rcx
-
-; 1232 :         }
-; 1233 : 
-; 1234 :         auto& _My_data    = _Mypair._Myval2;
-; 1235 :         pointer& _Myfirst = _My_data._Myfirst;
-; 1236 :         pointer& _Mylast  = _My_data._Mylast;
-; 1237 : 
-; 1238 :         const auto _Oldsize          = static_cast<size_type>(_Mylast - _Myfirst);
-
-	sar	r14, 2
-
-; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
-
-	shr	rdx, 1
-	sub	rax, rdx
-	cmp	rcx, rax
-	ja	$LN101@Resize_rea
-
-; 1689 :             return _Max; // geometric growth would overflow
-; 1690 :         }
-; 1691 : 
-; 1692 :         const size_type _Geometric = _Oldcapacity + _Oldcapacity / 2;
-
-	lea	rsi, QWORD PTR [rdx+rcx]
-
-; 1693 : 
-; 1694 :         if (_Geometric < _Newsize) {
-
-	cmp	rsi, rbp
-	jae	SHORT $LN11@Resize_rea
-
-; 1695 :             return _Newsize; // geometric growth would be insufficient
-
-	mov	rsi, rbp
-	jmp	SHORT $LN99@Resize_rea
-$LN11@Resize_rea:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 64   :         if (_Count > _Max_possible) {
-
-	cmp	rsi, r8
-	ja	$LN101@Resize_rea
-$LN99@Resize_rea:
-
-; 65   :             _Throw_bad_array_new_length(); // multiply overflow
-; 66   :         }
-; 67   :     }
-; 68   : 
-; 69   :     return _Count * _Ty_size;
-
-	shl	rsi, 2
-
-; 237  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
-
-	cmp	rsi, 4096				; 00001000H
-	jb	SHORT $LN22@Resize_rea
-
-; 136  :     const size_t _Block_size = _Non_user_size + _Bytes;
-
-	lea	rcx, QWORD PTR [rsi+39]
-
-; 137  :     if (_Block_size <= _Bytes) {
-
-	cmp	rcx, rsi
-	jbe	$LN101@Resize_rea
-
-; 85   :         return ::operator new(_Bytes);
-
-	call	??2@YAPEAX_K@Z				; operator new
-
-; 142  :     _STL_VERIFY(_Ptr_container != 0, "invalid argument"); // validate even in release since we're doing p[-1]
-
-	test	rax, rax
-	je	$LN92@Resize_rea
-
-; 143  :     void* const _Ptr = reinterpret_cast<void*>((_Ptr_container + _Non_user_size) & ~(_Big_allocation_alignment - 1));
-
-	lea	rbx, QWORD PTR [rax+39]
-	and	rbx, -32				; ffffffffffffffe0H
-
-; 144  :     static_cast<uintptr_t*>(_Ptr)[-1] = _Ptr_container;
-
-	mov	QWORD PTR [rbx-8], rax
-
-; 238  :             return _Allocate_manually_vector_aligned<_Traits>(_Bytes);
-
-	jmp	SHORT $LN21@Resize_rea
-$LN22@Resize_rea:
-
-; 239  :         }
-; 240  :     }
-; 241  : #endif // defined(_M_IX86) || defined(_M_X64)
-; 242  : 
-; 243  :     if (_Bytes != 0) {
-
-	test	rsi, rsi
-	je	SHORT $LN23@Resize_rea
-
-; 85   :         return ::operator new(_Bytes);
-
-	mov	rcx, rsi
-	call	??2@YAPEAX_K@Z				; operator new
-	mov	rbx, rax
-
-; 244  :         return _Traits::_Allocate(_Bytes);
-
-	jmp	SHORT $LN21@Resize_rea
-$LN23@Resize_rea:
-
-; 245  :     }
-; 246  : 
-; 247  :     return nullptr;
-
-	xor	ebx, ebx
-$LN21@Resize_rea:
-
-; 1789 :     _CSTD memset(_First_ch, 0, static_cast<size_t>(_Last_ch - _First_ch));
-
-	mov	r8, rbp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1242 :         const pointer _Appended_first = _Newvec + _Oldsize;
-
-	lea	rcx, QWORD PTR [rbx+r14*4]
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 1789 :     _CSTD memset(_First_ch, 0, static_cast<size_t>(_Last_ch - _First_ch));
-
-	sub	r8, r14
-	xor	edx, edx
-	shl	r8, 2
-	call	QWORD PTR __imp_memset
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility
-
-; 4166 :     const auto _Count           = static_cast<size_t>(_Last_ch - _First_ch);
-
-	mov	r8, QWORD PTR [rdi+8]
-
-; 4167 :     _CSTD memmove(_Dest_ch, _First_ch, _Count);
-
-	mov	rcx, rbx
-	sub	r8, QWORD PTR [rdi]
-	mov	rdx, QWORD PTR [rdi]
-	call	QWORD PTR __imp_memmove
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1745 :         if (_Myfirst) { // destroy and deallocate old array
-
-	mov	rcx, QWORD PTR [rdi]
-	test	rcx, rcx
-	je	SHORT $LN85@Resize_rea
-
-; 1746 :             _Destroy(_Myfirst, _Mylast);
-; 1747 :             _Getal().deallocate(_Myfirst, static_cast<size_type>(_Myend - _Myfirst));
-
-	mov	rdx, QWORD PTR [rdi+16]
-	sub	rdx, rcx
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 835  :         _Deallocate<_New_alignof<_Ty>>(_Ptr, sizeof(_Ty) * _Count);
-
-	and	rdx, -4
-
-; 260  :         if (_Bytes >= _Big_allocation_threshold) { // boost the alignment of big allocations to help autovectorization
-
-	cmp	rdx, 4096				; 00001000H
-	jb	SHORT $LN95@Resize_rea
-
-; 158  :     const uintptr_t _Ptr_container   = _Ptr_user[-1];
-
-	mov	r8, QWORD PTR [rcx-8]
-	add	rdx, 39					; 00000027H
-
-; 159  : 
-; 160  :     // If the following asserts, it likely means that we are performing
-; 161  :     // an aligned delete on memory coming from an unaligned allocation.
-; 162  :     _STL_ASSERT(_Ptr_user[-2] == _Big_allocation_sentinel, "invalid argument");
-; 163  : 
-; 164  :     // Extra paranoia on aligned allocation/deallocation; ensure _Ptr_container is
-; 165  :     // in range [_Min_back_shift, _Non_user_size]
-; 166  : #ifdef _DEBUG
-; 167  :     constexpr uintptr_t _Min_back_shift = 2 * sizeof(void*);
-; 168  : #else // ^^^ _DEBUG ^^^ // vvv !_DEBUG vvv
-; 169  :     constexpr uintptr_t _Min_back_shift = sizeof(void*);
-; 170  : #endif // _DEBUG
-; 171  :     const uintptr_t _Back_shift = reinterpret_cast<uintptr_t>(_Ptr) - _Ptr_container;
-
-	sub	rcx, r8
-
-; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
-
-	lea	rax, QWORD PTR [rcx-8]
-	cmp	rax, 31
-	ja	SHORT $LN92@Resize_rea
-
-; 173  :     _Ptr = reinterpret_cast<void*>(_Ptr_container);
-
-	mov	rcx, r8
-$LN95@Resize_rea:
-
-; 264  :         ::operator delete(_Ptr, _Bytes);
-
-	call	??3@YAXPEAX_K@Z				; operator delete
-$LN85@Resize_rea:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1751 :         _Mylast  = _Newvec + _Newsize;
-
-	lea	rax, QWORD PTR [rbx+rbp*4]
-	mov	QWORD PTR [rdi], rbx
-
-; 1255 :     }
-
-	mov	rbp, QWORD PTR [rsp+56]
-
-; 1751 :         _Mylast  = _Newvec + _Newsize;
-
-	mov	QWORD PTR [rdi+8], rax
-
-; 1752 :         _Myend   = _Newvec + _Newcapacity;
-
-	lea	rax, QWORD PTR [rsi+rbx]
-
-; 1255 :     }
-
-	mov	rbx, QWORD PTR [rsp+48]
-	mov	rsi, QWORD PTR [rsp+64]
-
-; 1752 :         _Myend   = _Newvec + _Newcapacity;
-
-	mov	QWORD PTR [rdi+16], rax
-
-; 1255 :     }
-
-	mov	rdi, QWORD PTR [rsp+72]
-	add	rsp, 32					; 00000020H
-	pop	r14
-	ret	0
-$LN92@Resize_rea:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 172  :     _STL_VERIFY(_Back_shift >= _Min_back_shift && _Back_shift <= _Non_user_size, "invalid argument");
-
-	call	QWORD PTR __imp__invalid_parameter_noinfo_noreturn
-	int	3
-$LN104@Resize_rea:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-
-; 1231 :             _Xlength();
-
-	call	?_Xlength@?$vector@MV?$allocator@M@std@@@std@@CAXXZ ; std::vector<float,std::allocator<float> >::_Xlength
-	int	3
-$LN101@Resize_rea:
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory
-
-; 138  :         _Throw_bad_array_new_length(); // add overflow
-
-	call	?_Throw_bad_array_new_length@std@@YAXXZ	; std::_Throw_bad_array_new_length
-	int	3
-$LN102@Resize_rea:
-??$_Resize_reallocate@U_Value_init_tag@std@@@?$vector@MV?$allocator@M@std@@@std@@AEAAX_KAEBU_Value_init_tag@1@@Z ENDP ; std::vector<float,std::allocator<float> >::_Resize_reallocate<std::_Value_init_tag>
-_TEXT	ENDS
-; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\type_traits
 ;	COMDAT ??$forward@V?$allocator@M@std@@@std@@YA$$QEAV?$allocator@M@0@AEAV10@@Z
 _TEXT	SEGMENT
@@ -55851,77 +54999,6 @@ _Al_$ = 24
 	mov	QWORD PTR [rcx+16], r8
 	ret	0
 ??0?$_Uninitialized_backout_al@V?$allocator@PEAVHighPassFilter@@@std@@@std@@QEAA@PEAPEAVHighPassFilter@@AEAV?$allocator@PEAVHighPassFilter@@@1@@Z ENDP ; std::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >::_Uninitialized_backout_al<std::allocator<HighPassFilter *> >
-_TEXT	ENDS
-; Function compile flags: /Ogspy
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-;	COMDAT ?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z
-_TEXT	SEGMENT
-this$ = 8
-_Newsize$ = 16
-?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z PROC ; std::vector<float,std::allocator<float> >::_Calculate_growth, COMDAT
-
-; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
-
-	mov	r8, QWORD PTR [rcx+16]
-
-; 1684 :         // given _Oldcapacity and _Newsize, calculate geometric growth
-; 1685 :         const size_type _Oldcapacity = capacity();
-; 1686 :         const auto _Max              = max_size();
-; 1687 : 
-; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
-
-	mov	rax, 4611686018427387903		; 3fffffffffffffffH
-
-; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
-
-	sub	r8, QWORD PTR [rcx]
-
-; 1684 :         // given _Oldcapacity and _Newsize, calculate geometric growth
-; 1685 :         const size_type _Oldcapacity = capacity();
-; 1686 :         const auto _Max              = max_size();
-; 1687 : 
-; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
-
-	mov	rcx, rax
-
-; 1559 :         return static_cast<size_type>(_My_data._Myend - _My_data._Myfirst);
-
-	sar	r8, 2
-
-; 1684 :         // given _Oldcapacity and _Newsize, calculate geometric growth
-; 1685 :         const size_type _Oldcapacity = capacity();
-; 1686 :         const auto _Max              = max_size();
-; 1687 : 
-; 1688 :         if (_Oldcapacity > _Max - _Oldcapacity / 2) {
-
-	mov	r9, r8
-	shr	r9, 1
-	sub	rcx, r9
-	cmp	r8, rcx
-	ja	SHORT $LN3@Calculate_
-
-; 1689 :             return _Max; // geometric growth would overflow
-; 1690 :         }
-; 1691 : 
-; 1692 :         const size_type _Geometric = _Oldcapacity + _Oldcapacity / 2;
-
-	lea	rax, QWORD PTR [r9+r8]
-
-; 1693 : 
-; 1694 :         if (_Geometric < _Newsize) {
-
-	cmp	rax, rdx
-	cmovb	rax, rdx
-$LN3@Calculate_:
-
-; 1695 :             return _Newsize; // geometric growth would be insufficient
-; 1696 :         }
-; 1697 : 
-; 1698 :         return _Geometric; // geometric growth is sufficient
-; 1699 :     }
-
-	ret	0
-?_Calculate_growth@?$vector@MV?$allocator@M@std@@@std@@AEBA_K_K@Z ENDP ; std::vector<float,std::allocator<float> >::_Calculate_growth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility

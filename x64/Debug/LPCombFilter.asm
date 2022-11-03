@@ -218,7 +218,7 @@ $unwind$?processAudio@LPCombFilter@@UEAAMM@Z DD 051101H
 ?MAX_FREQUENCY_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__EMAX_FREQUENCY_LOG@@YAXXZ ; MAX_FREQUENCY_LOG$initializer$
 ?MIN_FREQUENCY_LOG$initializer$@@3P6AXXZEA DQ FLAT:??__EMIN_FREQUENCY_LOG@@YAXXZ ; MIN_FREQUENCY_LOG$initializer$
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG'', COMDAT
@@ -230,7 +230,7 @@ text$di	SEGMENT
 ??__EMAX_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG'', COMDAT
@@ -242,7 +242,7 @@ text$di	SEGMENT
 ??__EMIN_LPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_LPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG'', COMDAT
@@ -254,7 +254,7 @@ text$di	SEGMENT
 ??__EMAX_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG'', COMDAT
@@ -266,7 +266,7 @@ text$di	SEGMENT
 ??__EMIN_HPF_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_HPF_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMAX_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MAX_FREQUENCY_LOG'', COMDAT
@@ -278,7 +278,7 @@ text$di	SEGMENT
 ??__EMAX_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MAX_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\constants.h
+; File E:\FoxSuite\shimmer\include\constants.h
 ;	COMDAT ??__EMIN_FREQUENCY_LOG@@YAXXZ
 text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ PROC			; `dynamic initializer for 'MIN_FREQUENCY_LOG'', COMDAT
@@ -290,7 +290,7 @@ text$di	SEGMENT
 ??__EMIN_FREQUENCY_LOG@@YAXXZ ENDP			; `dynamic initializer for 'MIN_FREQUENCY_LOG''
 text$di	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ??0LowPassFilter@@QEAA@HMW4LPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -342,7 +342,7 @@ $LN4:
 ??0LowPassFilter@@QEAA@HMW4LPFilterType@@@Z ENDP	; LowPassFilter::LowPassFilter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ??1LowPassFilter@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -354,7 +354,7 @@ this$ = 8
 ??1LowPassFilter@@QEAA@XZ ENDP				; LowPassFilter::~LowPassFilter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?init@LowPassFilter@@QEAAXH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -372,7 +372,7 @@ sampleRate$ = 16
 ?init@LowPassFilter@@QEAAXH@Z ENDP			; LowPassFilter::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?setCutoffFrequency@LowPassFilter@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -392,7 +392,7 @@ cutoffFreq$ = 16
 ?setCutoffFrequency@LowPassFilter@@QEAAXM@Z ENDP	; LowPassFilter::setCutoffFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?setFilterType@LowPassFilter@@QEAAXW4LPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -412,7 +412,7 @@ type$ = 16
 ?setFilterType@LowPassFilter@@QEAAXW4LPFilterType@@@Z ENDP ; LowPassFilter::setFilterType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?updateGains@LowPassFilter@@QEAAXXZ
 _TEXT	SEGMENT
 this$ = 160
@@ -1018,7 +1018,7 @@ $LN2@updateGain:
 ?updateGains@LowPassFilter@@QEAAXXZ ENDP		; LowPassFilter::updateGains
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?updateBuffers@LowPassFilter@@QEAAXMM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1048,7 +1048,7 @@ yn$ = 24
 ?updateBuffers@LowPassFilter@@QEAAXMM@Z ENDP		; LowPassFilter::updateBuffers
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 ;	COMDAT ?processAudio@LowPassFilter@@QEAAMM@Z
 _TEXT	SEGMENT
 this$ = 32
@@ -1126,13 +1126,13 @@ $LN6:
 ?processAudio@LowPassFilter@@QEAAMM@Z ENDP		; LowPassFilter::processAudio
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ??0LPCombFilter@@QEAA@XZ
 _TEXT	SEGMENT
 $T1 = 48
@@ -1156,35 +1156,35 @@ $LN21:
 	mov	QWORD PTR [rcx+40], rbp
 	mov	QWORD PTR [rcx+48], rbp
 	mov	QWORD PTR [rcx+56], rbp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 10   : 	dly_makeUpGaindB		= 0.0;
+; 9    : 	dly_makeUpGaindB		= 0.0;
 
 	mov	DWORD PTR [rcx+64], ebp
 
-; 11   : 	dly_makeUpGain			= 1.0;
+; 10   : 	dly_makeUpGain			= 1.0;
 
 	mov	QWORD PTR [rcx+68], 1065353216		; 3f800000H
 
-; 12   : 	dly_delayInmsec			= 0.0;
-; 13   : 	dly_delayInSamples		= 0.0;
+; 11   : 	dly_delayInmsec			= 0.0;
+; 12   : 	dly_delayInSamples		= 0.0;
 
 	mov	QWORD PTR [rcx+20], rbp
 
-; 14   : 	dly_readIndex			= 0;
+; 13   : 	dly_readIndex			= 0;
 
 	mov	QWORD PTR [rcx+28], rbp
 
-; 15   : 	dly_writeIndex			= 0;
-; 16   : 	dly_lineLengthInSamples = 0;
+; 14   : 	dly_writeIndex			= 0;
+; 15   : 	dly_lineLengthInSamples = 0;
 
 	mov	QWORD PTR [rcx+12], rbp
 
-; 17   : 	dly_lineLengthInmsec	= 0.0;
-; 18   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
+; 16   : 	dly_lineLengthInmsec	= 0.0;
+; 17   : 	dly_sampleRate			= _TEMPLATE_SAMPLERATE;
 
 	mov	DWORD PTR [rcx+8], 44100		; 0000ac44H
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 8    : 	cf_decayInSeconds   = 0.0;
 
@@ -1193,7 +1193,7 @@ $LN21:
 ; 9    : 	cf_feedbackGainSign = 1;
 
 	mov	DWORD PTR [rcx+80], 1
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 6    : LPCombFilter::LPCombFilter() : CombFilter() {
 
@@ -1206,7 +1206,7 @@ $LN21:
 	call	??2@YAPEAX_K@Z				; operator new
 	mov	rbx, rax
 	mov	QWORD PTR $T1[rsp], rax
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 39   : 			lpf_cutoffFreq = freq;
 
@@ -1242,7 +1242,7 @@ $LN21:
 
 	mov	rcx, rax
 	call	?updateGains@LowPassFilter@@QEAAXXZ	; LowPassFilter::updateGains
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 7    : 	lpcf_feedbackLPF = new LowPassFilter();	
 
@@ -1278,11 +1278,11 @@ this$ = 48
 ?dtor$0@?0???0LPCombFilter@@QEAA@XZ@4HA ENDP		; `LPCombFilter::LPCombFilter'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ??1LPCombFilter@@QEAA@XZ
 _TEXT	SEGMENT
 this$ = 48
@@ -1305,20 +1305,20 @@ $LN13:
 	mov	edx, 60					; 0000003cH
 	call	??3@YAXPEAX_K@Z				; operator delete
 $LN6@LPCombFilt:
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 13   : CombFilter::~CombFilter() {}
 
 	lea	rax, OFFSET FLAT:??_7CombFilter@@6B@
 	mov	rcx, rbx
 	mov	QWORD PTR [rbx], rax
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 12   : }
 
 	add	rsp, 32					; 00000020H
 	pop	rbx
-; File E:\prova\Shimmer\include\src\CombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\CombFilter.cpp
 
 ; 13   : CombFilter::~CombFilter() {}
 
@@ -1344,11 +1344,11 @@ $LN6:
 ??_GLowPassFilter@@QEAAPEAXI@Z ENDP			; LowPassFilter::`scalar deleting destructor'
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ?init@LPCombFilter@@UEAAXMH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -1387,19 +1387,19 @@ $LN8:
 
 	mov	rcx, QWORD PTR [rdi+88]
 	mov	DWORD PTR [rdi+96], eax
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
 	mov	DWORD PTR [rcx+4], eax
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 21   : }
 
 	mov	rbx, QWORD PTR [rsp+48]
 	add	rsp, 32					; 00000020H
 	pop	rdi
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 71   : 		updateGains();
 
@@ -1407,9 +1407,9 @@ $LN8:
 ?init@LPCombFilter@@UEAAXMH@Z ENDP			; LPCombFilter::init
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ?setCutoffFrequency@LPCombFilter@@QEAAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1426,7 +1426,7 @@ cutoffFreq$ = 16
 ; 28   : 	lpcf_feedbackLPF->setCutoffFrequency(lpcf_cutoffFreq);
 
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 68   : 		lpf_cutoffFreq = cutoffFreq;
 
@@ -1440,9 +1440,9 @@ cutoffFreq$ = 16
 ?setCutoffFrequency@LPCombFilter@@QEAAXM@Z ENDP		; LPCombFilter::setCutoffFrequency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ?setFilterType@LPCombFilter@@QEAAXW4LPFilterType@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1452,7 +1452,7 @@ type$dead$ = 16
 ; 32   : 	lpcf_feedbackLPF->setFilterType(type);
 
 	mov	rcx, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 76   : 		lpf_type = type;
 
@@ -1466,13 +1466,13 @@ type$dead$ = 16
 ?setFilterType@LPCombFilter@@QEAAXW4LPFilterType@@@Z ENDP ; LPCombFilter::setFilterType
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ?processLowPass@LPCombFilter@@QEAAMM@Z
 _TEXT	SEGMENT
 this$ = 32
@@ -1487,18 +1487,18 @@ $LN8:
 ; 36   : 	return lpcf_feedbackLPF->processAudio(xn);
 
 	mov	rax, QWORD PTR [rcx+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 200  : 		float yn = lpf_a0 * xn + lpf_a1 * lpf_xn_1 + lpf_a2 * lpf_xn_2 - lpf_b1 * lpf_yn_1 - lpf_b2 * lpf_yn_2;
 
 	movaps	xmm0, xmm1
 	movaps	XMMWORD PTR [rsp], xmm6
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 35   : float LPCombFilter::processLowPass(float xn) {
 
 	movaps	xmm6, xmm1
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 200  : 		float yn = lpf_a0 * xn + lpf_a1 * lpf_xn_1 + lpf_a2 * lpf_xn_2 - lpf_b1 * lpf_yn_1 - lpf_b2 * lpf_yn_2;
 
@@ -1516,12 +1516,12 @@ $LN8:
 ; 194  : 		lpf_xn_1 = xn;
 
 	movss	DWORD PTR [rax+44], xmm6
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 37   : }
 
 	movaps	xmm6, XMMWORD PTR [rsp]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 192  : 		lpf_xn_2 = lpf_xn_1;
 
@@ -1549,7 +1549,7 @@ $LN8:
 ; 205  : 		return lpf_c0 * yn;
 
 	mulss	xmm5, DWORD PTR [rax+40]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 36   : 	return lpcf_feedbackLPF->processAudio(xn);
 
@@ -1562,19 +1562,19 @@ $LN8:
 ?processLowPass@LPCombFilter@@QEAAMM@Z ENDP		; LPCombFilter::processLowPass
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\LowPassFilter.h
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 ;	COMDAT ?processAudio@LPCombFilter@@UEAAMM@Z
 _TEXT	SEGMENT
 this$ = 80
@@ -1599,22 +1599,22 @@ $LN17:
 ; 44   : 	float yn_lpf = lpcf_feedbackLPF->processAudio(yn);
 
 	mov	rax, QWORD PTR [r9+88]
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 200  : 		float yn = lpf_a0 * xn + lpf_a1 * lpf_xn_1 + lpf_a2 * lpf_xn_2 - lpf_b1 * lpf_yn_1 - lpf_b2 * lpf_yn_2;
 
 	movaps	xmm1, xmm0
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 41   : 	float yn = readFromDelayLine();
 
 	movaps	xmm7, xmm0
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 155  : 	if (dly_readIndex >= dly_lineLengthInSamples)
+; 154  : 	if (dly_readIndex >= dly_lineLengthInSamples)
 
 	xor	edx, edx
-; File E:\prova\Shimmer\include\LowPassFilter.h
+; File E:\FoxSuite\shimmer\include\LowPassFilter.h
 
 ; 200  : 		float yn = lpf_a0 * xn + lpf_a1 * lpf_xn_1 + lpf_a2 * lpf_xn_2 - lpf_b1 * lpf_yn_1 - lpf_b2 * lpf_yn_2;
 
@@ -1656,70 +1656,70 @@ $LN17:
 ; 205  : 		return lpf_c0 * yn;
 
 	mulss	xmm5, DWORD PTR [rax+40]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	movsxd	rcx, DWORD PTR [r9+32]
 	mov	rax, QWORD PTR [r9+40]
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 47   : 	float buff = xn + cf_feedbackGain * yn_lpf;
 
 	mulss	xmm5, DWORD PTR [r9+72]
 	addss	xmm5, xmm6
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 168  : 	dly_buffer[dly_writeIndex] = xn;
+; 167  : 	dly_buffer[dly_writeIndex] = xn;
 
 	movss	DWORD PTR [rax+rcx*4], xmm5
 
-; 152  : 	dly_readIndex++;
+; 151  : 	dly_readIndex++;
 
 	inc	DWORD PTR [r9+28]
 
-; 155  : 	if (dly_readIndex >= dly_lineLengthInSamples)
+; 154  : 	if (dly_readIndex >= dly_lineLengthInSamples)
 
 	mov	ecx, DWORD PTR [r9+12]
 	cmp	DWORD PTR [r9+28], ecx
 	jl	SHORT $LN12@processAud
 
-; 156  : 		dly_readIndex = 0;
+; 155  : 		dly_readIndex = 0;
 
 	mov	DWORD PTR [r9+28], edx
 $LN12@processAud:
 
-; 157  : 
-; 158  : 	// Increase writing index
-; 159  : 	dly_writeIndex++;
+; 156  : 
+; 157  : 	// Increase writing index
+; 158  : 	dly_writeIndex++;
 
 	inc	DWORD PTR [r9+32]
 
-; 162  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
 
 	mov	eax, DWORD PTR [r9+32]
 	cmp	eax, ecx
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 56   : 	return yn * dly_makeUpGain;
 
 	mulss	xmm7, DWORD PTR [r9+68]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 162  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
 
 	cmovge	eax, edx
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 57   : }
 
 	movaps	xmm6, XMMWORD PTR [rsp+48]
-; File E:\FoxSuite\fox-suite-blocks\src\Delay.cpp
+; File E:\FoxSuite\shimmer\include\src\Delay.cpp
 
-; 162  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
+; 161  : 	if (dly_writeIndex >= dly_lineLengthInSamples)
 
 	mov	DWORD PTR [r9+32], eax
-; File E:\prova\Shimmer\include\src\LPCombFilter.cpp
+; File E:\FoxSuite\shimmer\include\src\LPCombFilter.cpp
 
 ; 56   : 	return yn * dly_makeUpGain;
 

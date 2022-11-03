@@ -4,14 +4,14 @@
 #include <math.h>
 #include "guiconstants.h"
 #include <time.h>       /* time */
-
+//#pragma comment(lib, "fftw3.lib")
 #define HAVE_FFTW 1
 
 /**
 @getMagnitude
 \ingroup FX-Functions
 
-@brief calculates magnitude of a complex numb er
+@brief calculates magnitude of a complex number
 
 \param re - complex number real part
 \param im - complex number imaginary part

@@ -942,7 +942,7 @@ $unwind$?matchArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@PEAU
 	DD	063415H
 	DD	0e0113215H
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?canParameterBeAutomated@AudioEffectX@@UEAA_NH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -956,7 +956,7 @@ index$ = 16
 ?canParameterBeAutomated@AudioEffectX@@UEAA_NH@Z ENDP	; AudioEffectX::canParameterBeAutomated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?string2parameter@AudioEffectX@@UEAA_NHPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -971,7 +971,7 @@ text$ = 24
 ?string2parameter@AudioEffectX@@UEAA_NHPEAD@Z ENDP	; AudioEffectX::string2parameter
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getParameterProperties@AudioEffectX@@UEAA_NHPEAUVstParameterProperties@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -986,7 +986,7 @@ p$ = 24
 ?getParameterProperties@AudioEffectX@@UEAA_NHPEAUVstParameterProperties@@@Z ENDP ; AudioEffectX::getParameterProperties
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getProgramNameIndexed@AudioEffectX@@UEAA_NHHPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1002,7 +1002,7 @@ text$ = 32
 ?getProgramNameIndexed@AudioEffectX@@UEAA_NHHPEAD@Z ENDP ; AudioEffectX::getProgramNameIndexed
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?beginSetProgram@AudioEffectX@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1015,7 +1015,7 @@ this$ = 8
 ?beginSetProgram@AudioEffectX@@UEAA_NXZ ENDP		; AudioEffectX::beginSetProgram
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?endSetProgram@AudioEffectX@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1028,7 +1028,7 @@ this$ = 8
 ?endSetProgram@AudioEffectX@@UEAA_NXZ ENDP		; AudioEffectX::endSetProgram
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?beginLoadBank@AudioEffectX@@UEAAHPEAUVstPatchChunkInfo@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1042,7 +1042,7 @@ ptr$ = 16
 ?beginLoadBank@AudioEffectX@@UEAAHPEAUVstPatchChunkInfo@@@Z ENDP ; AudioEffectX::beginLoadBank
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?beginLoadProgram@AudioEffectX@@UEAAHPEAUVstPatchChunkInfo@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1056,7 +1056,7 @@ ptr$ = 16
 ?beginLoadProgram@AudioEffectX@@UEAAHPEAUVstPatchChunkInfo@@@Z ENDP ; AudioEffectX::beginLoadProgram
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getInputProperties@AudioEffectX@@UEAA_NHPEAUVstPinProperties@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1071,7 +1071,7 @@ properties$ = 24
 ?getInputProperties@AudioEffectX@@UEAA_NHPEAUVstPinProperties@@@Z ENDP ; AudioEffectX::getInputProperties
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getOutputProperties@AudioEffectX@@UEAA_NHPEAUVstPinProperties@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1086,7 +1086,7 @@ properties$ = 24
 ?getOutputProperties@AudioEffectX@@UEAA_NHPEAUVstPinProperties@@@Z ENDP ; AudioEffectX::getOutputProperties
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?setSpeakerArrangement@AudioEffectX@@UEAA_NPEAUVstSpeakerArrangement@@0@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1101,7 +1101,7 @@ pluginOutput$ = 24
 ?setSpeakerArrangement@AudioEffectX@@UEAA_NPEAUVstSpeakerArrangement@@0@Z ENDP ; AudioEffectX::setSpeakerArrangement
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getSpeakerArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@0@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1118,7 +1118,7 @@ pluginOutput$ = 24
 ?getSpeakerArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@0@Z ENDP ; AudioEffectX::getSpeakerArrangement
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?setBypass@AudioEffectX@@UEAA_N_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1132,7 +1132,7 @@ onOff$ = 16
 ?setBypass@AudioEffectX@@UEAA_N_N@Z ENDP		; AudioEffectX::setBypass
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?setPanLaw@AudioEffectX@@UEAA_NHM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1147,7 +1147,7 @@ val$ = 24
 ?setPanLaw@AudioEffectX@@UEAA_NHM@Z ENDP		; AudioEffectX::setPanLaw
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?setProcessPrecision@AudioEffectX@@UEAA_NH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1161,7 +1161,7 @@ precision$ = 16
 ?setProcessPrecision@AudioEffectX@@UEAA_NH@Z ENDP	; AudioEffectX::setProcessPrecision
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getNumMidiInputChannels@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1174,7 +1174,7 @@ this$ = 8
 ?getNumMidiInputChannels@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::getNumMidiInputChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getNumMidiOutputChannels@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1187,7 +1187,7 @@ this$ = 8
 ?getNumMidiOutputChannels@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::getNumMidiOutputChannels
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?processEvents@AudioEffectX@@UEAAHPEAUVstEvents@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1201,7 +1201,7 @@ events$ = 16
 ?processEvents@AudioEffectX@@UEAAHPEAUVstEvents@@@Z ENDP ; AudioEffectX::processEvents
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?startProcess@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1214,7 +1214,7 @@ this$ = 8
 ?startProcess@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::startProcess
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?stopProcess@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1227,7 +1227,7 @@ this$ = 8
 ?stopProcess@AudioEffectX@@UEAAHXZ ENDP			; AudioEffectX::stopProcess
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?processVariableIo@AudioEffectX@@UEAA_NPEAUVstVariableIo@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1241,7 +1241,7 @@ varIo$ = 16
 ?processVariableIo@AudioEffectX@@UEAA_NPEAUVstVariableIo@@@Z ENDP ; AudioEffectX::processVariableIo
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?setTotalSampleToProcess@AudioEffectX@@UEAAHH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1255,7 +1255,7 @@ value$ = 16
 ?setTotalSampleToProcess@AudioEffectX@@UEAAHH@Z ENDP	; AudioEffectX::setTotalSampleToProcess
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getGetTailSize@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1268,7 +1268,7 @@ this$ = 8
 ?getGetTailSize@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getGetTailSize
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getEffectName@AudioEffectX@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1282,7 +1282,7 @@ name$ = 16
 ?getEffectName@AudioEffectX@@UEAA_NPEAD@Z ENDP		; AudioEffectX::getEffectName
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getVendorString@AudioEffectX@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1296,7 +1296,7 @@ text$ = 16
 ?getVendorString@AudioEffectX@@UEAA_NPEAD@Z ENDP	; AudioEffectX::getVendorString
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getProductString@AudioEffectX@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1310,7 +1310,7 @@ text$ = 16
 ?getProductString@AudioEffectX@@UEAA_NPEAD@Z ENDP	; AudioEffectX::getProductString
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getVendorVersion@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1323,7 +1323,7 @@ this$ = 8
 ?getVendorVersion@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getVendorVersion
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?vendorSpecific@AudioEffectX@@UEAA_JH_JPEAXM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1340,7 +1340,7 @@ floatArg$ = 40
 ?vendorSpecific@AudioEffectX@@UEAA_JH_JPEAXM@Z ENDP	; AudioEffectX::vendorSpecific
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?canDo@AudioEffectX@@UEAAHPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1354,7 +1354,7 @@ text$ = 16
 ?canDo@AudioEffectX@@UEAAHPEAD@Z ENDP			; AudioEffectX::canDo
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getVstVersion@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1367,7 +1367,7 @@ this$ = 8
 ?getVstVersion@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getVstVersion
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getMidiProgramName@AudioEffectX@@UEAAHHPEAUMidiProgramName@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1382,7 +1382,7 @@ midiProgramName$ = 24
 ?getMidiProgramName@AudioEffectX@@UEAAHHPEAUMidiProgramName@@@Z ENDP ; AudioEffectX::getMidiProgramName
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getCurrentMidiProgram@AudioEffectX@@UEAAHHPEAUMidiProgramName@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1397,7 +1397,7 @@ currentProgram$ = 24
 ?getCurrentMidiProgram@AudioEffectX@@UEAAHHPEAUMidiProgramName@@@Z ENDP ; AudioEffectX::getCurrentMidiProgram
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getMidiProgramCategory@AudioEffectX@@UEAAHHPEAUMidiProgramCategory@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1412,7 +1412,7 @@ category$ = 24
 ?getMidiProgramCategory@AudioEffectX@@UEAAHHPEAUMidiProgramCategory@@@Z ENDP ; AudioEffectX::getMidiProgramCategory
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?hasMidiProgramsChanged@AudioEffectX@@UEAA_NH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1426,7 +1426,7 @@ channel$ = 16
 ?hasMidiProgramsChanged@AudioEffectX@@UEAA_NH@Z ENDP	; AudioEffectX::hasMidiProgramsChanged
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getMidiKeyName@AudioEffectX@@UEAA_NHPEAUMidiKeyName@@@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1441,7 +1441,7 @@ keyName$ = 24
 ?getMidiKeyName@AudioEffectX@@UEAA_NHPEAUMidiKeyName@@@Z ENDP ; AudioEffectX::getMidiKeyName
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?getNextShellPlugin@AudioEffectX@@UEAAHPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1455,7 +1455,7 @@ name$ = 16
 ?getNextShellPlugin@AudioEffectX@@UEAAHPEAD@Z ENDP	; AudioEffectX::getNextShellPlugin
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?offlineNotify@AudioEffectX@@UEAA_NPEAUVstAudioFile@@H_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1471,7 +1471,7 @@ start$ = 32
 ?offlineNotify@AudioEffectX@@UEAA_NPEAUVstAudioFile@@H_N@Z ENDP ; AudioEffectX::offlineNotify
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?offlinePrepare@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@H@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1486,7 +1486,7 @@ count$ = 24
 ?offlinePrepare@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@H@Z ENDP ; AudioEffectX::offlinePrepare
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?offlineRun@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@H@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1501,7 +1501,7 @@ count$ = 24
 ?offlineRun@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@H@Z ENDP ; AudioEffectX::offlineRun
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?offlineGetNumPasses@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1514,7 +1514,7 @@ this$ = 8
 ?offlineGetNumPasses@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::offlineGetNumPasses
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?offlineGetNumMetaPasses@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1527,7 +1527,7 @@ this$ = 8
 ?offlineGetNumMetaPasses@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::offlineGetNumMetaPasses
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__getNumCategoriesDeprecated@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1540,7 +1540,7 @@ this$ = 8
 ?__getNumCategoriesDeprecated@AudioEffectX@@UEAAHXZ ENDP ; AudioEffectX::__getNumCategoriesDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__copyProgramDeprecated@AudioEffectX@@UEAA_NH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1554,7 +1554,7 @@ destination$ = 16
 ?__copyProgramDeprecated@AudioEffectX@@UEAA_NH@Z ENDP	; AudioEffectX::__copyProgramDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__inputConnectedDeprecated@AudioEffectX@@UEAAXH_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1568,7 +1568,7 @@ state$ = 24
 ?__inputConnectedDeprecated@AudioEffectX@@UEAAXH_N@Z ENDP ; AudioEffectX::__inputConnectedDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__outputConnectedDeprecated@AudioEffectX@@UEAAXH_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1582,7 +1582,7 @@ state$ = 24
 ?__outputConnectedDeprecated@AudioEffectX@@UEAAXH_N@Z ENDP ; AudioEffectX::__outputConnectedDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__reportCurrentPositionDeprecated@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1595,7 +1595,7 @@ this$ = 8
 ?__reportCurrentPositionDeprecated@AudioEffectX@@UEAAHXZ ENDP ; AudioEffectX::__reportCurrentPositionDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__reportDestinationBufferDeprecated@AudioEffectX@@UEAAPEAMXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1608,7 +1608,7 @@ this$ = 8
 ?__reportDestinationBufferDeprecated@AudioEffectX@@UEAAPEAMXZ ENDP ; AudioEffectX::__reportDestinationBufferDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__setBlockSizeAndSampleRateDeprecated@AudioEffectX@@UEAAXHM@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1624,7 +1624,7 @@ _sampleRate$ = 24
 ?__setBlockSizeAndSampleRateDeprecated@AudioEffectX@@UEAAXHM@Z ENDP ; AudioEffectX::__setBlockSizeAndSampleRateDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__getErrorTextDeprecated@AudioEffectX@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1638,7 +1638,7 @@ text$ = 16
 ?__getErrorTextDeprecated@AudioEffectX@@UEAA_NPEAD@Z ENDP ; AudioEffectX::__getErrorTextDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__getIconDeprecated@AudioEffectX@@UEAAPEAXXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1651,7 +1651,7 @@ this$ = 8
 ?__getIconDeprecated@AudioEffectX@@UEAAPEAXXZ ENDP	; AudioEffectX::__getIconDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__setViewPositionDeprecated@AudioEffectX@@UEAA_NHH@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -1666,7 +1666,7 @@ y$ = 24
 ?__setViewPositionDeprecated@AudioEffectX@@UEAA_NHH@Z ENDP ; AudioEffectX::__setViewPositionDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__fxIdleDeprecated@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1679,7 +1679,7 @@ this$ = 8
 ?__fxIdleDeprecated@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::__fxIdleDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.h
 ;	COMDAT ?__keysRequiredDeprecated@AudioEffectX@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 8
@@ -1692,15 +1692,15 @@ this$ = 8
 ?__keysRequiredDeprecated@AudioEffectX@@UEAA_NXZ ENDP	; AudioEffectX::__keysRequiredDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ??0AudioEffectX@@QEAA@P6A_JPEAUAEffect@@HH_JPEAXM@ZHH@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -1715,7 +1715,7 @@ $LN11:
 	mov	QWORD PTR [rsp+8], rbx
 	push	rdi
 	sub	rsp, 32					; 00000020H
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
 
 ; 101  : , editor (0)
 
@@ -1729,12 +1729,12 @@ $LN11:
 ; 106  : , curProgram (0)
 
 	and	DWORD PTR [rcx+40], 0
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 
 ; 59   : {}
 
 	mov	rdi, rcx
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
 
 ; 100  : : audioMaster (audioMaster)
 
@@ -1760,12 +1760,12 @@ $LN11:
 
 	or	DWORD PTR [rdi+104], 16
 	lea	rax, OFFSET FLAT:?dispatchEffectClass@AudioEffect@@KA_JPEAUAEffect@@HH_JPEAXM@Z ; AudioEffect::dispatchEffectClass
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 
 ; 59   : {}
 
 	mov	rbx, QWORD PTR [rsp+48]
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
 
 ; 111  : 	cEffect.dispatcher = dispatchEffectClass;
 
@@ -1807,14 +1807,14 @@ $LN11:
 
 	lea	rax, OFFSET FLAT:?processClassDoubleReplacing@AudioEffect@@KAXPEAUAEffect@@PEAPEAN1H@Z ; AudioEffect::processClassDoubleReplacing
 	mov	QWORD PTR [rdi+176], rax
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 
 ; 59   : {}
 
 	lea	rax, OFFSET FLAT:??_7AudioEffectX@@6B@
 	mov	QWORD PTR [rdi], rax
 	mov	rax, rdi
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffect.cpp
 
 ; 110  : 	cEffect.magic = kEffectMagic;
 
@@ -1843,7 +1843,7 @@ $LN11:
 ; 121  : 	cEffect.uniqueID = CCONST ('N', 'o', 'E', 'f');
 
 	mov	DWORD PTR [rdi+160], 1315915110		; 4e6f4566H
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 
 ; 59   : {}
 
@@ -1887,7 +1887,7 @@ this$ = 8
 ??1AudioEffectX@@UEAA@XZ ENDP				; AudioEffectX::~AudioEffectX
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?dispatcher@AudioEffectX@@UEAA_JHH_JPEAXM@Z
 _TEXT	SEGMENT
 keyCode$1 = 48
@@ -2735,7 +2735,7 @@ $LN2@dispatcher:
 ?dispatcher@AudioEffectX@@UEAA_JHH_JPEAXM@Z ENDP	; AudioEffectX::dispatcher
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?resume@AudioEffectX@@UEAAXXZ
 _TEXT	SEGMENT
 this$ = 48
@@ -2775,7 +2775,7 @@ $LN2@resume:
 ?resume@AudioEffectX@@UEAAXXZ ENDP			; AudioEffectX::resume
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__wantEventsDeprecated@AudioEffectX@@UEAAXH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -2812,7 +2812,7 @@ $LN2@wantEvents:
 ?__wantEventsDeprecated@AudioEffectX@@UEAAXH@Z ENDP	; AudioEffectX::__wantEventsDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getTimeInfo@AudioEffectX@@UEAAPEAUVstTimeInfo@@H@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -2853,7 +2853,7 @@ $LN1@getTimeInf:
 ?getTimeInfo@AudioEffectX@@UEAAPEAUVstTimeInfo@@H@Z ENDP ; AudioEffectX::getTimeInfo
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__tempoAtDeprecated@AudioEffectX@@UEAAHH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -2891,7 +2891,7 @@ $LN1@tempoAtDep:
 ?__tempoAtDeprecated@AudioEffectX@@UEAAHH@Z ENDP	; AudioEffectX::__tempoAtDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getNumAutomatableParametersDeprecated@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -2928,7 +2928,7 @@ $LN1@getNumAuto:
 ?__getNumAutomatableParametersDeprecated@AudioEffectX@@UEAAHXZ ENDP ; AudioEffectX::__getNumAutomatableParametersDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getParameterQuantizationDeprecated@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -2965,7 +2965,7 @@ $LN1@getParamet:
 ?__getParameterQuantizationDeprecated@AudioEffectX@@UEAAHXZ ENDP ; AudioEffectX::__getParameterQuantizationDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?ioChanged@AudioEffectX@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3004,7 +3004,7 @@ $LN1@ioChanged:
 ?ioChanged@AudioEffectX@@UEAA_NXZ ENDP			; AudioEffectX::ioChanged
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__needIdleDeprecated@AudioEffectX@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3043,7 +3043,7 @@ $LN1@needIdleDe:
 ?__needIdleDeprecated@AudioEffectX@@UEAA_NXZ ENDP	; AudioEffectX::__needIdleDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?sizeWindow@AudioEffectX@@UEAA_NHH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3084,7 +3084,7 @@ $LN1@sizeWindow:
 ?sizeWindow@AudioEffectX@@UEAA_NHH@Z ENDP		; AudioEffectX::sizeWindow
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?updateSampleRate@AudioEffectX@@UEAANXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3141,7 +3141,7 @@ $LN3@updateSamp:
 ?updateSampleRate@AudioEffectX@@UEAANXZ ENDP		; AudioEffectX::updateSampleRate
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?updateBlockSize@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3195,7 +3195,7 @@ $LN3@updateBloc:
 ?updateBlockSize@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::updateBlockSize
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getInputLatency@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3232,7 +3232,7 @@ $LN1@getInputLa:
 ?getInputLatency@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getInputLatency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getOutputLatency@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3269,7 +3269,7 @@ $LN1@getOutputL:
 ?getOutputLatency@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getOutputLatency
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getPreviousPlugDeprecated@AudioEffectX@@UEAAPEAUAEffect@@H@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3310,7 +3310,7 @@ $LN1@getPreviou:
 ?__getPreviousPlugDeprecated@AudioEffectX@@UEAAPEAUAEffect@@H@Z ENDP ; AudioEffectX::__getPreviousPlugDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getNextPlugDeprecated@AudioEffectX@@UEAAPEAUAEffect@@H@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3351,7 +3351,7 @@ $LN1@getNextPlu:
 ?__getNextPlugDeprecated@AudioEffectX@@UEAAPEAUAEffect@@H@Z ENDP ; AudioEffectX::__getNextPlugDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getPlugCategory@AudioEffectX@@UEAA?AW4VstPlugCategory@@XZ
 _TEXT	SEGMENT
 this$ = 8
@@ -3371,7 +3371,7 @@ this$ = 8
 ?getPlugCategory@AudioEffectX@@UEAA?AW4VstPlugCategory@@XZ ENDP ; AudioEffectX::getPlugCategory
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__willProcessReplacingDeprecated@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3408,7 +3408,7 @@ $LN1@willProces:
 ?__willProcessReplacingDeprecated@AudioEffectX@@UEAAHXZ ENDP ; AudioEffectX::__willProcessReplacingDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getCurrentProcessLevel@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3445,7 +3445,7 @@ $LN1@getCurrent:
 ?getCurrentProcessLevel@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::getCurrentProcessLevel
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getAutomationState@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3482,7 +3482,7 @@ $LN1@getAutomat:
 ?getAutomationState@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getAutomationState
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__wantAsyncOperationDeprecated@AudioEffectX@@UEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -3509,7 +3509,7 @@ state$ = 16
 ?__wantAsyncOperationDeprecated@AudioEffectX@@UEAAX_N@Z ENDP ; AudioEffectX::__wantAsyncOperationDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__hasExternalBufferDeprecated@AudioEffectX@@UEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -3536,7 +3536,7 @@ state$ = 16
 ?__hasExternalBufferDeprecated@AudioEffectX@@UEAAX_N@Z ENDP ; AudioEffectX::__hasExternalBufferDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?offlineRead@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@W4VstOfflineOption@@_N@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3579,7 +3579,7 @@ $LN1@offlineRea:
 ?offlineRead@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@W4VstOfflineOption@@_N@Z ENDP ; AudioEffectX::offlineRead
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?offlineWrite@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@W4VstOfflineOption@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3620,7 +3620,7 @@ $LN1@offlineWri:
 ?offlineWrite@AudioEffectX@@UEAA_NPEAUVstOfflineTask@@W4VstOfflineOption@@@Z ENDP ; AudioEffectX::offlineWrite
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?offlineStart@AudioEffectX@@UEAA_NPEAUVstAudioFile@@HH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3663,7 +3663,7 @@ $LN1@offlineSta:
 ?offlineStart@AudioEffectX@@UEAA_NPEAUVstAudioFile@@HH@Z ENDP ; AudioEffectX::offlineStart
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?offlineGetCurrentPass@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3706,7 +3706,7 @@ $LN1@offlineGet:
 ?offlineGetCurrentPass@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::offlineGetCurrentPass
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?offlineGetCurrentMetaPass@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3749,7 +3749,7 @@ $LN1@offlineGet:
 ?offlineGetCurrentMetaPass@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::offlineGetCurrentMetaPass
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__setOutputSamplerateDeprecated@AudioEffectX@@UEAAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3785,7 +3785,7 @@ $LN2@setOutputS:
 ?__setOutputSamplerateDeprecated@AudioEffectX@@UEAAXM@Z ENDP ; AudioEffectX::__setOutputSamplerateDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getInputSpeakerArrangementDeprecated@AudioEffectX@@UEAAPEAUVstSpeakerArrangement@@XZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3825,7 +3825,7 @@ $LN1@getInputSp:
 ?__getInputSpeakerArrangementDeprecated@AudioEffectX@@UEAAPEAUVstSpeakerArrangement@@XZ ENDP ; AudioEffectX::__getInputSpeakerArrangementDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getOutputSpeakerArrangementDeprecated@AudioEffectX@@UEAAPEAUVstSpeakerArrangement@@XZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3865,7 +3865,7 @@ $LN1@getOutputS:
 ?__getOutputSpeakerArrangementDeprecated@AudioEffectX@@UEAAPEAUVstSpeakerArrangement@@XZ ENDP ; AudioEffectX::__getOutputSpeakerArrangementDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getHostVendorString@AudioEffectX@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3905,7 +3905,7 @@ $LN1@getHostVen:
 ?getHostVendorString@AudioEffectX@@UEAA_NPEAD@Z ENDP	; AudioEffectX::getHostVendorString
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getHostProductString@AudioEffectX@@UEAA_NPEAD@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -3945,7 +3945,7 @@ $LN1@getHostPro:
 ?getHostProductString@AudioEffectX@@UEAA_NPEAD@Z ENDP	; AudioEffectX::getHostProductString
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getHostVendorVersion@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -3982,7 +3982,7 @@ $LN1@getHostVen:
 ?getHostVendorVersion@AudioEffectX@@UEAAHXZ ENDP	; AudioEffectX::getHostVendorVersion
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?hostVendorSpecific@AudioEffectX@@UEAA_JH_JPEAXM@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4023,7 +4023,7 @@ $LN1@hostVendor:
 ?hostVendorSpecific@AudioEffectX@@UEAA_JH_JPEAXM@Z ENDP	; AudioEffectX::hostVendorSpecific
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?canHostDo@AudioEffectX@@UEAAHPEAD@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4067,7 +4067,7 @@ $LN1@canHostDo:
 ?canHostDo@AudioEffectX@@UEAAHPEAD@Z ENDP		; AudioEffectX::canHostDo
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?isSynth@AudioEffectX@@UEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -4094,7 +4094,7 @@ state$ = 16
 ?isSynth@AudioEffectX@@UEAAX_N@Z ENDP			; AudioEffectX::isSynth
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?noTail@AudioEffectX@@UEAAX_N@Z
 _TEXT	SEGMENT
 this$ = 8
@@ -4121,7 +4121,7 @@ state$ = 16
 ?noTail@AudioEffectX@@UEAAX_N@Z ENDP			; AudioEffectX::noTail
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getHostLanguage@AudioEffectX@@UEAAHXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -4158,7 +4158,7 @@ $LN1@getHostLan:
 ?getHostLanguage@AudioEffectX@@UEAAHXZ ENDP		; AudioEffectX::getHostLanguage
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__openWindowDeprecated@AudioEffectX@@UEAAPEAXPEAU__VstWindowDeprecated@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4199,7 +4199,7 @@ $LN1@openWindow:
 ?__openWindowDeprecated@AudioEffectX@@UEAAPEAXPEAU__VstWindowDeprecated@@@Z ENDP ; AudioEffectX::__openWindowDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__closeWindowDeprecated@AudioEffectX@@UEAA_NPEAU__VstWindowDeprecated@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4239,7 +4239,7 @@ $LN1@closeWindo:
 ?__closeWindowDeprecated@AudioEffectX@@UEAA_NPEAU__VstWindowDeprecated@@@Z ENDP ; AudioEffectX::__closeWindowDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?getDirectory@AudioEffectX@@UEAAPEAXXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -4279,7 +4279,7 @@ $LN1@getDirecto:
 ?getDirectory@AudioEffectX@@UEAAPEAXXZ ENDP		; AudioEffectX::getDirectory
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?updateDisplay@AudioEffectX@@UEAA_NXZ
 _TEXT	SEGMENT
 this$ = 64
@@ -4318,7 +4318,7 @@ $LN1@updateDisp:
 ?updateDisplay@AudioEffectX@@UEAA_NXZ ENDP		; AudioEffectX::updateDisplay
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?beginEdit@AudioEffectX@@UEAA_NH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4358,7 +4358,7 @@ $LN1@beginEdit:
 ?beginEdit@AudioEffectX@@UEAA_NH@Z ENDP			; AudioEffectX::beginEdit
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?endEdit@AudioEffectX@@UEAA_NH@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4398,7 +4398,7 @@ $LN1@endEdit:
 ?endEdit@AudioEffectX@@UEAA_NH@Z ENDP			; AudioEffectX::endEdit
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?openFileSelector@AudioEffectX@@UEAA_NPEAUVstFileSelect@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4445,7 +4445,7 @@ $LN1@openFileSe:
 ?openFileSelector@AudioEffectX@@UEAA_NPEAUVstFileSelect@@@Z ENDP ; AudioEffectX::openFileSelector
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?closeFileSelector@AudioEffectX@@UEAA_NPEAUVstFileSelect@@@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4492,7 +4492,7 @@ $LN1@closeFileS:
 ?closeFileSelector@AudioEffectX@@UEAA_NPEAUVstFileSelect@@@Z ENDP ; AudioEffectX::closeFileSelector
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?__getChunkFileDeprecated@AudioEffectX@@UEAA_NPEAX@Z
 _TEXT	SEGMENT
 this$ = 64
@@ -4539,7 +4539,7 @@ $LN1@getChunkFi:
 ?__getChunkFileDeprecated@AudioEffectX@@UEAA_NPEAX@Z ENDP ; AudioEffectX::__getChunkFileDeprecated
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?allocateArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@H@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -4611,7 +4611,7 @@ $LN2@allocateAr:
 ?allocateArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@H@Z ENDP ; AudioEffectX::allocateArrangement
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?deallocateArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -4655,9 +4655,9 @@ $LN2@deallocate:
 ?deallocateArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@@Z ENDP ; AudioEffectX::deallocateArrangement
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?copySpeaker@AudioEffectX@@UEAA_NPEAUVstSpeakerProperties@@0@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -4686,7 +4686,7 @@ $LN8:
 ; 1459 : 	vst_strncpy (to->name, from->name, 63);
 
 	lea	rdx, QWORD PTR [r8+16]
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 
 ; 296  : 	char* result = strncpy (dst, src, maxLen);
 
@@ -4697,7 +4697,7 @@ $LN8:
 ; 297  : 	dst[maxLen] = 0;
 
 	mov	BYTE PTR [rdi+79], 0
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 
 ; 1465 : 	memcpy (to->future, from->future, 28);
 
@@ -4738,7 +4738,7 @@ $LN1@copySpeake:
 ?copySpeaker@AudioEffectX@@UEAA_NPEAUVstSpeakerProperties@@0@Z ENDP ; AudioEffectX::copySpeaker
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\public.sdk\source\vst2.x\audioeffectx.cpp
 ;	COMDAT ?matchArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@PEAU2@@Z
 _TEXT	SEGMENT
 this$ = 48
@@ -4842,7 +4842,7 @@ $LN1@matchArran:
 ?matchArrangement@AudioEffectX@@UEAA_NPEAPEAUVstSpeakerArrangement@@PEAU2@@Z ENDP ; AudioEffectX::matchArrangement
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 ;	COMDAT ??$FromVstPtr@UVstSpeakerArrangement@@@@YAPEAUVstSpeakerArrangement@@AEA_J@Z
 _TEXT	SEGMENT
 arg$ = 8
@@ -4859,7 +4859,7 @@ arg$ = 8
 ??$FromVstPtr@UVstSpeakerArrangement@@@@YAPEAUVstSpeakerArrangement@@AEA_J@Z ENDP ; FromVstPtr<VstSpeakerArrangement>
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 ;	COMDAT ??$FromVstPtr@PEAUVstSpeakerArrangement@@@@YAPEAPEAUVstSpeakerArrangement@@AEA_J@Z
 _TEXT	SEGMENT
 arg$ = 8
@@ -4876,7 +4876,7 @@ arg$ = 8
 ??$FromVstPtr@PEAUVstSpeakerArrangement@@@@YAPEAPEAUVstSpeakerArrangement@@AEA_J@Z ENDP ; FromVstPtr<VstSpeakerArrangement *>
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 ;	COMDAT ??$FromVstPtr@UVstTimeInfo@@@@YAPEAUVstTimeInfo@@AEA_J@Z
 _TEXT	SEGMENT
 arg$ = 8
@@ -4893,7 +4893,7 @@ arg$ = 8
 ??$FromVstPtr@UVstTimeInfo@@@@YAPEAUVstTimeInfo@@AEA_J@Z ENDP ; FromVstPtr<VstTimeInfo>
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 ;	COMDAT ??$FromVstPtr@UAEffect@@@@YAPEAUAEffect@@AEA_J@Z
 _TEXT	SEGMENT
 arg$ = 8
@@ -4910,7 +4910,7 @@ arg$ = 8
 ??$FromVstPtr@UAEffect@@@@YAPEAUAEffect@@AEA_J@Z ENDP	; FromVstPtr<AEffect>
 _TEXT	ENDS
 ; Function compile flags: /Ogspy
-; File E:\prova\Shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
+; File E:\FoxSuite\shimmer\vst-2.4-sdk\vstsdk2.4\pluginterfaces\vst2.x\aeffect.h
 ;	COMDAT ??$FromVstPtr@X@@YAPEAXAEA_J@Z
 _TEXT	SEGMENT
 arg$ = 8
